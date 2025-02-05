@@ -4,9 +4,8 @@
 }
 
 
-
 .destination {
-    margin-left: 16px;
+    margin-left: 16rpx;
     margin-right: 16rpx;
 }
 
@@ -14,8 +13,8 @@
 .grid-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 20px;
-    padding: 20px;
+    grid-gap: 20rpx;
+    padding: 20rpx;
 }
 
 .grid-item{
@@ -25,8 +24,8 @@
 
 .grid-item img{
     display: block;
-    width: 120%;
-    height: 120%;
+    width: 100%;
+    height: auto;
     object-fit: cover;
 }
 
@@ -36,9 +35,9 @@
     top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: white;
+    color: var(--color-full-white);
     font-weight: bold;
-    padding: 10px 15px;
+    padding: 10rpx 15rpx;
     text-align: center;
     width: 100%;
 }
