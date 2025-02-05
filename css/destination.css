@@ -1,0 +1,30 @@
+#destination{
+    width: 100%;
+    flex-grow: 1;
+}
+#destination table{
+    width: 100%;
+}
+#destination tr,
+#destination td,
+#destination th{
+    width: 49%;
+    border: 1px solid black;
+    text-align: center;
+}
+
+#destination h2{
+    font-weight: normal;
+    font-family: 'Courier New', Courier, monospace;
+}
+#destination h2:hover{
+    font-weight: normal;
+    font-family: 'Courier New', Courier, monospace;
+    cursor: pointer;
+    color: blue;
+}
+img {
+    width: 80%;
+    height: 300px;
+    object-fit: cover;
+}

@@ -1,0 +1,37 @@
+body {
+    background-color: #A8C4E5;
+}
+header {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0056b3;
+}
+header h1{
+    font-weight: normal;
+    font-size: 15px;
+    margin-left: 5px;
+    font-family: 'Courier New', Courier, monospace;
+}
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+header a {
+    font-family: 'Courier New', Courier, monospace;
+    text-decoration: none;
+    color: white;
+
+    margin-right: 5px;
+}
+header h1 a {
+    font-weight: bold;
+}
+header h1 a:hover,
+nav a:hover {
+    color: black;
+    cursor: pointer;
+}

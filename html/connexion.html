@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <title>Se Connecter</title>
+    <link rel="stylesheet" href="../css/connexion.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <meta charset="UTF-8">
+</head>
+<body>
+    <header>
+        <h1><a href="../index.html">CY-TAXEVASION</a></h1>
+    </header>
+    <table>
+        <form action="../php/connexion.php" method="post">
+            <tr>
+                <th colspan="2">Connexion</th>
+            </tr>
+            <tr>
+                <td><label for="Mail : ">Mail</label></td>
+                <td><input id="mail" name="mail" type="mail" placeholder="name.firstname@gmail.com"></td>
+            </tr>
+            <tr>
+                <td><label for="password">Mot de passe  :</label></td>
+                <td><input id="password" name="mdp" type="password" placeholder="PASSWORD"></td>
+            </tr>
+            <tr>
+                <td colspan="2"><button type="submit">Submit</button><button type="reset">Reset</button></td>
+            </tr>
+            <tr>
+                <td colspan="2">Pas de compte ? <a href="inscription.html">Inscrivez-vous</a></td>
+            </tr>
+        </form>
+    </table>
+    <footer>
+        <div>
+            <p>Nous contacter</p>
+        </div>
+        <div class="socials">
+            <img src="../image/twitter-logo.png">
+            <img src="../image/instagram-logo.png">
+        </div>
+    </footer>
+</body>
+<script src="exo2.js"></script>
+</html>
