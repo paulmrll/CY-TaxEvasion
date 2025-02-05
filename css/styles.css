@@ -1,0 +1,15 @@
+
+
+
+:root {
+    --color-light-blue: #00b7e0;
+    --color-dark-blue: #137fb6;
+    --color-title-blue: #111827;
+    --color-gray: #6b7280;
+    --color-full-white: #f6f6f6;
+}
+
+body {
+    font-family: Arial Rounded MT Bold, Helvetica Rounded, Arial, sans-serif;
+    line-height: 1.6;
+}

@@ -4,12 +4,12 @@
 }
 #destination table{
     width: 100%;
+    padding: 5%;
 }
 #destination tr,
 #destination td,
 #destination th{
     width: 49%;
-    border: 1px solid black;
     text-align: center;
 }
 
@@ -23,8 +23,51 @@
     cursor: pointer;
     color: blue;
 }
-img {
-    width: 80%;
+
+#destination img {
+    width: 85%;
     height: 300px;
     object-fit: cover;
 }
+
+
+.destination {
+    margin-left: 16px;
+    margin-right: 16rpx;
+}
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    padding: 20px;
+}
+
+.grid-item{
+    overflow: hidden;
+    position: relative;
+}
+
+.grid-item img{
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.grid-item h2 {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: var(--color-full-white);
+    font-size: 16px;
+    margin: 0;
+    padding: 5px 10px;
+    background-color: var(--color-title-blue);
+}
+
+
+
+
+
+
