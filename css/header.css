@@ -1,45 +1,44 @@
-body {
-    background-color: #A8C4E5;
-}
+
 
 header {
     width: 100%;
-    max-width: 100%;
+    background-color: var(--color-bar);
+}
+
+.header-container{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--color-background);
+    padding: 1.5vw;
 }
-header p{
+
+
+.header-left{
     font-weight: normal;
     font-size: 1.7vw;
-    margin-left: 5px;
     font-family: 'Courier New', Courier, monospace;
 }
-nav ul {
-    display: flex;
-    list-style: none;
-    gap: 20px;
-    font-size: 1.5vw;
 
+
+.header-right{
+    margin-left: auto;
+    display: flex;
+    gap: 1.5vw;
+    font-size: 1.5vw;
 }
+
 
 header a {
     font-family: 'Courier New', Courier, monospace;
     text-decoration: none;
-    color: white;
+    color: var(--color-light-writing);
     margin-right: 5px;
 }
 
-header p a {
-    font-weight: bold;
-    margin: 10px;
-}
 
-header p a:hover,
 
-nav a:hover {
-    color: black;
+.header-right a:hover, .header-left:hover {
+    color: var(--color-dark-writing);
     cursor: pointer;
 }
 

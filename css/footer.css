@@ -5,33 +5,36 @@ body{
     padding-bottom: 10vw;
 }
 
-
 footer{
     position: absolute;
     bottom: 0;
-    display: flex;
-    background-color: var(--color-background);
+    background-color: var(--color-bar);
     width: 100%;
-    align-items: center;
     left: 0;
 }
 
 
-.socials{
+.footer-container{
     display: flex;
-    gap: 10px;
-    padding-right: 20px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5vw;
+}
+
+
+.contact {
+    font-size: 1.5vw;
+    color: var(--color-dark-writing);
+}
+
+.socials{
     margin-left: auto;
+    display: flex;
+    gap: 0.7vw;
 }
 
-
-footer img{
-   width: 30px;
-   height: 30px;
+.twitter-logo, .instagram-logo {
+    width: 3vw;
+    height: auto;
 }
 
-
-footer p{
-    margin: 10px;
-    font-size: 2vw;
-}

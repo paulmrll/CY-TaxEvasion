@@ -2,16 +2,18 @@
 
 
 :root {
-    --color-light-blue: #00b7e0;
-    --color-dark-blue: #137fb6;
     --color-title-blue: #111827;
-    --color-gray: #6b7280;
     --color-full-white: #f6f6f6;
-    --color-background: #0056b3;
-
+    --color-bar: #255C69;
+    --color-background: #AAC7CD;
+    --color-dark-writing: #00161B;
+    --color-light-writing: white;
+    --color-jaimebien: #02CFFF;
 }
+
 
 body {
     font-family: Arial Rounded MT Bold, Helvetica Rounded, Arial, sans-serif;
     line-height: 1.6;
+    background-color: var(--color-background);
 }
