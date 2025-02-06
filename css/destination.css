@@ -12,20 +12,20 @@ h1{
     font-size: 2vw;
 }
 
-.destination-grid {
-    margin: 1vw;
-    padding-bottom: 5vw;
-}
+
 
 .grid-container {
-    display: grid;grid-template-columns: repeat(3, 1fr);
-    grid-gap: 2vw;
-    padding: 3vw;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 5vw;
+    padding: 5vw;
 }
 
 .grid-item{
     overflow: hidden;
     position: relative;
+    width: 100%;
+    height: auto;
 }
 
 .grid-item img{
