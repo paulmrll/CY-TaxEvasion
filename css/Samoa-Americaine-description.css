@@ -1,0 +1,26 @@
+
+.title-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3vw;
+}
+
+
+.main-image {
+    position: relative;
+    width: 40%;
+    height: auto;
+}
+
+h1{
+    margin: auto;
+    font-size: 3vw;
+}
+
+main p{
+    margin: 0;
+    text-align: justify;
+    padding: 3vw;
+    font-size: 2vw;
+}

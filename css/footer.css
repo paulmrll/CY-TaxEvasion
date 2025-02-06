@@ -1,20 +1,22 @@
 body{
     margin: 0;
-    padding-bottom: 20px;
     position: relative;
     min-height: 100vh;
+    padding-bottom: 10vw;
 }
+
 
 footer{
     position: absolute;
     bottom: 0;
     display: flex;
     background-color: var(--color-background);
-
     width: 100%;
     align-items: center;
     left: 0;
 }
+
+
 .socials{
     display: flex;
     gap: 10px;
@@ -29,7 +31,7 @@ footer img{
 }
 
 
-p{
+footer p{
     margin: 10px;
     font-size: 2vw;
 }

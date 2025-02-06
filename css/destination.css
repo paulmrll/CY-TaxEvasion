@@ -1,19 +1,26 @@
-#destination{
-    width: 80%;
-    flex-grow: 1;
+
+
+h1{
+    padding: 1vw;
+    font-size: 3vw;
+    margin: 1vw;
+    text-decoration: underline;
 }
 
+.intro-text{
+    padding: 1vw;
+    font-size: 2vw;
+}
 
 .destination-grid {
-    margin-left: 20rpx;
-    margin-right: 20rpx;
+    margin: 1vw;
+    padding-bottom: 5vw;
 }
-
 
 .grid-container {
     display: grid;grid-template-columns: repeat(3, 1fr);
-    grid-gap: 20px;
-    padding: 30px;
+    grid-gap: 2vw;
+    padding: 3vw;
 }
 
 .grid-item{
@@ -42,6 +49,15 @@
     width: auto;
 }
 
-.grid-item:hover img {
+.flag{
+    width: 20%;
+    height: auto;
+    position: absolute;
+    top: 85%;
+    left: 15%;
+    transform: translate(-50%, -50%);
+}
+
+.grid-item:hover img{
     transform: scale(1.5);
 }
