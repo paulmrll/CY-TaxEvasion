@@ -1,17 +1,18 @@
 body {
     background-color: #A8C4E5;
 }
+
 header {
     width: 100%;
     max-width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #0056b3;
+    background-color: var(--color-background);
 }
 header h1{
     font-weight: normal;
-    font-size: 15px;
+    font-size: 1.7vw;
     margin-left: 5px;
     font-family: 'Courier New', Courier, monospace;
 }
@@ -19,6 +20,8 @@ nav ul {
     display: flex;
     list-style: none;
     gap: 20px;
+    font-size: 1.5vw;
+
 }
 header a {
     font-family: 'Courier New', Courier, monospace;
@@ -35,3 +38,4 @@ nav a:hover {
     color: black;
     cursor: pointer;
 }
+

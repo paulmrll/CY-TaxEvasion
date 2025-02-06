@@ -1,20 +1,19 @@
 #destination{
-    width: 100%;
+    width: 80%;
     flex-grow: 1;
 }
 
 
-.destination {
-    margin-left: 16rpx;
-    margin-right: 16rpx;
+.destination-grid {
+    margin-left: 20rpx;
+    margin-right: 20rpx;
 }
 
 
 .grid-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 20rpx;
-    padding: 20rpx;
+    display: grid;grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    padding: 30px;
 }
 
 .grid-item{
@@ -30,18 +29,19 @@
 }
 
 .grid-item h3 {
-    font-size: 2vw;
+    font-size: 1.5vw;
     position: absolute;
     top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: var(--color-full-white);
+    background-color: rgba(0, 0, 0, 0.3);
     font-weight: bold;
     padding: 10rpx 15rpx;
     text-align: center;
-    width: 100%;
+    width: auto;
 }
 
 .grid-item:hover img {
-    transform: scale(1.2);
+    transform: scale(1.5);
 }
