@@ -1,4 +1,3 @@
-
 .title-container{
     display: flex;
     justify-content: space-between;
@@ -25,4 +24,67 @@ main p{
     text-align: justify;
     padding: 3vw;
     font-size: 2vw;
+}
+form {
+    width: 100%;
+}
+fieldset{
+    max-width: 50%;
+    margin: auto;
+    border: 0.1vw solid black;
+}
+table{
+    border: 0.1vw solid black;
+}
+table tr,
+table td,
+table th{
+    border: 0.1vw solid black;
+}
+table th{
+    text-align: center;
+}
+table td:nth-child(1){
+    width: 30%;
+    text-align: center;
+}
+table td:nth-child(2){
+    width: 70%;
+    text-align: center;
+}
+fieldset button{
+    border: 0.1vw solid black;
+    border-top-left-radius: 10vw;
+    border-top-right-radius: 10vw;
+    border-bottom-left-radius: 10vw;
+    border-bottom-right-radius: 10vw;
+    background-color: var(--color-full-white);
+
+}
+fieldset button[type="submit"]:hover{
+    border: 0.1vw solid black;
+    border-top-left-radius: 10vw;
+    border-top-right-radius: 10vw;
+    border-bottom-left-radius: 10vw;
+    border-bottom-right-radius: 10vw;
+    background-color: green;
+    color: black;
+}
+fieldset button[type="reset"]:hover{
+    border: 0.1vw solid black;
+    border-top-left-radius: 10vw;
+    border-top-right-radius: 10vw;
+    border-bottom-left-radius: 10vw;
+    border-bottom-right-radius: 10vw;
+    background-color: orange;
+    color: black;
+}
+fieldset #buttons{
+    margin-top: 0.5vw;
+    width: 100%;
+    text-align: center;
+}
+iframe{
+    max-width: 30%;
+    max-height: 10%;
 }

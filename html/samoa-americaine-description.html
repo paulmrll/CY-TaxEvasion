@@ -48,9 +48,56 @@
 
 
         <div class="reservation-container">
-            
-
+            <fieldset>
+                <legend>Réserver vos vacances</legend>
+                <form method="post" action="../php/samoa-americaine.php">
+                    <table>
+                        <tr>
+                            <th colspan="2">Vacances samoa-americaine : Jour 1</th>
+                        </tr>
+                        <tr>
+                            <td><label for="hotel1">Hotel</label></td>
+                            <td><select name="hotel1" id="hotel1" required placeholder="make your choice">
+                                <option value="tradewind_hotel">Tradewind Hotel</option>
+                                <option value="sadie_thompson_building">Sadie Thompson Building</option>
+                                <option value="moana_O_sina">Moana O Sina</option>
+                            </select></td>
+                        </tr>
+                        <tr>
+                            <td><label for="restaurant1">Restaurant</label></td>
+                            <td><input type="radio" id="restaurant1_1" name="restaurant1" value="Sadie-Thompson-Inn-Restaurant" required>Sadie Thompson Inn Restaurant
+                            <input type="radio" id="restaurant1_2" name="restaurant1" value="DDW-Beach-Cafe"required>DDW Beach Cafe
+                            <input type="radio" id="restaurant1_3" name="restaurant1" value="Paradise-Pizza-Restaurant"required>Paradise Pizza & Restaurant</td>
+                        </tr>
+                    </table>
+                    <br>
+                    <table>
+                        <tr>
+                            <th colspan="2">Vacances samoa-americaine : Jour 2</th>
+                        </tr>
+                        <tr>
+                            <td><label for="hotel2">Hotel</label></td>
+                            <td><select name="hotel2" id="hotel2" required placeholder="make your choice">
+                                <option value="tradewind_hotel">Tradewind Hotel</option>
+                                <option value="Vaoto_lodge">Vaoto Lodge</option>
+                                <option value="pago_airport_inn">Pago Airport Inn</option>
+                            </select></td>
+                        </tr>
+                        <tr>
+                            <td><label for="restaurant2">Restaurant</label></td>
+                            <td><input type="radio" id="restaurant2" name="restaurant2" value="tisa's_barefoot_bar" required>Tisa's Barefoot Bar
+                            <input type="radio" id="restaurant2" name="restaurant2" value="goat_island_cafe"required>Goat Island Cafe
+                            <input type="radio" id="restaurant2" name="restaurant2" value="flying_fox_brewing_company"required> Flying Fox Brewing Company</td>
+                        </tr>
+                    </table>
+                    <div id="buttons">
+                        <button type="submit">Envoyer</button>
+                        <button type="reset">Reset</button>
+                    </div>
+                </form>
+            </fieldset>
         </div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1991448.7946050332!2d-170.93032785863588!3d-12.872417108610989!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x71a684b79248fdc9%3A0xf3ee739e2dae4bdd!2sSamoa%20am%C3%A9ricaines!5e0!3m2!1sfr!2sfr!4v1738876860896!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
 
     </main>

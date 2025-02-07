@@ -1,5 +1,3 @@
-
-
 h1{
     padding: 1vw;
     font-size: 3vw;
@@ -60,6 +58,6 @@ h1{
     transform: translate(-50%, -50%);
 }
 
-.grid-item:hover img{
+.grid-item:hover > a > img{
     transform: scale(1.5);
 }
