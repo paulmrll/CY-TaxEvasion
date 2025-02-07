@@ -10,21 +10,25 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 1.5vw;
+    width: 100%;
 }
 
 
 .header-left{
     font-weight: normal;
     font-size: 1.7vw;
+    text-shadow: 2px 2px var(--color-dark-writing);
     font-family: 'Courier New', Courier, monospace;
 }
 
 
 .header-right{
-    margin-left: auto;
     display: flex;
+    align-items: center;
+    text-shadow: 2px 2px var(--color-dark-writing);
     gap: 1.5vw;
     font-size: 1.5vw;
+    margin-right: 3vw;
 }
 
 
@@ -32,9 +36,14 @@ header a {
     font-family: 'Courier New', Courier, monospace;
     text-decoration: none;
     color: var(--color-light-writing);
-    margin-right: 5px;
 }
 
+
+.header-user-logo{
+    width: 8vw;
+    height: auto;
+    object-fit: cover;
+}
 
 
 .header-right a:hover, .header-left:hover {

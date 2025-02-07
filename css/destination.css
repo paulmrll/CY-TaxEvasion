@@ -17,8 +17,10 @@ h1{
 .grid-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 5vw;
-    padding: 5vw;
+    grid-gap: 3vw;
+    padding: 6vw;
+    margin-left: 3vw;
+    margin-right: 3vw;
 }
 
 .grid-item{
@@ -30,7 +32,7 @@ h1{
 
 .grid-item img{
     display: block;
-    width: 100%;
+    width: 120%;
     height: auto;
     object-fit: cover;
 }
@@ -41,8 +43,8 @@ h1{
     top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: var(--color-full-white);
-    background-color: rgba(0, 0, 0, 0.3);
+    color: var(--color-light-writing);
+    text-shadow: 2px 2px var(--color-dark-writing);
     font-weight: bold;
     padding: 10rpx 15rpx;
     text-align: center;
