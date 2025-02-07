@@ -4,24 +4,23 @@
 
 header {
     padding-left: 1.5vw;
-    width: 100%;
     background-color: var(--color-bar);
+    width: 100%;
 }
 
 .header-container{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 1vw;
-    padding-bottom: 1vw;
-    width: 100%;
+    padding-top: 0.5vw;
+    padding-bottom: 0.5vw;
 }
+
 
 
 .header-left{
     font-weight: normal;
     font-size: 1.5vw;
-    padding-left: 1.5vw;
     text-shadow: 2px 2px var(--color-dark-writing);
     font-family: 'Courier New', Courier, monospace;
 }

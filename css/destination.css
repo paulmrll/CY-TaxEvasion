@@ -50,11 +50,11 @@ h1{
 }
 
 .flag{
-    width: 20%;
+    width: 10%;
     height: auto;
     position: absolute;
-    top: 85%;
-    left: 15%;
+    top: 90%;
+    left: 10%;
     transform: translate(-50%, -50%);
 }
 

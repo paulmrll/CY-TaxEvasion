@@ -1,6 +1,7 @@
 *{
     box-sizing: border-box;
 }
+
 body{
     margin: 0;
     position: relative;
@@ -9,11 +10,11 @@ body{
 }
 
 footer{
+    padding-left: 1.5vw;
     position: absolute;
     bottom: 0;
     background-color: var(--color-bar);
     width: 100%;
-    left: 0;
 }
 
 
@@ -21,7 +22,8 @@ footer{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.5vw;
+    padding-top: 0.5vw;
+    padding-bottom: 0.5vw;
 }
 
 
@@ -31,13 +33,15 @@ footer{
 }
 
 .socials{
-    margin-left: auto;
     display: flex;
+    align-items: center;
     gap: 0.7vw;
+    padding-right: 1.5vw;
 }
 
 .twitter-logo, .instagram-logo {
     width: 3vw;
     height: auto;
+    object-fit: cover;
 }
 
