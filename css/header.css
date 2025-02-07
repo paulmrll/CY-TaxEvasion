@@ -1,4 +1,6 @@
-
+*{
+    box-sizing: border-box;
+}
 
 header {
     padding-left: 1.5vw;
@@ -31,7 +33,7 @@ header {
     text-shadow: 2px 2px var(--color-dark-writing);
     gap: 1.5vw;
     font-size: 1vw;
-    margin-right: 3vw;
+    padding-right: 3vw;
 }
 
 
