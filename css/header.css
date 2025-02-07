@@ -1,6 +1,7 @@
 
 
 header {
+    padding-left: 1.5vw;
     width: 100%;
     background-color: var(--color-bar);
 }
@@ -9,14 +10,16 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.5vw;
+    padding-top: 1vw;
+    padding-bottom: 1vw;
     width: 100%;
 }
 
 
 .header-left{
     font-weight: normal;
-    font-size: 1.7vw;
+    font-size: 1.5vw;
+    padding-left: 1.5vw;
     text-shadow: 2px 2px var(--color-dark-writing);
     font-family: 'Courier New', Courier, monospace;
 }
@@ -27,7 +30,7 @@ header {
     align-items: center;
     text-shadow: 2px 2px var(--color-dark-writing);
     gap: 1.5vw;
-    font-size: 1.5vw;
+    font-size: 1vw;
     margin-right: 3vw;
 }
 
@@ -40,14 +43,14 @@ header a {
 
 
 .header-user-logo{
-    width: 8vw;
+    width: 6vw;
     height: auto;
     object-fit: cover;
 }
 
 
 .header-right a:hover, .header-left:hover {
-    color: var(--color-dark-writing);
+    color: orange;
     cursor: pointer;
 }
 
