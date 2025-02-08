@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+    <meta charset="UTF-8">
     <title>Les-Samoa-Americaine</title>
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/samoa-americaine-description.css">
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/footer.css">
-    <meta charset="UTF-8">
 </head>
 <body>
 
@@ -14,11 +14,13 @@
 
     <header>
         <div class="header-container">
-            <a class="header-left" href="../index.html">CY-TAXEVASION </a>
+            <div class="header-left">
+                <a href="../index.html" class="header-link">CY-TAXEVASION </a>
+            </div>
             <div class="header-right">
-                <a href="../html/destination.html">Voir nos voyages</a>
-                <a href="../html/connexion.html">Se connecter</a>
-                <a href="utilisateur.html"> <img class="header-user-logo" src="../image/anguilla.jpg" alt="utilisateur-logo"></a>
+                <a href="../html/destination.html" class="header-link-active">Voir nos voyages</a>
+                <a href="../html/connexion.html" class="header-link">Se connecter</a>
+                <a href="utilisateur.html" class="header-link"> <img class="header-user-logo" src="../image/anguilla.jpg" alt="utilisateur-logo"></a>
             </div>
         </div>
     </header>
@@ -45,7 +47,7 @@
                 <form method="post" action="../php/samoa-americaine.php">
                     <table>
                         <tr>
-                            <th colspan="2">Vacances samoa-americaine : Jour 1 - 4</th>
+                            <th colspan="2">Vacances Samoa-Americaine : Jour 1 - 4</th>
                         </tr>
                         <tr>
                             <td><label for="hotel1">Hotel</label></td>
@@ -56,7 +58,7 @@
                             </select></td>
                         </tr>
                         <tr>
-                            <td><label for="restaurant1">Restaurant</label></td>
+                            <td><label for="restaurant">Restaurant</label></td>
                             <td><input type="radio" id="restaurant1_1" name="restaurant1" value="Sadie-Thompson-Inn-Restaurant" required>Sadie Thompson Inn Restaurant
                             <input type="radio" id="restaurant1_2" name="restaurant1" value="DDW-Beach-Cafe"required>DDW Beach Cafe
                             <input type="radio" id="restaurant1_3" name="restaurant1" value="Paradise-Pizza-Restaurant"required>Paradise Pizza & Restaurant</td>

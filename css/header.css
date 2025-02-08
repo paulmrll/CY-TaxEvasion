@@ -52,6 +52,7 @@ header {
 }
 
 .header-link-active{
+    font-family: 'Courier New', Courier, monospace;
     color: var(--color-dark-writing);
     text-decoration: underline;
 

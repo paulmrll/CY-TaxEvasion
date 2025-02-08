@@ -19,6 +19,8 @@ h1{
     padding: 6vw;
     margin-left: 3vw;
     margin-right: 3vw;
+    white-space: nowrap;
+
 }
 
 .grid-item{
@@ -49,6 +51,7 @@ h1{
     width: auto;
 }
 
+
 .flag{
     width: 10%;
     height: auto;
@@ -58,6 +61,6 @@ h1{
     transform: translate(-50%, -50%);
 }
 
-.grid-item:hover > a > img{
-    transform: scale(1.5);
+.grid-item:hover > a > img {
+    transform: scale(1.1);
 }

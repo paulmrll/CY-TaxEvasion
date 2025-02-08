@@ -1,4 +1,93 @@
-body h2{
+body {
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
     text-align: center;
-    font-family:'Courier New', Courier, monospace;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+h4 {
+    font-size: 2vw;
+}
+
+
+.background{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 30vw;
+    background: var(--color-jaimebien);
+    z-index: -1;
+    border-radius: 5vw;
+}
+
+
+.carousel-container {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    display: flex;
+    justify-content: center;
+    scroll-snap-type: x mandatory;
+    white-space: nowrap;
+    margin: 0;
+}
+
+.carousel {
+    display: flex;
+    padding-bottom: 1vw;
+}
+
+.grid-container {
+    display: flex;
+    gap: 1vw;
+}
+
+.grid-item {
+    position: relative;
+    width: 20%;
+    height: auto;
+    flex: 0 0 auto;
+    overflow: hidden;
+    border-radius: 10px;
+    scroll-snap-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+
+.grid-item img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.grid-item h3 {
+    font-size: 1.5vw;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--color-light-writing);
+    text-shadow: 2px 2px var(--color-dark-writing);
+    font-weight: bold;
+    text-align: center;
+    width: auto;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+
+.flag {
+    width: 15%;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+
+.grid-item:hover > a > img {
+    transform: scale(1.1);
 }
