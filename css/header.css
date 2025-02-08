@@ -20,6 +20,16 @@ header {
 }
 
 
+.header-slogan{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-55%);
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    color: var(--color-light-writing);
+    font-size: 1vw;
+}
+
 .header-right{
     display: flex;
     align-items: center;
@@ -28,16 +38,11 @@ header {
     padding-right: 3vw;
 }
 
-
-
 .header-link{
     font-family: 'Courier New', Courier, monospace;
     text-decoration: none;
     color: var(--color-light-writing);
-    text-shadow: 2px 2px var(--color-dark-writing);
-    
 }
-
 
 .header-user-logo{
     width: 6vw;
@@ -45,9 +50,8 @@ header {
     margin-top: 0.8vw;
 }
 
-
-.header-right a:hover, .header-left:hover {
-    color: orange;
+.header-right a:hover{
+    color: var(--color-header-active);
     cursor: pointer;
 }
 
@@ -55,13 +59,22 @@ header {
     font-family: 'Courier New', Courier, monospace;
     color: var(--color-header-active);
     text-decoration: underline;
-
 }
 
 .header-connect{
     border: 2px solid var(--color-light-writing);
     padding: 5px 10px;
-    display: inline-block;
     border-radius: 5px;
 }
+
+.header-connect:hover{
+    background-color: var(--color-header-active);
+    border: 2px solid var(--color-header-active);
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: var(--color-light-writing)
+}
+
+
+
 
