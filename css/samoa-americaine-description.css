@@ -79,8 +79,10 @@ table td:nth-child(2){
 
 
 table td select{
+    width: 40%;
     font-family: 'Courier New', Courier, monospace;
     font-size: var(--font-size-p);
+    text-align-last: center;
 }
 
 
