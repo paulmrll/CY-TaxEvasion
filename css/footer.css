@@ -19,6 +19,8 @@ footer{
 
 
 .footer-container{
+    max-width: 70vw;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -42,6 +44,5 @@ footer{
 .twitter-logo, .instagram-logo {
     width: 3vw;
     height: auto;
-    object-fit: cover;
 }
 
