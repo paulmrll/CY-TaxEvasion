@@ -9,11 +9,10 @@ body{
 }
 
 footer{
-    padding-left: 1.5vw;
     position: absolute;
     bottom: 0;
     background-color: var(--color-bar);
-    width: 100%;
+    width: 100vw;
 }
 
 
