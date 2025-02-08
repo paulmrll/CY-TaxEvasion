@@ -4,12 +4,14 @@
 :root {
     --color-title-blue: #111827;
     --color-full-white: #f6f6f6;
-    --color-bar: #255C69;
-    --color-background: white;
-    --color-dark-writing: #00161B;
+    --color-bar: #041522;
+    --color-background: #FAF9F6;
+    --color-dark-writing: #041522;
     --color-light-writing: white;
-    --color-jaimebien: #02CFFF;
-    --font-size-p: 1vw;
+    --color-background-2: #d6f1fc;
+    --color-title: #D4AF37;
+    --color-button: #046A38;
+    --color-header-active: #5cb8ec;
 }
 
 

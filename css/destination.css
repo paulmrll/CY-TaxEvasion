@@ -28,6 +28,7 @@ h1{
     position: relative;
     width: 100%;
     height: auto;
+    border-radius: 1vw;
 }
 
 .grid-item img{

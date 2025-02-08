@@ -31,7 +31,7 @@ footer{
 
 .contact {
     font-size: 1.5vw;
-    color: var(--color-dark-writing);
+    color: var(--color-header-active);
 }
 
 .socials{
