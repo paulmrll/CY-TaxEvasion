@@ -35,7 +35,7 @@ header {
     text-decoration: none;
     color: var(--color-light-writing);
     text-shadow: 2px 2px var(--color-dark-writing);
-
+    
 }
 
 
@@ -54,7 +54,7 @@ header {
 .header-link-active{
     font-family: 'Courier New', Courier, monospace;
     color: var(--color-dark-writing);
-    text-decoration: underline;
-
+    text-decoration: none;
 }
+
 
