@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 3vw;
+    padding: 3vw 0 4vw 0;
 }
 
 
@@ -19,20 +19,31 @@ h1{
 }
 
 
-main p{
-    margin: 0;
+.destination-text p{
+    margin-left: 10vw;
+    margin-right: 10vw;
     text-align: justify;
     padding: 3vw;
     font-size: var(--font-size-p);
-    font-weight: normal;
     font-family: 'Courier New', Courier, monospace;
+    color: var(--color-light-writing);
 }
 
+.destination-text{
+    background: var(--color-bar);
+    margin-left: -10vw;
+    margin-right: -10vw;
+    padding: 2vw 0 2vw 0;
+}
+
+
+.reservation-container{
+    padding-top: 5vw;
+}
 
 form {
     width: 100%;
 }
-
 
 fieldset{
     max-width: 50%;

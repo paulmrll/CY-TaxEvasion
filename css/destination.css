@@ -1,13 +1,11 @@
 h1{
     padding: 1vw;
-    font-size: 3vw;
-    margin: 1vw;
+    font-size: 2vw;
     text-decoration: underline;
 }
 
 .intro-text{
-    padding: 1vw;
-    font-size: 2vw;
+
 }
 
 
@@ -16,7 +14,7 @@ h1{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 3vw;
-    padding: 6vw;
+    padding:  4vw 6vw 6vw 6vw;
     margin-left: 3vw;
     margin-right: 3vw;
     white-space: nowrap;
