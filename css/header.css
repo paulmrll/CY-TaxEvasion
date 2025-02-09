@@ -9,8 +9,6 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 0.5vw;
-    padding-bottom: 0.5vw;
 }
 
 .header-left{
@@ -50,7 +48,8 @@ header {
     margin-top: 0.8vw;
 }
 
-.header-right a:hover{
+
+.header-right a:hover, .header-left a:hover{
     color: var(--color-header-active);
     cursor: pointer;
 }
@@ -60,6 +59,7 @@ header {
     color: var(--color-header-active);
     text-decoration: underline;
 }
+
 
 .header-connect{
     border: 2px solid var(--color-light-writing);
@@ -74,7 +74,3 @@ header {
     border-radius: 5px;
     color: var(--color-light-writing)
 }
-
-
-
-
