@@ -4,39 +4,32 @@ table{
     width: auto;
     text-align: center;
     background-color: white;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Inter', sans-serif;
     border: black 1px dotted;
 }
 table label{
-    font-family: 'Courier New', Courier, monospace;
 }
 table button{
-    font-family: 'Courier New', Courier, monospace;
     margin-left: 10%;
     margin-right: 10%;
 }
 table input{
-    font-family: 'Courier New', Courier, monospace;
 }
 table label:hover{
-    font-family: 'Courier New', Courier, monospace;
     cursor:text;
 }
 table button:hover[type="submit"]{
     cursor: pointer;
     color: green;
     background-color: white;
-    font-family: 'Courier New', Courier, monospace;
 }
 table button:hover[type="reset"]{
     cursor: pointer;
     color: orange;
     background-color: black;
-    font-family: 'Courier New', Courier, monospace;
 }
 table input:hover{
     cursor: text;
-    font-family: 'Courier New', Courier, monospace;
 }
 table td,
 table tr, 

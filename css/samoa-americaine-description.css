@@ -29,6 +29,7 @@ h1{
     color: var(--color-light-writing);
 }
 
+
 .destination-text{
     background: var(--color-bar);
     margin-left: -10vw;
@@ -37,12 +38,14 @@ h1{
 }
 
 
-.reservation-container{
-    padding-top: 5vw;
-}
+
 
 form {
     width: 100%;
+    white-space: nowrap;
+    font-family: 'Inter', sans-serif;
+
+
 }
 
 fieldset{
@@ -54,7 +57,6 @@ fieldset{
 
 legend{
     text-align: center;
-    font-family: 'Courier New', Courier, monospace;
     font-weight: bold;
 }
 
@@ -66,13 +68,11 @@ table{
 
 table tr, table td, table th{
     font-size: var(--font-size-p);
-    font-family: 'Courier New', Courier, monospace;
     border: 0.1vw solid black;
 }
 
 
 table th{
-    font-family: 'Courier New', Courier, monospace;
     text-align: center;
 }
 
@@ -91,7 +91,6 @@ table td:nth-child(2){
 
 table td select{
     width: 40%;
-    font-family: 'Courier New', Courier, monospace;
     font-size: var(--font-size-p);
     text-align-last: center;
 }
@@ -99,16 +98,14 @@ table td select{
 
 fieldset button{
     font-size: var(--font-size-p);
-    font-family: 'Courier New', Courier, monospace;
     border: 0.1vw solid black;
     border-radius: 10vw;
-    background-color: var(--color-full-white);
+    background-color: var(--color-background);
 
 }
 
 
 fieldset button[type="submit"]:hover{
-    font-family: 'Courier New', Courier, monospace;
     border: 0.1vw solid black;
     border-radius: 10vw;
     background-color: green;
@@ -117,7 +114,6 @@ fieldset button[type="submit"]:hover{
 
 
 fieldset button[type="reset"]:hover{
-    font-family: 'Courier New', Courier, monospace;
     border: 0.1vw solid black;
     border-radius: 10vw;
     background-color: orange;
@@ -143,5 +139,11 @@ iframe{
     display: block;
     margin: auto;
     max-width: 40%;
+    padding-top: 5vw;
+}
+
+
+
+.reservation-container{
     padding-top: 5vw;
 }
