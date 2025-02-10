@@ -29,7 +29,10 @@ h1{
     color: var(--color-light-writing);
 }
 
-
+.reservation-container{
+    margin-top: 2vw;
+    margin-bottom: 2vw;
+}
 .destination-text{
     background: var(--color-bar);
     margin-left: -10vw;
@@ -37,16 +40,11 @@ h1{
     padding: 2vw 0 2vw 0;
 }
 
-
-
-
 form {
     width: 100%;
 }
 
-
 fieldset{
-    font-family: 'Courier New', Courier, monospace;
     max-width: 50%;
     margin: auto;
     border: 0.1vw solid black;
@@ -78,6 +76,7 @@ table th{
 table td:nth-child(1){
     width: 30%;
     text-align: center;
+    font-weight: bold;
 }
 
 
@@ -124,8 +123,6 @@ fieldset #buttons{
     width: 100%;
     text-align: center;
 }
-
-
 
 .maps{
     width: 100%;

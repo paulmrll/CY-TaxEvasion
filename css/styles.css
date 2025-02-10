@@ -13,11 +13,12 @@
     --color-button: #046A38;
     --color-header-active: #5cb8ec;
     --font-size-p: 1vw;
+    --font-style:normal;
 }
 
 
 body {
-    font-family: Arial Rounded MT Bold, Helvetica Rounded, Arial, sans-serif;
+    font-family: var(--font-style);
     line-height: 1.6;
     background-color: var(--color-background);
     color: var(--color-dark-writing);
