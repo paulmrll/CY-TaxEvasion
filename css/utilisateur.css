@@ -1,15 +1,21 @@
 
 h1{
-    margin-left: 2vw;
+    margin-top: 5vw;
     font-size: 3.5vw;
     font-weight: bold;
 }
 
 
 .compte-info-container{
-    margin-left: 5vw;
     display: grid;
     grid-template-columns: 1fr;
     font-size: 1.5vw;
+}
+
+.utilisateur{
+    background: var(--color-background-2);
+    padding: 0 1vw 1vw 1vw;
+    margin-top: 2vw;
+    border-radius: 2vw;
 }
 
