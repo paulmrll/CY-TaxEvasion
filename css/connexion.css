@@ -1,14 +1,13 @@
 table{
     margin: 0 auto;
-    margin-top: 10%;
+    margin-top: 5%;
     width: auto;
     text-align: center;
     background-color: white;
     font-family: 'Inter', sans-serif;
-    border: black 1px dotted;
+    border: black 1px solid;
 }
-table label{
-}
+
 table button{
     margin-left: 10%;
     margin-right: 10%;
@@ -34,5 +33,6 @@ table input:hover{
 table td,
 table tr, 
 table th{
-    border: 1px black dotted;
+    padding: 2vw;
+    border: 1px black solid;
 }
