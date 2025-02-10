@@ -1,3 +1,6 @@
+*{
+    box-sizing: border-box;
+}
 .title-container{
     display: flex;
     justify-content: space-between;
@@ -123,20 +126,15 @@ fieldset #buttons{
     width: 100%;
     text-align: center;
 }
-
 .maps{
     width: 100%;
-    height: auto;
-    margin: auto;
+    text-align: center;
+}
+.maps > img{
+    width: 40vw;
 }
 
 
-iframe{
-    display: block;
-    margin: auto;
-    max-width: 40%;
-    padding-top: 1vw;
-}
 
 
 
