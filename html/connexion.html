@@ -33,27 +33,35 @@
 </header>
 
 
-    <form action="../php/connexion.php" method="post"></form>
-        <table>
-            <tr>
-                <th colspan="2">Connexion</th>
-            </tr>
-            <tr>
-                <td><label for="Mail : ">Mail</label></td>
-                <td><input id="mail" name="mail" type="mail" placeholder="name.firstname@gmail.com"></td>
-            </tr>
-            <tr>
-                <td><label for="password">Mot de passe  :</label></td>
-                <td><input id="password" name="mdp" type="password" placeholder="PASSWORD"></td>
-            </tr>
-            <tr>
-                <td colspan="2"><button type="submit">Submit</button><button type="reset">Reset</button></td>
-            </tr>
-            <tr>
-                <td colspan="2">Pas de compte ? <a href="inscription.html">Inscrivez-vous</a></td>
-            </tr>
-        </table>
-    </form>
+    
+<form action="../php/connexion.php" method="post">
+    <table>
+        <tr>
+            <th colspan="2">Connexion</th>
+        </tr>
+        <tr>
+            <td><label for="mail">Mail :</label></td>
+            <td><input id="mail" name="mail" type="email" placeholder="name.firstname@gmail.com" required></td>
+        </tr>
+        <tr>
+            <td><label for="password">Mot de passe :</label></td>
+            <td><input id="password" name="mdp" type="password" placeholder="PASSWORD" required></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button type="submit">Submit</button>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2"><button type="reset">Reset</button></td>
+        </tr>
+        <tr>
+            <td colspan="2">Pas de compte ? <a href="inscription.html">Inscrivez-vous</a></td>
+        </tr>
+    </table>
+</form>
+
+    
 
 
 

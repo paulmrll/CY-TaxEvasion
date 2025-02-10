@@ -1,40 +1,74 @@
-
-
 table{
     margin: 0 auto;
-    margin-top: 10%;
-    width: auto;
+    margin-top: 5%;
+    width: 40vw;
     text-align: center;
-    background-color: white;
     font-family: 'Inter', sans-serif;
-    border: black 1px dotted;
+    border: green 1px solid;
+    border-radius: 20px;
+    background-color: var(--color-bar);
+    color: var(--color-light-writing);
 }
-table label{
-}
+
+
+
 table button{
     margin-left: 10%;
     margin-right: 10%;
+    width: 50%;
+    letter-spacing: 2vw;
+    text-align: center;
+    border-radius: 20vw;
+    background-color: var(--color-light-writing);
 }
-table input{
+
+label{
+    width: 30%;
 }
+input{
+    width: 70%;
+}
+
+
+
 table label:hover{
     cursor:text;
 }
-table button:hover[type="submit"]{
-    cursor: pointer;
-    color: green;
-    background-color: white;
-}
 table button:hover[type="reset"]{
     cursor: pointer;
-    color: orange;
-    background-color: black;
+    color: black;
+    background-color: orange;
+    border-radius: 2vw;
 }
 table input:hover{
     cursor: text;
+    
+}
+table input{
+    width: 100%;
+    height: 2vw;
+    border: green 1px solid;
+    border-radius: 20vw;
+    padding-left: 2vw;
+    padding-right: 2vw;
+}
+
+table button:hover[type="submit"]{
+    cursor: pointer;
+    background-color: green;
+    border-radius: 2vw;
 }
 table td,
 table tr, 
 table th{
-    border: 1px black dotted;
+    padding: 2vw;
+
+}
+td{
+
+    border-top: white 1px solid;
+}
+table a{
+    color:  var(--color-light-writing);
+    text-decoration: none;
 }

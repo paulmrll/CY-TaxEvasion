@@ -34,27 +34,40 @@
 </header>
 
 
+<form action="../php/inscription.php" method="post">
     <table>
-        <form action="../php/connexion.php" method="post">
-            <tr>
-                <th colspan="2">Inscription</th>
-            </tr>
-            <tr>
-                <td><label for="Mail : ">Mail</label></td>
-                <td><input id="mail" name="mail" type="mail" placeholder="name.firstname@gmail.com"></td>
-            </tr>
-            <tr>
-                <td><label for="password">Mot de passe  :</label></td>
-                <td><input id="password" name="mdp" type="password" placeholder="PASSWORD"></td>
-            </tr>
-            <tr>
-                <td colspan="2"><button type="submit">Submit</button><button type="reset">Reset</button></td>
-            </tr>
-            <tr>
-                <td colspan="2">Déjà un compte ? <a href="connexion.html">Se Connecter</a></td>
-            </tr>
-        </form>
+        <tr>
+            <th colspan="2">Inscription</th>
+        </tr>
+        <tr>
+            <td><label for="name">Nom :</label></td>
+            <td><input id="name" name="name" type="text" placeholder="nom" required></td>
+        </tr>
+        <tr>
+            <td><label for="firstname">Prénom :</label></td>
+            <td><input id="firstname" name="firstname" type="text" placeholder="prenom" required></td>
+        </tr>
+        <tr>
+            <td><label for="mail">Mail :</label></td>
+            <td><input id="mail" name="mail" type="email" placeholder="name.firstname@gmail.com" required></td>
+        </tr>
+        <tr>
+            <td><label for="password">Mot de passe :</label></td>
+            <td><input id="password" name="mdp" type="password" placeholder="password" required></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button type="submit">Submit</button>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2"><button type="reset">Reset</button></td>
+        </tr>
+        <tr>
+            <td colspan="2">Déjà un compte ? <a href="connexion.html">Connectez-vous</a></td>
+        </tr>
     </table>
+</form>
 
 
 
