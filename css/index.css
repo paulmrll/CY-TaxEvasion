@@ -29,7 +29,9 @@ header, main, footer {
         transform: translateY(0);
     }
 }
-
+.italic-text {
+    font-style: italic;
+}
 .center-text{
     display: flex;
     justify-content: center;
