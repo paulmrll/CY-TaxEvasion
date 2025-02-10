@@ -1,11 +1,11 @@
 
 header {
-    padding-left: 1.5vw;
     background-color: var(--color-bar);
     width: 100vw;
 }
 
 .header-container{
+    margin-left: 1.5vw;
     display: flex;
     justify-content: space-between;
     align-items: center;

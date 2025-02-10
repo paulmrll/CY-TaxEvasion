@@ -117,7 +117,7 @@ header, main, footer {
     height: auto;
     flex: 0 0 auto;
     overflow: hidden;
-    border-radius: 10px;
+    border-radius: 1vw;
     scroll-snap-align: center;
     transition: transform 0.3s ease-in-out;
 }
@@ -131,7 +131,7 @@ header, main, footer {
 }
 
 .grid-item h3 {
-    font-size: 1.5vw;
+    font-size: 1.3vw;
     position: absolute;
     top: 45%;
     left: 50%;
