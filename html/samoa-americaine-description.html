@@ -17,9 +17,17 @@
             <div class="header-left">
                 <a href="../index.html" class="header-link">CY-TAXEVASION </a>
             </div>
+
+            <div class="header-slogan">THE HOLIDAYS YOUR WALLET NEED</div>
+
+
             <div class="header-right">
-                <a href="../html/destination.html" class="header-link-active">Voir nos voyages</a>
-                <a href="../html/connexion.html" class="header-link-active">Se connecter</a>
+                <a href="../html/destination.html" class="header-link">Voir nos voyages</a>
+
+                <a href="../html/connexion.html" class="header-link">
+                    <div class="header-connect">Se connecter</div>
+                </a>
+
                 <a href="utilisateur.html" class="header-link"> <img class="header-user-logo" src="../image/anguilla.jpg" alt="utilisateur-logo"></a>
             </div>
         </div>
@@ -34,10 +42,13 @@
             <img class="main-image" src="../image/les-samoa-americaine.jpeg" alt="../image/les-samoa-americaine.jpg">
         </div>
 
-        <p>
-            Les Samoa américaines, territoire non incorporé des États-Unis dans le Pacifique Sud, se distinguent par leur autonomie fiscale et leurs paysages paradisiaques. Leur code fiscal indépendant permet une fiscalité plus avantageuse que celle des États-Unis, avec des taux réduits et des exonérations pour les entreprises.
-            L’archipel offre des opportunités économiques variées dans le tourisme, la pêche et l’industrie agroalimentaire. Grâce à ses incitations fiscales et ses zones franches, il constitue un choix stratégique pour les investisseurs cherchant à allier rentabilité et cadre de vie exceptionnel.
-        </p>
+
+        <div class="destination-text">
+            <p>
+                Les Samoa-américaines, territoire non incorporé des États-Unis dans le Pacifique Sud, se distinguent par leur autonomie fiscale et leurs paysages paradisiaques. Leur code fiscal indépendant permet une fiscalité plus avantageuse que celle des États-Unis, avec des taux réduits et des exonérations pour les entreprises.
+                L’archipel offre des opportunités économiques variées dans le tourisme, la pêche et l’industrie agroalimentaire. Grâce à ses incitations fiscales et ses zones franches, il constitue un choix stratégique pour les investisseurs cherchant à allier rentabilité et cadre de vie exceptionnel.
+            </p>
+        </div>
 
 
 
@@ -45,72 +56,75 @@
             <fieldset>
                 <legend>Réserver vos vacances</legend>
                 <form method="post" action="../php/samoa-americaine.php">
-                    <table>
-                        <tr>
-                            <th colspan="2">Vacances Samoa-Americaine : Jour 1 - 4</th>
-                        </tr>
-                        <tr>
-                            <td><label for="hotel1">Hotel</label></td>
-                            <td><select name="hotel1" id="hotel1" required placeholder="make your choice">
-                                <option value="tradewind_hotel">Tradewind Hotel</option>
-                                <option value="sadie_thompson_building">Sadie Thompson Building</option>
-                                <option value="moana_O_sina">Moana O Sina</option>
-                            </select></td>
-                        </tr>
-                        <tr>
-                            <td><label for="restaurant1">Restaurant</label></td>
-                            <td><input type="radio" id="restaurant1" name="restaurant1" value="Sadie-Thompson-Inn-Restaurant" required>Sadie Thompson Inn Restaurant
-                            <input type="radio" id="restaurant1" name="restaurant1" value="DDW-Beach-Cafe"required>DDW Beach Cafe
-                            <input type="radio" id="restaurant1" name="restaurant1" value="Paradise-Pizza-Restaurant"required>Paradise Pizza & Restaurant</td>
-                        </tr>
-                    </table>
-                    <br>
-                    <table>
-                        <tr>
-                            <th colspan="2">Vacances samoa-americaine : Jour 5 - 8</th>
-                        </tr>
-                        <tr>
-                            <td><label for="hotel2">Hotel</label></td>
-                            <td><select name="hotel2" id="hotel2" required placeholder="make your choice">
-                                <option value="tradewind_hotel">Tradewind Hotel</option>
-                                <option value="Vaoto_lodge">Vaoto Lodge</option>
-                                <option value="pago_airport_inn">Pago Airport Inn</option>
-                            </select></td>
-                        </tr>
-                        <tr>
-                            <td><label for="restaurant2">Restaurant</label></td>
-                            <td><input type="radio" id="restaurant2" name="restaurant2" value="tisa's_barefoot_bar" required>Tisa's Barefoot Bar
-                            <input type="radio" id="restaurant2" name="restaurant2" value="goat_island_cafe"required>Goat Island Cafe
-                            <input type="radio" id="restaurant2" name="restaurant2" value="flying_fox_brewing_company"required> Flying Fox Brewing Company</td>
-                        </tr>
-                    </table>
-                    <br>
-                    <table>
-                        <tr>
-                            <th colspan="2">Vacances samoa-americaine : Jour 8 - 12</th>
-                        </tr>
-                        <tr>
-                            <td><label for="hotel3">Hotel</label></td>
-                            <td><select name="hotel3" id="hotel3" required placeholder="make your choice">
-                                <option value="tradewind_hotel">Tradewind Hotel</option>
-                                <option value="Maliu_rai_reach_resort">Maliu Mai Beach Resort</option>
-                                <option value="fitiuta_lodge">Fitiuta Lodge</option>
-                            </select></td>
-                        </tr>
-                        <tr>
-                            <td><label for="restaurant3">Restaurant</label></td>
-                            <td><input type="radio" id="restaurant3" name="restaurant3" value="dickies_diner" required>Dickies Diner
-                            <input type="radio" id="restaurant3" name="restaurant3" value="emilio's_bakery"required>Emilio's Bakery
-                            <input type="radio" id="restaurant3" name="restaurant3" value="flying_fox_brewing_company"required> Flying Fox Brewing Company</td>
-                        </tr>
-                    </table>
-                    <div id="buttons">
+
+                    <fieldset>
+                        <legend>Vacances Samoa-Américaines : Jour 1 - 4</legend>
+
+                        <label for="hotel1">Hôtel :</label>
+                        <select name="hotel1" id="hotel1" required>
+                            <option value="" disabled selected>Choisissez un hôtel</option>
+                            <option value="tradewind_hotel">Tradewind Hotel</option>
+                            <option value="sadie_thompson_building">Sadie Thompson Building</option>
+                            <option value="moana_O_sina">Moana O Sina</option>
+                        </select>
+
+                        <fieldset>
+                            <legend class="restaurant-select">Restaurant :</legend>
+                            <label><input type="radio" name="restaurant1" value="Sadie-Thompson-Inn-Restaurant" required> Sadie Thompson Inn Restaurant</label>
+                            <label><input type="radio" name="restaurant1" value="DDW-Beach-Cafe" required> DDW Beach Cafe</label>
+                            <label><input type="radio" name="restaurant1" value="Paradise-Pizza-Restaurant" required> Paradise Pizza & Restaurant</label>
+                        </fieldset>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Vacances Samoa-Américaines : Jour 5 - 8</legend>
+
+                        <label for="hotel2">Hôtel :</label>
+                        <select name="hotel2" id="hotel2" required>
+                            <option value="" disabled selected>Choisissez un hôtel</option>
+                            <option value="tradewind_hotel">Tradewind Hotel</option>
+                            <option value="Vaoto_lodge">Vaoto Lodge</option>
+                            <option value="pago_airport_inn">Pago Airport Inn</option>
+                        </select>
+
+                        <fieldset>
+                            <legend class="restaurant-select">Restaurant :</legend>
+                            <label><input type="radio" name="restaurant2" value="tisa's_barefoot_bar" required> Tisa's Barefoot Bar</label>
+                            <label><input type="radio" name="restaurant2" value="goat_island_cafe" required> Goat Island Cafe</label>
+                            <label><input type="radio" name="restaurant2" value="flying_fox_brewing_company" required> Flying Fox Brewing Company</label>
+                        </fieldset>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Vacances Samoa-Américaines : Jour 8 - 12</legend>
+
+                        <label for="hotel3">Hôtel :</label>
+                        <select name="hotel3" id="hotel3" required>
+                            <option value="" disabled selected>Choisissez un hôtel</option>
+                            <option value="tradewind_hotel">Tradewind Hotel</option>
+                            <option value="Maliu_rai_reach_resort">Maliu Mai Beach Resort</option>
+                            <option value="fitiuta_lodge">Fitiuta Lodge</option>
+                        </select>
+
+                        <fieldset>
+                            <legend class="restaurant-select">Restaurant :</legend>
+                            <label><input type="radio" name="restaurant3" value="dickies_diner" required> Dickies Diner</label>
+                            <label><input type="radio" name="restaurant3" value="emilio's_bakery" required> Emilio's Bakery</label>
+                            <label><input type="radio" name="restaurant3" value="flying_fox_brewing_company" required> Flying Fox Brewing Company</label>
+                        </fieldset>
+                    </fieldset>
+
+                    <div class="form-buttons">
                         <button type="submit">Envoyer</button>
-                        <button type="reset">Reset</button>
+                        <button type="reset">Réinitialiser</button>
                     </div>
+
                 </form>
             </fieldset>
         </div>
+
+
+
 
         <div class="maps">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1991448.7946050332!2d-170.93032785863588!3d-12.872417108610989!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x71a684b79248fdc9%3A0xf3ee739e2dae4bdd!2sSamoa%20am%C3%A9ricaines!5e0!3m2!1sfr!2sfr!4v1738876860896!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -122,8 +136,11 @@
 
     <footer>
         <div class="footer-container">
-            <div class="contact">Nous contacter</div>
+            <div class="contact" >
+                <a href="../html/contact.html" class="footer-contact">Nous contacter</a>
+            </div>
             <div class="socials">
+                <div>Nos réseaux : </div>
                 <img class="twitter-logo" src="../image/twitter-logo.png" alt="twitter-logo">
                 <img class="instagram-logo" src="../image/instagram-logo.png" alt="instagram-logo.png">
             </div>
