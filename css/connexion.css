@@ -21,6 +21,7 @@ table button{
     text-align: center;
     border-radius: 20vw;
     background-color: var(--color-light-writing);
+    border: black solid 1px;
 }
 
 label{
