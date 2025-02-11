@@ -1,4 +1,3 @@
-
 table{
     margin: 0 auto;
     margin-top: 5%;
@@ -10,9 +9,6 @@ table{
     background-color: var(--color-bar);
     color: var(--color-light-writing);
 }
-
-
-
 table button{
     margin-left: 10%;
     margin-right: 10%;
@@ -23,16 +19,12 @@ table button{
     background-color: var(--color-light-writing);
     border: black solid 1px;
 }
-
 label{
     width: 30%;
 }
 input{
     width: 70%;
 }
-
-
-
 table label:hover{
     cursor:text;
 }
@@ -57,7 +49,7 @@ table input{
 
 table button:hover[type="submit"]{
     cursor: pointer;
-    background-color: green;
+    background-color: var(--color-background-2);
     border-radius: 2vw;
 }
 table td,
