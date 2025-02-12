@@ -1,24 +1,18 @@
 table{
-    margin: 0 auto;
-    margin-top: 5%;
+    margin: 5% auto ;
     width: 40vw;
     text-align: center;
     font-family: 'Inter', sans-serif;
     border: green 1px solid;
-    border-radius: 20px;
+    border-radius: 1.5vw;
     background-color: var(--color-bar);
     color: var(--color-light-writing);
 }
-table button{
-    margin-left: 10%;
-    margin-right: 10%;
-    width: 50%;
-    letter-spacing: 2vw;
-    text-align: center;
-    border-radius: 20vw;
-    background-color: var(--color-light-writing);
-    border: black solid 1px;
-}
+
+
+
+
+
 label{
     width: 30%;
 }
@@ -28,46 +22,59 @@ input{
 table label:hover{
     cursor:text;
 }
-table button:hover[type="reset"]{
-    cursor: pointer;
-    color: black;
-    background-color: orange;
-    border-radius: 2vw;
-}
+
 table input:hover{
     cursor: text;
     
 }
+
 table input{
-    width: 100%;
-    height: 2vw;
-    border: green 1px solid;
-    border-radius: 20px;
+    width: 90%;
+    height: 1.5vw;
+    border: green 0.1vw solid;
+    border-radius: 20vw;
     padding-left: 2vw;
     padding-right: 2vw;
 }
 
+
+table button{
+    margin: 0 5% 0 5%;
+    width: 20%;
+    letter-spacing: 0.3vw;
+    text-align: center;
+    border-radius: 20vw;
+    background-color: var(--color-light-writing);
+    border: black solid 1px;
+}
+
 table button:hover[type="submit"]{
     cursor: pointer;
-    background-color: var(--color-background-2);
+    background-color: var(--color-submit);
     border-radius: 2vw;
 }
-table td,
-table tr, 
-table th{
-    padding: 2vw;
 
+table button:hover[type="reset"]{
+    cursor: pointer;
+    background-color: var(--color-reset);
+    border-radius: 2vw;
 }
-td{
 
+
+table td, table tr, table th{
+    padding: 1.8vw 1vw 1.8vw 1vw;
+}
+
+td{
     border-top: white 1px solid;
 }
+
 table a{
     color:  var(--color-light-writing);
     text-decoration: none;
 }
 
-
-
-
-
+form a{
+    color: var(--color-header-active);
+    text-decoration: underline;
+}
