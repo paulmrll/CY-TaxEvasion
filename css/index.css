@@ -27,11 +27,9 @@ header, main, footer {
 }
 
 
-
 .italic-text {
     font-style: italic;
 }
-
 
 
 
@@ -64,9 +62,8 @@ header, main, footer {
 }
 
 
-
 .carousel-container {
-    padding: 2vw var(--spacing-lg);
+    padding: var(--spacing-sm) var(--spacing-md);
     width: 100%;
     background: var(--color-background-2);
 }
@@ -138,15 +135,15 @@ header, main, footer {
 
 
 .trading-container {
-    padding: 3vw 0;
+    padding: var(--spacing-sm) var(--spacing-md);
     background: var(--color-bar);
 }
 
 
 
 .trading-content{
-    margin-left: 10vw;
     display: flex;
+    justify-content: center;
     gap: 10vw;
 }
 
@@ -163,7 +160,7 @@ header, main, footer {
 
 
 .random-text{
-    padding: 10vw var(--spacing-lg);
+    padding: var(--spacing-sm) var(--spacing-md);
 }
 
 
@@ -171,7 +168,7 @@ header, main, footer {
 
 .map-container{
     background: var(--color-background-2);
-    padding: 10vw var(--spacing-lg);
+    padding: var(--spacing-sm) var(--spacing-md);
 }
 
 

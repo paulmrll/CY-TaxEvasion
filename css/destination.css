@@ -1,22 +1,21 @@
+
+
+
 h1{
-    padding: 1vw;
     font-size: 2vw;
     text-decoration: underline;
 }
 
+.intro-text{
+    padding: var(--spacing-sm) var(--spacing-md);
 
-
-
+}
 
 .grid-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 3vw;
-    padding:  4vw 6vw 6vw 6vw;
-    margin-left: 3vw;
-    margin-right: 3vw;
-    white-space: nowrap;
-
+    padding: var(--spacing-sm) var(--spacing-lg);
 }
 
 .grid-item{
