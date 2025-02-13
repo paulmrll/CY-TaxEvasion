@@ -1,3 +1,34 @@
 
 
 
+
+.contact-div{
+    background: var(--color-background-2);
+    padding: 0 1vw 1vw 1vw;
+    margin-top: 3vw;
+    border-radius: 3vw;
+    width: 100%;
+
+}
+h1{
+    text-align: center;
+}
+.information{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-size: 1.5vw;
+    gap: 1vw;
+    text-align: center;
+    width: 30%;
+    margin-left: 35%;
+}
+.information > img{
+    width: 2vw;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+
+

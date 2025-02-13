@@ -1,4 +1,3 @@
-
 h1{
     margin-top: 5vw;
     font-size: 3.5vw;
@@ -8,8 +7,11 @@ h1{
 
 .compte-info-container{
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     font-size: 1.5vw;
+    width: 70%;
+    margin-left: 25%;
+    text-align: center;
 }
 
 .utilisateur{
@@ -17,5 +19,24 @@ h1{
     padding: 0 1vw 1vw 1vw;
     margin-top: 2vw;
     border-radius: 2vw;
+    width: 100%;
 }
 
+button{
+    background: var(--color-light-writing);
+    width: 10%;
+    border: solid var(--color-light-writing) 0.1vw;
+    border-radius: 2vw;
+}
+button:active{
+    background: var(--color-light-writing);
+    width: 10%;
+    border: solid var(--color-light-writing) 0.1vw;
+    border-radius: 2vw;
+    transform: scale(0.9);
+}
+
+main div button img{
+    width: 100%;
+
+}
