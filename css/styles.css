@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
 
 :root {
     --color-title-blue: #111827;
@@ -12,6 +14,7 @@
     --color-header-active: #5cb8ec;
     --color-reset: #ed825f;
     --color-submit: #5cb8ec;
+    --color-map: #2a29cd;
     --font-size-p: 1vw;
     --font-style:normal;
     --spacing-sm: 5vw;
@@ -28,6 +31,7 @@
 
 
 body {
+    font-family: Poppins;
     font-size: 1vw;
     line-height: 1.6;
     background-color: var(--color-background);

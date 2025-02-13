@@ -44,7 +44,7 @@ header, main, footer {
 
 
 .search-bar input{
-    background-color: rgba(50, 50, 50, 0.6);
+    background-color: rgba(50, 50, 50, 0.4);
     color: var(--color-light-writing);
     border: 1px solid #555555;
     font-size: 1.5vw;
@@ -60,7 +60,6 @@ header, main, footer {
 
 .search-bar-title{
     font-size: 2vw;
-    background-color: rgba(50, 50, 50, 0.6);
     color: var(--color-light-writing);
     padding: 0 1vw;
     margin-bottom: 1vw;
@@ -186,33 +185,50 @@ header, main, footer {
 
 
 
-
 .map-container{
     background: var(--color-background-2);
-    padding: var(--spacing-sm) var(--spacing-md);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+    padding: var(--spacing-sm) var(--spacing-sm);
 }
 
 
-
 .map-content{
-    display: flex;
-    gap: 10vw;
+    position: relative;
     align-items: center;
-    justify-content: center;
 }
 
 
 .map-image{
-    width: 40%;
-
+    width: 100%;
     height: auto;
-    border-radius: 5vw;
+    border-radius: 3vw;
 }
 
+.ping-container{
+    position: relative;
+}
+
+.ping{
+    position: absolute;
+    width: 0.5vw;
+    height: 0.5vw;
+    background: red;
+    border-radius: 50%;
+    font-size: 0.5vw;
+    white-space: nowrap;
+}
+
+
+.ping-text{
+    font-size: 1vw;
+    position: relative;
+    transform: translate(95%, -90%);
+}
+
+
+
+
 .map-text{
-    padding-top: 10vw;
+    font-size: 2vw;
+    font-family: Poppins;
+    color: var(--color-map);
 }
