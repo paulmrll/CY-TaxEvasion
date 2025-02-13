@@ -4,22 +4,20 @@ header {
 }
 
 
-.header-container{
+.header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 2vw 0 2vw;
 }
 
-
-.header-left{
+.header-left {
     font-weight: normal;
     font-size: 1.5vw;
     font-family: 'Courier New', Courier, monospace;
 }
 
-
-.header-slogan{
+.header-slogan {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
@@ -29,49 +27,48 @@ header {
     font-size: 1vw;
 }
 
-.header-right{
+.header-right {
     display: flex;
     align-items: center;
     gap: 1.5vw;
     font-size: 1vw;
 }
 
-.header-link{
+.header-link {
     font-family: 'Courier New', Courier, monospace;
     text-decoration: none;
     color: var(--color-light-writing);
 }
 
 
-.header-user-logo{
+.header-user-logo {
     width: 4vw;
     height: auto;
     margin-top: 0.8vw;
 }
 
 
-.header-right a:hover, .header-left a:hover{
+.header-right a:hover, .header-left a:hover {
     color: var(--color-header-active);
     cursor: pointer;
 }
 
-.header-link-active{
+.header-link-active {
     font-family: 'Courier New', Courier, monospace;
     color: var(--color-header-active);
     text-decoration: underline;
 }
 
 
-.header-connect{
+.header-connect {
     border: 0.08vw solid var(--color-light-writing);
     padding: 0.3vw 0.5vw;
     border-radius: 0.3vw;
 }
 
-.header-connect:hover{
+
+.header-connect:hover {
     background-color: var(--color-header-active);
-    border: 2px solid var(--color-header-active);
-    padding: 5px 10px;
-    border-radius: 5px;
+    border: 0.08vw solid var(--color-header-active);
     color: var(--color-light-writing)
 }

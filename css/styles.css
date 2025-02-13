@@ -16,8 +16,9 @@
     --font-style:normal;
     --spacing-sm: 2vw;
     --spacing-md: 4vw;
-    --spacing-lg: 8vw;
+    --spacing-lg: 10vw;
 }
+
 
 * {
     margin: 0;
@@ -27,13 +28,8 @@
 
 
 body {
+    font-size: 1vw;
     line-height: 1.6;
     background-color: var(--color-background);
     color: var(--color-dark-writing);
-}
-
-
-main{
-
-    box-sizing: border-box;
 }
