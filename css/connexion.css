@@ -29,11 +29,12 @@ table input:hover{
 
 table input{
     width: 90%;
-    height: 1.5vw;
+    height: 3vw;
     border: var(--color-background-2) 0.1vw solid;
     border-radius: 20vw;
     padding-left: 2vw;
     padding-right: 2vw;
+    font-size: 0.7vw;
     text-align: center;
 }
 
