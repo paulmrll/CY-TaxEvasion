@@ -1,31 +1,23 @@
-*{
-    box-sizing: border-box;
-}
 
 body{
     position: relative;
     min-height: 100vh;
-    padding-bottom: 8vw;
 }
 
+
+
 footer{
-    position: absolute;
-    bottom: 0;
     background-color: var(--color-bar);
-    width: 100%;
     font-size: 1.5vw;
     color: var(--color-header-active);
 }
 
 
 .footer-container{
-    max-width: 70vw;
-    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 0.5vw;
-    padding-bottom: 0.5vw;
+    padding: 0.5vw 2vw 0.5vw 2vw;
 }
 
 

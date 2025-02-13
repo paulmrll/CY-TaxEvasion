@@ -18,6 +18,13 @@ label{
 input{
     width: 70%;
 }
+
+
+table{
+    font-size: 1vw;
+}
+
+
 table label:hover{
     cursor:text;
 }

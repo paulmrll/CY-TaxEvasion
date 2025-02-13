@@ -1,6 +1,4 @@
 
-
-
 :root {
     --color-title-blue: #111827;
     --color-full-white: #f6f6f6;
@@ -14,26 +12,28 @@
     --color-header-active: #5cb8ec;
     --color-reset: #ed825f;
     --color-submit: #5cb8ec;
-
     --font-size-p: 1vw;
     --font-style:normal;
+    --spacing-sm: 2vw;
+    --spacing-md: 4vw;
+    --spacing-lg: 8vw;
 }
 
-
-body {
-    font-family: var(--font-style);
-    line-height: 1.6;
-    background-color: var(--color-background);
-    color: var(--color-dark-writing);
-    padding: 0;
+* {
     margin: 0;
-}
-
-
-main{
-    margin-right: 10vw;
-    margin-left: 10vw;
+    padding: 0;
     box-sizing: border-box;
 }
 
 
+body {
+    line-height: 1.6;
+    background-color: var(--color-background);
+    color: var(--color-dark-writing);
+}
+
+
+main{
+
+    box-sizing: border-box;
+}

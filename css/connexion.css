@@ -18,6 +18,9 @@ label{
 input{
     width: 70%;
 }
+
+
+
 table label:hover{
     cursor:text;
 }

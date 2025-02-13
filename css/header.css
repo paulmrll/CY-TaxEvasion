@@ -1,15 +1,16 @@
 
 header {
     background-color: var(--color-bar);
-    width: 100vw;
 }
 
+
 .header-container{
-    margin-left: 1.5vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0 2vw 0 2vw;
 }
+
 
 .header-left{
     font-weight: normal;
@@ -33,7 +34,6 @@ header {
     align-items: center;
     gap: 1.5vw;
     font-size: 1vw;
-    padding-right: 3vw;
 }
 
 .header-link{
@@ -41,6 +41,7 @@ header {
     text-decoration: none;
     color: var(--color-light-writing);
 }
+
 
 .header-user-logo{
     width: 4vw;
