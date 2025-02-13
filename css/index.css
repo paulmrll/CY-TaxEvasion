@@ -209,6 +209,7 @@ header, main, footer {
 .map-image{
     width: 40%;
     height: auto;
+    margin-top: 5vw;
     border-radius: 5vw;
 }
 

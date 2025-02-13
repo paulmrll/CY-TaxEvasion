@@ -45,6 +45,10 @@ footer{
 }
 
 .twitter-logo, .instagram-logo {
+    padding-top: 0.8vw;
     width: 3vw;
     height: auto;
+}
+img{
+    width: 3vw;
 }
