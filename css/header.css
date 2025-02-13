@@ -70,5 +70,8 @@ header {
 .header-connect:hover {
     background-color: var(--color-header-active);
     border: 0.08vw solid var(--color-header-active);
-    color: var(--color-light-writing)
+    padding: 0.3vw 0.5vw;
+    border-radius: 0.3vw;
+    color: var(--color-light-writing);
+    transform: scale(1.1);
 }
