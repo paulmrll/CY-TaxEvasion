@@ -27,7 +27,12 @@
 }
 
 
-
+body {
+    font-size: 1vw;
+    line-height: 1.6;
+    background-color: var(--color-background);
+    color: var(--color-dark-writing);
+}
 
 @keyframes slideIn {
     from {
@@ -48,3 +53,4 @@
         opacity: 1;
     }
 }
+
