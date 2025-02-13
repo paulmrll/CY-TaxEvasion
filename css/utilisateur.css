@@ -1,5 +1,4 @@
 h1{
-    margin-top: 5vw;
     font-size: 3vw;
     font-weight: bold;
     text-align: center;
@@ -15,12 +14,12 @@ h1{
     text-align: center;
 }
 
+
 .utilisateur{
     background: var(--color-background-2);
-    padding: 0 1vw 1vw 1vw;
-    margin-top: 2vw;
     border-radius: 2vw;
-    width: 100%;
+    margin: 7vw 25vw;
+    padding: 4vw 0;
 }
 
 

@@ -74,3 +74,39 @@ header {
     color: var(--color-light-writing);
     transform: scale(1.03);
 }
+
+
+.header-right div {
+    position: relative;
+}
+
+
+.header-jet-icon {
+    position: absolute;
+    bottom: -1.2vw;
+    left: -1vw;
+    transition: transform 0.15s ease-in-out 0.1s;
+    will-change: transform;
+    pointer-events: none;
+}
+
+
+.header-voir-voyage-text {
+    transform: scale(2);
+    padding: 1vw;
+}
+
+
+.header-voir-voyage-text:hover + .header-jet-icon {
+    transform: translateX(10vw) translateY(0.5vw);
+}
+
+
+.header-right a:hover {
+    color: var(--color-header-active);
+    cursor: pointer;
+}
+
+
+
+
