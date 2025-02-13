@@ -143,8 +143,8 @@ header, main, footer {
 
 .trading-content{
     display: flex;
-    justify-content: center;
     gap: 10vw;
+    justify-content: center;
 }
 
 
@@ -169,17 +169,24 @@ header, main, footer {
 .map-container{
     background: var(--color-background-2);
     padding: var(--spacing-sm) var(--spacing-md);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
+
 
 
 .map-content{
     display: flex;
     gap: 10vw;
+    align-items: center;
 }
 
 
 .map-image{
     width: 40%;
+
     height: auto;
     border-radius: 5vw;
 }
