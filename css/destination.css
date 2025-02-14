@@ -25,6 +25,7 @@ h1{
 .grid-container {
     display: grid;
     grid-template-columns: 1fr;
+    overflow: hidden;
 }
 
 .grid-item{
@@ -70,15 +71,15 @@ h1{
 
 
 .grid-item h3 {
-    font-size: 1rem;
+    font-size: 1.5rem;
     position: absolute;
     top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: var(--color-light-writing);
-    text-shadow: 2px 2px var(--color-dark-writing);
+    text-shadow: 0.1rem 0.1rem var(--color-dark-writing);
     font-weight: bold;
-    padding: 10rpx 15rpx;
+    padding: 10rem 15rem;
     text-align: center;
     width: auto;
     white-space: nowrap;
