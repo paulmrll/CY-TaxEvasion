@@ -1,0 +1,34 @@
+*{
+    box-sizing: border-box;
+}
+
+.users-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 2vw;
+    padding-top: 10vw;
+}
+
+table{
+    border-spacing: 0vw;
+    border: 0.1vw solid black;
+    border-radius: 2vw;
+}
+
+th, td{
+    padding: 1vw;
+    text-align: center;
+}
+
+td{
+    border-top: 0.1vw solid black;
+    border-right: 0.1vw solid black;
+}
+th{
+    border-right: 0.1vw solid black;
+}
+
+td:last-child, th:last-child{
+    border-right: none;
+}
