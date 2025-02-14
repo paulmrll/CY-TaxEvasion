@@ -3,32 +3,35 @@
 }
 
 .users-container{
-    width: 100%;
+    width: 100vw;
     display: flex;
     justify-content: center;
-    margin-top: 2vw;
-    padding-top: 10vw;
+    margin-top: 10rem;
 }
 
 table{
     border-spacing: 0vw;
-    border: 0.1vw solid black;
-    border-radius: 2vw;
+    border: 0.1rem solid black;
+    border-radius: 1rem;
 }
 
 th, td{
-    padding: 1vw;
+    padding: 0.1rem;
     text-align: center;
 }
 
 td{
-    border-top: 0.1vw solid black;
-    border-right: 0.1vw solid black;
+    border-top: 0.1rem solid black;
+    border-right: 0.1rem solid black;
 }
 th{
-    border-right: 0.1vw solid black;
+    border-right: 0.1rem solid black;
 }
 
 td:last-child, th:last-child{
     border-right: none;
+}
+td, th{
+    padding: 1rem;
+    width: 100%;
 }
