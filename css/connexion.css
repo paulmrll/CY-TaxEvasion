@@ -1,5 +1,5 @@
 table{
-    margin: 5% auto ;
+    margin: 8% auto ;
     width: 50rem;
     text-align: center;
     font-family: 'Inter', sans-serif;
@@ -7,6 +7,7 @@ table{
     border-radius: 1.5rem;
     background-color: var(--color-background-2);;
     color: var(--color-dark-writing);
+
 }
 
 
