@@ -16,11 +16,11 @@
     --color-submit: #5cb8ec;
     --color-map-grey: #555555;
     --color-map-red: red;
-    --font-size-p: 1vw;
+    --font-size-p: 1rem;
     --font-style:normal;
-    --spacing-sm: 4vw;
-    --spacing-md: 10vw;
-    --spacing-lg: 20vw;
+    --spacing-sm: 4rem;
+    --spacing-md: 10rem;
+    --spacing-lg: 20rem;
 }
 
 

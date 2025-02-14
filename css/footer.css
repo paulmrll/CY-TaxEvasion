@@ -6,7 +6,7 @@
 body{
     position: relative;
     min-height: 100vh;
-    padding-bottom: 8vw;
+    padding-bottom: 8rem;
 }
 
 footer{
@@ -14,24 +14,22 @@ footer{
     bottom: 0;
     background-color: var(--color-bar);
     width: 100%;
-    font-size: 1.5vw;
+    font-size: 1.5rem;
     color: var(--color-header-active);
 }
 
 
 .footer-container{
-    max-width: 70vw;
+    max-width: 80rem;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 0.5vw;
-    padding-bottom: 0.5vw;
+
 }
 
 
 .footer-contact{
-    font-size: 1.5vw;
     color: var(--color-header-active);
     text-decoration: none;
 }
@@ -40,16 +38,16 @@ footer{
 .socials{
     display: flex;
     align-items: center;
-    gap: 0.7vw;
-    padding-right: 1.5vw;
+    gap: 0.7rem;
+    padding-right: 1.5rem;
 
 }
 
 .twitter-logo, .instagram-logo {
-    padding-top: 0.8vw;
-    width: 3vw;
+    padding-top: 0.8rem;
+    width: 4rem;
     height: auto;
 }
 img{
-    width: 3vw;
+    width: 4rem;
 }
