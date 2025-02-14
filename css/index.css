@@ -5,6 +5,7 @@ header, main, footer {
     animation: slideIn 1s ease-in-out forwards;
 }
 
+
 .video-background {
     position: fixed;
     object-fit: cover;
@@ -38,7 +39,7 @@ header, main, footer {
     background-size: cover;
     background-position: 100% 40%;
     padding: var(--spacing-md);
-    padding-bottom: 33rem;
+    padding-bottom: 34rem;
 }
 
 
@@ -46,19 +47,19 @@ header, main, footer {
     background-color: rgba(50, 50, 50, 0.4);
     color: var(--color-light-writing);
     border: 1px solid #555555;
-    font-size: 1.5vw;
+    font-size: 2rem;
 }
 
 .search-bar {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0.5vw;
+    gap: 0.5rem;
 }
 
 
 .search-bar-title {
-    font-size: 2vw;
+    font-size: 2.3rem;
     color: var(--color-light-writing);
     padding: 0 1vw;
     margin-bottom: 1vw;
@@ -169,7 +170,7 @@ header, main, footer {
 }
 
 
-.trading-items {
+.trading-items{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -192,10 +193,10 @@ header, main, footer {
 }
 
 
+
+
 .random-text {
     padding: var(--spacing-sm) var(--spacing-md);
-    justify-content: center;
-    text-align: center;
     text-align-last: center;
 }
 
@@ -204,6 +205,7 @@ header, main, footer {
     background: var(--color-background-2);
     padding: var(--spacing-sm) var(--spacing-md);
 }
+
 
 
 .map-image {
@@ -234,14 +236,10 @@ header, main, footer {
 
 .ping:hover{
     background: var(--color-header-active);
-
 }
-
-.ping:hover .ping-text{
+.ping-text:hover{
     color: var(--color-map-grey);
 }
-
-
 
 
 .ping-text {

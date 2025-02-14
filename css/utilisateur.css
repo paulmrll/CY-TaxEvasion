@@ -30,6 +30,15 @@ h1{
 
 }
 
+
+.grid-line-container div a:nth-child(2){
+    font-size: 1.5rem;
+    background: var(--color-background);
+    padding: 0 5rem;
+    border-radius: 1rem;
+    border: 0.09rem solid var(--color-dark-writing);
+}
+
 .grid-line-container a{
     flex: 1;
     text-align: left;
@@ -37,10 +46,9 @@ h1{
 
 
 
-
 button{
     background: var(--color-light-writing);
-    width: 8%;
+    width: 7%;
     border: solid var(--color-light-writing) 0.1rem;
     border-radius: 2rem;
 }
