@@ -15,6 +15,7 @@ header, main, footer {
     height: 100vh;
     overflow: hidden;
     z-index: -1;
+
 }
 
 
@@ -248,5 +249,10 @@ header, main, footer {
     position: relative;
     color: var(--color-light-writing);
     transform: translateX(1.1rem) translateY(-1.5rem);
+    text-decoration: none;
+}
+
+a{
+    color: var(--color-light-writing);
     text-decoration: none;
 }
