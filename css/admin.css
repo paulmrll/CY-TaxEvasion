@@ -33,4 +33,5 @@ td:last-child, th:last-child{
 }
 td, th{
     padding: 1rem;
+    width: 100%;
 }
