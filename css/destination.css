@@ -10,6 +10,8 @@ h1{
     display: flex;
     padding: var(--spacing-sm) var(--spacing-sm);
     gap: 5rem;
+    justify-content: center;
+    align-items: center;
 }
 
 .intro-text{
@@ -18,8 +20,9 @@ h1{
 
 .intro-image{
     width: 25%;
-    height: auto;
+    height: 25%;
     border-radius: 1rem;
+
 }
 
 .grid-container {
