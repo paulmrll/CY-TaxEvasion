@@ -1,8 +1,8 @@
 
 header {
     background-color: var(--color-bar);
-    height: 7rem;
-
+    white-space: nowrap;
+    margin: 0 auto;
 }
 
 
@@ -10,20 +10,19 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 2rem;
+    gap: 2rem;
+    padding: 0 2rem ;
 }
 
 .header-left {
     font-weight: normal;
     font-size: 2rem;
     font-family: 'Courier New', Courier, monospace;
+    align-items: center;
 }
 
+
 .header-slogan {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
     font-family: 'Courier New', Courier, monospace;
     color: var(--color-light-writing);
     font-size: 1.3rem;
@@ -45,9 +44,9 @@ header {
 
 
 .header-user-logo {
-    width: 5rem;
+    width: 3rem;
     height: auto;
-    margin-top: 0.9rem;
+    margin-top: 0.9vw;
 }
 
 
@@ -65,15 +64,15 @@ header {
 
 .header-connect {
     border: 0.1rem solid var(--color-light-writing);
-    padding: 0.2rem 0.5rem;
-    border-radius: 0.3rem;
+    padding: 0.2vw 0.5vw;
+    border-radius: 0.3vw;
 }
 
 
 .header-connect:hover {
     background-color: var(--color-header-active);
-    border: 0.1rem solid var(--color-header-active);
-    border-radius: 0.3rem;
+    border: 0.1vw solid var(--color-header-active);
+    border-radius: 0.3vw;
     color: var(--color-light-writing);
     transform: scale(1.03);
 }
@@ -100,7 +99,7 @@ header {
 
 
 .header-voir-voyage-text:hover + .header-jet-icon {
-    transform: translateX(13.5rem) translateY(0.8rem);
+    transform: translateX(30rem) translateY(18rem);
 }
 
 

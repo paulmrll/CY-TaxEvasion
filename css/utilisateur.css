@@ -1,43 +1,56 @@
 h1{
-    font-size: 3vw;
+    font-size: 3rem;
     font-weight: bold;
     text-align: center;
 }
 
 
-.compte-info-container{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    font-size: 1.5vw;
-    width: 70%;
-    margin-left: 25%;
-    text-align: center;
-}
-
-
 .utilisateur{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background: var(--color-background-2);
-    border-radius: 2vw;
-    margin: 7vw 25vw;
-    padding: 4vw 0;
+    border-radius: 2rem;
+    margin: 5rem 25rem;
+    padding: 1rem 8rem;
 }
+
+.compte-info-container{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    font-size: 2rem;
+}
+
+.grid-line-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.grid-line-container a{
+    flex: 1;
+    text-align: left;
+}
+
+
 
 
 button{
     background: var(--color-light-writing);
-    width: 10%;
-    border: solid var(--color-light-writing) 0.1vw;
-    border-radius: 2vw;
+    width: 8%;
+    border: solid var(--color-light-writing) 0.1rem;
+    border-radius: 2rem;
 }
 button:active{
     background: var(--color-light-writing);
-    width: 10%;
-    border: solid var(--color-light-writing) 0.1vw;
-    border-radius: 2vw;
+    border: solid var(--color-light-writing) 0.1rem;
+    border-radius: 2rem;
     transform: scale(0.9);
 }
 
 main div button img{
     width: 100%;
-    
 }
