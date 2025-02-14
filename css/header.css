@@ -1,6 +1,8 @@
 
 header {
     background-color: var(--color-bar);
+    height: 7rem;
+
 }
 
 
@@ -25,6 +27,7 @@ header {
     font-family: 'Courier New', Courier, monospace;
     color: var(--color-light-writing);
     font-size: 1.3rem;
+
 }
 
 .header-right {
@@ -97,7 +100,7 @@ header {
 
 
 .header-voir-voyage-text:hover + .header-jet-icon {
-    transform: translateX(13.5rem) translateY(0.9rem);
+    transform: translateX(13.5rem) translateY(0.8rem);
 }
 
 

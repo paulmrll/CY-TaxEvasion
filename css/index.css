@@ -232,13 +232,16 @@ header, main, footer {
 }
 
 
-.ping:hover {
+.ping:hover{
     background: var(--color-header-active);
+
 }
 
-.ping-text:hover {
+.ping:hover .ping-text{
     color: var(--color-map-grey);
 }
+
+
 
 
 .ping-text {

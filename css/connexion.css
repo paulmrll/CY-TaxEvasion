@@ -1,14 +1,13 @@
 table{
     margin: 5% auto ;
-    width: 40vw;
+    width: 50rem;
     text-align: center;
     font-family: 'Inter', sans-serif;
     border: var(--color-background-2) 1px solid;
-    border-radius: 1.5vw;
+    border-radius: 1.5rem;
     background-color: var(--color-background-2);;
     color: var(--color-dark-writing);
 }
-
 
 
 
@@ -20,6 +19,10 @@ input{
 }
 
 
+table{
+    font-size: 1.5rem;
+}
+
 
 table label:hover{
     cursor:text;
@@ -30,33 +33,35 @@ table input:hover{
 
 }
 
+
 table input{
     width: 90%;
-    height: 3vw;
-    border: var(--color-background-2) 0.1vw solid;
-    border-radius: 20vw;
-    padding-left: 2vw;
-    padding-right: 2vw;
-    font-size: 0.7vw;
+    height: 3rem;
+    border: var(--color-background-2) 0.1rem solid;
+    border-radius: 20rem;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    font-size: 1rem;
     text-align: center;
 }
 
 
 table button{
-    margin: 0 5% 0 5%;
+    margin: 0 5%;
     width: 20%;
-    letter-spacing: 0.3vw;
+    letter-spacing: 0.3rem;
     text-align: center;
-    border-radius: 20vw;
+    border-radius: 20rem;
     background-color: var(--color-light-writing);
-    border: black solid 1px;
+    border: black solid 0.1rem;
 }
 
 table button:hover[type="submit"]{
     cursor: pointer;
     background-color: var(--color-submit);
-    border-radius: 2vw;
 }
+
+
 button:active{
     transform: scale(0.9);
 }
@@ -69,14 +74,12 @@ table button:hover[type="reset"]{
 
 
 table td, table tr, table th{
-    padding: 1.8vw 1vw 1.8vw 1vw;
+    padding: 1.8rem 1rem;
 }
 
 td{
-    border-top: white 1px solid;
+    border-top: white 0.1rem solid;
 }
-
-
 
 form a{
     color: var(--color-header-active);

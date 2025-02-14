@@ -1,6 +1,4 @@
 
-
-
 h1{
     font-size: 2rem;
     text-decoration: underline;
@@ -48,7 +46,6 @@ h1{
 
 .grid-line-container:hover{
     transform: scale(1.1);
-
 }
 
 .grid-line-container:nth-child(3n+1) {
@@ -97,9 +94,6 @@ h1{
     transform: translate(-50%, -50%);
 }
 
-.grid-item:hover > a > img {
-    transform: scale(1.1);
-}
 
 
 
