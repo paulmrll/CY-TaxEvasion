@@ -14,10 +14,11 @@
     --color-header-active: #5cb8ec;
     --color-reset: #ed825f;
     --color-submit: #5cb8ec;
-    --color-map: #2a29cd;
+    --color-map-grey: #555555;
+    --color-map-red: red;
     --font-size-p: 1vw;
     --font-style:normal;
-    --spacing-sm: 5vw;
+    --spacing-sm: 4vw;
     --spacing-md: 10vw;
     --spacing-lg: 20vw;
 }
@@ -33,7 +34,7 @@
 body {
     font-family: Poppins;
     font-size: 1vw;
-    line-height: 1.6;
+    line-height: 2;
     background-color: var(--color-background);
     color: var(--color-dark-writing);
 }
