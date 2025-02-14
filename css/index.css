@@ -23,7 +23,7 @@ header, main, footer {
     left: 50%;
     width: 120%;
     height: 120%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -55%);
     pointer-events: none;
 }
 
@@ -38,7 +38,7 @@ header, main, footer {
     background-size: cover;
     background-position: 100% 40%;
     padding: var(--spacing-md);
-    padding-bottom: 32rem;
+    padding-bottom: 33rem;
 }
 
 
@@ -226,7 +226,7 @@ header, main, footer {
     height: 1rem;
     background: var(--color-map-red);
     border-radius: 50%;
-    font-size: 0.5rem;
+    font-size: 0.2rem;
     white-space: nowrap;
     text-decoration: none;
 }
@@ -241,10 +241,9 @@ header, main, footer {
 
 
 .ping-text {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     position: relative;
     color: var(--color-light-writing);
-    transform: translateX(1.2rem) translateY(-1.5rem);
+    transform: translateX(1.1rem) translateY(-1.5rem);
     text-decoration: none;
-
 }
