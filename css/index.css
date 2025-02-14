@@ -81,7 +81,7 @@ header, main, footer {
 
 
 .carousel-container {
-    padding: var(--spacing-sm) var(--spacing-md);
+    padding: var(--spacing-sm) var(--spacing-sm);
     width: 100%;
     background: var(--color-background-2);
 }
