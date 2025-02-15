@@ -1,18 +1,15 @@
 
-p{
-    padding-bottom: 5rem;
-}
 
 .flag-image {
     content: '';
     position: relative;
     top: 0;
     left: 0;
-    width: 100%; 
+    width: 100%;
     height: 90%;
     background-size: cover;
     background-position: center;
-    opacity: 0.6; 
+    opacity: 0.6;
     z-index: 0;
 }
 
@@ -39,11 +36,13 @@ h1 {
 
 
 .destination-text {
+    display: flex;
+    justify-content: center;
     text-align: justify;
-    font-size: var(--font-size-p);
+    font-size: 1.1rem;
     font-family: 'Courier New', Courier, monospace;
     color: var(--color-light-writing);
-    padding: var(--spacing-sm) var(--spacing-sm);
+    padding: var(--spacing-lg) var(--spacing-sm);
 }
 
 .destination-text {
@@ -54,7 +53,6 @@ h1 {
     background: var(--color-bar);
     padding: var(--spacing-sm) var(--spacing-md);
 }
-
 
 
 .maps {
@@ -68,35 +66,18 @@ h1 {
 }
 
 
-
-
-
-
-
-
-.reservation-option-container{
+.reservation-option-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     background: var(--color-background-2);
-    margin: var(--spacing-sm) var(--spacing-md) var(--spacing-md);
+    margin: var(--spacing-md) var(--spacing-lg);
     border-radius: 1.5rem;
     gap: 2rem;
 }
 
 
-
-
-.reservation-option-part{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 2rem;
-    padding: 2rem;
-}
-
-.reservation-slider-container{
+.reservation-slider-container {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -106,28 +87,28 @@ h1 {
 }
 
 
-.reservation-checkbox{
+.reservation-checkbox {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     gap: 2rem;
-    white-space: nowrap;
 }
 
-.reservation-select{
+.reservation-select {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     gap: 2rem;
-    white-space: nowrap;
 }
 
-.reservation-select select{
+
+
+.reservation-select select {
     cursor: pointer;
-    font-size: 1rem;
-    padding: 0.3rem 1.5rem 0 0.5rem;
+    font-size: 1.2rem;
+    padding: 0.3rem 1.5rem;
     border: 0.1rem solid #ccc;
     border-radius: 0.5rem;
     text-align: center;
@@ -140,12 +121,26 @@ h1 {
 }
 
 
-input[type=checkbox]{
+.reservation-date {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+input[type=checkbox] {
     display: none;
 }
 
-input[type=date]{
+input[type=date] {
     cursor: pointer;
+    font-size: 1rem;
+    padding: 0.3rem 1.5rem;
+    border: 0.1rem solid var(--color-light-border);
+    border-radius: 0.5rem;
+    text-align: center;
+    color: var(--color-dark-writing);
 }
 
 
@@ -155,26 +150,62 @@ input[type="checkbox"]:checked + .reservation-button {
     transform: scale(1.05);
 }
 
-.reservation-button{
+
+input[type="date"]{
+    font-size: 1.2rem;
+}
+
+
+.reservation-button {
     cursor: pointer;
     border-radius: 1rem;
     padding: 0.5rem;
     background: var(--color-header-active-lighter);
-
+    font-size: 1.2rem;
 }
 
-button{
+.button-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+button {
+    color: var(--color-dark-writing);
+    text-align: center;
+    font-size: 1.3rem;
+    border-radius: 1rem 0.1rem;
+    background-color: var(--color-light-writing);
+    padding: 0.4rem 0.8rem;
+    border: 0.1rem var(--color-dark-writing) solid;
     cursor: pointer;
 }
 
+button:hover[type="submit"] {
+    background-color: var(--color-submit);
+    border: 0.1rem var(--color-submit) solid;
+}
 
-h2{
+button:hover[type="reset"] {
+    background-color: var(--color-reset);
+    border: 0.1rem var(--color-reset) solid;
+}
+
+
+button:active {
+    transform: scale(0.9);
+}
+
+h2 {
+    padding-top: 1rem;
     font-size: 2rem;
     color: var(--color-header-active);
     text-decoration: underline;
 }
 
-h5{
+h5 {
     color: var(--color-header-active);
     font-size: 1.5rem;
     font-weight: bold;

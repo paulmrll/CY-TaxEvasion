@@ -2,11 +2,11 @@
 
 
 :root {
-    --color-full-white: #f6f6f6;
     --color-bar: #041522;
     --color-background: #FAF9F6;
     --color-dark-writing: #041522;
     --color-light-writing: white;
+    --color-light-border: #ccc;
     --color-background-2: #d6f1fc;
     --color-title: #D4AF37;
     --color-header-active: #5cb8ec;
@@ -17,7 +17,6 @@
     --color-map-red: red;
     --color-blue: #3f4eeb;
 
-    --font-size-p: 1rem;
     --font-style:normal;
     --spacing-sm: 4rem;
     --spacing-md: 10rem;

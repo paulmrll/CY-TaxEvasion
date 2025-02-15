@@ -63,8 +63,6 @@
     <div class="reservation-option-container">
         <h2>Votre réservation</h2>
         <form method="post" action="../php/samoa-americaine.php">
-
-
             <div class="reservation-slider-container">
 
                 <div class="reservation-select">
@@ -129,14 +127,14 @@
                     </div>
                 </div>
 
-                <div class="reservation-checkbox">
+                <div class="reservation-date">
                     <h5>Dates de départ :</h5>
                     <input id="date-départ" name="date-départ" type="date" placeholder="jj/mm/aaaa" required></td>
 
                 </div>
 
 
-                <div class="reservation-checkbox">
+                <div class="reservation-date">
 
                     <h5>Dates de retour :</h5>
                     <input id="date-retour" name="date-retour" type="date" placeholder="jj/mm/aaaa" required></td>
@@ -145,7 +143,7 @@
 
 
             </div>
-            <div id="buttons">
+            <div class="button-container" id="buttons">
                 <button type="submit">Payer</button>
                 <button type="reset">Reset</button>
             </div>
