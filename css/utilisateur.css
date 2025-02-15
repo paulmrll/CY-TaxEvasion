@@ -1,48 +1,68 @@
 
 h1 {
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: bold;
     text-align: center;
+    white-space: nowrap;
+    margin: 2rem 5rem;
 }
 
 
 .utilisateur {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
 
-    background: var(--color-background-2);
-    border: solid var(--color-background-2) 0.1rem;
-    border-radius: 1rem;
-    margin: 10rem auto;
-    max-width: 70vw;
 }
+
+.main-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: var(--spacing-sm) 10rem;
+
+}
+
 
 .compte-info-container {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
-    font-size: 2rem;
-    width: 70vw;
-    padding: 2rem;
+    gap: 2rem;
+    font-size: 1.5rem;
+}
+
+.box-container {
+    background: var(--color-background-2);
+    border-radius: 4rem;
+    padding: 3rem 5rem;
+
+}
+
+.part-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 .grid-line-container {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
+    gap: 5rem;
+}
 
+.line-container {
+    display: flex;
+    align-items: center;
+    gap: 5rem;
 }
 
 
 .grid-line-container div a:nth-child(2) {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     background: var(--color-background);
     padding: 0 5rem;
     border-radius: 0.5rem;
     border: 0.1rem solid var(--color-dark-writing);
+    font-style: italic;
 }
-
 
 
 button {
@@ -55,10 +75,97 @@ button {
 
 button:active {
     background: var(--color-light-writing);
-    border: solid var(--color-light-writing) 0.1rem;
     transform: scale(0.85);
 }
 
 main div button img {
     width: 100%;
+}
+
+
+.carousel-container {
+    padding: var(--spacing-sm) var(--spacing-sm);
+    width: 100%;
+    background: var(--color-background-2);
+}
+
+
+.carousel-content {
+    padding-bottom: 1vw;
+    width: 100%;
+    height: auto;
+    overflow-x: auto;
+    overflow-y: hidden;
+    justify-content: center;
+    scroll-snap-type: x mandatory;
+    white-space: nowrap;
+}
+
+
+.grid-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+
+.grid-item {
+    position: relative;
+    width: 20rem;
+    height: 10rem;
+    overflow: hidden;
+    border-radius: 1vw;
+    transition: transform 0.3s ease-in-out;
+}
+
+
+.grid-item img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.grid-item h3 {
+    font-size: 1.5rem;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--color-light-writing);
+    text-shadow: 2px 2px var(--color-dark-writing);
+    font-weight: bold;
+    text-align: center;
+    width: auto;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.button-payer{
+    background: var(--color-background);
+    color: var(--color-dark-writing);
+    border: var(--color-dark-writing) 0.1rem solid;
+    border-radius: 1rem;
+    padding: 0 0.5rem;
+}
+
+.button-payer button{
+    font-size: 1.3rem;
+}
+
+.Réservé {
+    color: green;
+}
+
+.Annulé{
+    color: red;
+}
+
+.Payment {
+    color: lightsalmon;
+}
+
+.Effectué{
+    color: darkblue;
 }
