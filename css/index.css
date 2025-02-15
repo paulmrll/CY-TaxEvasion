@@ -19,7 +19,7 @@ header, main, footer {
 }
 
 
-.video-background iframe {
+.video-background video {
     position: absolute;
     top: 50%;
     left: 50%;
