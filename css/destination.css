@@ -1,24 +1,34 @@
+
 h1{
-    padding: 1vw;
-    font-size: 2vw;
+    font-size: 2rem;
     text-decoration: underline;
+}
+
+
+.destination-intro{
+    background: var(--color-background-2);
+    display: flex;
+    padding: var(--spacing-sm) var(--spacing-sm);
+    gap: 5rem;
+    justify-content: center;
+    align-items: center;
 }
 
 .intro-text{
 
 }
 
+.intro-image{
+    width: 25%;
+    height: 25%;
+    border-radius: 1rem;
 
+}
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 3vw;
-    padding:  4vw 6vw 6vw 6vw;
-    margin-left: 3vw;
-    margin-right: 3vw;
-    white-space: nowrap;
-
+    grid-template-columns: 1fr;
+    overflow: hidden;
 }
 
 .grid-item{
@@ -26,40 +36,73 @@ h1{
     position: relative;
     width: 100%;
     height: auto;
-    border-radius: 1vw;
+    border-radius: 1rem;
+}
+
+.grid-line-container{
+    padding: var(--spacing-sm) var(--spacing-md);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+
+.grid-line-container:hover{
+    transform: scale(1.1);
+}
+
+.grid-line-container:nth-child(3n+1) {
+    background: var(--color-background);
+}
+
+.grid-line-container:nth-child(3n+2) {
+    background: var(--color-background-2);
+}
+
+.grid-line-container:nth-child(3n) {
+    background: var(--color-bar);
+    color: var(--color-light-writing);
 }
 
 .grid-item img{
     display: block;
-    width: 120%;
+    width: 100%;
     height: auto;
     object-fit: cover;
 }
 
+
 .grid-item h3 {
-    font-size: 1.5vw;
+    font-size: 1.5rem;
     position: absolute;
     top: 45%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: var(--color-light-writing);
-    text-shadow: 2px 2px var(--color-dark-writing);
+    text-shadow: 0.1rem 0.1rem var(--color-dark-writing);
     font-weight: bold;
-    padding: 10rpx 15rpx;
+    padding: 10rem 15rem;
     text-align: center;
     width: auto;
+    white-space: nowrap;
 }
 
 
 .flag{
-    width: 10%;
+    width: 15%;
     height: auto;
     position: absolute;
-    top: 90%;
-    left: 10%;
+    top: 85%;
+    left: 12%;
     transform: translate(-50%, -50%);
 }
 
-.grid-item:hover > a > img {
-    transform: scale(1.1);
+
+
+
+.description-texte{
+    text-align: center;
+    text-align-last: center;
 }

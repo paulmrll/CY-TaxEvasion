@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
 
 :root {
@@ -12,25 +12,50 @@
     --color-title: #D4AF37;
     --color-button: #046A38;
     --color-header-active: #5cb8ec;
-    --font-size-p: 1vw;
+    --color-reset: #ed825f;
+    --color-submit: #5cb8ec;
+    --color-map-grey: #555555;
+    --color-map-red: red;
+    --font-size-p: 1rem;
     --font-style:normal;
+    --spacing-sm: 4rem;
+    --spacing-md: 10rem;
+    --spacing-lg: 20rem;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 
 body {
-    font-family: var(--font-style);
-    line-height: 1.6;
+    font-family: Poppins;
+    font-size: 1vw;
+    line-height: 2;
     background-color: var(--color-background);
     color: var(--color-dark-writing);
-    padding: 0;
-    margin: 0;
 }
 
-
-main{
-    margin-right: 10vw;
-    margin-left: 10vw;
-    box-sizing: border-box;
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
 

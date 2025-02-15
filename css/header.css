@@ -1,76 +1,113 @@
 
 header {
-    background-color: var(--color-bar);
-    width: 100vw;
+    margin: 0 auto;
 }
 
-.header-container{
-    margin-left: 1.5vw;
+
+.header-container {
+    max-width: 100%;
+    background: var(--color-bar);
+    background-size: cover;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 1rem;
+    padding: 0.5rem 3rem;
 }
 
-.header-left{
+.header-left {
     font-weight: normal;
-    font-size: 1.5vw;
+    font-size: 2rem;
     font-family: 'Courier New', Courier, monospace;
+    align-items: center;
 }
 
 
-.header-slogan{
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
+.header-slogan {
     font-family: 'Courier New', Courier, monospace;
     color: var(--color-light-writing);
-    font-size: 1vw;
+    font-size: 1.3rem;
+    padding-left: 10rem;
 }
 
-.header-right{
+.header-right {
     display: flex;
     align-items: center;
-    gap: 1.5vw;
-    font-size: 1vw;
-    padding-right: 3vw;
+    gap: 1.5rem;
+    font-size: 1.4rem;
 }
 
-.header-link{
+.header-link {
     font-family: 'Courier New', Courier, monospace;
     text-decoration: none;
     color: var(--color-light-writing);
 }
 
-.header-user-logo{
-    width: 6vw;
+
+.header-user-logo {
+    width: 3rem;
     height: auto;
-    margin-top: 0.8vw;
+    margin-top: 0.9rem;
 }
 
 
-.header-right a:hover, .header-left a:hover{
+.header-right a:hover, .header-left a:hover {
     color: var(--color-header-active);
     cursor: pointer;
 }
 
-.header-link-active{
+.header-link-active {
     font-family: 'Courier New', Courier, monospace;
     color: var(--color-header-active);
     text-decoration: underline;
 }
 
 
-.header-connect{
-    border: 0.08vw solid var(--color-light-writing);
-    padding: 0.3vw 0.5vw;
+.header-connect {
+    border: 0.1rem solid var(--color-light-writing);
+    padding: 0.2rem 0.5rem;
     border-radius: 0.3vw;
 }
 
-.header-connect:hover{
+
+.header-connect:hover {
     background-color: var(--color-header-active);
-    border: 2px solid var(--color-header-active);
-    padding: 5px 10px;
-    border-radius: 5px;
-    color: var(--color-light-writing)
+    border: 0.1rem solid var(--color-header-active);
+    color: var(--color-light-writing);
+    transform: scale(1.03);
 }
+
+
+.header-right div {
+    position: relative;
+}
+
+
+.header-jet-icon {
+    position: absolute;
+    bottom: -1.4rem;
+    left: -2.5rem;
+    transition: transform 0.15s ease-in-out 0.1s;
+    will-change: transform;
+    pointer-events: none;
+}
+
+
+.header-voir-voyage-text {
+    transform: scale(2);
+}
+
+
+.header-voir-voyage-text:hover + .header-jet-icon {
+    transform: translateX(13rem) translateY(1rem);
+}
+
+
+.header-right a:hover {
+    color: var(--color-header-active);
+    cursor: pointer;
+}
+
+
+
+

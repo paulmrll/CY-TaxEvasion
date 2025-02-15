@@ -2,6 +2,7 @@
 <html lang="fr">
 <head>
     <title>S'inscrire</title>
+    <link rel="icon" type="image" href="../image/logo-site.webp">
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/inscription.css">
     <link rel="stylesheet" href="../css/header.css">
@@ -14,45 +15,62 @@
 
 <header>
     <div class="header-container">
+
         <div class="header-left">
             <a href="../index.html" class="header-link">CY-TAXEVASION </a>
         </div>
 
         <div class="header-slogan">THE HOLIDAYS YOUR WALLET NEED</div>
-
         <div class="header-right">
-            <a href="../html/destination.html" class="header-link">Voir nos voyages</a>
+            <div class="header-voir-voyage">
+                <a href="../html/destination.html" class="header-link header-voir-voyage-text">Voir nos voyages</a>
+                <img class="header-jet-icon" src="../image/jet-icon.png" alt="jet-icon">
+            </div>
+
 
             <a href="../html/connexion.html" class="header-link">
                 <div class="header-connect">Se connecter</div>
             </a>
 
-            <a href="utilisateur.html" class="header-link"> <img class="header-user-logo" src="../image/anguilla.jpg" alt="utilisateur-logo"></a>
+            <a href="../html/utilisateur.html" class="header-link-active"><img class="header-user-logo"
+                                                                               src="../image/user-icone.png"
+                                                                               alt="utilisateur-logo"></a>
         </div>
     </div>
 </header>
 
-    <form action="../php/connexion.php" method="post">
-        <table>
-            <tr>
-                <th colspan="2">Inscription</th>
-            </tr>
-            <tr>
-                <td><label for="mail : ">Mail</label></td>
-                <td><input id="mail" name="mail" type="email" placeholder="name.firstname@gmail.com"></td>
-            </tr>
-            <tr>
-                <td><label for="password">Mot de passe  :</label></td>
-                <td><input id="password" name="mdp" type="password" placeholder="PASSWORD"></td>
-            </tr>
-            <tr>
-                <td colspan="2"><button type="submit">Submit</button><button type="reset">Reset</button></td>
-            </tr>
-            <tr>
-                <td colspan="2">Déjà un compte ? <a href="connexion.html">Se Connecter</a></td>
-            </tr>
-        </table>
-    </form>
+
+<form action="../php/inscription.php" method="post">
+    <table>
+        <tr>
+            <th colspan="2">Inscription</th>
+        </tr>
+        <tr>
+            <td><input id="name" name="name" type="text" placeholder="nom" required></td>
+        </tr>
+        <tr>
+            <td><input id="firstname" name="firstname" type="text" placeholder="prénom" required></td>
+        </tr>
+        <tr>
+            <td><input id="mail" name="email" type="email" placeholder="prénom.nom@gmail.com" required></td>
+        </tr>
+        <tr>
+            <td><input id="password" name="mdp" type="password" placeholder="password" required></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button type="submit">Submit</button>
+                <button type="reset">Reset</button>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">Déjà un compte ? <a href="connexion.html">Connectez-vous</a></td>
+        </tr>
+        <tr>
+            <td colspan="2"><a href="admin.html">Se connecter en tant qu'administateur</a></td>
+        </tr>
+    </table>
+</form>
 
 
 
@@ -63,8 +81,8 @@
             </div>
             <div class="socials">
                 <div>Nos réseaux : </div>
-                <img class="twitter-logo" src="../image/twitter-logo.png" alt="twitter-logo">
-                <img class="instagram-logo" src="../image/instagram-logo.png" alt="instagram-logo.png">
+                <a class="twitter-logo" href="https://x.com/?mx=2" target="_blank"><img  src="../image/twitter-logo.png" alt="twitter-logo"></a>
+                <a class="instagram-logo" href="https://www.instagram.com/paul_mrll_/" target="_blank"><img src="../image/instagram-logo.png" alt="instagram-logo.png"></a>
             </div>
         </div>
     </footer>

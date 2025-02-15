@@ -2,14 +2,15 @@
 <html lang="fr">
 <head>
     <title>CY-TAXEVASION</title>
+    <link rel="icon" type="image" href="image/logo-site.webp">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/footer.css">
     <meta charset="UTF-8">
+
 </head>
 <body>
-
 
 
 <header>
@@ -20,24 +21,43 @@
         </div>
 
         <div class="header-slogan">THE HOLIDAYS YOUR WALLET NEED</div>
-
         <div class="header-right">
-            <a href="html/destination.html" class="header-link">Voir nos voyages</a>
+            <div class="header-voir-voyage">
+                <a href="html/destination.html" class="header-link header-voir-voyage-text">Voir nos voyages</a>
+                <img class="header-jet-icon" src="image/jet-icon.png" alt="jet-icon">
+            </div>
 
             <a href="html/connexion.html" class="header-link">
                 <div class="header-connect">Se connecter</div>
             </a>
 
-            <a href="html/utilisateur.html" class="header-link"> <img class="header-user-logo" src="image/anguilla.jpg" alt="utilisateur-logo"></a>
+            <a href="html/utilisateur.html" class="header-link-active"><img class="header-user-logo"
+                                                                            src="image/user-icone.png"
+                                                                            alt="utilisateur-logo"></a>
         </div>
     </div>
 </header>
 
 
-    <main>
+<main>
+
+    <div class="video-background">
+
+        <div class="video-background">
+            <iframe width="560" height="315" 
+            src="https://www.youtube.com/embed/y3sILyOYEpg?si=PcPPuxt5rUs7EBUZ&vq=hd1080&autoplay=1&mute=1&loop=1&playlist=y3sILyOYEpg&controls=0&showinfo=0"
+            title="YouTube video player" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+        </iframe>
+        
+        </div>
+        
+
+    </div>
 
 
-
+    <div class="search-bar-container">
         <label class="search-bar">
             <a class="search-bar-title">Recherchez votre destination de rêves</a>
             <input type="text" list="destination">
@@ -49,200 +69,146 @@
                 <option value="Le Panama"></option>
             </datalist>
         </label>
+    </div>
 
 
+    <div class="map-container">
+        <div class="ping-container">
+            <img class="map-image" src="image/map.jpg" alt="map">
 
-        <div class="carousel-title italic-text"> 🌴Découvrez nos voyages les plus populairesS🌴 </div>
-        <div class="carousel-container">
+            <a href="html/samoa-americaine-description.html" class="ping" style="top: 57%; left: 15.2%">
+                <div class="ping-text">Les Samoa-Américaines</div>
+            </a>
+            <a href="html/samoa-americaine-description.html" class="ping" style="top:36.5%; left: 30.5%;">
+                <div class="ping-text">Anguilla</div>
+            </a>
+            <a href="html/samoa-americaine-description.html" class="ping" style="top:39.5%; left: 31.5%;">
+                <div class="ping-text">Antigua-et-Barbuda</div>
 
-            <div class="carousel-content">
-                <div class="grid-container">
-                    <div class="grid-item">
-                        <a href="html/samoa-americaine-description.html" class="image-select">
-                            <img src="image/les-samoa-americaine.jpeg" alt="samoa_americaine">
-                            <h3>Samoa-Américaines</h3>
-                            <div class="flag">
-                                <img src="image/samoa-americaine-flag.jpg" alt="samoa-americaine-flag.jpg">
-                            </div>
-                        </a>
-                    </div>
-                    <div class="grid-item">
-                        <a href="html/samoa-americaine-description.html" class="image-select">
-                            <img src="image/anguilla.jpg" alt="anguilla.jpg">
-                            <h3>Anguilla</h3>
-                            <div class="flag">
-                                <img src="image/anguilla-flag.jpg" alt="anguilla-flag.jpg">
-                            </div>
-                        </a>
-                    </div>
-                    <div class="grid-item">
-                        <a href="html/samoa-americaine-description.html" class="image-select">
-                            <img src="image/antigua-et-barbuda.jpg" alt="antigua-et-barbuda.jpg">
-                            <h3>Antigua-et-Barbuda</h3>
-                            <div class="flag">
-                                <img src="image/antigua-et-barbuda-flag.jpg" alt="antigua-et-barbuda-flag.jpg">
-                            </div>
-                        </a>
-                    </div>
-                    <div class="grid-item">
-                        <a href="html/samoa-americaine-description.html" class="image-select">
-                            <img src="image/les-fidji.jpeg" alt="les_fidji.jpeg">
-                            <h3>Les Fidji</h3>
-                            <div class="flag">
-                                <img src="image/les-fidji-flag.jpg" alt="les-fidji-flag.jpg">
-                            </div>
-                        </a>
-                    </div>
-                    <div class="grid-item">
-                        <a href="html/samoa-americaine-description.html" class="image-select">
-                            <img src="image/les-palaos.jpeg" alt="les-palaos.jpeg">
-                            <h3>Les Palaos</h3>
-                            <div class="flag">
-                                <img src="image/les-palaos-flag.jpg" alt="les-palaos-flag.jpg">
-                            </div>
-                        </a>
-                    </div>
-                    <div class="grid-item">
-                        <a href="html/samoa-americaine-description.html" class="image-select">
-                            <img src="image/le-panama.jpg" alt="le-panama.jpg">
-                            <h3>Le Panama</h3>
-                            <div class="flag">
-                                <img src="image/le-panama-flag.jpg" alt="le-panama-flag.jpg">
-                            </div>
-                        </a>
-                    </div>
+            </a>
+            <a href="html/samoa-americaine-description.html" class="ping" style="top: 60%; left: 93.5%;">
+                <div class="ping-text">Les Fidji</div>
+
+            </a>
+            <a href="html/samoa-americaine-description.html" class="ping" style="top: 45.5%; left: 86%;">
+                <div class="ping-text">Le Palaos</div>
+
+            </a>
+            <a href="html/samoa-americaine-description.html" class="ping" style="top:43.8%; left: 27.2%;">
+                <div class="ping-text">Le Panama</div>
+            </a>
+        </div>
+    </div>
+
+
+    <div class="carousel-container">
+        <div class="carousel-title italic-text"> 🌴Découvrez nos voyages les plus populaires🌴</div>
+        <div class="carousel-content">
+            <div class="grid-container">
+                <div class="grid-item">
+                    <a href="html/samoa-americaine-description.html" class="image-select">
+                        <img src="image/les-samoa-americaine.jpeg" alt="les-samoa_americaines">
+                        <h3>Samoa-Américaines</h3>
+                        <div class="flag">
+                            <img src="image/samoa-americaine-flag.jpg" alt="les-samoa-américaines-flag">
+                        </div>
+                    </a>
+                </div>
+                <div class="grid-item">
+                    <a href="html/samoa-americaine-description.html" class="image-select">
+                        <img src="image/anguilla.jpg" alt="anguilla">
+                        <h3>Anguilla</h3>
+                        <div class="flag">
+                            <img src="image/anguilla-flag.jpg" alt="anguilla-flag">
+                        </div>
+                    </a>
+                </div>
+
+                <div class="grid-item">
+                    <a href="html/samoa-americaine-description.html" class="image-select">
+                        <img src="image/antigua-et-barbuda.jpg" alt="antigua-et-barbuda">
+                        <h3>Antigua-et-Barbuda</h3>
+                        <div class="flag">
+                            <img src="image/antigua-et-barbuda-flag.jpg" alt="antigua-et-barbuda-flag">
+                        </div>
+                    </a>
+                </div>
+                <div class="grid-item">
+                    <a href="html/samoa-americaine-description.html" class="image-select">
+                        <img src="image/les-fidji.jpeg" alt="les_fidji">
+                        <h3>Les Fidji</h3>
+                        <div class="flag">
+                            <img src="image/les-fidji-flag.jpg" alt="les-fidji-flag">
+                        </div>
+                    </a>
+                </div>
+                <div class="grid-item">
+                    <a href="html/samoa-americaine-description.html" class="image-select">
+                        <img src="image/les-palaos.jpg" alt="les-palaos">
+                        <h3>Les Palaos</h3>
+                        <div class="flag">
+                            <img src="image/les-palaos-flag.jpg" alt="les-palaos">
+                        </div>
+                    </a>
+                </div>
+                <div class="grid-item">
+                    <a href="html/samoa-americaine-description.html" class="image-select">
+                        <img src="image/le-panama.jpg" alt="le-panama">
+                        <h3>Le Panama</h3>
+                        <div class="flag">
+                            <img src="image/le-panama-flag.jpg" alt="le-panama-flag">
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
-
-        <div class="random-text">
-            ON RACONTE ÇA VIE ICI
-            ON RACONTE ÇA VIE ICI
-            ON RACONTE ÇA VIE ICI
-            ON RACONTE ÇA VIE ICI
-            ON RACONTE ÇA VIE ICI
-            ON RACONTE ÇA VIE ICI
-            ON RACONTE ÇA VIE ICI
-            ON RACONTE ÇA VIE ICI
-            ON RACONTE ÇA VIE ICI
-            ON RACONTE ÇA VIE ICI
-            ON RACONTE ÇA VIE ICI
-            ON RACONTE ÇA VIE ICI
-            ON RACONTE ÇA VIE ICI
-            ON RACONTE ÇA VIE ICI
-            ON RACONTE ÇA VIE ICI
-            ON RACONTE ÇA VIE ICI
-            ON RACONTE ÇA VIE ICI
-            ON RACONTE ÇA VIE ICI
-            ON RACONTE ÇA VIE ICI
-            ON RACONTE ÇA VIE ICI
-            ON RACONTE ÇA VIE ICI
-            ON RACONTE ÇA VIE ICI
-            ON RACONTE ÇA VIE ICI
-            ON RACONTE ÇA VIE ICI
-            ON RACONTE ÇA VIE ICI
-            ON RACONTE ÇA VIE ICI
-            ON RACONTE ÇA VIE ICI
-            ON RACONTE ÇA VIE ICI
-            ON RACONTE ÇA VIE ICI
-            ON RACONTE ÇA VIE ICI
-            ON RACONTE ÇA VIE ICI
-            ON RACONTE ÇA VIE ICI
-            ON RACONTE ÇA VIE ICI
-            ON RACONTE ÇA VIE ICI
-            ON RACONTE ÇA VIE ICI
-            ON RACONTE ÇA VIE ICI
-            ON RACONTE ÇA VIE ICI
-            ON RACONTE ÇA VIE ICI
-            ON RACONTE ÇA VIE ICI
-        </div>
+    </div>
 
 
-        <div class="trading-container">
-            <div class="trading-content">
-                <img class="trading-image" src="image/les-samoa-americaine.jpeg" alt="trading-image.jpg">
-                <div class="trading-text">Les paradis fiscaux, bien que controversés, présentent certains avantages économiques. 
-                    Ils permettent aux entreprises et aux investisseurs de bénéficier d’une fiscalité allégée, favorisant ainsi 
-                    l’attractivité des capitaux et la croissance économique. En offrant un cadre réglementaire plus souple, ils
-                     encouragent l’implantation d’entreprises internationales, stimulant l’emploi et les investissements dans les 
-                     secteurs locaux. De plus, ces juridictions offrent une protection de la confidentialité financière, ce qui 
-                     peut être un atout pour les entrepreneurs souhaitant sécuriser leur patrimoine. Enfin, la concurrence fiscale 
-                     induite par ces paradis peut inciter certains pays à revoir leur propre fiscalité pour éviter la fuite des 
-                     capitaux, ce qui peut bénéficier aux contribuables dans des États à forte imposition.</div>
+    <div class="trading-container">
+        <div class="trading-content">
+            <div class="trading-items">
+                <img class="trading-image" src="image/not-stonks-graph.png" alt="trading-graph.jpg">
+                <div class="trading-text">Vous en avez marre que l'<a href="https://www.urssaf.fr/accueil.html" target="_blank">URSAF</a> vous prennent tout?</div>
             </div>
-
-        </div>
-
-
-
-        <div class="map-container">
-            <div class="map-content">
-                <img class="map-image" src="image/map.jpg" alt="map">
-                <div class="map-text">Des pays partout dans le monde</div>
+            <div class="trading-items">
+                <img class="trading-image" src="image/stonks-graph.png" alt="trading-graph.jpg">
+                <div class="trading-text">Alors n'hésitez plus et sautez le pas avec Cy-TAXEVASION</div>
             </div>
         </div>
+    </div>
 
-        <div class="random-text">
-            ON RACONTE ÇA VIE ICI
-            ON RACONTE ÇA VIE ICI
-            ON RACONTE ÇA VIE ICI
-            ON RACONTE ÇA VIE ICI
-            ON RACONTE ÇA VIE ICI
-            ON RACONTE ÇA VIE ICI
-            ON RACONTE ÇA VIE ICI
-            ON RACONTE ÇA VIE ICI
-            ON RACONTE ÇA VIE ICI
-            ON RACONTE ÇA VIE ICI
-            ON RACONTE ÇA VIE ICI
-            ON RACONTE ÇA VIE ICI
-            ON RACONTE ÇA VIE ICI
-            ON RACONTE ÇA VIE ICI
-            ON RACONTE ÇA VIE ICI
-            ON RACONTE ÇA VIE ICI
-            ON RACONTE ÇA VIE ICI
-            ON RACONTE ÇA VIE ICI
-            ON RACONTE ÇA VIE ICI
-            ON RACONTE ÇA VIE ICI
-            ON RACONTE ÇA VIE ICI
-            ON RACONTE ÇA VIE ICI
-            ON RACONTE ÇA VIE ICI
-            ON RACONTE ÇA VIE ICI
-            ON RACONTE ÇA VIE ICI
-            ON RACONTE ÇA VIE ICI
-            ON RACONTE ÇA VIE ICI
-            ON RACONTE ÇA VIE ICI
-            ON RACONTE ÇA VIE ICI
-            ON RACONTE ÇA VIE ICI
-            ON RACONTE ÇA VIE ICI
-            ON RACONTE ÇA VIE ICI
-            ON RACONTE ÇA VIE ICI
-            ON RACONTE ÇA VIE ICI
-            ON RACONTE ÇA VIE ICI
-            ON RACONTE ÇA VIE ICI
-            ON RACONTE ÇA VIE ICI
-            ON RACONTE ÇA VIE ICI
-            ON RACONTE ÇA VIE ICI
+    <div class="texte">
+        <p>
+            Pourquoi payer plus quand vous pouvez voyager mieux ? Avec CY-TAXEVASION, découvrez les destinations les plus exclusives alliant luxe, discrétion et optimisation fiscale. Des plages paradisiaques des Caraïbes aux îles du Pacifique, profitez d’un séjour sur-mesure où soleil et avantages fiscaux vont de pair.
+        </p>
+        <p>
+            Voyagez en toute sérénité avec nos experts qui s’occupent de tout : hébergements haut de gamme, conseils sur les juridictions avantageuses et services VIP.
+        </p>
+        <p>
+            Ne laissez pas votre fortune dormir, faites-la voyager avec vous !
+        </p>
+    </div>
+
+
+</main>
+
+
+<footer>
+    <div class="footer-container">
+        <div class="contact">
+            <a href="html/contact.html" class="footer-contact">Nous contacter</a>
         </div>
-
-
-    </main>
-
-
-
-    <footer>
-        <div class="footer-container">
-            <div class="contact" >
-                <a href="html/contact.html" class="footer-contact">Nous contacter</a>
-            </div>
-            <div class="socials">
-                <div>Nos réseaux : </div>
-                <img class="twitter-logo" src="image/twitter-logo.png" alt="twitter-logo">
-                <img class="instagram-logo" src="image/instagram-logo.png" alt="instagram-logo.png">
-            </div>
+        <div class="socials">
+            <div>Nos réseaux :</div>
+            <a class="twitter-logo" href="https://x.com/?mx=2" target="_blank"><img src="image/twitter-logo.png"
+                                                                                    alt="twitter-logo"></a>
+            <a class="instagram-logo" href="https://www.instagram.com/paul_mrll_/" target="_blank"><img
+                    src="image/instagram-logo.png" alt="instagram-logo.png"></a>
         </div>
-    </footer>
+    </div>
+</footer>
 
 </body>
 
-<script src="exo2.js"></script>
 </html>
