@@ -6,98 +6,73 @@
     <title>Anguilla</title>
     <link rel="icon" type="image" href="../image/logo-site.webp">
     <link rel="stylesheet" href="../css/styles.css">
-    <link rel="stylesheet" href="../css/destination-description.css">
+    <link rel="stylesheet" href="../css/samoa-americaine-description.css">
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/destination.css">
+
     <style>
-        .title-container {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            position: relative;
-            width: 100%;
-        }
-
-        .title-container h1 {
-            position: relative;
-
-            font-size: 3rem;
-            font-weight: bold;
-            color: white;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
-            z-index: 1;
-            margin: 0;
-            padding: 20px;
-        }
-
-        .title-container::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 40%;
-            height: 60%;
-            background-image: url('../image/anguilla-big-flag.jpg');
-            background-size: cover;
-            background-position: center;
-            opacity: 0.6;
-            z-index: 0;
-        }
-
+       
 
         .main-image {
             position: relative;
-            width: 40%;
+            width: 40%; /* Ajustez pour équilibrer la largeur de l'image */
             z-index: 1;
         }
     </style>
 </head>
 
 <body>
-<header>
-    <div class="header-container">
-        <div class="header-left">
-            <a href="../index.html" class="header-link">CY-TAXEVASION</a>
-        </div>
-
-        <div class="header-slogan">THE HOLIDAYS YOUR WALLET NEED</div>
-        <div class="header-right">
-            <div class="header-voir-voyage">
-                <a href="../html/destination.html" class="header-link header-voir-voyage-text">Voir nos voyages</a>
-                <img class="header-jet-icon" src="../image/jet-icon.png" alt="jet-icon">
+    <header>
+        <div class="header-container">
+            <div class="header-left">
+                <a href="../index.html" class="header-link">CY-TAXEVASION</a>
             </div>
 
-            <a href="../html/connexion.html" class="header-link">
-                <div class="header-connect">Se connecter</div>
-            </a>
+            <div class="header-slogan">THE HOLIDAYS YOUR WALLET NEED</div>
+            <div class="header-right">
+                <div class="header-voir-voyage">
+                    <a href="../html/destination.html" class="header-link header-voir-voyage-text">Voir nos voyages</a>
+                    <img class="header-jet-icon" src="../image/jet-icon.png" alt="jet-icon">
+                </div>
 
-            <a href="../html/utilisateur.html" class="header-link-active"><img class="header-user-logo"
-                                                                               src="../image/user-icone.png"
-                                                                               alt="utilisateur-logo"></a>
+                <a href="../html/connexion.html" class="header-link">
+                    <div class="header-connect">Se connecter</div>
+                </a>
+
+                <a href="../html/utilisateur.html" class="header-link-active"><img class="header-user-logo"
+                        src="../image/user-icone.png" alt="utilisateur-logo"></a>
+            </div>
         </div>
-    </div>
-</header>
+    </header>
 
-<main>
-    <div class="title-container">
-        <h1>ANGUILLA</h1>
-        <img class="main-image" src="../image/anguilla.jpg" alt="Vue d'Anguilla">
-    </div>
+    <main>
+        <div class="title-container">
+            <div class="grid-item">
+                <div  class="flag-image">
+                    <img class="flag-image" src="../image/anguilla-big-flag.jpg" alt="anguilla">
+                    <h3>Anguilla</h3>
+                </div>
+            </div>
+            <img class="main-image" src="../image/anguilla.jpg" alt="Vue d'Anguilla">
+        </div>
 
-    <div class="destination-text">
-        <p>
-            Membre de l’organisation des états du caraïbe oriental depuis 1995, l’île Anguilla est un territoire
-            britannique d’outre-mer. Anguilla est un paradis fiscal par excellence. Les personnes physiques résidentes
-            et non-résidentes bénéficient d’un impôt zéro, et ce pour les : impôt sur le revenu, les droits de
-            successions ainsi que l’impôt sur la fortune. Nous notons toutefois une taxe de 3% sur les biens immobiliers
-            localisés sur l’île d’Anguilla pour les non-résidents.
-        </p>
-    </div>
+        <div class="destination-text">
+            <p>
+                Membre de l’organisation des états du caraïbe oriental depuis 1995, l’île Anguilla est un territoire
+                britannique d’outre-mer. Anguilla est un paradis fiscal par excellence. Les personnes physiques résidentes
+                 et non-résidentes bénéficient d’un impôt zéro, et ce pour les : impôt sur le revenu, les droits de 
+                 successions ainsi que l’impôt sur la fortune. Nous notons toutefois une taxe de 3% sur les biens immobiliers
+                  localisés sur l’île d’Anguilla pour les non-résidents.
+            </p>
+        </div>
 
-
-    <div class="reservation-option-container">
+        
+      <div class="reservation-option-container">
         <h2>Votre réservation</h2>
         <form method="post" action="../php/samoa-americaine.php">
+
+
             <div class="reservation-slider-container">
 
                 <div class="reservation-select">
@@ -162,14 +137,14 @@
                     </div>
                 </div>
 
-                <div class="reservation-date">
+                <div class="reservation-checkbox">
                     <h5>Dates de départ :</h5>
                     <input id="date-départ" name="date-départ" type="date" placeholder="jj/mm/aaaa" required></td>
 
                 </div>
 
 
-                <div class="reservation-date">
+                <div class="reservation-checkbox">
 
                     <h5>Dates de retour :</h5>
                     <input id="date-retour" name="date-retour" type="date" placeholder="jj/mm/aaaa" required></td>
@@ -178,35 +153,32 @@
 
 
             </div>
-            <div class="button-container" id="buttons">
+            <div id="buttons">
                 <button type="submit">Payer</button>
                 <button type="reset">Reset</button>
             </div>
         </form>
     </div>
 
-    <div class="maps">
-        <img src="../image/samoa-americaine-maps.png" alt="Samoa-Americaine-maps">
-        <br>
-        <p>Carte Samoa-américaine</p>
-    </div>
-
-
-</main>
-
-<footer>
-    <div class="footer-container">
-        <div class="contact">
-            <a href="../html/contact.html" class="footer-contact">Nous contacter</a>
+        <div class="maps">
+            <img src="../image/samoa-americaine-maps.png" alt="Samoa-Americaine-maps">
+            <br>
+            <p>Carte Samoa-américaine</p>
         </div>
-        <div class="socials">
-            <a class="twitter-logo" href="https://x.com/?mx=2" target="_blank"><img src="../image/twitter-logo.png"
-                                                                                    alt="twitter-logo"></a>
-            <a class="instagram-logo" href="https://www.instagram.com/paul_mrll_/" target="_blank"><img
-                    src="../image/instagram-logo.png" alt="instagram-logo.png"></a>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="contact" >
+                <a href="../html/contact.html" class="footer-contact">Nous contacter</a>
+            </div>            <div class="socials">
+                <a class="twitter-logo" href="https://x.com/?mx=2" target="_blank"><img src="../image/twitter-logo.png"
+                        alt="twitter-logo"></a>
+                <a class="instagram-logo" href="https://www.instagram.com/paul_mrll_/" target="_blank"><img
+                        src="../image/instagram-logo.png" alt="instagram-logo.png"></a>
+            </div>
         </div>
-    </div>
-</footer>
+    </footer>
 </body>
 
 </html>
