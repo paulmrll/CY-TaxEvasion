@@ -9,11 +9,12 @@ h1{
 .destination-intro{
     background: var(--color-background-2);
     display: flex;
-    padding: var(--spacing-sm) var(--spacing-md);
+    padding: var(--spacing-sm) var(--spacing-md) var(--spacing-md) ;
     gap: 5rem;
     justify-content: center;
     align-items: center;
 }
+
 
 
 .intro-image{
@@ -101,9 +102,65 @@ h1{
 }
 
 
-
-
 .description-texte{
     text-align: center;
     text-align-last: center;
+}
+
+
+.option-select{
+    display: flex;
+    flex-direction: column;
+}
+
+.destination-option-slider-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+    font-size: 1.5rem;
+}
+
+
+.destination-option-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--color-bar);
+    padding: var(--spacing-sm) var(--spacing-md) var(--spacing-md);
+    gap: 2rem;
+}
+
+.option-select select{
+    cursor: pointer;
+    font-size: 1.5rem;
+    padding: 0.3rem 1.5rem 0 0.5rem;
+    border: 0.1rem solid #ccc;
+    border-radius: 0.5rem;
+    text-align: center;
+    color: var(--color-dark-writing);
+    appearance: none;
+    background-image: url("../image/fleche-bas.jpg");
+    background-repeat: no-repeat;
+    background-position: right 0.1rem center;
+    background-size: 1rem;
+}
+
+
+select:focus{
+    background: var(--color-background);
+}
+
+
+
+h2{
+    font-size: 2rem;
+    color: var(--color-header-active);
+    text-decoration: underline;
+}
+
+h5{
+    color: var(--color-header-active);
+    font-size: 1.3rem;
+    font-weight: bold;
 }

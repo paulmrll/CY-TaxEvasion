@@ -1,4 +1,4 @@
-h1{
+h1 {
     font-size: 3rem;
 }
 
@@ -47,7 +47,7 @@ select {
     font-size: 1rem;
     font-weight: bold;
     border: 0.1rem solid #ccc;
-    border-radius: 8px;
+    border-radius: 0.5rem;
     background: var(--color-background);
     appearance: none;
     text-align: center;

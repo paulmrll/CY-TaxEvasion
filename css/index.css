@@ -36,7 +36,6 @@ header, main, footer {
 
 
 .search-bar-container {
-    /*background-image: url('../image/airplane-banner.png');*/
     background-size: cover;
     background-position: 100% 40%;
     padding: var(--spacing-md);
@@ -207,8 +206,17 @@ header, main, footer {
 
 
 .map-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background: var(--color-background-2);
     padding: var(--spacing-md) var(--spacing-md);
+}
+
+.map-container h1 {
+    font-size: 3rem;
+    text-decoration: underline;
 }
 
 
