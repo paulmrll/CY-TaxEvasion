@@ -58,6 +58,7 @@ h1 {
 .maps {
     width: 100%;
     text-align: center;
+    margin-bottom: 5rem;
 }
 
 .maps > img {
