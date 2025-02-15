@@ -2,7 +2,6 @@
 
 
 :root {
-    --color-title-blue: #111827;
     --color-full-white: #f6f6f6;
     --color-bar: #041522;
     --color-background: #FAF9F6;
@@ -10,12 +9,14 @@
     --color-light-writing: white;
     --color-background-2: #d6f1fc;
     --color-title: #D4AF37;
-    --color-button: #046A38;
     --color-header-active: #5cb8ec;
+    --color-header-active-lighter: #75cbfa;
     --color-reset: #ed825f;
     --color-submit: #5cb8ec;
     --color-map-grey: #555555;
     --color-map-red: red;
+    --color-blue: #3f4eeb;
+
     --font-size-p: 1rem;
     --font-style:normal;
     --spacing-sm: 4rem;

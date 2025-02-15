@@ -9,12 +9,11 @@ form{
 
 table{
 
-    border: var(--color-background-2) 1px solid;
+    border: var(--color-header-active) 1px solid;
     border-radius: 1.5rem;
     background-color: var(--color-background-2);;
     color: var(--color-dark-writing);
     font-size: 1.5rem;
-
 }
 
 
@@ -34,41 +33,54 @@ table label:hover{
 
 table input:hover{
     cursor: text;
-
 }
 
 
 table input{
     width: 100%;
-    height: 3rem;
-    border: var(--color-background-2) 0.1rem solid;
-    border-radius: 10rem;
+    height: 2rem;
+    border: darkred 0.06rem solid;
+    border-radius: 1.5rem;
     font-size: 1rem;
     text-align: center;
 
 }
 
+table input:focus{
+    outline: none;
+}
 
-
+table input:valid{
+    border: limegreen 0.06rem solid;
+}
 
 table button{
     color: var(--color-dark-writing);
     text-align: center;
-    font-size: 1.5rem;
-    border-radius: 1rem 0.05rem;
+    font-size: 1.3rem;
+    border-radius: 1rem 0.1rem;
     background-color: var(--color-light-writing);
     padding: 0.4rem 0.8rem;
+    border: 0.1rem var(--color-dark-writing) solid;
 }
 
 
 td button{
     margin: 0 2rem;
-
 }
 
 table button:hover[type="submit"]{
     cursor: pointer;
     background-color: var(--color-submit);
+    border: 0.1rem var(--color-submit) solid;
+}
+
+
+table button:hover[type="reset"]{
+    cursor: pointer;
+    background-color: var(--color-reset);
+    border: 0.1rem var(--color-reset) solid;
+
 }
 
 
@@ -76,14 +88,8 @@ button:active{
     transform: scale(0.9);
 }
 
-table button:hover[type="reset"]{
-    cursor: pointer;
-    background-color: var(--color-reset);
-}
-
-
 table td, table tr, table th{
-    padding: 1.5rem 1rem;
+    padding: 1rem 1rem;
 }
 
 td{
@@ -91,6 +97,6 @@ td{
 }
 
 form a{
-    color: var(--color-header-active);
-    text-decoration: none;
+    color: var(--color-blue);
+    text-decoration: underline 0.1rem;
 }

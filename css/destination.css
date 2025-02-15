@@ -1,5 +1,6 @@
 
 h1{
+    padding-left: 1rem;
     font-size: 2rem;
     text-decoration: underline;
 }
@@ -8,15 +9,12 @@ h1{
 .destination-intro{
     background: var(--color-background-2);
     display: flex;
-    padding: var(--spacing-sm) var(--spacing-sm);
+    padding: var(--spacing-sm) var(--spacing-md);
     gap: 5rem;
     justify-content: center;
     align-items: center;
 }
 
-.intro-text{
-
-}
 
 .intro-image{
     width: 25%;
@@ -46,6 +44,7 @@ h1{
     display: flex;
     flex-direction: row;
     gap: 2rem;
+    text-decoration: none;
 }
 
 
@@ -55,10 +54,12 @@ h1{
 
 .grid-line-container:nth-child(3n+1) {
     background: var(--color-background);
+    color: var(--color-dark-writing);
 }
 
 .grid-line-container:nth-child(3n+2) {
     background: var(--color-background-2);
+    color: var(--color-dark-writing);
 }
 
 .grid-line-container:nth-child(3n) {

@@ -1,36 +1,99 @@
-*{
-    box-sizing: border-box;
+h1{
+    font-size: 3rem;
 }
 
-.users-container{
-    width: 100vw;
+.users-container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    margin: 15rem auto;
+    align-items: center;
+    margin: 13rem 30rem;
 }
 
-table{
+
+table {
     border: 0.1rem solid black;
     border-radius: 1rem;
+    background: var(--color-background-2);
+
 }
 
-th, td{
+th, td {
     padding: 0.1rem;
     text-align: center;
 }
 
-td{
+td {
     border-top: 0.1rem solid black;
-    border-right: 0.1rem solid black;
+    border-right: 0.1rem solid black
 }
-th{
+
+th {
     border-right: 0.1rem solid black;
 }
 
-td:last-child, th:last-child{
+td:last-child, th:last-child {
     border-right: none;
 }
-td, th{
+
+td, th {
     padding: 1rem;
     width: 100%;
+}
+
+
+select {
+    padding: 0.5rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border: 0.1rem solid #ccc;
+    border-radius: 8px;
+    background: var(--color-background);
+    appearance: none;
+    text-align: center;
+
+}
+
+
+select:hover {
+    cursor: pointer;
+}
+
+select option {
+    background: var(--color-background);
+}
+
+
+select option[value="ADMIN"] {
+    color: var(--color-blue);
+}
+
+select option[value="VIP"] {
+    color: purple;
+}
+
+select option[value="NORMAL"] {
+    color: var(--color-dark-writing);
+}
+
+select option[value="BANNI"] {
+    color: red;
+}
+
+
+select:has(option[value="ADMIN"]:checked) {
+    color: var(--color-blue);
+}
+
+select:has(option[value="VIP"]:checked) {
+    color: purple;
+}
+
+select:has(option[value="NORMAL"]:checked) {
+    color: var(--color-dark-writing);
+}
+
+
+select:has(option[value="BANNI"]:checked) {
+    color: red;
 }

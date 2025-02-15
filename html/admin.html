@@ -39,46 +39,61 @@
 
 
     <main>
+
+
+
         <div class="users-container">
+            <h1>Panneaux Administrateur</h1>
             <table>
                 <tr>
                     <th>Name</th>
                     <th>Firstname</th>
                     <th>Mail</th>
                     <th>Classification</th>
-                    <th>Modification</th>
                 </tr>
                 <tr>
                     <td>Paul</td>
                     <td>Morel</td>
                     <td>paul.morel@gmail.com</td>
-                    <td>VIP</td>
                     <td><select name="class-change">
-                        <option value="VIP" selected>VIP</option>
+                        <option value="ADMIN"selected>ADMIN</option>
+                        <option value="BANNI">BANNI</option>
                         <option value="NORMAL">NORMAL</option>
-                        <option value="ADMIN">ADMIN</option>
+                        <option value="VIP" >VIP</option>
+
                     </select></td>
                 </tr>
                 <tr>
                     <td>Florian</td>
                     <td>Dupont</td>
                     <td>florian.dupont@gmail.com</td>
-                    <td>VIP</td>
                     <td><select name="class-change">
-                        <option value="VIP">VIP</option>
+                        <option value="ADMIN">ADMIN</option>
+                        <option value="BANNI">BANNI</option>
                         <option value="NORMAL">NORMAL</option>
-                        <option value="ADMIN" selected>ADMIN</option>
+                        <option value="VIP" selected>VIP</option
                     </select></td>
                 </tr>
                 <tr>
                     <td>Louis</td>
                     <td>Richelieux</td>
                     <td>louis.richelieux@gmail.com</td>
-                    <td>VIP</td>
                     <td><select name="class-change">
-                        <option value="VIP">VIP</option>
-                        <option value="NORMAL" selected>NORMAL</option>
                         <option value="ADMIN">ADMIN</option>
+                        <option value="BANNI">BANNI</option>
+                        <option value="NORMAL" selected>NORMAL</option>
+                        <option value="VIP" >VIP</option
+                    </select></td>
+                </tr>
+                <tr>
+                    <td>Antonio</td>
+                    <td>robber</td>
+                    <td>antonio.robber@gmail.com</td>
+                    <td><select name="class-change">
+                        <option value="ADMIN">ADMIN</option>
+                        <option value="BANNI" selected>BANNI</option>
+                        <option value="NORMAL">NORMAL</option>
+                        <option value="VIP" >VIP</option
                     </select></td>
                 </tr>
             </table>
@@ -106,5 +121,4 @@
 
 
 </body>
-<script src="exo2.js"></script>
 </html>

@@ -4,19 +4,17 @@ h1 {
     font-weight: bold;
     text-align: center;
     white-space: nowrap;
-    margin: 2rem 5rem;
+    color: var(--color-header-active);
+    text-decoration: underline 0.2rem var(--color-header-active);
+    text-shadow: 1px 1px var(--color-background);
 }
 
-
-.utilisateur {
-
-}
 
 .main-grid {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: var(--spacing-sm) 10rem;
+    margin: var(--spacing-sm) var(--spacing-lg);
 
 }
 
@@ -24,29 +22,55 @@ h1 {
 .compte-info-container {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1rem;
     font-size: 1.5rem;
 }
 
 .box-container {
     background: var(--color-background-2);
     border-radius: 4rem;
-    padding: 3rem 5rem;
-
+    padding: 2rem 2rem;
 }
+
+
+.utilisateur-line-container{
+    display: flex;
+    align-items: stretch;
+    gap: 2rem;
+    white-space: nowrap;
+}
+
+
+.utilisateur-image{
+    display: flex;
+    flex: 1;
+    background: var(--color-background-2);
+    border-radius: 4rem;
+    padding: 3rem;
+    align-items: center;
+}
+
+.utilisateur-image img{
+    width: 12rem;
+    height: 12rem;
+    border-radius: 2rem;
+}
+
 
 .part-container {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    gap: 4rem;
 }
 
 .grid-line-container {
     display: flex;
     align-items: center;
+    flex-direction: row;
     justify-content: space-between;
-    gap: 5rem;
 }
+
+
 
 .line-container {
     display: flex;
@@ -58,20 +82,31 @@ h1 {
 .grid-line-container div a:nth-child(2) {
     font-size: 1.2rem;
     background: var(--color-background);
-    padding: 0 5rem;
+    padding: 0 2rem;
     border-radius: 0.5rem;
-    border: 0.1rem solid var(--color-dark-writing);
+    border: 0.08rem solid var(--color-dark-writing);
     font-style: italic;
 }
 
 
-button {
+
+
+
+.grid-line-container button {
     background: var(--color-light-writing);
-    width: 5%;
+    width: 6%;
     border: solid var(--color-light-writing) 0.1rem;
     border-radius: 2rem;
+    align-self: flex-end;
 }
 
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
 
 button:active {
     background: var(--color-light-writing);
@@ -87,18 +122,6 @@ main div button img {
     padding: var(--spacing-sm) var(--spacing-sm);
     width: 100%;
     background: var(--color-background-2);
-}
-
-
-.carousel-content {
-    padding-bottom: 1vw;
-    width: 100%;
-    height: auto;
-    overflow-x: auto;
-    overflow-y: hidden;
-    justify-content: center;
-    scroll-snap-type: x mandatory;
-    white-space: nowrap;
 }
 
 
@@ -142,16 +165,24 @@ main div button img {
     border-radius: 5px;
 }
 
-.button-payer{
-    background: var(--color-background);
-    color: var(--color-dark-writing);
-    border: var(--color-dark-writing) 0.1rem solid;
-    border-radius: 1rem;
-    padding: 0 0.5rem;
-}
+
 
 .button-payer button{
-    font-size: 1.3rem;
+    color: var(--color-dark-writing);
+    text-align: center;
+    font-size: 1.5rem;
+    border-radius: 1rem 0.1rem;
+    background-color: var(--color-submit);
+    border: 0.1rem var(--color-submit) solid;
+    padding: 0.4rem 0.8rem;
+}
+
+
+
+.button-payer button:hover{
+    cursor: pointer;
+    background-color: var(--color-header-active-lighter);
+    border: 0.1rem var(--color-bar) solid;
 }
 
 .Réservé {
@@ -163,7 +194,7 @@ main div button img {
 }
 
 .Payment {
-    color: lightsalmon;
+    color: var(--color-reset);
 }
 
 .Effectué{
