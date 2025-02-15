@@ -14,8 +14,7 @@ h1 {
     background: var(--color-background-2);
     border: solid var(--color-background-2) 0.1rem;
     border-radius: 1rem;
-    margin: auto;
-    margin-top: 1rem;
+    margin: 10rem auto;
     max-width: 70vw;
 }
 
@@ -40,28 +39,24 @@ h1 {
     font-size: 1.5rem;
     background: var(--color-background);
     padding: 0 5rem;
-    border-radius: 1rem;
-    border: 0.09rem solid var(--color-dark-writing);
+    border-radius: 0.5rem;
+    border: 0.1rem solid var(--color-dark-writing);
 }
 
-.grid-line-container a {
-    flex: 1;
-    text-align: left;
-}
 
 
 button {
     background: var(--color-light-writing);
-    width: 7%;
+    width: 5%;
     border: solid var(--color-light-writing) 0.1rem;
     border-radius: 2rem;
 }
 
+
 button:active {
     background: var(--color-light-writing);
     border: solid var(--color-light-writing) 0.1rem;
-    border-radius: 2rem;
-    transform: scale(0.9);
+    transform: scale(0.85);
 }
 
 main div button img {

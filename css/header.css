@@ -12,7 +12,7 @@ header {
     justify-content: space-between;
     align-items: center;
     gap: 1rem;
-    padding: 0.5rem 2rem;
+    padding: 0.5rem 3rem;
 }
 
 .header-left {
@@ -65,7 +65,7 @@ header {
 
 .header-connect {
     border: 0.1rem solid var(--color-light-writing);
-    padding: 0.4rem 0.7rem;
+    padding: 0.2rem 0.5rem;
     border-radius: 0.3vw;
 }
 
