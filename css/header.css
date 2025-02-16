@@ -1,5 +1,8 @@
-
+*{
+    box-sizing: border-box;
+}
 header {
+    overflow: hidden;
     margin: 0 auto;
 }
 
@@ -13,6 +16,7 @@ header {
     align-items: center;
     gap: 1rem;
     padding: 0.5rem 3rem;
+    flex-wrap: wrap;
 }
 
 .header-left {
