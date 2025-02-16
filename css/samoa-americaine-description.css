@@ -1,0 +1,186 @@
+
+p{
+    padding-bottom: 5rem;
+}
+
+.flag-image {
+    content: '';
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 60%; 
+    height: 90%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.6; 
+    z-index: 0;
+}
+
+
+.title-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--spacing-sm) var(--spacing-sm);
+}
+
+
+.main-image {
+    position: relative;
+    width: 40%;
+    height: auto;
+}
+
+
+h1 {
+    margin: auto;
+    font-size: 4rem;
+}
+
+
+.destination-text {
+    text-align: justify;
+    font-size: var(--font-size-p);
+    font-family: 'Courier New', Courier, monospace;
+    color: var(--color-light-writing);
+    padding: var(--spacing-sm) var(--spacing-sm);
+}
+
+.destination-text {
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    text-align-last: center;
+    background: var(--color-bar);
+    padding: var(--spacing-sm) var(--spacing-md);
+}
+
+
+
+.maps {
+    width: 100%;
+    text-align: center;
+}
+
+.maps > img {
+    width: 60rem;
+    height: auto;
+}
+
+
+
+
+
+
+
+
+.reservation-option-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--color-background-2);
+    margin: var(--spacing-sm) var(--spacing-md) var(--spacing-md);
+    border-radius: 1.5rem;
+    gap: 2rem;
+}
+
+
+
+
+.reservation-option-part{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.reservation-slider-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 2rem;
+
+}
+
+
+.reservation-checkbox{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    white-space: nowrap;
+}
+
+.reservation-select{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    white-space: nowrap;
+}
+
+.reservation-select select{
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 0.3rem 1.5rem 0 0.5rem;
+    border: 0.1rem solid #ccc;
+    border-radius: 0.5rem;
+    text-align: center;
+    color: var(--color-dark-writing);
+    appearance: none;
+    background-image: url("../image/fleche-bas.jpg");
+    background-repeat: no-repeat;
+    background-position: right 0.1rem center;
+    background-size: 1rem;
+}
+
+
+input[type=checkbox]{
+    display: none;
+}
+
+input[type=date]{
+    cursor: pointer;
+}
+
+
+input[type="checkbox"]:checked + .reservation-button {
+    background-color: var(--color-dark-writing);
+    color: var(--color-light-writing);
+    transform: scale(1.05);
+}
+
+.reservation-button{
+    cursor: pointer;
+    border-radius: 1rem;
+    padding: 0.5rem;
+    background: var(--color-header-active-lighter);
+
+}
+
+button{
+    cursor: pointer;
+}
+
+
+h2{
+    font-size: 2rem;
+    color: var(--color-header-active);
+    text-decoration: underline;
+}
+
+h5{
+    color: var(--color-header-active);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+
+
+
+
