@@ -32,7 +32,7 @@ header {
     font-family: 'Courier New', Courier, monospace;
     color: var(--color-light-writing);
     font-size: 1.3rem;
-    margin-left: 15rem;
+    margin-left: 10rem;
 }
 
 .header-right {
