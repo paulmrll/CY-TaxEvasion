@@ -10,7 +10,7 @@ h1{
     background: var(--color-background-2);
     display: flex;
     padding: var(--spacing-sm) var(--spacing-md) var(--spacing-md) ;
-    gap: 5rem;
+    gap: 10rem;
     justify-content: center;
     align-items: center;
 }
@@ -44,7 +44,7 @@ h1{
     align-items: center;
     display: flex;
     flex-direction: row;
-    gap: 2rem;
+    gap: 10rem;
     text-decoration: none;
 }
 
@@ -145,6 +145,8 @@ h1{
     background-position: right 0.1rem center;
     background-size: 1rem;
 }
+
+
 
 
 select:focus{

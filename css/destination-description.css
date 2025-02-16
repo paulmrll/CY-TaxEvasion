@@ -1,5 +1,4 @@
 
-
 .flag-image {
     content: '';
     position: relative;
@@ -104,7 +103,6 @@ h1 {
 }
 
 
-
 .reservation-select select {
     cursor: pointer;
     font-size: 1.2rem;
@@ -149,17 +147,17 @@ h1 {
     color: var(--color-light-writing);
 }
 
-.reservation-checkbox div{
+.reservation-checkbox div {
     display: flex;
     flex-direction: row;
     gap: 1rem;
 }
 
-input[type="date"]{
+input[type="date"] {
     font-size: 1.2rem;
 }
 
-input[type="radio"]{
+input[type="radio"] {
     font-size: 1.2rem;
     display: none;
 
@@ -170,16 +168,16 @@ input[type="radio"]{
     color: var(--color-light-writing);
 }
 
-input[type="date"]:hover{
+input[type="date"]:hover {
     transform: scale(1.05);
 }
 
 
-select:hover{
+select:hover {
     transform: scale(1.05);
 }
 
-select:focus{
+select:focus {
     transform: scale(1.05);
 }
 
@@ -187,17 +185,17 @@ select:focus{
 .reservation-button {
     cursor: pointer;
     border-radius: 1rem;
-    padding:  0 0.5rem;
+    padding: 0 0.5rem;
     background: var(--color-header-active-lighter);
     font-size: 1.2rem;
 }
 
 
-.reservation-checkbox label:hover{
+.reservation-checkbox label:hover {
     transform: scale(1.1);
 }
 
-.reservation-checkbox label:checked{
+.reservation-checkbox label:checked {
     transform: scale(0.8);
     transition: transform 0.3s ease, opacity 0.3s ease;
 
@@ -213,8 +211,6 @@ input[type="radio"]:checked + label {
     transform: scale(0.9);
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
-
-
 
 
 .button-container {
@@ -237,7 +233,6 @@ button {
 }
 
 
-
 button:hover[type="submit"] {
     background-color: var(--color-submit);
     border: 0.1rem var(--color-submit) solid;
@@ -256,10 +251,7 @@ button:active {
 }
 
 
-
-
-
-.reservation-prix{
+.reservation-prix {
     display: flex;
     flex-direction: row;
     justify-content: center;

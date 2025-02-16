@@ -29,7 +29,7 @@ h1 {
 .box-container {
     background: var(--color-background-2);
     border-radius: 4rem;
-    padding: 2rem 2rem;
+    padding: 1.5rem 2rem;
 }
 
 
@@ -39,6 +39,25 @@ h1 {
     gap: 2rem;
     white-space: nowrap;
 }
+
+.utilisateur-image button{
+        background: none;
+        border: none;
+        font: inherit;
+        color: inherit;
+        cursor: pointer;
+        outline: none;
+}
+
+.utilisateur-image button:hover{
+    background: none;
+    border: none;
+    font: inherit;
+    color: inherit;
+    cursor: pointer;
+    outline: none;
+}
+
 
 
 .utilisateur-image{
@@ -51,8 +70,8 @@ h1 {
 }
 
 .utilisateur-image img{
-    width: 12rem;
-    height: 12rem;
+    width: 8rem;
+    height: 8rem;
     border-radius: 2rem;
 }
 
