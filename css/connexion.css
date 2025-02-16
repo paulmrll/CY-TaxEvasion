@@ -62,6 +62,8 @@ table button{
     background-color: var(--color-light-writing);
     padding: 0.4rem 0.8rem;
     border: 0.1rem var(--color-dark-writing) solid;
+    cursor: pointer;
+
 }
 
 
@@ -70,17 +72,14 @@ td button{
 }
 
 table button:hover[type="submit"]{
-    cursor: pointer;
     background-color: var(--color-submit);
     border: 0.1rem var(--color-submit) solid;
 }
 
 
 table button:hover[type="reset"]{
-    cursor: pointer;
     background-color: var(--color-reset);
     border: 0.1rem var(--color-reset) solid;
-
 }
 
 

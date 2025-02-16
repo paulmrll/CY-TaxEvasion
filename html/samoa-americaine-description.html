@@ -5,7 +5,7 @@
     <title>Les-Samoa-Americaine</title>
     <link rel="icon" type="image" href="../image/logo-site.webp">
     <link rel="stylesheet" href="../css/styles.css">
-    <link rel="stylesheet" href="../css/samoa-americaine-description.css">
+    <link rel="stylesheet" href="../css/destination-description.css">
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/footer.css">
 </head>
@@ -31,9 +31,9 @@
                 <div class="header-connect">Se connecter</div>
             </a>
 
-            <a href="../html/utilisateur.html" class="header-link-active"><img class="header-user-logo"
-                                                                               src="../image/user-icone.png"
-                                                                               alt="utilisateur-logo"></a>
+            <a href="../user.html" class="header-link-active"><img class="header-user-logo"
+                                                                src="../image/user-icone.png"
+                                                                alt="utilisateur-logo"></a>
         </div>
     </div>
 </header>
@@ -63,8 +63,6 @@
     <div class="reservation-option-container">
         <h2>Votre réservation</h2>
         <form method="post" action="../php/samoa-americaine.php">
-
-
             <div class="reservation-slider-container">
 
                 <div class="reservation-select">
@@ -130,22 +128,44 @@
                 </div>
 
                 <div class="reservation-checkbox">
+                    <h5>Repas :</h5>
+                    <div>
+                        <input type="radio" id="repas1" name="repas" value="Spa et Jacuzzi Privée" required>
+                        <label class="reservation-button" for="repas1">Matin</label>
+
+                        <input type="radio" id="repas2" name="repas" value="Spa et Jacuzzi Privée">
+                        <label class="reservation-button" for="repas2">Soir</label>
+
+                        <input type="radio" id="repas3" name="repas" value="Dîner gastronomique 5 étoiles">
+                        <label class="reservation-button" for="repas3">Midi-Soir</label>
+
+                        <input type="radio" id="repas4" name="repas"
+                               value="Soirée VIP exécutif business  class">
+                        <label class="reservation-button" for="repas4">Matin-Midi-Soir</label>
+                    </div>
+                </div>
+
+                <div class="reservation-date">
                     <h5>Dates de départ :</h5>
                     <input id="date-départ" name="date-départ" type="date" placeholder="jj/mm/aaaa" required></td>
 
                 </div>
 
 
-                <div class="reservation-checkbox">
+                <div class="reservation-date">
 
                     <h5>Dates de retour :</h5>
                     <input id="date-retour" name="date-retour" type="date" placeholder="jj/mm/aaaa" required></td>
 
                 </div>
 
+                <div class="reservation-prix">
+                    <h5>Prix :</h5><h6>Beaucoup Trop Cher</h6>
+                </div>
+
 
             </div>
-            <div id="buttons">
+            <div class="button-container" id="buttons">
                 <button type="submit">Payer</button>
                 <button type="reset">Reset</button>
             </div>
@@ -164,16 +184,17 @@
 
 <footer>
     <div class="footer-container">
-        <div class="contact" >
-            <a href="../html/contact.html" class="footer-contact">Nous contacter</a>
-        </div>        <div class="socials">
-            <a class="twitter-logo" href="https://x.com/?mx=2" target="_blank"><img src="../image/twitter-logo.png"
-                                                                                    alt="twitter-logo"></a>
-            <a class="instagram-logo" href="https://www.instagram.com/paul_mrll_/" target="_blank"><img
-                    src="../image/instagram-logo.png" alt="instagram-logo.png"></a>
-        </div>
+      <div class="contact" >
+        <a href="../html/contact.html" class="footer-contact">Nous contacter</a>
+        <a href="../html/about_us.html" class="footer-contact">Qui sommes-nous ?</a>
+      </div>
+      <div class="socials">
+        <div>Nos réseaux : </div>
+        <a class="twitter-logo" href="https://x.com/?mx=2" target="_blank"><img  src="../image/twitter-logo.png" alt="twitter-logo"></a>
+        <a class="instagram-logo" href="https://www.instagram.com/" target="_blank"><img src="../image/instagram-logo.png" alt="instagram-logo.png"></a>
+      </div>
     </div>
-</footer>
+  </footer>
 
 
 </body>

@@ -1,7 +1,9 @@
 
 h1{
     padding-left: 1rem;
-    font-size: 2rem;
+    font-size: 2.5rem;
+    color: var(--color-header-active);
+    text-shadow: 1px 1px var(--color-dark-writing);
     text-decoration: underline;
 }
 
@@ -10,7 +12,7 @@ h1{
     background: var(--color-background-2);
     display: flex;
     padding: var(--spacing-sm) var(--spacing-md) var(--spacing-md) ;
-    gap: 5rem;
+    gap: 10rem;
     justify-content: center;
     align-items: center;
 }
@@ -44,7 +46,7 @@ h1{
     align-items: center;
     display: flex;
     flex-direction: row;
-    gap: 2rem;
+    gap: 10rem;
     text-decoration: none;
 }
 
@@ -135,7 +137,7 @@ h1{
     cursor: pointer;
     font-size: 1.5rem;
     padding: 0.3rem 1.5rem 0 0.5rem;
-    border: 0.1rem solid #ccc;
+    border: 0.1rem solid var(--color-light-border);
     border-radius: 0.5rem;
     text-align: center;
     color: var(--color-dark-writing);
@@ -145,6 +147,8 @@ h1{
     background-position: right 0.1rem center;
     background-size: 1rem;
 }
+
+
 
 
 select:focus{

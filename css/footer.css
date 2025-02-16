@@ -31,6 +31,9 @@ footer{
     color: var(--color-header-active);
     text-decoration: none;
 }
+.contact a{
+    padding-right: 2rem;
+}
 
 
 .socials{

@@ -1,0 +1,245 @@
+
+h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    white-space: nowrap;
+    color: var(--color-header-active);
+    text-decoration: underline 0.2rem var(--color-header-active);
+    text-shadow: 1px 1px var(--color-background);
+}
+
+
+.main-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: var(--spacing-sm) var(--spacing-lg);
+
+}
+
+.compte-info-container-top {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    font-size: 1.5rem;
+}
+
+.compte-info-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    font-size: 1.5rem;
+}
+
+.box-container {
+    background: var(--color-background-2);
+    border-radius: 4rem;
+    padding: 1.5rem 2rem;
+}
+
+
+.utilisateur-line-container {
+    display: flex;
+    align-items: stretch;
+    gap: 2rem;
+    white-space: nowrap;
+}
+
+.utilisateur-image button {
+    background: none;
+    border: none;
+    font: inherit;
+    color: inherit;
+    cursor: pointer;
+    outline: none;
+}
+
+.utilisateur-image button:hover {
+    background: none;
+    border: none;
+    font: inherit;
+    color: inherit;
+    cursor: pointer;
+    outline: none;
+}
+
+
+.utilisateur-image {
+    display: flex;
+    flex: 1;
+    background: var(--color-background-2);
+    border-radius: 4rem;
+    padding: 3rem;
+    align-items: center;
+}
+
+.utilisateur-image img {
+    width: 8rem;
+    height: 8rem;
+    border-radius: 2rem;
+}
+
+
+.part-container {
+    display: flex;
+    flex-direction: row;
+    gap: 4rem;
+}
+
+.grid-line-container {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+.line-container {
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+}
+
+
+.grid-line-container div a:nth-child(2) {
+    font-size: 1.2rem;
+    background: var(--color-background);
+    padding: 0 2rem;
+    border-radius: 0.5rem;
+    border: 0.08rem solid var(--color-dark-writing);
+    font-style: italic;
+}
+
+
+.grid-line-container button {
+    background: none;
+    width: 6%;
+    border: none;
+    border-radius: 2rem;
+    align-self: flex-end;
+}
+
+.grid-line-container button:hover {
+    background: none;
+    width: 6%;
+    border: none;
+    border-radius: 2rem;
+    align-self: flex-end;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+button:active {
+    background: var(--color-light-writing);
+    transform: scale(0.85);
+}
+
+main div button img {
+    width: 100%;
+}
+
+
+.carousel-container {
+    padding: var(--spacing-sm) var(--spacing-sm);
+    width: 100%;
+    background: var(--color-background-2);
+}
+
+
+.grid-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+
+.grid-item {
+    position: relative;
+    width: 20rem;
+    height: 10rem;
+    overflow: hidden;
+    border-radius: 1vw;
+    transition: transform 0.3s ease-in-out;
+}
+
+
+.grid-item img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.grid-item h3 {
+    font-size: 1.5rem;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--color-light-writing);
+    text-shadow: 2px 2px var(--color-dark-writing);
+    font-weight: bold;
+    text-align: center;
+    width: auto;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+
+.button-payer button {
+    color: var(--color-dark-writing);
+    text-align: center;
+    font-size: 1.5rem;
+    border-radius: 1rem 0.1rem;
+    background-color: var(--color-submit);
+    border: 0.1rem var(--color-submit) solid;
+    padding: 0.4rem 0.8rem;
+}
+
+
+.button-payer button:hover {
+    cursor: pointer;
+    background-color: var(--color-header-active-lighter);
+    border: 0.1rem var(--color-bar) solid;
+}
+
+.Réservé {
+    color: #19730a;
+    background: var(--color-background);
+    padding: 0 0.5rem;
+    border-radius: 1rem;
+    border: 0.1rem solid var(--color-dark-writing);
+}
+
+.Annulé {
+    color: var(--color-map-red);
+    background: var(--color-background);
+    padding: 0 0.5rem;
+    border-radius: 1rem;
+    border: 0.1rem solid var(--color-dark-writing);
+}
+
+.Payment {
+    color: var(--color-reset);
+    background: var(--color-background);
+    padding: 0.1rem 0.5rem;
+    border-radius: 1rem;
+    border: 0.1rem solid var(--color-dark-writing);
+    white-space: nowrap;
+}
+
+.Effectué {
+    color: darkblue;
+    background: var(--color-background);
+    padding: 0 0.5rem;
+    border-radius: 1rem;
+    border: 0.1rem solid var(--color-dark-writing);
+}
