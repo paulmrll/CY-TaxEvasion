@@ -5,7 +5,7 @@
     --color-bar: #041522;
     --color-background: #FAF9F6;
     --color-dark-writing: #041522;
-    --color-light-writing: white;
+    --color-light-writing: #FAF9F6;
     --color-light-border: #ccc;
     --color-background-2: #d6f1fc;
     --color-header-active: #5cb8ec;
@@ -20,6 +20,7 @@
     --spacing-md: 10rem;
     --spacing-lg: 20rem;
 }
+
 
 
 * {

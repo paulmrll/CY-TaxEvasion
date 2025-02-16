@@ -33,6 +33,7 @@
     width: 100vw;
     background-color: var(--color-background-2);
     padding: 1rem;
+    margin-bottom: 7em;
 }
 
 .credit img {
