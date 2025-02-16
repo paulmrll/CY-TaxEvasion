@@ -45,6 +45,7 @@ header, main, footer {
     flex-direction: column;
     align-items: center;
     gap: 0.5rem;
+    
 }
 
 
@@ -69,6 +70,7 @@ header, main, footer {
     padding: 0.5vw 1vw;
     outline: none;
     border-radius: 0.1rem;
+    border-radius: 20rem;
 }
 
 
