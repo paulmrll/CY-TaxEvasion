@@ -15,7 +15,6 @@
     --color-map-grey: #555555;
     --color-map-red: #b80707;
     --color-blue: #3f4eeb;
-
     --font-style: normal;
     --spacing-sm: 4rem;
     --spacing-md: 10rem;
@@ -32,7 +31,7 @@
 
 body {
     font-family: Poppins;
-    font-size: 1rem;
+    font-size: 1.1rem;
     line-height: 2;
     background-color: var(--color-background);
     color: var(--color-dark-writing);

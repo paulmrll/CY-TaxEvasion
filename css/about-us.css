@@ -1,34 +1,41 @@
-.us{
-   background-color: var(--color-blue);
-   padding: 2rem;
-   text-align: center;
+
+
+.us {
+    background-color: var(--color-background-2);
+    padding: 2rem;
+    text-align: center;
+    border-radius: 1rem;
 }
 
-.grid-container{
+.grid-container {
     display: grid;
     grid-template-columns: repeat(3, 20vw);
     gap: 2rem;
     margin-left: 15vw;
 }
-.grid-container > div{
+
+.grid-container > div {
     padding: 1rem;
 }
 
-.us .text{
+.us .text {
     margin-top: 5vw;
 }
-.us p{
+
+.us p {
     font-size: 1rem;
     line-height: 2rem;
     margin-left: 25vw;
     width: 50%;
 }
-.credit{
+
+.credit {
     width: 100vw;
     background-color: var(--color-background-2);
     padding: 1rem;
 }
-.credit img{
+
+.credit img {
     width: 10vw;
     margin-left: 44vw;
 }
