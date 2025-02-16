@@ -28,10 +28,11 @@ header {
 
 
 .header-slogan {
+    align-items: center;
     font-family: 'Courier New', Courier, monospace;
     color: var(--color-light-writing);
     font-size: 1.3rem;
-    padding-left: 10rem;
+    margin-left: 15rem;
 }
 
 .header-right {
@@ -52,6 +53,11 @@ header {
     width: 3rem;
     height: auto;
     margin-top: 0.9rem;
+
+}
+
+.header-user-logo:hover{
+    filter: brightness(0.8);
 }
 
 

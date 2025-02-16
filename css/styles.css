@@ -8,7 +8,6 @@
     --color-light-writing: white;
     --color-light-border: #ccc;
     --color-background-2: #d6f1fc;
-    --color-title: #D4AF37;
     --color-header-active: #5cb8ec;
     --color-header-active-lighter: #75cbfa;
     --color-reset: #ed825f;
@@ -16,7 +15,6 @@
     --color-map-grey: #555555;
     --color-map-red: #b80707;
     --color-blue: #3f4eeb;
-
     --font-style: normal;
     --spacing-sm: 4rem;
     --spacing-md: 10rem;
@@ -33,11 +31,12 @@
 
 body {
     font-family: Poppins;
-    font-size: 1vw;
+    font-size: 1.1rem;
     line-height: 2;
     background-color: var(--color-background);
     color: var(--color-dark-writing);
 }
+
 
 @keyframes slideIn {
     from {

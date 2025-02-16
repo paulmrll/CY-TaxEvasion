@@ -15,7 +15,6 @@ header, main, footer {
     height: 100vh;
     overflow: hidden;
     z-index: -1;
-
 }
 
 
@@ -30,10 +29,6 @@ header, main, footer {
 }
 
 
-.italic-text {
-    font-style: italic;
-}
-
 
 .search-bar-container {
     background-size: cover;
@@ -43,12 +38,7 @@ header, main, footer {
 }
 
 
-.search-bar input {
-    background-color: rgba(50, 50, 50, 0.4);
-    color: var(--color-light-writing);
-    border: 1px solid #555555;
-    font-size: 2rem;
-}
+
 
 .search-bar {
     display: flex;
@@ -67,33 +57,44 @@ header, main, footer {
 }
 
 
+
 .search-bar input {
-    width: 50rem;
+    width: 90%;
+    max-width: 50rem;
+    background-color: rgba(50, 50, 50, 0.4);
+    color: var(--color-light-writing);
+    border: 1px solid #555555;
     height: 2rem;
     font-size: 1.2rem;
     padding: 0.5vw 1vw;
     outline: none;
-    border-radius: 2rem;
+    border-radius: 0.1rem;
 }
 
 
 .carousel-title {
-    font-size: 2rem;
 
+    font-style: italic;
+    margin-bottom: 0.8rem;
+    font-size: 2rem;
 }
 
 
 .carousel-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     padding: var(--spacing-sm) var(--spacing-sm);
-    width: 100%;
     background: var(--color-background-2);
 }
 
 
 .carousel-content {
-    width: 100%;
-    height: auto;
-    white-space: nowrap;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -119,6 +120,7 @@ header, main, footer {
 .grid-item img {
     display: block;
     width: 100%;
+    max-width: 30rem;
     height: 100%;
     object-fit: cover;
 }
@@ -139,7 +141,7 @@ header, main, footer {
 
 
 .flag {
-    width: 15%;
+    width: 20%;
     position: absolute;
     bottom: 10px;
     left: 10px;
@@ -160,6 +162,7 @@ header, main, footer {
     display: flex;
     gap: 10rem;
     width: 100%;
+    max-width: 100rem;
     margin: auto;
     justify-content: center;
     align-items: center;
@@ -212,7 +215,7 @@ header, main, footer {
     justify-content: center;
     align-items: center;
     background: var(--color-background-2);
-    padding: var(--spacing-md) var(--spacing-md);
+    padding: var(--spacing-md) var(--spacing-md) var(--spacing-sm);
 }
 
 .map-container h1 {
@@ -225,6 +228,7 @@ header, main, footer {
     display: block;
     margin: 0 auto;
     width: 100%;
+    max-width: 95rem;
     height: auto;
     border-radius: 1rem;
 }
@@ -268,3 +272,5 @@ a {
     color: var(--color-light-writing);
     text-decoration: none;
 }
+
+

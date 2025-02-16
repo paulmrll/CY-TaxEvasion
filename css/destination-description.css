@@ -1,28 +1,17 @@
 
-.flag-image {
-    content: '';
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 70%;
-    height: auto;
-    background-size: cover;
-    background-position: center;
-    opacity: 0.6;
-    z-index: 0;
-}
-
 .title-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: var(--spacing-sm) var(--spacing-sm);
+    padding: var(--spacing-sm) var(--spacing-md);
+
 }
 
 
 .main-image {
     position: relative;
-    width: 40%;
+    width: 100%;
+    max-width: 30rem;
     height: auto;
     border-radius: 2rem;
 }
@@ -30,7 +19,8 @@
 
 h1 {
     margin: auto;
-    font-size: 4rem;
+    color: black;
+    font-size: 3rem;
 }
 
 
@@ -38,7 +28,7 @@ h1 {
     display: flex;
     justify-content: center;
     text-align: justify;
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     font-family: 'Courier New', Courier, monospace;
     color: var(--color-light-writing);
     padding: var(--spacing-lg) var(--spacing-sm);
@@ -61,7 +51,8 @@ h1 {
 }
 
 .maps > img {
-    width: 60rem;
+    width: 100%;
+    max-width: 60rem;
     height: auto;
     border-radius: 2rem;
 }

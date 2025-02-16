@@ -99,16 +99,27 @@ h1 {
     display: flex;
     align-items: center;
     gap: 5rem;
+    font-size: 1.2rem;
 }
 
+.grid-line-container div{
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 5rem;
+}
 
 .grid-line-container div a:nth-child(2) {
-    font-size: 1.2rem;
+    width: 100%;
+    font-size: 1.1rem;
     background: var(--color-background);
-    padding: 0 2rem;
-    border-radius: 0.5rem;
+    padding: 0 1rem;
+    border-radius: 0.2rem;
     border: 0.08rem solid var(--color-dark-writing);
     font-style: italic;
+    margin-right: 1.5rem;
 }
 
 
@@ -128,13 +139,6 @@ h1 {
     align-self: flex-end;
 }
 
-input {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1rem;
-}
 
 button:active {
     background: var(--color-light-writing);
@@ -194,10 +198,11 @@ main div button img {
 }
 
 
+
 .button-payer button {
     color: var(--color-dark-writing);
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     border-radius: 1rem 0.1rem;
     background-color: var(--color-submit);
     border: 0.1rem var(--color-submit) solid;
@@ -208,38 +213,45 @@ main div button img {
 .button-payer button:hover {
     cursor: pointer;
     background-color: var(--color-header-active-lighter);
-    border: 0.1rem var(--color-bar) solid;
 }
 
 .Réservé {
-    color: #19730a;
-    background: var(--color-background);
+    color: var(--color-background);
+    background: #19730a;
     padding: 0 0.5rem;
     border-radius: 1rem;
-    border: 0.1rem solid var(--color-dark-writing);
 }
 
 .Annulé {
-    color: var(--color-map-red);
-    background: var(--color-background);
+    background: var(--color-map-red);
+    color: var(--color-background);
     padding: 0 0.5rem;
     border-radius: 1rem;
-    border: 0.1rem solid var(--color-dark-writing);
 }
 
 .Payment {
-    color: var(--color-reset);
-    background: var(--color-background);
+    color: var(--color-background);
+    background: var(--color-reset);
     padding: 0.1rem 0.5rem;
     border-radius: 1rem;
-    border: 0.1rem solid var(--color-dark-writing);
     white-space: nowrap;
 }
 
 .Effectué {
-    color: darkblue;
-    background: var(--color-background);
+    color: var(--color-background);
+    background: var(--color-header-active);
     padding: 0 0.5rem;
     border-radius: 1rem;
-    border: 0.1rem solid var(--color-dark-writing);
+}
+
+.date-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    color: var(--color-light-writing);
+    background: var(--color-header-active);
+    border-radius: 1rem;
+    padding: 1rem;
+    font-size: 1.1rem;
 }

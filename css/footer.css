@@ -31,6 +31,11 @@ footer{
     color: var(--color-header-active);
     text-decoration: none;
 }
+
+.footer-contact:hover{
+    text-decoration: underline;
+}
+
 .contact a{
     padding-right: 2rem;
 }

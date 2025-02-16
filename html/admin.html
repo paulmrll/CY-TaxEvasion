@@ -45,73 +45,94 @@
         <h1>Panneaux Administrateur</h1>
         <table>
             <tr>
+                <th>ID</th>
                 <th>Name</th>
                 <th>Firstname</th>
                 <th>Mail</th>
                 <th>Classification</th>
+                <th>Option</th>
             </tr>
             <tr>
+                <td>#1</td>
                 <td>Paul</td>
                 <td>Morel</td>
                 <td>paul.morel@gmail.com</td>
                 <td>
                     <label>
                         <select name="class-change">
-                            <option value="ADMIN" selected>ADMIN</option>
-                            <option value="BANNI">BANNI</option>
-                            <option value="NORMAL">NORMAL</option>
+                            <option value="Administrateur" selected>Administrateur</option>
+                            <option value="Banni" >Banni</option>
+                            <option value="Utilisateur">Utilisateur</option>
                             <option value="VIP">VIP</option>
-
                         </select>
                     </label>
                 </td>
+                <td>
+                    <button type="button">Supprimer</button>
+                </td>
             </tr>
             <tr>
+                <td>#2</td>
                 <td>Florian</td>
                 <td>Dupont</td>
                 <td>florian.dupont@gmail.com</td>
                 <td>
                     <label>
                         <select name="class-change">
-                            <option value="ADMIN">ADMIN</option>
-                            <option value="BANNI">BANNI</option>
-                            <option value="NORMAL">NORMAL</option>
+                            <option value="Administrateur">Administrateur</option>
+                            <option value="Banni" >Banni</option>
+                            <option value="Utilisateur">Utilisateur</option>
                             <option value="VIP" selected>VIP</option>
                         </select>
                     </label>
                 </td>
+                <td>
+                    <button type="button">Supprimer</button>
+                </td>
             </tr>
             <tr>
+                <td>#3</td>
                 <td>Louis</td>
                 <td>Richelieux</td>
                 <td>louis.richelieux@gmail.com</td>
                 <td>
                     <label>
                         <select name="class-change">
-                            <option value="ADMIN">ADMIN</option>
-                            <option value="BANNI">BANNI</option>
-                            <option value="NORMAL" selected>NORMAL</option>
+                            <option value="Administrateur">Administrateur</option>
+                            <option value="Banni" >Banni</option>
+                            <option value="Utilisateur" selected>Utilisateur</option>
                             <option value="VIP">VIP</option>
                         </select>
                     </label>
                 </td>
+                <td>
+                    <button type="button">Supprimer</button>
+                </td>
             </tr>
             <tr>
+                <td>#4</td>
                 <td>Antonio</td>
                 <td>robber</td>
                 <td>antonio.robber@gmail.com</td>
                 <td>
                     <label>
                         <select name="class-change">
-                            <option value="ADMIN">ADMIN</option>
-                            <option value="BANNI" selected>BANNI</option>
-                            <option value="NORMAL">NORMAL</option>
+                            <option value="Administrateur">Administrateur</option>
+                            <option value="Banni" selected>Banni</option>
+                            <option value="Utilisateur">Utilisateur</option>
                             <option value="VIP">VIP</option>
                         </select>
                     </label>
                 </td>
+                <td>
+                    <button type="button">Supprimer</button>
+                </td>
             </tr>
         </table>
+        <div class="confirm-button">
+            <button type="submit">Confirmer Les Modifications</button>
+        </div>
+
     </div>
 </main>
 
