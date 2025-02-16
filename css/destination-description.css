@@ -41,7 +41,7 @@ h1 {
     display: flex;
     justify-content: center;
     text-align: justify;
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     font-family: 'Courier New', Courier, monospace;
     color: var(--color-light-writing);
     padding: var(--spacing-lg) var(--spacing-sm);

@@ -1,60 +1,80 @@
 h1 {
-    font-size: 2rem;
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
 }
+
+
 
 .users-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: var(--spacing-md) var(--spacing-sm);
 
-    margin: 13rem 30rem;
 }
-
 
 table {
-    border: 0.1rem solid black;
-    border-radius: 1rem;
-    background: var(--color-background-2);
 
+    border-collapse: collapse;
+    margin-bottom: 4rem;
+    border: 0.1rem solid var(--color-dark-writing);
+    font-size: 1.4rem;
 }
 
-th, td {
-    padding: 0.1rem;
-    text-align: center;
-}
-
-td {
-    border-top: 0.1rem solid black;
-    border-right: 0.1rem solid black
-}
 
 th {
+    color: var(--color-light-writing);
+    background: var(--color-bar);
     border-right: 0.1rem solid black;
 }
 
-td:last-child, th:last-child {
+
+tr:nth-child(2n) {
+    background: var(--color-background-2);
+}
+
+tr:not(:first-child):hover {
+    background: var(--color-light-border);
+    opacity: 0.8;
+}
+
+td {
+    border-top: 0.1rem solid var(--color-dark-writing);
+    border-right: 0.1rem solid var(--color-light-border);
+}
+
+
+td:last-child{
     border-right: none;
 }
 
+
 td, th {
     padding: 1rem;
-    width: 100%;
 }
-
 
 select {
-    padding: 0.5rem 1.5rem;
-    font-size: 1rem;
-    font-weight: bold;
-    border: 0.1rem solid #ccc;
+    cursor: pointer;
+    font-size: 1.3rem;
+    padding: 0.3rem 1.5rem  0.5rem;
+    border: 0.1rem solid var(--color-light-border);
     border-radius: 0.5rem;
-    background: var(--color-background);
-    appearance: none;
     text-align: center;
-
+    color: var(--color-dark-writing);
+    appearance: none;
+    background-image: url("../image/fleche-bas.jpg");
+    background-repeat: no-repeat;
+    background-position: right 0.1rem center;
+    background-size: 1rem;
+    margin-right: 1rem;
 }
 
+select:focus {
+    border-color: var(--color-header-active);
+    outline: none;
+}
 
 select:hover {
     cursor: pointer;
@@ -65,36 +85,38 @@ select option {
 }
 
 
-select option[value="ADMIN"] {
-    color: var(--color-blue);
+table button{
+    color: var(--color-light-writing);
+    text-align: center;
+    font-size: 1.3rem;
+    border-radius: 1rem 0.1rem;
+    background-color: #d62d2d;
+    padding: 0.3rem 0.4rem;
+    border: 0.1rem var(--color-dark-writing) solid;
+    cursor: pointer;
 }
 
-select option[value="VIP"] {
-    color: purple;
+
+table button:hover[type="submit"]{
+    background-color: var(--color-submit);
+    border: 0.1rem var(--color-submit) solid;
 }
 
-select option[value="NORMAL"] {
+.confirm-button{
+    margin-left: 40rem;
+}
+
+button{
     color: var(--color-dark-writing);
+    text-align: center;
+    font-size: 1.5rem;
+    border-radius: 1rem 0.1rem;
+    background-color: var(--color-background-2);
+    padding: 0.4rem 0.8rem;
+    border: 0.1rem var(--color-dark-writing) solid;
+    cursor: pointer;
 }
 
-select option[value="BANNI"] {
-    color: red;
-}
-
-
-select:has(option[value="ADMIN"]:checked) {
-    color: var(--color-blue);
-}
-
-select:has(option[value="VIP"]:checked) {
-    color: purple;
-}
-
-select:has(option[value="NORMAL"]:checked) {
-    color: var(--color-dark-writing);
-}
-
-
-select:has(option[value="BANNI"]:checked) {
-    color: red;
+button:active{
+    transform: scale(0.9);
 }
