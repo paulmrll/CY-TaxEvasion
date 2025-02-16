@@ -6,9 +6,9 @@
 
 .grid-container{
     display: grid;
-    grid-template-columns: repeat(3, 10vw);
-    gap: 1rem;
-    margin-left: 32vw;
+    grid-template-columns: repeat(3, 20vw);
+    gap: 2rem;
+    margin-left: 15vw;
 }
 .grid-container > div{
     padding: 1rem;
