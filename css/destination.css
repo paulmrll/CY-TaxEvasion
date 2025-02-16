@@ -1,7 +1,9 @@
 
 h1{
     padding-left: 1rem;
-    font-size: 2rem;
+    font-size: 2.5rem;
+    color: var(--color-header-active);
+    text-shadow: 1px 1px var(--color-dark-writing);
     text-decoration: underline;
 }
 
