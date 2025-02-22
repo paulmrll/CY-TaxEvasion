@@ -16,9 +16,9 @@
     --color-map-red: #b80707;
     --color-blue: #3f4eeb;
     --font-style: normal;
-    --spacing-sm: 4rem;
-    --spacing-md: 10rem;
-    --spacing-lg: 20rem;
+    --spacing-sm: 4vmin;
+    --spacing-md: 10vmin;
+    --spacing-lg: 20vmin;
 }
 
 

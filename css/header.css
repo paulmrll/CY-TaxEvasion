@@ -3,27 +3,28 @@
 }
 header {
     overflow: hidden;
-    margin: 0 auto;
+    margin: 0;
+    
 }
 
 
 .header-container {
-    max-width: 100%;
+
     background: var(--color-bar);
     background-size: cover;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 1rem;
-    padding: 0.5rem 3rem;
     flex-wrap: wrap;
 }
 
 .header-left {
     font-weight: normal;
-    font-size: 2rem;
+    font-size: 2.5vmin;
     font-family: 'Courier New', Courier, monospace;
     align-items: center;
+    width: 20%;
+    margin-left : 1vmin;
 }
 
 
@@ -31,15 +32,19 @@ header {
     align-items: center;
     font-family: 'Courier New', Courier, monospace;
     color: var(--color-light-writing);
-    font-size: 1.3rem;
-    margin-left: 10rem;
+    font-size: 2.5vmin;
+    width : 30%;
+    padding-left: 2vmin;
+    text-align : center;
 }
 
 .header-right {
     display: flex;
     align-items: center;
-    gap: 1.5rem;
-    font-size: 1.4rem;
+    gap: 1.5vmin;
+    font-size: 2.5vmin;
+    justify-content: flex-end;
+    width : 40%;
 }
 
 .header-link {
@@ -50,9 +55,8 @@ header {
 
 
 .header-user-logo {
-    width: 3rem;
-    height: auto;
-    margin-top: 0.9rem;
+    width :70%;
+    margin-top: 0.9vmin;
 
 }
 
@@ -74,15 +78,15 @@ header {
 
 
 .header-connect {
-    border: 0.1rem solid var(--color-light-writing);
-    padding: 0.2rem 0.5rem;
-    border-radius: 0.3vw;
+    border: 0.2vmin solid var(--color-light-writing);
+    padding: 0.2vmin 0.5vmin;
+    border-radius: 3vmin;
 }
 
 
 .header-connect:hover {
     background-color: var(--color-header-active);
-    border: 0.1rem solid var(--color-header-active);
+    border: 0.1vmin solid var(--color-header-active);
     color: var(--color-light-writing);
     transform: scale(1.03);
 }
@@ -95,8 +99,8 @@ header {
 
 .header-jet-icon {
     position: absolute;
-    bottom: -1.4rem;
-    left: -2.5rem;
+    bottom: -1.4vmin;
+    left: -2.5vmin;
     transition: transform 0.15s ease-in-out 0.1s;
     will-change: transform;
     pointer-events: none;
@@ -109,7 +113,7 @@ header {
 
 
 .header-voir-voyage-text:hover + .header-jet-icon {
-    transform: translateX(13rem) translateY(1rem);
+    transform: translateX(25vmin) translateY(1vmin);
 }
 
 

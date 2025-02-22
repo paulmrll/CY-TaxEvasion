@@ -10,19 +10,19 @@ form{
 table{
 
     border: var(--color-header-active) 1px solid;
-    border-radius: 1.5rem;
+    border-radius: 3vmin;
     background-color: var(--color-background-2);;
     color: var(--color-dark-writing);
-    font-size: 1.5rem;
+    font-size: 3vmin;
 }
 
 
 
 table label{
-    width: 30%;
+    width: 30vmin;
 }
 input{
-    width: 70%;
+    width: 70vmin;
 }
 
 
@@ -38,10 +38,10 @@ table input:hover{
 
 table input{
     width: 100%;
-    height: 2rem;
-    border: darkred 0.06rem solid;
-    border-radius: 1.5rem;
-    font-size: 1rem;
+    height: 5vmin;
+    border: darkred 0.06vmin solid;
+    border-radius: 1.5vmin;
+    font-size: 3vmin;
     text-align: center;
 
 }
@@ -51,34 +51,34 @@ table input:focus{
 }
 
 table input:valid{
-    border: limegreen 0.06rem solid;
+    border: limegreen 0.06vmin solid;
 }
 
 table button{
     color: var(--color-dark-writing);
     text-align: center;
-    font-size: 1.3rem;
-    border-radius: 1rem 0.1rem;
+    font-size: 3vmin;
+    border-radius: 1vmin 0.1vmin;
     background-color: var(--color-light-writing);
-    padding: 0.4rem 0.8rem;
-    border: 0.1rem var(--color-dark-writing) solid;
+    padding: 0.4vmin 0.8vmin;
+    border: 0.1vmin var(--color-dark-writing) solid;
     cursor: pointer;
 }
 
 
 td button{
-    margin: 0 2rem;
+    margin: 0 2vmin;
 }
 
 table button:hover[type="submit"]{
     background-color: var(--color-submit);
-    border: 0.1rem var(--color-submit) solid;
+    border: 0.1vmin var(--color-submit) solid;
 }
 
 
 table button:hover[type="reset"]{
     background-color: var(--color-reset);
-    border: 0.1rem var(--color-reset) solid;
+    border: 0.1vmin var(--color-reset) solid;
 }
 
 
@@ -87,14 +87,14 @@ button:active{
 }
 
 table td, table tr, table th{
-    padding: 1rem 1rem;
+    padding: 1vmin 1vmin;
 }
 
 td{
-    border-top: white 0.1rem solid;
+    border-top: white 0.1vmin solid;
 }
 
 form a{
     color: var(--color-blue);
-    text-decoration: underline 0.1rem;
+    text-decoration: underline 0.1vmin;
 }
