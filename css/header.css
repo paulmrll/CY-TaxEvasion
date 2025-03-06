@@ -20,7 +20,7 @@ header {
 
 .header-left {
     font-weight: normal;
-    font-size: 2.5vmin;
+    font-size: 3vmin;
     font-family: 'Courier New', Courier, monospace;
     align-items: center;
     width: 20%;
@@ -32,7 +32,7 @@ header {
     align-items: center;
     font-family: 'Courier New', Courier, monospace;
     color: var(--color-light-writing);
-    font-size: 2.5vmin;
+    font-size: 3vmin;
     width : 30%;
     padding-left: 2vmin;
     text-align : center;
@@ -42,7 +42,7 @@ header {
     display: flex;
     align-items: center;
     gap: 1.5vmin;
-    font-size: 2.5vmin;
+    font-size: 3vmin;
     justify-content: flex-end;
     width : 40%;
 }
@@ -100,7 +100,7 @@ header {
 .header-jet-icon {
     position: absolute;
     bottom: -1.4vmin;
-    left: -2.5vmin;
+    left: -3vmin;
     transition: transform 0.15s ease-in-out 0.1s;
     will-change: transform;
     pointer-events: none;

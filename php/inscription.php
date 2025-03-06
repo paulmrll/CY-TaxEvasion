@@ -1,75 +1,48 @@
 <?php
-
-require "config.php";
-
-
-function find($email, $pdo) {
-    if (isset($email) && isset($pdo)){
-        $sql1="SELECT COUNT(*) FROM `1` WHERE email = :email";
-        $stmt1=$pdo->prepare($sql1);
-        $stmt1->execute([
-            ":email" => $email
-        ]);
-        $count=$stmt1->fetchColumn();
-        if ($count > 0) {
-            echo "Utilisateur déjà présent";
-            exit();
-        }
-    } 
-}
-
-function modify($mail, $name, $firstname){
-    $mail=strtolower($mail);
-    for ($i = 0; $i < strlen($name); $i++){
-        if ($i == 0){
-            $name[$i] = strtoupper($name[$i]);
-        } else {
-            $name[$i] = strtolower($name[$i]);
+function exist($email){
+    $file = fopen("../data/utilisateurs.txt", "r");
+    if (file_exists("../data/utilisateurs.txt")){
+        while (!feof($file)){
+            $line = fgets($file);
+            $line = explode(";", $line);
+            if ($line[2] == $email){
+                return true;
+            }
         }
     }
-    for ($j = 0; $j < strlen($firstname); $j++){
-        if ($j == 0){
-            $firstname[$j] = strtoupper($firstname[$j]);
-        } else {
-            $firstname[$j] = strtolower($firstname[$j]);
-        }
-    }
-    $tab = [
-        "mail" => $mail,
-        "firstname" => $firstname,
-        "name" => $name,
-    ];
-    return $tab;
+    return false;
 }
 
-$mdp=$_POST["mdp"];
-$name=$_POST["name"];
-$firstname=$_POST["firstname"];
-$mail=$_POST["mail"];
+function inscription($nom, $prenom, $email, $mdp){
+    echo "1";
+    $file = fopen("../data/utilisateurs.txt", "a");
+   
+    if (file_exists("../data/utilisateurs.txt")){
+        if (isset($nom) && isset($prenom) && isset($email) && isset($mdp)){
+            if (exist($email)){
+                echo "Cet email est déjà utilisé";
+                return;
+            } else {
+                $mdp_hash = password_hash($mdp, PASSWORD_DEFAULT);
+                $line = $nom . ";" . $prenom . ";" . $email . ";" . $mdp_hash . "\n";
+                fwrite($file, $line);
+            }
+        } 
+    }
+    fclose($file);
 
-$info = modify($mail, $name, $firstname);
+}
+echo "1";
+$nom = $_POST["name"];
+$prenom = $_POST["firstname"];
+$email = $_POST["email"];
+$mdp = $_POST["mdp"];
 
-$mail = $info["mail"];
-$firstname = $info["firstname"];
-$name = $info["name"];
-
-echo $firstname .$name;
+inscription($nom, $prenom, $email, $mdp);
 
 
-if (isset($mdp) && isset($name) && isset($firstname) && isset($mail)){
-    find($mail, $pdo);
-    $mdp_hash=password_hash($mdp, PASSWORD_DEFAULT);
-    $sql="INSERT INTO `1` (name, firstname, email, mdp) VALUES (:name, :firstname, :mail, :mdp)";
-    $stmt=$pdo->prepare($sql);
-    $stmt->execute([
-        "name" => $name, 
-        "firstname" => $firstname, 
-        "mail" => $mail, 
-        "mdp" => $mdp_hash
-    ]);
+
+
+
     
-    echo "inscription reussi";
-}
-
-
 ?>
