@@ -13,7 +13,7 @@ function connexion($mail, $mdp){
 
                     
                     if (password_verify($mdp, $line[3])){
-                        header("Location: ../html/index.html");
+
                         echo "Connexion réussie";
                         return true;
                     } else {
@@ -26,10 +26,11 @@ function connexion($mail, $mdp){
         }
     }
 }
+if (isset($_POST['mail']) && isset($_POST['mdp'])){
+    $mail = $_POST['mail'];
+    $mdp = $_POST['mdp'];
 
-$mail = $_POST['mail'];
-$mdp = $_POST['mdp'];
-if (isset($mail) && isset($mdp)){
-    connexion($mail, $mdp);
+        connexion($mail, $mdp);
+    
 }
 ?>

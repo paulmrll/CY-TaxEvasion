@@ -24,13 +24,12 @@ function inscription($nom, $prenom, $email, $mdp){
                 return;
             } else {
                 $mdp_hash = password_hash($mdp, PASSWORD_DEFAULT);
-                $line = $nom . ";" . $prenom . ";" . $email . ";" . $mdp_hash . "\n";
+                $line = $nom . ";" . $prenom . ";" . $email . ";" . $mdp_hash . ";o" . "\n";
                 fwrite($file, $line);
             }
         } 
     }
     fclose($file);
-
 }
 echo "1";
 $nom = $_POST["name"];
