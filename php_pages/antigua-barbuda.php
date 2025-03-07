@@ -15,21 +15,21 @@
 <header>
     <div class="header-container">
         <div class="header-left">
-            <a href="../index.html" class="header-link">CY-TAXEVASION</a>
+            <a href="../index.php" class="header-link">CY-TAXEVASION</a>
         </div>
 
         <div class="header-slogan">THE HOLIDAYS YOUR WALLET NEED</div>
         <div class="header-right">
             <div class="header-voir-voyage">
-                <a href="../html/destination.html" class="header-link header-voir-voyage-text">Voir nos voyages</a>
+                <a href="../php_pages/destination.php" class="header-link header-voir-voyage-text">Voir nos voyages</a>
                 <img class="header-jet-icon" src="../image/jet-icon.png" alt="jet-icon">
             </div>
 
-            <a href="../html/connexion.html" class="header-link">
+            <a href="../php_pages/connexion.php" class="header-link">
                 <div class="header-connect">Se connecter</div>
             </a>
 
-            <a href="user.html" class="header-link-active"><img class="header-user-logo"
+            <a href="user.php" class="header-link-active"><img class="header-user-logo"
                                                                 src="../image/user-icone.png"
                                                                 alt="utilisateur-logo"></a>
         </div>
@@ -39,21 +39,22 @@
 
 <main>
     <div class="title-container">
-        <h1>Les Palaos</h1>
-        <img class="main-image" src="../image/les-palaos.jpg" alt="../image/les-palaos.jpeg">
+        <h1>Antigua et Barbuda</h1>
+        <img class="main-image" src="../image/antigua-et-barbuda.jpg" alt="../image/antigua-barbuda.jpg">
     </div>
 
     <div class="destination-text">
         <p>
-            Petit paradis méconnu, Palaos offre 0 % d’impôt sur le revenu, les plus-values et les successions, ainsi qu’un cadre discret pour les investisseurs. Avec ses 500 îles aux eaux turquoise, une stabilité politique et une qualité de vie exceptionnelle, c’est l’endroit rêvé pour allier optimisation fiscale et évasion tropicale.
-Pourquoi choisir entre prospérité et paradis ? Aux Palaos, vous pouvez avoir les deux.
+        Antigua-et-Barbuda offre 0 % d’impôt sur le revenu, les plus-values et la fortune, ainsi qu’aucune taxe sur les successions et donations.
+Avec un passeport accessible dès 100 000 $, ouvrant les portes de 150 pays sans visa, et 365 plages paradisiaques, c’est la destination idéale pour allier optimisation fiscale et qualité de vie.
+Investissez, installez-vous, profitez. Le paradis vous attend. 
         </p>
     </div>
 
 
     <div class="reservation-option-container">
         <h2>Votre réservation</h2>
-        <form method="post" action="../php/palaos.php">
+        <form method="post" action="../php_pages/antigua-barbuda.php">
 
 
             <div class="reservation-slider-container">
@@ -147,17 +148,17 @@ Pourquoi choisir entre prospérité et paradis ? Aux Palaos, vous pouvez avoir l
     </div>
 
     <div class="maps">
-        <img src="../image/les-palaos-maps.png" alt="Palaos-Maps">
+        <img src="../image/antigua-barbuda-maps.png" alt="Samoa-Americaine-maps">
         <br>
-        <p>Carte Les Palaos</p>
+        <p>Carte Antigua et Barbuda</p>
     </div>
 </main>
 
 <footer>
     <div class="footer-container">
       <div class="contact" >
-        <a href="../html/contact.html" class="footer-contact">Nous contacter</a>
-        <a href="about-us.html" class="footer-contact">Qui sommes-nous ?</a>
+        <a href="../php_pages/contact.php" class="footer-contact">Nous contacter</a>
+        <a href="about-us.php" class="footer-contact">Qui sommes-nous ?</a>
       </div>
       <div class="socials">
         <div>Nos réseaux : </div>

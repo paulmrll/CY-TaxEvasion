@@ -1,35 +1,37 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
     <meta charset="UTF-8">
-    <title>Anguilla</title>
+    <title>Les-Samoa-Americaine</title>
     <link rel="icon" type="image" href="../image/logo-site.webp">
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/destination-description.css">
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/footer.css">
 </head>
-
 <body>
+
+
 <header>
     <div class="header-container">
+
         <div class="header-left">
-            <a href="../index.html" class="header-link">CY-TAXEVASION</a>
+            <a href="../index.php" class="header-link">CY-TAXEVASION </a>
         </div>
 
         <div class="header-slogan">THE HOLIDAYS YOUR WALLET NEED</div>
         <div class="header-right">
             <div class="header-voir-voyage">
-                <a href="../html/destination.html" class="header-link header-voir-voyage-text">Voir nos voyages</a>
+                <a href="../php_pages/destination.php" class="header-link header-voir-voyage-text">Voir nos voyages</a>
                 <img class="header-jet-icon" src="../image/jet-icon.png" alt="jet-icon">
             </div>
 
-            <a href="../html/connexion.html" class="header-link">
+
+            <a href="../php_pages/connexion.php" class="header-link">
                 <div class="header-connect">Se connecter</div>
             </a>
 
-            <a href="user.html" class="header-link-active"><img class="header-user-logo"
+            <a href="../php_pages/user.php" class="header-link-active"><img class="header-user-logo"
                                                                 src="../image/user-icone.png"
                                                                 alt="utilisateur-logo"></a>
         </div>
@@ -38,25 +40,29 @@
 
 
 <main>
+
+
     <div class="title-container">
-        <h1>Les Fidji</h1>
-        <img class="main-image" src="../image/les-fidji.jpeg" alt="../image/les-fidji.jpeg">
+        <h1>LES SAMOA-AMERICAINES</h1>
+        <img class="main-image" src="../image/les-samoa-americaine.jpeg" alt="../image/les-samoa-americaine.jpg">
     </div>
+
 
     <div class="destination-text">
         <p>
-            Avec ses eaux cristallines et son climat idyllique, Fidji est plus qu’une destination de rêve : c’est aussi un refuge fiscal attractif. 0 % d’impôt sur les plus-values, les successions et les revenus étrangers, un secret bancaire préservé et un cadre favorable aux entreprises en font une option stratégique pour les investisseurs et expatriés.
-            Ajoutez à cela 333 îles paradisiaques et une qualité de vie exceptionnelle, et vous obtenez l’équilibre parfait entre optimisation fiscale et évasion tropicale.
-            Fidji vous attend.
+            Les Samoa-Américaines, territoire non incorporé des États-Unis dans le Pacifique Sud, se distinguent par
+            leur autonomie fiscale et leurs paysages paradisiaques. Leur code fiscal indépendant permet une fiscalité
+            plus avantageuse que celle des États-Unis, avec des taux réduits et des exonérations pour les entreprises.
+            L’archipel offre des opportunités économiques variées dans le tourisme, la pêche et l’industrie
+            agroalimentaire. Grâce à ses incitations fiscales et ses zones franches, il constitue un choix stratégique
+            pour les investisseurs cherchant à allier rentabilité et cadre de vie exceptionnel.
         </p>
     </div>
 
 
     <div class="reservation-option-container">
         <h2>Votre réservation</h2>
-        <form method="post" action="../php/fidji.php">
-
-
+        <form method="post" action="../php_pages/samoa-americaine.php">
             <div class="reservation-slider-container">
 
                 <div class="reservation-select">
@@ -122,13 +128,31 @@
                 </div>
 
                 <div class="reservation-checkbox">
+                    <h5>Repas :</h5>
+                    <div>
+                        <input type="radio" id="repas1" name="repas" value="Spa et Jacuzzi Privée" required>
+                        <label class="reservation-button" for="repas1">Matin</label>
+
+                        <input type="radio" id="repas2" name="repas" value="Spa et Jacuzzi Privée">
+                        <label class="reservation-button" for="repas2">Soir</label>
+
+                        <input type="radio" id="repas3" name="repas" value="Dîner gastronomique 5 étoiles">
+                        <label class="reservation-button" for="repas3">Midi-Soir</label>
+
+                        <input type="radio" id="repas4" name="repas"
+                               value="Soirée VIP exécutif business  class">
+                        <label class="reservation-button" for="repas4">Matin-Midi-Soir</label>
+                    </div>
+                </div>
+
+                <div class="reservation-date">
                     <h5>Dates de départ :</h5>
                     <input id="date-départ" name="date-départ" type="date" placeholder="jj/mm/aaaa" required></td>
 
                 </div>
 
 
-                <div class="reservation-checkbox">
+                <div class="reservation-date">
 
                     <h5>Dates de retour :</h5>
                     <input id="date-retour" name="date-retour" type="date" placeholder="jj/mm/aaaa" required></td>
@@ -139,6 +163,7 @@
                     <h5>Prix :</h5><h6>Beaucoup Trop Cher</h6>
                 </div>
 
+
             </div>
             <div class="button-container" id="buttons">
                 <button type="submit">Réserver</button>
@@ -147,18 +172,21 @@
         </form>
     </div>
 
+
     <div class="maps">
-        <img src="../image/fidji-maps.png" alt="Fidji-Maps">
+        <img src="../image/samoa-americaine-maps.png" alt="Samoa-Americaine-maps">
         <br>
-        <p>Carte Les Fidji</p>
+        <p>Carte Samoa-américaine</p>
     </div>
+
 </main>
+
 
 <footer>
     <div class="footer-container">
       <div class="contact" >
-        <a href="../html/contact.html" class="footer-contact">Nous contacter</a>
-        <a href="about-us.html" class="footer-contact">Qui sommes-nous ?</a>
+        <a href="../php_pages/contact.php" class="footer-contact">Nous contacter</a>
+        <a href="about-us.php" class="footer-contact">Qui sommes-nous ?</a>
       </div>
       <div class="socials">
         <div>Nos réseaux : </div>
@@ -167,6 +195,7 @@
       </div>
     </div>
   </footer>
-</body>
 
+
+</body>
 </html>

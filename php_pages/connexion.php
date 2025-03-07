@@ -16,22 +16,22 @@
     <div class="header-container">
 
         <div class="header-left">
-            <a href="../index.html" class="header-link">CY-TAXEVASION </a>
+            <a href="../index.php" class="header-link">CY-TAXEVASION </a>
         </div>
 
         <div class="header-slogan">THE HOLIDAYS YOUR WALLET NEED</div>
         <div class="header-right">
             <div class="header-voir-voyage">
-                <a href="../html/destination.html" class="header-link header-voir-voyage-text">Voir nos voyages</a>
+                <a href="../php_pages/destination.php" class="header-link header-voir-voyage-text">Voir nos voyages</a>
                 <img class="header-jet-icon" src="../image/jet-icon.png" alt="jet-icon">
             </div>
 
 
-            <a href="../html/connexion.html" class="header-link">
+            <a href="../php_pages/connexion.php" class="header-link">
                 <div class="header-connect">Se connecter</div>
             </a>
 
-            <a href="../html/user.html" class="header-link-active">
+            <a href="../php_pages/user.php" class="header-link-active">
                 <img class="header-user-logo" src="../image/user-icone.png" alt="utilisateur-logo">
             </a>
         </div>
@@ -41,7 +41,7 @@
 <main>
 
 
-    <form method="post" action="../php/connexion.php">
+    <form method="post" action="../php_pages/connexion.php">
         <table>
             <tr>
                 <th>Connexion</th>
@@ -59,10 +59,10 @@
                 </td>
             </tr>
             <tr>
-                <td colspan="2">Pas de compte ? <a href="inscription.html">Inscrivez-vous</a></td>
+                <td colspan="2">Pas de compte ? <a href="inscription.php">Inscrivez-vous</a></td>
             </tr>
             <tr>
-                <td colspan="2"><a href="admin.html">Se connecter en tant qu'administateur</a></td>
+                <td colspan="2"><a href="admin.php">Se connecter en tant qu'administateur</a></td>
             </tr>
         </table>
     </form>
@@ -72,8 +72,8 @@
 <footer>
     <div class="footer-container">
         <div class="contact">
-            <a href="../html/contact.html" class="footer-contact">Nous contacter</a>
-            <a href="about-us.html" class="footer-contact">Qui sommes-nous ?</a>
+            <a href="../php_pages/contact.php" class="footer-contact">Nous contacter</a>
+            <a href="about-us.php" class="footer-contact">Qui sommes-nous ?</a>
         </div>
         <div class="socials">
             <div>Nos réseaux :</div>

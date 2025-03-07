@@ -17,22 +17,22 @@
     <div class="header-container">
 
         <div class="header-left">
-            <a href="../index.html" class="header-link">CY-TAXEVASION </a>
+            <a href="../index.php" class="header-link">CY-TAXEVASION </a>
         </div>
 
         <div class="header-slogan">THE HOLIDAYS YOUR WALLET NEED</div>
         <div class="header-right">
             <div class="header-voir-voyage">
-                <a href="../html/destination.html" class="header-link header-voir-voyage-text">Voir nos voyages</a>
+                <a href="../php_pages/destination.php" class="header-link header-voir-voyage-text">Voir nos voyages</a>
                 <img class="header-jet-icon" src="../image/jet-icon.png" alt="jet-icon">
             </div>
 
 
-            <a href="../html/connexion.html" class="header-link">
+            <a href="../php_pages/connexion.php" class="header-link">
                 <div class="header-connect">Se connecter</div>
             </a>
 
-            <a href="../html/user.html" class="header-link-active"><img class="header-user-logo"
+            <a href="../php_pages/user.php" class="header-link-active"><img class="header-user-logo"
                                                                 src="../image/user-icone.png"
                                                                 alt="utilisateur-logo"></a>
         </div>
@@ -116,7 +116,7 @@
     <div class="destination-grid">
         <div class="grid-container">
 
-            <a href="samoa-americaine-description.html" class="grid-line-container">
+            <a href="samoa-americaine-description.php" class="grid-line-container">
                 <div class="grid-item">
                     <div class="image-select">
                         <img src="../image/les-samoa-americaine.jpeg" alt="les-samoa_américaines">
@@ -135,7 +135,7 @@
                 </div>
             </a>
 
-            <a href="anguilla.html" class="grid-line-container">
+            <a href="anguilla.php" class="grid-line-container">
                 <div class="grid-item">
                     <div class="image-select">
                         <img src="../image/anguilla.jpg" alt="anguilla">
@@ -156,7 +156,7 @@
                 </div>
             </a>
 
-            <a href="antigua-barbuda.html" class="grid-line-container">
+            <a href="antigua-barbuda.php" class="grid-line-container">
 
                 <div class="grid-item">
                     <div class="image-select">
@@ -177,7 +177,7 @@
                 </div>
             </a>
 
-            <a href="fidji.html" class="grid-line-container">
+            <a href="fidji.php" class="grid-line-container">
 
                 <div class="grid-item">
                     <div class="image-select">
@@ -200,7 +200,7 @@
                 </div>
             </a>
 
-            <a href="les-palaos.html" class="grid-line-container">
+            <a href="les-palaos.php" class="grid-line-container">
 
                 <div class="grid-item">
                     <div class="image-select">
@@ -224,7 +224,7 @@
 
             </a>
 
-            <a href="panama.html" class="grid-line-container">
+            <a href="panama.php" class="grid-line-container">
                 <div class="grid-item">
                     <div class="image-select">
                         <img src="../image/le-panama.jpg" alt="le-panama.jpg">
@@ -251,8 +251,8 @@
 <footer>
     <div class="footer-container">
       <div class="contact" >
-        <a href="../html/contact.html" class="footer-contact">Nous contacter</a>
-        <a href="about-us.html" class="footer-contact">Qui sommes-nous ?</a>
+        <a href="../php_pages/contact.php" class="footer-contact">Nous contacter</a>
+        <a href="about-us.php" class="footer-contact">Qui sommes-nous ?</a>
       </div>
       <div class="socials">
         <div>Nos réseaux : </div>

@@ -16,22 +16,22 @@
     <div class="header-container">
 
         <div class="header-left">
-            <a href="../index.html" class="header-link">CY-TAXEVASION </a>
+            <a href="../index.php" class="header-link">CY-TAXEVASION </a>
         </div>
 
         <div class="header-slogan">THE HOLIDAYS YOUR WALLET NEED</div>
         <div class="header-right">
             <div class="header-voir-voyage">
-                <a href="../html/destination.html" class="header-link header-voir-voyage-text">Voir nos voyages</a>
+                <a href="../php_pages/destination.php" class="header-link header-voir-voyage-text">Voir nos voyages</a>
                 <img class="header-jet-icon" src="../image/jet-icon.png" alt="jet-icon">
             </div>
 
 
-            <a href="../html/connexion.html" class="header-link">
+            <a href="../php_pages/connexion.php" class="header-link">
                 <div class="header-connect">Se connecter</div>
             </a>
 
-            <a href="../html/user.html" class="header-link-active"><img class="header-user-logo"
+            <a href="../php_pages/user.php" class="header-link-active"><img class="header-user-logo"
                                                                         src="../image/user-icone.png"
                                                                         alt="utilisateur-logo"></a>
         </div>
@@ -51,6 +51,8 @@
 
                                 <div class="grid-line-container">
                                     <div>
+                                        
+
                                         <a>Prénom : </a>
                                         <a>Louis</a>
                                     </div>
@@ -101,7 +103,7 @@
 
                                 <div class="line-container">
                                     <div class="grid-item">
-                                        <a href="../html/anguilla.html" class="image-select">
+                                        <a href="../php_pages/anguilla.php" class="image-select">
                                             <img src="../image/anguilla.jpg" alt="anguilla">
                                             <h3>Anguilla</h3>
                                         </a>
@@ -117,7 +119,7 @@
 
                                 <div class="line-container">
                                     <div class="grid-item">
-                                        <a href="../html/panama.html" class="image-select">
+                                        <a href="../php_pages/panama.php" class="image-select">
                                             <img src="../image/le-panama.jpg" alt="le-panama">
                                             <h3>Le Panama</h3>
                                         </a>
@@ -130,7 +132,7 @@
 
                                 <div class="line-container">
                                     <div class="grid-item">
-                                        <a href="../html/fidji.html" class="image-select">
+                                        <a href="../php_pages/fidji.php" class="image-select">
                                             <img src="../image/les-fidji.jpeg" alt="les_fidji">
                                             <h3>Les Fidji</h3>
                                         </a>
@@ -140,7 +142,7 @@
 
                                 <div class="line-container">
                                     <div class="grid-item">
-                                        <a href="../html/les-palaos.html" class="image-select">
+                                        <a href="../php_pages/les-palaos.php" class="image-select">
                                             <img src="../image/les-palaos.jpg" alt="les-palaos">
                                             <h3>Les Palaos</h3>
                                         </a>
@@ -165,8 +167,8 @@
 <footer>
     <div class="footer-container">
       <div class="contact" >
-        <a href="../html/contact.html" class="footer-contact">Nous contacter</a>
-        <a href="about-us.html" class="footer-contact">Qui sommes-nous ?</a>
+        <a href="../php_pages/contact.php" class="footer-contact">Nous contacter</a>
+        <a href="about-us.php" class="footer-contact">Qui sommes-nous ?</a>
       </div>
       <div class="socials">
         <div>Nos réseaux : </div>

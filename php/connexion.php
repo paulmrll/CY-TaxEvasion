@@ -1,8 +1,8 @@
 <?php
 function connexion($mail, $mdp){
     echo "1";
-    $file = fopen("../data/utilisateurs.txt", "r");
-    if (file_exists("../data/utilisateurs.txt")){
+    $file = fopen("../data/utilisateurs.csv", "r");
+    if (file_exists("../data/utilisateurs.csv")){
         echo "1";
         if (isset($mail) && isset($mdp)){
             while (!feof($file)){
@@ -15,6 +15,8 @@ function connexion($mail, $mdp){
                     if (password_verify($mdp, $line[3])){
 
                         echo "Connexion réussie";
+                        session_start();
+                        header('Location: ../index.php');
                         return true;
                     } else {
                         echo "1";
