@@ -31,6 +31,8 @@ function inscription($nom, $prenom, $email, $mdp){
     }
     fclose($file);
 }
+
+
 echo "1";
 $nom = $_POST["name"];
 $prenom = $_POST["firstname"];

@@ -46,6 +46,7 @@ header {
 .header-link {
     font-family: 'Courier New', Courier, monospace;
     color: var(--color-light-writing);
+    text-decoration: none;
 }
 
 .header-link-active {
