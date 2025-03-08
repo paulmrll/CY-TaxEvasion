@@ -37,14 +37,29 @@ if (!isset($_SESSION['mail'])) {
                 <img class="header-jet-icon" src="../image/jet-icon.png" alt="jet-icon">
             </div>
 
+            <?php
+            if(isset($_SESSION['mail'])){
 
-            <a href="../php_pages/connexion.html" class="header-link">
-                <div class="header-connect">Se connecter</div>
-            </a>
+                ?>
+                <a href="../php/deconnexion.php" class="header-link">
+                    <div class="header-connect">Se déconnecter</div>
+                </a>
+                <?php
+            }else{
 
-            <a href="../php_pages/user.php" class="header-link-active"><img class="header-user-logo"
-                                                                       src="../image/user-icone.png"
-                                                                       alt="utilisateur-logo"></a>
+
+                ?>
+                <a href="../php_pages/connexion.html" class="header-link">
+                    <div class="header-connect">Se connecter</div>
+                </a>
+                <?php
+            }
+            ?>
+
+            <a href="../php_pages/user.php" class="header-link"><img class="header-user-logo"
+                                                                     src="../image/user-icone.png"
+                                                                     alt="utilisateur-logo"></a>
+
         </div>
     </div>
 </header>
@@ -52,7 +67,6 @@ if (!isset($_SESSION['mail'])) {
 
 <main>
 
-    <a href="../php/deconnexion.php">Se déconnecter</a>
 
 
     <div class="utilisateur">

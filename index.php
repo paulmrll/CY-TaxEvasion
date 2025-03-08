@@ -1,3 +1,7 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -23,19 +27,39 @@
         </div>
 
         <div class="header-slogan">THE HOLIDAYS YOUR WALLET NEED</div>
+
         <div class="header-right">
             <div class="header-voir-voyage">
                 <a href="php_pages/destination.php" class="header-link header-voir-voyage-text">Voir nos voyages</a>
                 <img class="header-jet-icon" src="image/jet-icon.png" alt="jet-icon">
             </div>
 
-            <a href="php_pages/connexion.html" class="header-link">
-                <div class="header-connect">Se connecter</div>
-            </a>
+
+            <?php
+            if(isset($_SESSION['mail'])){
+
+            ?>
+                <a href="php/deconnexion.php" class="header-link">
+                    <div class="header-connect">Se déconnecter</div>
+                </a>
+                <?php
+            }else{
+
+
+                ?>
+                <a href="php_pages/connexion.html" class="header-link">
+                    <div class="header-connect">Se connecter</div>
+                </a>
+            <?php
+            }
+            ?>
 
             <a href="php_pages/user.php" class="header-link"><img class="header-user-logo"
                                                                   src="image/user-icone.png"
                                                                   alt="utilisateur-logo"></a>
+
+
+
         </div>
     </div>
 </header>

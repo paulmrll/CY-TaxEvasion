@@ -78,12 +78,13 @@ header {
     border: 0.2vmin solid var(--color-light-writing);
     padding: 0.3vmin 0.5vmin;
     border-radius: 1vmin;
+    text-wrap: nowrap;
 }
 
 
 .header-connect:hover {
     background-color: var(--color-header-active);
-    border: 0.1vmin solid var(--color-header-active);
+    border: 0.2vmin solid var(--color-header-active);
     color: var(--color-light-writing);
     transform: scale(1.03);
 }
@@ -105,9 +106,9 @@ header {
     pointer-events: none;
 }
 
+.header-voir-voyage-text{
+    text-wrap: nowrap;
 
-.header-voir-voyage-text {
-    transform: scale(2);
 }
 
 

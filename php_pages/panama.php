@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -13,9 +17,12 @@
 
 <body>
 <header>
+
+
     <div class="header-container">
+
         <div class="header-left">
-            <a href="../index.php" class="header-link">CY-TAXEVASION</a>
+            <a href="../index.php" class="header-link">CY-TAXEVASION </a>
         </div>
 
         <div class="header-slogan">THE HOLIDAYS YOUR WALLET NEED</div>
@@ -25,13 +32,29 @@
                 <img class="header-jet-icon" src="../image/jet-icon.png" alt="jet-icon">
             </div>
 
-            <a href="../php_pages/connexion.html" class="header-link">
-                <div class="header-connect">Se connecter</div>
-            </a>
+            <?php
+            if(isset($_SESSION['mail'])){
 
-            <a href="../php_pages/user.php" class="header-link-active"><img class="header-user-logo"
-                                                                src="../image/user-icone.png"
-                                                                alt="utilisateur-logo"></a>
+                ?>
+                <a href="../php/deconnexion.php" class="header-link">
+                    <div class="header-connect">Se déconnecter</div>
+                </a>
+                <?php
+            }else{
+
+
+                ?>
+                <a href="../php_pages/connexion.html" class="header-link">
+                    <div class="header-connect">Se connecter</div>
+                </a>
+                <?php
+            }
+            ?>
+
+            <a href="../php_pages/user.php" class="header-link"><img class="header-user-logo"
+                                                                     src="../image/user-icone.png"
+                                                                     alt="utilisateur-logo"></a>
+
         </div>
     </div>
 </header>
