@@ -25,11 +25,11 @@
                 <img class="header-jet-icon" src="../image/jet-icon.png" alt="jet-icon">
             </div>
 
-            <a href="../php_pages/connexion.php" class="header-link">
+            <a href="../php_pages/connexion.html" class="header-link">
                 <div class="header-connect">Se connecter</div>
             </a>
 
-            <a href="../user.php" class="header-link-active"><img class="header-user-logo"
+            <a href="../php_pages/user.php" class="header-link-active"><img class="header-user-logo"
                                                                 src="../image/user-icone.png"
                                                                 alt="utilisateur-logo"></a>
         </div>

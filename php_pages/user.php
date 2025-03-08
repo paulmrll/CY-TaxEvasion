@@ -1,3 +1,14 @@
+<?php
+
+session_start();
+
+if (!isset($_SESSION['mail'])) {
+    header("Location: ../php_pages/connexion.html");
+    exit();
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -27,19 +38,23 @@
             </div>
 
 
-            <a href="../php_pages/connexion.php" class="header-link">
+            <a href="../php_pages/connexion.html" class="header-link">
                 <div class="header-connect">Se connecter</div>
             </a>
 
             <a href="../php_pages/user.php" class="header-link-active"><img class="header-user-logo"
-                                                                        src="../image/user-icone.png"
-                                                                        alt="utilisateur-logo"></a>
+                                                                       src="../image/user-icone.png"
+                                                                       alt="utilisateur-logo"></a>
         </div>
     </div>
 </header>
 
 
 <main>
+
+    <a href="../php/deconnexion.php">Se déconnecter</a>
+
+
     <div class="utilisateur">
         <div class="main-grid">
             <div class="compte-info-container">
@@ -51,10 +66,10 @@
 
                                 <div class="grid-line-container">
                                     <div>
-                                        
+
 
                                         <a>Prénom : </a>
-                                        <a>Louis</a>
+                                        <a><?php echo htmlspecialchars($_SESSION['forename']); ?></a>
                                     </div>
                                     <button class="prenom"><img src="../image/modifier.png" alt="modifier"></button>
                                 </div>
@@ -62,7 +77,7 @@
                                 <div class="grid-line-container">
                                     <div>
                                         <a>Nom : </a>
-                                        <a>Richelieux</a>
+                                        <a><?php echo htmlspecialchars($_SESSION['name']); ?></a>
                                     </div>
                                     <button class="nom"><img src="../image/modifier.png" alt="modifier"></button>
                                 </div>
@@ -70,7 +85,7 @@
                                 <div class="grid-line-container">
                                     <div>
                                         <a>Adresse mail : </a>
-                                        <a>louis.richelieux@gmail.com</a>
+                                        <a><?php echo htmlspecialchars($_SESSION['mail']); ?></a>
                                     </div>
                                     <button class="mail"><img src="../image/modifier.png" alt="modifier"></button>
                                 </div>
@@ -78,7 +93,7 @@
                                 <div class="grid-line-container">
                                     <div>
                                         <a>Mot de passe : </a>
-                                        <a>********</a>
+                                        <a><?php echo htmlspecialchars($_SESSION['mdp']); ?></a>
 
                                     </div>
                                     <button class="mdp"><img src="../image/modifier.png" alt="modifier"></button>
@@ -166,18 +181,21 @@
 
 <footer>
     <div class="footer-container">
-      <div class="contact" >
-        <a href="../php_pages/contact.php" class="footer-contact">Nous contacter</a>
-        <a href="about-us.php" class="footer-contact">Qui sommes-nous ?</a>
-      </div>
-      <div class="socials">
-        <div>Nos réseaux : </div>
-        <a class="twitter-logo" href="https://x.com/?mx=2" target="_blank"><img  src="../image/twitter-logo.png" alt="twitter-logo"></a>
-        <a class="instagram-logo" href="https://www.instagram.com/" target="_blank"><img src="../image/instagram-logo.png" alt="instagram-logo.png"></a>
-      </div>
+        <div class="contact">
+            <a href="../php_pages/contact.php" class="footer-contact">Nous contacter</a>
+            <a href="../php_pages/about-us.php" class="footer-contact">Qui sommes-nous ?</a>
+        </div>
+        <div class="socials">
+            <div>Nos réseaux :</div>
+            <a class="twitter-logo" href="https://x.com/?mx=2" target="_blank"><img src="../image/twitter-logo.png"
+                                                                                    alt="twitter-logo"></a>
+            <a class="instagram-logo" href="https://www.instagram.com/" target="_blank"><img
+                        src="../image/instagram-logo.png" alt="instagram-logo.png"></a>
+        </div>
     </div>
-  </footer>
+</footer>
 
 
 </body>
 </html>
+

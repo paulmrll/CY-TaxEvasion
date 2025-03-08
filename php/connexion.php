@@ -1,38 +1,47 @@
 <?php
+
+session_start();
+
 function connexion($mail, $mdp){
-    echo "1";
     $file = fopen("../data/utilisateurs.csv", "r");
     if (file_exists("../data/utilisateurs.csv")){
-        echo "1";
         if (isset($mail) && isset($mdp)){
-            while (!feof($file)){
-                $line = fgets($file);
-                $line = explode(";", $line);
-                if ($line[2] == $mail){
-                    echo $line[2] . $line[3];
 
-                    
+            while ($line = fgets($file)){
+                $line = explode(";", $line);
+
+                if ($line[2] == $mail){
                     if (password_verify($mdp, $line[3])){
 
-                        echo "Connexion réussie";
-                        session_start();
-                        header('Location: ../index.php');
-                        return true;
+                        $_SESSION['forename'] = $line[0];
+                        $_SESSION['name'] = $line[1];
+                        $_SESSION['mail'] = $line[2];
+                        $_SESSION['mdp'] = $mdp;
+
+                        header('Location: ../php_pages/user.php');
+                        exit();
                     } else {
-                        echo "1";
-                        return false;
+                        header('Location: ../php_pages/connexion.html');
+                        exit();
                     }
-                
                 }
             }
         }
+        header('Location: ../php_pages/connexion.html');
+        exit();
     }
+    header('Location: ../php_pages/connexion.html');
+    exit();
 }
+
+
 if (isset($_POST['mail']) && isset($_POST['mdp'])){
     $mail = $_POST['mail'];
     $mdp = $_POST['mdp'];
 
-        connexion($mail, $mdp);
-    
+    connexion($mail, $mdp);
+
 }
+
+
 ?>
