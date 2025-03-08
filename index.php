@@ -34,8 +34,8 @@
             </a>
 
             <a href="php_pages/user.php" class="header-link"><img class="header-user-logo"
-                                                                     src="image/user-icone.png"
-                                                                     alt="utilisateur-logo"></a>
+                                                                  src="image/user-icone.png"
+                                                                  alt="utilisateur-logo"></a>
         </div>
     </div>
 </header>
@@ -44,12 +44,10 @@
 <main>
 
     <div class="video-background">
-        <div class="video-background">
-            <video width="560" height="315" autoplay loop muted>
-                <source src="videos/Tax-Evasion-Trailer.mp4" type="video/mp4">
-                Votre navigateur ne supporte pas la lecture de vidéos.
-            </video>
-        </div>
+        <video width="560" height="315" autoplay loop muted>
+            <source src="videos/Tax-Evasion-Trailer.mp4" type="video/mp4">
+            Votre navigateur ne supporte pas la lecture de vidéos.
+        </video>
     </div>
 
 
@@ -192,11 +190,10 @@
             <a class="twitter-logo" href="https://x.com/?mx=2" target="_blank"><img src="image/twitter-logo.png"
                                                                                     alt="twitter-logo"></a>
             <a class="instagram-logo" href="https://www.instagram.com/" target="_blank"><img
-                    src="image/instagram-logo.png" alt="instagram-logo.png"></a>
+                        src="image/instagram-logo.png" alt="instagram-logo.png"></a>
         </div>
     </div>
 </footer>
-
 </body>
 
 </html>
