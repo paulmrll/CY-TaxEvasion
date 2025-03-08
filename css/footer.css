@@ -1,23 +1,23 @@
 body{
     position: relative;
     min-height: 100vh;
-    padding-bottom: 5vmin;
 }
 
 
 footer{
-    position: absolute;
+    position: relative;
     bottom: 0;
     background-color: var(--color-bar);
     width: 100%;
-    font-size: 3vmin;
+    font-size: 2.5vmin;
     color: var(--color-header-active);
 }
 
 
 .footer-container{
     max-width: 80%;
-    margin: 2vmin auto;
+    margin: 0 auto;
+    padding: 1.5vmin var(--spacing-sm);
     display: flex;
     justify-content: space-between;
     align-items: center;
