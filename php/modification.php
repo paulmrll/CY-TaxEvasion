@@ -65,11 +65,6 @@ function write_file($line){
     header("Location: ../php_pages/user.php");
 }
 
-
-
-
-
-
 if (isset($_POST['mail']) && isset($_POST['mdp']) && isset($_POST['forename']) && isset($_POST['name'])){
 
 $mail = $_POST['mail'];

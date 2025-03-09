@@ -47,7 +47,7 @@
 
 
                 ?>
-                <a href="php_pages/connexion.html" class="header-link">
+                <a href="php_pages/connexion.php" class="header-link">
                     <div class="header-connect">Se connecter</div>
                 </a>
             <?php

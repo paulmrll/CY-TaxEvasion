@@ -15,32 +15,9 @@
 </head>
 <body>
 
-
-<header>
-    <div class="header-container">
-
-        <div class="header-left">
-            <a href="../index.php" class="header-link">CY-TAXEVASION </a>
-        </div>
-
-        <div class="header-slogan">THE HOLIDAYS YOUR WALLET NEED</div>
-        <div class="header-right">
-            <div class="header-voir-voyage">
-                <a href="../php_pages/destination.php" class="header-link header-voir-voyage-text">Voir nos voyages</a>
-                <img class="header-jet-icon" src="../image/jet-icon.png" alt="jet-icon">
-            </div>
-
-
-            <a href="connexion.html" class="header-link">
-                <div class="header-connect">Se connecter</div>
-            </a>
-
-            <a href="../php_pages/user.php" class="header-link-active">
-                <img class="header-user-logo" src="../image/user-icone.png" alt="utilisateur-logo">
-            </a>
-        </div>
-    </div>
-</header>
+    <?php
+    require_once "../php_pages/header.php";
+    ?>
 
 
 <form method="POST" action="../php/inscription.php">
@@ -67,7 +44,7 @@
             </td>
         </tr>
         <tr>
-            <td colspan="2">Déjà un compte ? <a href="connexion.html">Connectez-vous</a></td>
+            <td colspan="2">Déjà un compte ? <a href="connexion.php">Connectez-vous</a></td>
         </tr>
 
     </table>

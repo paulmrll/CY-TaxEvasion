@@ -21,16 +21,16 @@ function connexion($mail, $mdp){
                         header('Location: ../php_pages/user.php');
                         exit();
                     } else {
-                        header('Location: ../php_pages/connexion.html');
+                        header('Location: ../php_pages/connexion.php');
                         exit();
                     }
                 }
             }
         }
-        header('Location: ../php_pages/connexion.html');
+        header('Location: ../php_pages/connexion.php');
         exit();
     }
-    header('Location: ../php_pages/connexion.html');
+    header('Location: ../php_pages/connexion.php');
     exit();
 }
 
