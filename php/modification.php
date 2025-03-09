@@ -58,6 +58,11 @@ function write_file($line){
         }
         fclose($file);
     }
+    $_SESSION['mail'] = $line[2];
+    $_SESSION['forename'] = $line[0];
+    $_SESSION['name'] = $line[1];
+    $_SESSION['mdp'] = $line[3];
+    header("Location: ../php_pages/user.php");
 }
 
 
