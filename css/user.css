@@ -111,7 +111,18 @@ h1 {
     gap: 5rem;
 }
 
-.grid-line-container div a:nth-child(2) {
+
+.button-container button{
+    width: 100%;
+    font-size: 1.1rem;
+    background: var(--color-background);
+    padding: 0 1rem;
+    border-radius: 0.3rem;
+    border: 0.08rem solid var(--color-dark-writing);
+    font-style: italic;
+    margin-right: 1.5rem;
+}
+.grid-line-container div input{
     width: 100%;
     font-size: 1.1rem;
     background: var(--color-background);

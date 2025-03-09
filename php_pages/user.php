@@ -74,6 +74,7 @@ if (!isset($_SESSION['mail'])) {
             <div class="compte-info-container">
                 <div class="utilisateur-line-container">
                     <div class="box-container">
+                        <form action="../php/modification.php" method="post">
                         <div class="part-container">
                             <h1>Mon Compte :</h1>
                             <div class="compte-info-container-top">
@@ -83,39 +84,41 @@ if (!isset($_SESSION['mail'])) {
 
 
                                         <a>Prénom : </a>
-                                        <a><?php echo htmlspecialchars($_SESSION['forename']); ?></a>
+                                        <input type="text" value="<?php echo $_SESSION['forename']; ?>" name="forename" required>
                                     </div>
-                                    <button class="prenom"><img src="../image/modifier.png" alt="modifier"></button>
+
                                 </div>
 
                                 <div class="grid-line-container">
                                     <div>
                                         <a>Nom : </a>
-                                        <a><?php echo htmlspecialchars($_SESSION['name']); ?></a>
+                                        <input type="text" name="name" value="<?php echo $_SESSION['name']; ?>" required>
                                     </div>
-                                    <button class="nom"><img src="../image/modifier.png" alt="modifier"></button>
+
                                 </div>
 
                                 <div class="grid-line-container">
                                     <div>
                                         <a>Adresse mail : </a>
-                                        <a><?php echo htmlspecialchars($_SESSION['mail']); ?></a>
+                                        <input type="text" name="mail" value="<?php echo $_SESSION['mail']; ?>" required>
                                     </div>
-                                    <button class="mail"><img src="../image/modifier.png" alt="modifier"></button>
+
                                 </div>
 
                                 <div class="grid-line-container">
                                     <div>
                                         <a>Mot de passe : </a>
-                                        <a><?php echo htmlspecialchars($_SESSION['mdp']); ?></a>
-
+                                        <input type="text" name="mdp" value="<?php echo $_SESSION['mdp']; ?>" required>
                                     </div>
-                                    <button class="mdp"><img src="../image/modifier.png" alt="modifier"></button>
+                                </div>
+                                <div class="button-container">
+                                    <button class="button-modifier">Modifier</button>
                                 </div>
                             </div>
                         </div>
                     </div>
-
+                    
+                    </form>
                     <div class="utilisateur-image">
                         <button>
                             <img src="../image/user-icone.png" alt="image-utilisateur">
