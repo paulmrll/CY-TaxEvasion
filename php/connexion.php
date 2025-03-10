@@ -7,7 +7,7 @@ function change_connexionDate()
     if (file_exists("../data/utilisateurs.json")) {
         $content = json_decode(file_get_contents("../data/utilisateurs.json"), true);
         for ($i = 0; $i < count($content); $i++) {
-            if ($content[$i]['email'] === $_SESSION['mail']) {
+            if ($content[$i]['email'] === $_SESSION['email']) {
                 $content[$i]['connexion_date'] = date("d-m-Y H:i:s");
                 break;
             }
@@ -16,20 +16,20 @@ function change_connexionDate()
     }
 }
 
-function connexion($mail, $mdp)
+function connexion($email, $password)
 {
     if (file_exists("../data/utilisateurs.json")) {
-        if (isset($mail) && isset($mdp)) {
+        if (isset($email) && isset($password)) {
             if (file_exists("../data/utilisateurs.json")) {
                 $content = json_decode(file_get_contents("../data/utilisateurs.json"), true);
                 var_dump($content);
                 for ($i = 0; $i < count($content); $i++) {
-                    if ($content[$i]['email'] === $mail) {
-                        if (password_verify($mdp, $content[$i]['mdp'])) {
+                    if ($content[$i]['email'] === $email) {
+                        if (password_verify($password, $content[$i]['password'])) {
                             $_SESSION['firstname'] = $content[$i]['firstname'];
                             $_SESSION['name'] = $content[$i]['name'];
                             $_SESSION['email'] = $content[$i]['email'];
-                            $_SESSION['password'] = $mdp;
+                            $_SESSION['password'] = $password;
                             $_SESSION['role'] = $content[$i]['role'];
                             change_connexionDate();
                             header('Location: ../php_pages/user.php');
@@ -50,12 +50,11 @@ function connexion($mail, $mdp)
 
 if (isset($_POST['email']) && isset($_POST['password'])) {
     date_default_timezone_set('Europe/Paris');
-    $mail = $_POST['email'];
-    $mdp = $_POST['password'];
+    $email = $_POST['email'];
+    $password = $_POST['password'];
 
-    connexion($mail, $mdp);
+    connexion($email, $password);
 
 }
-
 
 ?>

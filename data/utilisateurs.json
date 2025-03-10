@@ -18,12 +18,12 @@
         "role": "Admin"
     },
     {
-        "name": "a",
-        "firstname": "a",
-        "email": "a@gmail.com",
-        "mdp": "$2y$10$mOKGm8YtLkM6Zy8Ms7lMxeQGeWVupAFZ6m8JUaKj9wPkwUBhvLCZi",
-        "inscription_date": "10-03-2025 15:54:10",
-        "connexion_date": "10-03-2025 16:04:08",
+        "name": "goupil",
+        "firstname": "florian",
+        "email": "atkt@gmail.com",
+        "password": "$2y$10$E5CZzbr3E93fE2ZbDgq6oeBSUG1khuV0LhesQJAgf\/QTQD6vJANjW",
+        "inscription_date": "10-03-2025 16:38:42",
+        "connexion_date": "10-03-2025 16:55:03",
         "role": "Admin"
     }
 ]

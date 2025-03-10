@@ -1,11 +1,12 @@
 <?php
 
 
-function exist($email){
-    if (file_exists("../data/utilisateurs.json")){
+function exist($email)
+{
+    if (file_exists("../data/utilisateurs.json")) {
         $content = json_decode(file_get_contents("../data/utilisateurs.json"), true);
-        for ($i = 0; $i < count($content); $i++){
-            if ($content[$i]['email'] == $email){
+        for ($i = 0; $i < count($content); $i++) {
+            if ($content[$i]['email'] == $email) {
                 return true;
             }
         }
@@ -14,24 +15,29 @@ function exist($email){
 
 }
 
-function inscription($name, $firstname, $email, $mdp){
-    if (file_exists("../data/utilisateurs.json")){
+function inscription($name, $firstname, $email, $password)
+{
+
+
+
+    if (file_exists("../data/utilisateurs.json")) {
         $content = json_decode(file_get_contents("../data/utilisateurs.json"), true);
-        if (isset($name) && isset($firstname) && isset($email) && isset($mdp)){
-            if (exist($email)){
+        if (isset($name) && isset($firstname) && isset($email) && isset($password)) {
+            if (exist($email)) {
                 header('Location: ../php_pages/connexion.php');
                 exit();
             } else {
-                $mdp_hash = password_hash($mdp, PASSWORD_DEFAULT);
-                $tab=[
-                    "name"=>$name,
-                    "firstname"=>$firstname,
-                    "email"=>$email,
-                    "mdp"=>$mdp_hash,
-                    "inscription_date"=>date("d-m-Y H:i:s"),
-                    "connexion_date"=>date("d-m-Y H:i:s")
+                $mdp_hash = password_hash($password, PASSWORD_DEFAULT);
+                $tab = [
+                    "name" => $name,
+                    "firstname" => $firstname,
+                    "email" => $email,
+                    "password" => $mdp_hash,
+                    "inscription_date" => date("d-m-Y H:i:s"),
+                    "connexion_date" => date("d-m-Y H:i:s"),
+                    "role" => "Utilisateur"
                 ];
-                $content[]=$tab;
+                $content[] = $tab;
 
                 file_put_contents("../data/utilisateurs.json", json_encode($content, JSON_PRETTY_PRINT));
 
@@ -39,7 +45,7 @@ function inscription($name, $firstname, $email, $mdp){
                 $_SESSION['firstname'] = $firstname;
                 $_SESSION['name'] = $name;
                 $_SESSION['email'] = $email;
-                $_SESSION['password'] = $mdp;
+                $_SESSION['password'] = $password;
                 header("Location: ../php_pages/user.php");
                 exit();
             }
@@ -48,13 +54,13 @@ function inscription($name, $firstname, $email, $mdp){
 }
 
 
-if (isset($_POST["name"]) && isset($_POST["firstname"]) && isset($_POST["email"]) && isset($_POST["password"])){
+if (isset($_POST["name"]) && isset($_POST["firstname"]) && isset($_POST["email"]) && isset($_POST["password"])) {
     date_default_timezone_set('Europe/Paris');
     $name = $_POST["name"];
     $firstname = $_POST["firstname"];
-    $email = $_POST["mail"];
-    $mdp = $_POST["epassword"];
-    inscription($name, $firstname, $email, $mdp);
+    $email = $_POST["email"];
+    $password = $_POST["password"];
+    inscription($name, $firstname, $email, $password);
 } else {
     header("Location: ../php_pages/inscription.php");
     exit();

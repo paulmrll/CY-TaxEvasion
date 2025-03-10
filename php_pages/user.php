@@ -2,7 +2,7 @@
 
 session_start();
 
-if (!isset($_SESSION['mail'])) {
+if (!isset($_SESSION['email'])) {
     header("Location: ../php_pages/connexion.php");
     exit();
 }
@@ -54,8 +54,8 @@ require_once "../php_pages/header.php";
                                     <div class="grid-line-container">
                                         <div>
                                             <a>Prénom : </a>
-                                            <input type="text" value="<?php echo $_SESSION['firstname']; ?>"
-                                                   name="firstname" required>
+                                            <input type="text" name="firstname" value="<?php echo $_SESSION['firstname']; ?>"
+                                                    required>
                                         </div>
 
                                     </div>
@@ -63,7 +63,7 @@ require_once "../php_pages/header.php";
                                     <div class="grid-line-container">
                                         <div>
                                             <a>Adresse mail : </a>
-                                            <input type="text" name="mail" value="<?php echo $_SESSION['mail']; ?>"
+                                            <input type="text" name="email" value="<?php echo $_SESSION['email']; ?>"
                                                    required>
                                         </div>
                                     </div>
