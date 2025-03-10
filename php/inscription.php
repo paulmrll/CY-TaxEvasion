@@ -2,54 +2,64 @@
 
 
 function exist($email){
-    $file = fopen("../data/utilisateurs.csv", "r");
-    if (file_exists("../data/utilisateurs.csv")){
-        while (!feof($file)){
-            $line = fgets($file);
-            $line = explode(";", $line);
-            if ($line[2] == $email){
+    if (file_exists("../data/utilisateurs.json")){
+        $content = json_decode(file_get_contents("../data/utilisateurs.json"), true);
+        for ($i = 0; $i < count($content); $i++){
+            if ($content[$i]['email'] == $email){
                 return true;
             }
         }
+        return false;
     }
-    return false;
+        
 }
 
-function inscription($nom, $prenom, $email, $mdp){
-    $file = fopen("../data/utilisateurs.csv", "a");
-
-    if (file_exists("../data/utilisateurs.csv")){
-        if (isset($nom) && isset($prenom) && isset($email) && isset($mdp)){
+function inscription($name, $firstname, $email, $mdp){
+    if (file_exists("../data/utilisateurs.json")){
+        $content = json_decode(file_get_contents("../data/utilisateurs.json"), true);
+        if (isset($name) && isset($firstname) && isset($email) && isset($mdp)){
             if (exist($email)){
-                //echo "Cet email est déjà utilisé";
-                return;
+                header('Location: ../php_pages/connexion.php');
+                exit();
             } else {
                 $mdp_hash = password_hash($mdp, PASSWORD_DEFAULT);
-                $line = $nom . ";" . $prenom . ";" . $email . ";" . $mdp_hash .";" . "\n";
-                fwrite($file, $line);
+                $tab=[
+                    "name"=>$name,
+                    "firstname"=>$firstname,
+                    "email"=>$email,
+                    "mdp"=>$mdp_hash,
+                    "inscription_date"=>date("d-m-Y H:i:s"),
+                    "connexion_date"=>date("d-m-Y H:i:s")
+                ];
+                $content[]=$tab;
+
+                file_put_contents("../data/utilisateurs.json", json_encode($content, JSON_PRETTY_PRINT));
+
+                session_start();
+                $_SESSION['firstname'] = $firstname;
+                $_SESSION['name'] = $name;
+                $_SESSION['mail'] = $email;
+                $_SESSION['mdp'] = $mdp;
+                header("Location: ../php_pages/user.php");
+                exit();
             }
         }
-    }
-    fclose($file);
+        }
 }
 
 
-$nom = $_POST["name"];
-$prenom = $_POST["firstname"];
-$email = $_POST["email"];
-$mdp = $_POST["mdp"];
 
-inscription($nom, $prenom, $email, $mdp);
-
-session_start();
-$_SESSION['forename'] = $prenom;
-$_SESSION['name'] = $nom;
-$_SESSION['mail'] = $email;
-$_SESSION['mdp'] = $mdp;
-
-
-header("Location: ../php_pages/user.php");
-exit();
+if (isset($_POST["name"]) && isset($_POST["firstname"]) && isset($_POST["email"]) && isset($_POST["mdp"])){
+    date_default_timezone_set('Europe/Paris');
+    $name = $_POST["name"];
+    $firstname = $_POST["firstname"];
+    $email = $_POST["email"];
+    $mdp = $_POST["mdp"];
+    inscription($name, $firstname, $email, $mdp);
+} else {
+    header("Location: ../php_pages/inscription.php");
+    exit();
+}
 
 
 ?>

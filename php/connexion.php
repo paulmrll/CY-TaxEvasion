@@ -2,40 +2,55 @@
 
 session_start();
 
-function connexion($mail, $mdp){
-    $file = fopen("../data/utilisateurs.csv", "r");
-    if (file_exists("../data/utilisateurs.csv")){
-        if (isset($mail) && isset($mdp)){
-
-            while ($line = fgets($file)){
-                $line = explode(";", $line);
-
-                if ($line[2] == $mail){
-                    if (password_verify($mdp, $line[3])){
-
-                        $_SESSION['forename'] = $line[0];
-                        $_SESSION['name'] = $line[1];
-                        $_SESSION['mail'] = $line[2];
-                        $_SESSION['mdp'] = $mdp;
-
-                        header('Location: ../php_pages/user.php');
-                        exit();
-                    } else {
-                        header('Location: ../php_pages/connexion.php');
-                        exit();
-                    }
-                }
+function change_connexionDate(){
+    if (file_exists("../data/utilisateurs.json")){
+        $content = json_decode(file_get_contents("../data/utilisateurs.json"), true);
+        for ($i = 0; $i < count($content); $i++){
+            if ($content[$i]['email'] === $_SESSION['mail']){
+                $content[$i]['connexion_date'] = date("d-m-Y H:i:s");
+                break;
             }
         }
-        header('Location: ../php_pages/connexion.php');
-        exit();
+        file_put_contents("../data/utilisateurs.json", json_encode($content, JSON_PRETTY_PRINT));
     }
-    header('Location: ../php_pages/connexion.php');
-    exit();
+    
+}
+function connexion($mail, $mdp){
+    if (file_exists("../data/utilisateurs.json")){
+        if (isset($mail) && isset($mdp)){
+            if (file_exists("../data/utilisateurs.json")){
+                $content = json_decode(file_get_contents("../data/utilisateurs.json"), true);
+                var_dump($content);
+                for ($i = 0; $i < count($content); $i++){
+                    if ($content[$i]['email'] === $mail){
+                        if (password_verify($mdp, $content[$i]['mdp'])){
+                            $_SESSION['firstname'] = $content[$i]['firstname'];
+                            $_SESSION['name'] = $content[$i]['name'];
+                            $_SESSION['mail'] = $content[$i]['email'];
+                            $_SESSION['mdp'] = $mdp;
+                            change_connexionDate();
+                            header('Location: ../php_pages/user.php');
+                            exit();
+                        } else {
+                            header('Location: ../php_pages/connexion.php');
+                            exit();
+                        }
+                    }
+                }
+                header('Location: ../php_pages/inscription.php');
+                exit();
+            }
+        }
+
+
+    }
+
+
 }
 
 
 if (isset($_POST['mail']) && isset($_POST['mdp'])){
+    date_default_timezone_set('Europe/Paris');
     $mail = $_POST['mail'];
     $mdp = $_POST['mdp'];
 

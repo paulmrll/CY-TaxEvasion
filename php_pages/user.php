@@ -45,7 +45,7 @@ require_once "../php_pages/header.php";
 
 
                                         <a>Prénom : </a>
-                                        <input type="text" value="<?php echo $_SESSION['forename']; ?>" name="forename" required>
+                                        <input type="text" value="<?php echo $_SESSION['firstname']; ?>" name="firstname" required>
                                     </div>
 
                                 </div>
