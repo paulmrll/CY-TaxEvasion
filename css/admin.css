@@ -11,7 +11,7 @@ h1 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: var(--spacing-md) var(--spacing-sm);
+    margin: 12rem var(--spacing-sm);
 }
 
 
