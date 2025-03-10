@@ -2,20 +2,20 @@
 session_start();
 
 
-if (isset($_SESSION['role']) != "admin") {
+if (isset($_SESSION['role']) != "Admin") {
 
     header("Location: ../index.php");
     exit();
 }
 
 
-$jsonFile = "../data/users.json";
+$jsonFile = "../data/utilisateurs.json";
 if (!file_exists($jsonFile)) {
     exit();
 }
 
 $json = file_get_contents($jsonFile);
-$user_list = json_decode($json, true);
+$content = json_decode($json, true);
 ?>
 
 
@@ -53,12 +53,12 @@ require_once "../php_pages/header.php";
                     <th>Option</th>
                 </tr>
 
-                <?php foreach ($user_list as $index => $user): ?>
+                <?php foreach ($content as $index => $user): ?>
                     <tr>
                         <td><?php echo "#" . ($index + 1) ?></td>
                         <td><?php echo htmlspecialchars($user["name"]) ?></td>
                         <td><?php echo htmlspecialchars($user["firstname"]) ?></td>
-                        <td><?php echo htmlspecialchars($user["mail"]) ?></td>
+                        <td><?php echo htmlspecialchars($user["email"]) ?></td>
                         <td><?php echo htmlspecialchars($user["role"]) ?></td>
                         <td>
                             <div class="button-container">
@@ -68,9 +68,9 @@ require_once "../php_pages/header.php";
                                     <button class="modifier-button" type="submit">Modifier</button>
                                 </form>
 
-                                <form action="../php_json/delete_user.php" method="post">
+                                <form action="../php/suppression.php" method="post">
                                     <input type="hidden" name="action" value="delete">
-                                    <button class="sup-button"type="submit">Supprimer</button>
+                                    <button class="sup-button" type="submit">Supprimer</button>
                                 </form>
                             </div>
                         </td>

@@ -10,7 +10,7 @@ if (isset($_SESSION['role']) != "Admin") {
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
-    $jsonFile = "../data/users.json";
+    $jsonFile = "../data/utilisateurs.json";
     if (!file_exists($jsonFile)) {
         exit();
     }
@@ -32,7 +32,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             $name = $user["name"];
             $firstname = $user["firstname"];
-            $mail = $user["mail"];
+            $mail = $user["email"];
             $password = $user["password"];
             $role = $user["role"];
         }

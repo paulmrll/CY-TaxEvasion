@@ -3,7 +3,7 @@ form{
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin: var(--spacing-md) var(--spacing-lg);
+    margin: 12rem;
 }
 
 

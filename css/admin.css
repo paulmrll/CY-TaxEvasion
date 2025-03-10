@@ -16,7 +16,6 @@ h1 {
 
 
 table {
-
     border-collapse: collapse;
     border: 0.1rem solid var(--color-dark-writing);
     font-size: 1.4rem;
@@ -84,41 +83,48 @@ select option {
 }
 
 
-table button{
+
+.sup-button{
     color: var(--color-light-writing);
     text-align: center;
     font-size: 1.3rem;
-    border-radius: 1rem 0.1rem;
+    border-radius: 1rem 0.3rem;
     background-color: #d62d2d;
     padding: 0.3rem 0.4rem;
     border: 0.1rem var(--color-dark-writing) solid;
     cursor: pointer;
 }
 
+.sup-button:hover[type="submit"]{
+    background-color: #d62d2d;
+    border: 0.1rem #d62d2d solid;
+}
 
 table button:hover[type="submit"]{
     background-color: var(--color-submit);
     border: 0.1rem var(--color-submit) solid;
 }
 
-.confirm-button {
-    display: flex;
-    justify-content: flex-end;
-    margin-top: 2rem;
-}
 
-button{
-    color: var(--color-dark-writing);
+
+.modifier-button{
+    color: var(--color-light-writing);
     text-align: center;
-    font-size: 1.5rem;
-    border-radius: 1rem 0.1rem;
-    background-color: var(--color-background-2);
-    padding: 0.4rem 0.8rem;
+    font-size: 1.3rem;
+    border-radius: 1rem 0.3rem;
+    background-color: var(--color-header-active);
+    padding: 0.3rem 0.4rem;
     border: 0.1rem var(--color-dark-writing) solid;
     cursor: pointer;
-    white-space: nowrap;
 }
 
 button:active{
     transform: scale(0.9);
+}
+
+.button-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
 }

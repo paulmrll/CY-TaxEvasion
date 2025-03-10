@@ -38,7 +38,7 @@ function inscription($name, $firstname, $email, $mdp){
                 session_start();
                 $_SESSION['firstname'] = $firstname;
                 $_SESSION['name'] = $name;
-                $_SESSION['mail'] = $email;
+                $_SESSION['email'] = $email;
                 $_SESSION['password'] = $mdp;
                 header("Location: ../php_pages/user.php");
                 exit();
@@ -52,8 +52,8 @@ if (isset($_POST["name"]) && isset($_POST["firstname"]) && isset($_POST["email"]
     date_default_timezone_set('Europe/Paris');
     $name = $_POST["name"];
     $firstname = $_POST["firstname"];
-    $email = $_POST["email"];
-    $mdp = $_POST["password"];
+    $email = $_POST["mail"];
+    $mdp = $_POST["epassword"];
     inscription($name, $firstname, $email, $mdp);
 } else {
     header("Location: ../php_pages/inscription.php");

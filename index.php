@@ -37,7 +37,7 @@
             if(isset($_SESSION['mail'])){
 
                 ?>
-                <a href="php_json/deconnexion.php" class="header-link">
+                <a href="php/deconnexion.php" class="header-link">
                     <div class="header-connect">Se déconnecter</div>
                 </a>
                 <?php

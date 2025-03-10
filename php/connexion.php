@@ -28,8 +28,8 @@ function connexion($mail, $mdp)
                         if (password_verify($mdp, $content[$i]['mdp'])) {
                             $_SESSION['firstname'] = $content[$i]['firstname'];
                             $_SESSION['name'] = $content[$i]['name'];
-                            $_SESSION['mail'] = $content[$i]['email'];
-                            $_SESSION['mdp'] = $mdp;
+                            $_SESSION['email'] = $content[$i]['email'];
+                            $_SESSION['password'] = $mdp;
                             $_SESSION['role'] = $content[$i]['role'];
                             change_connexionDate();
                             header('Location: ../php_pages/user.php');
@@ -50,8 +50,8 @@ function connexion($mail, $mdp)
 
 if (isset($_POST['email']) && isset($_POST['password'])) {
     date_default_timezone_set('Europe/Paris');
-    $mail = $_POST['mail'];
-    $mdp = $_POST['mdp'];
+    $mail = $_POST['email'];
+    $mdp = $_POST['password'];
 
     connexion($mail, $mdp);
 

@@ -35,7 +35,7 @@ require_once "../php_pages/header.php";
                 <div class="utilisateur-line-container">
                     <div class="box-container">
 
-                        <form action="../php_json/modification.php" method="post">
+                        <form action="../php/modification.php" method="post">
                             <div class="part-container">
                                 <h1>Mon Compte :</h1>
                                 <div class="compte-info-container-top">

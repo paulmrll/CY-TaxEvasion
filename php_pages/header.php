@@ -26,10 +26,10 @@
             </div>
 
             <?php
-            if(isset($_SESSION['mail'])){
+            if(isset($_SESSION['email'])){
 
                 ?>
-                <a href="../php_json/deconnexion.php" class="header-link">
+                <a href="../php/deconnexion.php" class="header-link">
                     <div class="header-connect">Se déconnecter</div>
                 </a>
                 <?php
@@ -47,7 +47,7 @@
                                                                   alt="user-logo"></a>
 
             <?php
-            if(isset($_SESSION['mail'])) {
+            if(isset($_SESSION['email'])) {
                 if($_SESSION['role'] == 'Admin'){
                     ?>
                     <a href="../php_pages/admin.php" class="header-link"><img class="header-user-logo"
