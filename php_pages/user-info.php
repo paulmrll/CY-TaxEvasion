@@ -32,14 +32,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             $name = $user["name"];
             $firstname = $user["firstname"];
-            $mail = $user["email"];
+            $email = $user["email"];
             $password = $user["password"];
             $role = $user["role"];
         }
         $n++;
     }
-
-
 }
 ?>
 
@@ -69,9 +67,9 @@ require_once "../php_pages/header.php";
                 <div class="utilisateur-line-container">
                     <div class="box-container">
 
-                        <form action="../php_json/modification.php" method="post">
+                        <form action="../php/admin-modification.php" method="post">
                             <div class="part-container">
-                                <h1>Mon Compte :</h1>
+                                <h1>Compte de <?php echo $firstname; ?> :</h1>
                                 <div class="compte-info-container-top">
 
 
@@ -97,18 +95,11 @@ require_once "../php_pages/header.php";
                                     <div class="grid-line-container">
                                         <div>
                                             <a>Adresse mail : </a>
-                                            <input type="text" name="mail" value="<?php echo $mail; ?>"
+                                            <input type="text" name="mail" value="<?php echo $email; ?>"
                                                    required>
                                         </div>
                                     </div>
 
-                                    <div class="grid-line-container">
-                                        <div>
-                                            <a>Mot de passe : </a>
-                                            <input type="password" name="password"
-                                                   value="<?php echo $password; ?>" required>
-                                        </div>
-                                    </div>
                                     <div class="button-container">
                                         <button class="button-modifier">Modifier</button>
                                     </div>
@@ -128,7 +119,7 @@ require_once "../php_pages/header.php";
 
                 <div class="box-container">
                     <div class="part-container">
-                        <h1>Mes Voyages :</h1>
+                        <h1>Voyages de <?php echo $firstname; ?> :</h1>
                         <div class="compte-info-container">
                             <div class="grid-container">
 
