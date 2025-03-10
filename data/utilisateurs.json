@@ -1,11 +1,36 @@
 [
     {
-        "name": "Morille",
-        "firstname": "Paul 1",
-        "email": "paul@gmail.com",
-        "password": "$2y$10$bD.BRYchX21k7M92Q0SaaulxZ\/KGSEtEicAQ0lv6k44sF2WsNtk4K",
-        "inscription_date": "10-03-2025 21:18:26",
-        "connexion_date": "10-03-2025 21:30:03",
-        "role": "Admin"
+        "name": "a",
+        "firstname": "a",
+        "email": "a@gmail.com",
+        "password": "$2y$10$Dng58pmpadPmZ2TrzKjuX.anZhoZtIp5jN3nHVdAYZNfy2UrAztMq",
+        "inscription_date": "10-03-2025 22:21:12",
+        "connexion_date": "10-03-2025 22:21:12",
+        "role": "Utilisateur",
+        "Travels": {
+            "Country": [],
+            "Date": [],
+            "Number of persone": [],
+            "Price": [],
+            "Duration": [],
+            "Days": []
+        }
+    },
+    {
+        "name": "b",
+        "firstname": "b",
+        "email": "b@gmail.com",
+        "password": "$2y$10$kz1XHRNxd6zgSTBXDdsQau3U1QtWwFwAYN3mTOv.izxPSjMP6vZcS",
+        "inscription_date": "10-03-2025 22:21:41",
+        "connexion_date": "10-03-2025 22:21:41",
+        "role": "Utilisateur",
+        "Travels": {
+            "Country": [],
+            "Date": [],
+            "Number of persone": [],
+            "Price": [],
+            "Duration": [],
+            "Days": []
+        }
     }
 ]
