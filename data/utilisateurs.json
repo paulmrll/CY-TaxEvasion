@@ -1,29 +1,11 @@
 [
     {
         "name": "Morille",
-        "firstname": "Paul",
-        "email": "123@gmail.com",
-        "mdp": "$2y$10$czVxGmG4GjGbg2xDOvfMSOfcchBL8wtieoe6tY8MHRUcuUrQYpq5O",
-        "inscription_date": "10-03-2025 12:17:20",
-        "connexion_date": "10-03-2025 13:36:34",
-        "role": "User"
-    },
-    {
-        "name": "Morille",
-        "firstname": "Paul3",
-        "email": "paul.morille11@gmail.com",
-        "mdp": "$2y$10$cnUt6EzOOLXeAS52nozJ4uyD1rRDT0.kGTTsmryiXTgbIrpdkEaJ.",
-        "inscription_date": "10-03-2025 13:48:14",
-        "connexion_date": "10-03-2025 14:04:56",
-        "role": "Admin"
-    },
-    {
-        "name": "goupil",
-        "firstname": "florian",
-        "email": "atkt@gmail.com",
-        "password": "$2y$10$E5CZzbr3E93fE2ZbDgq6oeBSUG1khuV0LhesQJAgf\/QTQD6vJANjW",
-        "inscription_date": "10-03-2025 16:38:42",
-        "connexion_date": "10-03-2025 16:55:03",
+        "firstname": "Paul 1",
+        "email": "paul@gmail.com",
+        "password": "$2y$10$bD.BRYchX21k7M92Q0SaaulxZ\/KGSEtEicAQ0lv6k44sF2WsNtk4K",
+        "inscription_date": "10-03-2025 21:18:26",
+        "connexion_date": "10-03-2025 21:30:03",
         "role": "Admin"
     }
 ]

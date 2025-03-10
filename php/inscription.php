@@ -46,6 +46,7 @@ function inscription($name, $firstname, $email, $password)
                 $_SESSION['name'] = $name;
                 $_SESSION['email'] = $email;
                 $_SESSION['password'] = $password;
+                $_SESSION['role'] = "Utilisateur";
                 header("Location: ../php_pages/user.php");
                 exit();
             }

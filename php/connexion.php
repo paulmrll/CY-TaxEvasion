@@ -22,7 +22,7 @@ function connexion($email, $password)
         if (isset($email) && isset($password)) {
             if (file_exists("../data/utilisateurs.json")) {
                 $content = json_decode(file_get_contents("../data/utilisateurs.json"), true);
-                var_dump($content);
+
                 for ($i = 0; $i < count($content); $i++) {
                     if ($content[$i]['email'] === $email) {
                         if (password_verify($password, $content[$i]['password'])) {

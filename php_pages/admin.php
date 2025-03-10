@@ -69,6 +69,7 @@ require_once "../php_pages/header.php";
                                 </form>
 
                                 <form action="../php/suppression.php" method="post">
+                                    <input type="hidden" name="email" value="<?php echo $user["email"] ?>">
                                     <input type="hidden" name="action" value="delete">
                                     <button class="sup-button" type="submit">Supprimer</button>
                                 </form>
