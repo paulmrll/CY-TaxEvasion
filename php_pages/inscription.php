@@ -26,16 +26,17 @@
             <th colspan="2">Inscription</th>
         </tr>
         <tr>
-            <td><input id="name" name="name" type="text" placeholder="Nom" required></td>
-        </tr>
-        <tr>
             <td><input id="firstname" name="firstname" type="text" placeholder="Prénom" required></td>
         </tr>
         <tr>
-            <td><input id="mail" name="email" type="email" placeholder="e-mail@gmail.com" required></td>
+            <td><input id="name" name="name" type="text" placeholder="Nom" required></td>
+        </tr>
+
+        <tr>
+            <td><input id="email" name="email" type="email" placeholder="e-mail@gmail.com" required></td>
         </tr>
         <tr>
-            <td><input id="password" name="mdp" type="password" placeholder="Mot de passe" required></td>
+            <td><input id="password" name="password" type="password" placeholder="Mot de passe" required></td>
         </tr>
         <tr>
             <td colspan="2">

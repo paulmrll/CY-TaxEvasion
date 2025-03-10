@@ -47,6 +47,7 @@ h1 {
 }
 
 .utilisateur-image button {
+
     background: none;
     border: none;
     font: inherit;
@@ -67,11 +68,12 @@ h1 {
 
 .utilisateur-image {
     display: flex;
+    flex-direction: column;
     flex: 1;
     background: var(--color-background-2);
     border-radius: 2rem;
-    padding: 3rem;
     align-items: center;
+    justify-content: center;
 }
 
 .utilisateur-image img {

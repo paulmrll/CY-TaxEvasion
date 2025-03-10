@@ -25,10 +25,10 @@
                 <th>Connexion</th>
             </tr>
             <tr>
-                <td><input id="mail" name="mail" type="email" placeholder="nom.prenom@gmail.com" required></td>
+                <td><input id="email" name="email" type="email" placeholder="nom.prenom@gmail.com" required></td>
             </tr>
             <tr>
-                <td><input id="password" name="mdp" type="password" placeholder="mot de passe" required></td>
+                <td><input id="password" name="password" type="password" placeholder="mot de passe" required></td>
             </tr>
             <tr>
                 <td colspan="2">
@@ -39,9 +39,7 @@
             <tr>
                 <td colspan="2">Pas de compte ? <a href="inscription.php">Inscrivez-vous</a></td>
             </tr>
-            <tr>
-                <td colspan="2"><a href="admin.php">Se connecter en tant qu'administateur</a></td>
-            </tr>
+
         </table>
     </form>
 

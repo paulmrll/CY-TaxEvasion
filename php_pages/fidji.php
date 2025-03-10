@@ -107,7 +107,7 @@ require_once "../php_pages/header.php";
 
                 <div class="reservation-checkbox">
                     <h5>Dates de départ :</h5>
-                    <input id="date-départ" name="date-départ" type="date" placeholder="jj/mm/aaaa" required></td>
+                    <input id="date-départ" name="date-départ" type="date" placeholder="jj/mm/aaaa" required>
 
                 </div>
 
@@ -115,7 +115,7 @@ require_once "../php_pages/header.php";
                 <div class="reservation-checkbox">
 
                     <h5>Dates de retour :</h5>
-                    <input id="date-retour" name="date-retour" type="date" placeholder="jj/mm/aaaa" required></td>
+                    <input id="date-retour" name="date-retour" type="date" placeholder="jj/mm/aaaa" required>
 
                 </div>
 

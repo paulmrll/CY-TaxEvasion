@@ -2,12 +2,46 @@
 
 session_start();
 
-if (!isset($_SESSION['mail'])) {
+if (isset($_SESSION['role']) != "Admin") {
     header("Location: ../php_pages/connexion.php");
     exit();
 }
-?>
 
+
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+
+    $jsonFile = "../data/users.json";
+    if (!file_exists($jsonFile)) {
+        exit();
+    }
+
+    $json = file_get_contents($jsonFile);
+    $user_list = json_decode($json, true);
+
+
+    if (!isset($_POST['user_id'])) {
+        header("Location: ../php_pages/admin.php");
+        exit();
+    }
+
+    $user_id = $_POST['user_id'];
+
+    $n = 0;
+    foreach ($user_list as $user) {
+        if ($user_id == $n) {
+
+            $name = $user["name"];
+            $firstname = $user["firstname"];
+            $mail = $user["mail"];
+            $password = $user["password"];
+            $role = $user["role"];
+        }
+        $n++;
+    }
+
+
+}
+?>
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -45,7 +79,7 @@ require_once "../php_pages/header.php";
                                     <div class="grid-line-container">
                                         <div>
                                             <a>Nom : </a>
-                                            <input type="text" name="name" value="<?php echo $_SESSION['name']; ?>"
+                                            <input type="text" name="name" value="<?php echo $name; ?>"
                                                    required>
                                         </div>
 
@@ -54,7 +88,7 @@ require_once "../php_pages/header.php";
                                     <div class="grid-line-container">
                                         <div>
                                             <a>Prénom : </a>
-                                            <input type="text" value="<?php echo $_SESSION['firstname']; ?>"
+                                            <input type="text" value="<?php echo $firstname; ?>"
                                                    name="firstname" required>
                                         </div>
 
@@ -63,7 +97,7 @@ require_once "../php_pages/header.php";
                                     <div class="grid-line-container">
                                         <div>
                                             <a>Adresse mail : </a>
-                                            <input type="text" name="mail" value="<?php echo $_SESSION['mail']; ?>"
+                                            <input type="text" name="mail" value="<?php echo $mail; ?>"
                                                    required>
                                         </div>
                                     </div>
@@ -72,7 +106,7 @@ require_once "../php_pages/header.php";
                                         <div>
                                             <a>Mot de passe : </a>
                                             <input type="password" name="password"
-                                                   value="<?php echo $_SESSION['password']; ?>" required>
+                                                   value="<?php echo $password; ?>" required>
                                         </div>
                                     </div>
                                     <div class="button-container">
@@ -87,7 +121,7 @@ require_once "../php_pages/header.php";
                         <button>
                             <img src="../image/user-icone.png" alt="image-utilisateur">
                         </button>
-                        <?php echo $_SESSION['role']; ?>
+                        <?php echo $role; ?>
                     </div>
                 </div>
 

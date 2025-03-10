@@ -11,7 +11,7 @@ function exist($email){
         }
         return false;
     }
-        
+
 }
 
 function inscription($name, $firstname, $email, $mdp){
@@ -39,28 +39,23 @@ function inscription($name, $firstname, $email, $mdp){
                 $_SESSION['firstname'] = $firstname;
                 $_SESSION['name'] = $name;
                 $_SESSION['mail'] = $email;
-                $_SESSION['mdp'] = $mdp;
-                $_SESSION['role'] = $content[$i]['role'];
+                $_SESSION['password'] = $mdp;
                 header("Location: ../php_pages/user.php");
                 exit();
             }
         }
-        }
+    }
 }
 
 
-
-if (isset($_POST["name"]) && isset($_POST["firstname"]) && isset($_POST["email"]) && isset($_POST["mdp"])){
+if (isset($_POST["name"]) && isset($_POST["firstname"]) && isset($_POST["email"]) && isset($_POST["password"])){
     date_default_timezone_set('Europe/Paris');
     $name = $_POST["name"];
     $firstname = $_POST["firstname"];
     $email = $_POST["email"];
-    $mdp = $_POST["mdp"];
+    $mdp = $_POST["password"];
     inscription($name, $firstname, $email, $mdp);
 } else {
     header("Location: ../php_pages/inscription.php");
     exit();
 }
-
-
-?>
