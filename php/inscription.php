@@ -40,6 +40,7 @@ function inscription($name, $firstname, $email, $mdp){
                 $_SESSION['name'] = $name;
                 $_SESSION['mail'] = $email;
                 $_SESSION['mdp'] = $mdp;
+                $_SESSION['role'] = $content[$i]['role'];
                 header("Location: ../php_pages/user.php");
                 exit();
             }

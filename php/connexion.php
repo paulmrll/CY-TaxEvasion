@@ -28,6 +28,7 @@ function connexion($mail, $mdp){
                             $_SESSION['name'] = $content[$i]['name'];
                             $_SESSION['mail'] = $content[$i]['email'];
                             $_SESSION['mdp'] = $mdp;
+                            $_SESSION['role'] = $content[$i]['role'];
                             change_connexionDate();
                             header('Location: ../php_pages/user.php');
                             exit();

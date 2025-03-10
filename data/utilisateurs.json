@@ -5,14 +5,16 @@
         "email": "123@gmail.com",
         "mdp": "$2y$10$czVxGmG4GjGbg2xDOvfMSOfcchBL8wtieoe6tY8MHRUcuUrQYpq5O",
         "inscription_date": "10-03-2025 12:17:20",
-        "connexion_date": "10-03-2025 13:36:34"
+        "connexion_date": "10-03-2025 13:36:34",
+        "role": "User"
     },
     {
         "name": "Morille",
-        "firstname": "Paul",
+        "firstname": "Paul3",
         "email": "paul.morille11@gmail.com",
-        "mdp": "$2y$10$srZfv7TA812xbGESTom.Q.B.T\/HCliRlAj9nqOBGzAIc2eyNCBAFu",
+        "mdp": "$2y$10$cnUt6EzOOLXeAS52nozJ4uyD1rRDT0.kGTTsmryiXTgbIrpdkEaJ.",
         "inscription_date": "10-03-2025 13:48:14",
-        "connexion_date": "10-03-2025 13:53:33"
+        "connexion_date": "10-03-2025 14:04:56",
+        "role": "Admin"
     }
 ]

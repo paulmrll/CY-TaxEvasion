@@ -1,82 +1,44 @@
 <?php
 session_start();
 
-function find_user(){
-    if (file_exists("../data/utilisateurs.csv")){
-        $file = fopen("../data/utilisateurs.csv", "r");
+function user_modification($mail, $mdp, $firstname, $name){
+    if (file_exists("../data/utilisateurs.json")){
+       $content = json_decode(file_get_contents("../data/utilisateurs.json"), true);
 
-        while( ($line = fgets($file)) !== false){
-            $line = trim($line);
-            $line = explode(";", $line);
-            var_dump($line);
-            if ($line[2] == $_SESSION['mail']){
-                fclose($file);
-                return $line;
+       if (isset($content)){
+            for ($i = 0; $i < count($content); $i++){
+                if ($content[$i]['email'] === $_SESSION['mail']){
+                    $content[$i]['name'] = $name;
+                    $content[$i]['firstname'] = $firstname;
+                    $mdp_hash = password_hash($mdp, PASSWORD_DEFAULT);
+                    $content[$i]['mdp'] = $mdp_hash;
+                    $content[$i]['email'] = $mail;
+                    file_put_contents("../data/utilisateurs.json", json_encode($content, JSON_PRETTY_PRINT));
+                    $_SESSION['mail'] = $mail;
+                    $_SESSION['name'] = $name;
+                    $_SESSION['firstname'] = $firstname;
+                    $_SESSION['mdp'] = $mdp;
+                    $_SESSION['role'] = $content[$i]['role'];
+                    header('Location: ../php_pages/user.php');
+                    exit();
+                }
             }
-        }
-        fclose($file);
+            session_destroy();
+            header('Location: ../php_pages/connexion.php');
+            exit();
+       } else {
         return false;
+       }
     }
 }
 
-function modification_line(){
+
+if (isset($_POST['mail']) && isset($_POST['mdp']) && isset($_POST['firstname']) && isset($_POST['name'])){
+    $mail = $_POST['mail'];
+    $mdp = $_POST['mdp'];
+    $firstname = $_POST['firstname'];
+    $name = $_POST['name'];
     
-    $line = find_user();
-   
-    if ($line != false){
-        $line[0] = $_POST['forename'];
-        $line[1] = $_POST['name'];
-        $line[2] = $_POST['mail'];
-        $line[3] = $_POST['mdp'];
-        
-        return $line;
-    }
-}
-
-function write_file($line){
-    if (file_exists("../data/utilisateurs.csv")){
-        $file = fopen("../data/utilisateurs.csv", "r");
-        $tab = array();
-        $i = 0;
-        while (($line1 = fgets($file)) !== false){
-            $line1 = trim($line1);
-            $line2 = explode(";", $line1);
-            
-            if ($line2[2] == $_SESSION['mail']){
-                $tab[$i] = $line;
-                $i++;
-            } else {
-                $tab[$i] = $line2;
-                $i++;
-            }
-        }
-        
-        fclose($file);
-        $file = fopen("../data/utilisateurs.csv", "w");
-        foreach ($tab as $line){
-            fputcsv($file, $line, ";");
-        }
-        fclose($file);
-    }
-    $_SESSION['mail'] = $line[2];
-    $_SESSION['forename'] = $line[0];
-    $_SESSION['name'] = $line[1];
-    $_SESSION['mdp'] = $line[3];
-    header("Location: ../php_pages/user.php");
-}
-
-if (isset($_POST['mail']) && isset($_POST['mdp']) && isset($_POST['forename']) && isset($_POST['name'])){
-
-$mail = $_POST['mail'];
-$mdp = $_POST['mdp'];
-$forename = $_POST['forename'];
-$name = $_POST['name'];
-
-
-    $line = modification_line();
-
-    write_file($line);
-
-    exit();
+    user_modification($mail, $mdp, $firstname, $name);
 }
 ?>
