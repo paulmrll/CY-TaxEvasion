@@ -1,5 +1,5 @@
 <?php
-
+require_once "fonctions_utiles.php";
 
 function exist($email){
     if (file_exists("../data/utilisateurs.json")) {
@@ -14,9 +14,11 @@ function exist($email){
 
 }
 
+
 function create_user($name, $firstname, $email, $password){
     if (isset($name) && isset($firstname) && isset($email) && isset($password)) {
         $mdp_hash = password_hash($password, PASSWORD_DEFAULT);
+        
         $tab = [
             "name" => $name,
             "firstname" => $firstname,
@@ -54,6 +56,9 @@ function start_session($name, $firstname, $email, $password){
 function inscription($name, $firstname, $email, $password){
     if (file_exists("../data/utilisateurs.json")) {
         $content = json_decode(file_get_contents("../data/utilisateurs.json"), true);
+        $name = change_variable($name);
+        $firstname = change_variable($firstname);
+        $email = change_email($email);
         $tab = create_user($name, $firstname, $email, $password);
         if ($content === null){
             file_put_contents("../data/utilisateurs.json", json_encode([$tab], JSON_PRETTY_PRINT));
