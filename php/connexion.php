@@ -10,17 +10,16 @@ function connexion($email, $password)
     if (file_exists("../data/utilisateurs.json")) {
         if (isset($email) && isset($password)) {
             $email = change_email($email);
-            if (file_exists("../data/utilisateurs.json")) {
-                $content = json_decode(file_get_contents("../data/utilisateurs.json"), true);
 
+                $content = json_decode(file_get_contents("../data/utilisateurs.json"), true);
+                if ($content === null){
+                    header('Location: ../php_pages/inscription.php');
+                    exit();
+                }
                 for ($i = 0; $i < count($content); $i++) {
                     if ($content[$i]['email'] === $email) {
                         if (password_verify($password, $content[$i]['password'])) {
-                            $_SESSION['firstname'] = $content[$i]['firstname'];
-                            $_SESSION['name'] = $content[$i]['name'];
-                            $_SESSION['email'] = $content[$i]['email'];
-                            $_SESSION['password'] = $password;
-                            $_SESSION['role'] = $content[$i]['role'];
+                            start_session($email, $content[$i]['name'], $content[$i]['firstname'], $password, $content[$i]['role']);
                             change_connexionDate();
                             header('Location: ../php_pages/user.php');
                             exit();
@@ -32,8 +31,10 @@ function connexion($email, $password)
                 }
                 header('Location: ../php_pages/inscription.php');
                 exit();
-            }
         }
+    } else {
+        header('Location: ../php_pages/inscription.php');
+        exit();
     }
 }
 

@@ -43,17 +43,9 @@ function create_user($name, $firstname, $email, $password){
 }
 
 
-function start_session($name, $firstname, $email, $password){
-    session_start();
-    $_SESSION['firstname'] = $firstname;
-    $_SESSION['name'] = $name;
-    $_SESSION['email'] = $email;
-    $_SESSION['password'] = $password;
-    $_SESSION['role'] = "Utilisateur";
-    header("Location: ../php_pages/user.php");
-    exit();
-}
+
 function inscription($name, $firstname, $email, $password){
+    $role = "Utilisateur";
     if (file_exists("../data/utilisateurs.json")) {
         $content = json_decode(file_get_contents("../data/utilisateurs.json"), true);
         $name = change_variable($name);
@@ -62,7 +54,10 @@ function inscription($name, $firstname, $email, $password){
         $tab = create_user($name, $firstname, $email, $password);
         if ($content === null){
             file_put_contents("../data/utilisateurs.json", json_encode([$tab], JSON_PRETTY_PRINT));
-            start_session($name, $firstname, $email, $password);
+            session_start();
+            start_session($email, $name, $firstname, $password, $role);
+            header('Location: ../php_pages/user.php');
+            exit();
         } else {
             if (exist($email)) {
                 header('Location: ../php_pages/connexion.php');
@@ -70,13 +65,19 @@ function inscription($name, $firstname, $email, $password){
             } else {
                 $content[] = $tab;
                 file_put_contents("../data/utilisateurs.json", json_encode($content, JSON_PRETTY_PRINT));
-                start_session($name, $firstname, $email, $password);
+                session_start();
+                start_session($email, $name, $firstname, $password, $role);
+                header('Location: ../php_pages/user.php');
+                exit();
             }
         }
     } else {
         $tab = create_user($name, $firstname, $email, $password);
             file_put_contents("../data/utilisateurs.json", json_encode([$tab], JSON_PRETTY_PRINT));
-            start_session($name, $firstname, $email, $password);
+            session_start();
+            start_session($email, $name, $firstname, $password, $role);
+            header('Location: ../php_pages/user.php');
+            exit();
     }
 }
 
@@ -88,6 +89,7 @@ if (isset($_POST["name"]) && isset($_POST["firstname"]) && isset($_POST["email"]
     $email = $_POST["email"];
     $password = $_POST["password"];
     inscription($name, $firstname, $email, $password);
+    
 } else {
     header("Location: ../php_pages/inscription.php");
     exit();
