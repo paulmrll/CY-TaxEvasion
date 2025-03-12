@@ -6,7 +6,7 @@
     <link rel="icon" type="image" href="../image/logo-site.webp">
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/header.css">
-    <link rel="stylesheet" href="../css/footer.css">
+
 </head>
 <body>
 
