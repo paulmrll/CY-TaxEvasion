@@ -38,7 +38,7 @@ require_once "../php_pages/header.php";
                     <label type="text"  for="cvv">CVV:</label>
                     <input minlength="2" type="text" id="cvv" name="cvv" placeholder="789" required>
                 </div>
-                <button type="submit">Pay</button>
+                <button type="submit">Save</button>
             </form>
     </div>
 </main>

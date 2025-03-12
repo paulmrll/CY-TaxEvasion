@@ -36,7 +36,7 @@ function create_user($name, $firstname, $email, $password){
                 "Days" => []
             ]], 
             "card" => [
-                "card" => 0,
+                "number" => 0,
                 "date" => 0,
                 "cvv" => 0
             ]

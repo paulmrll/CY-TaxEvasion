@@ -14,9 +14,9 @@ function add_card($card, $date, $cvv){
     }
     for ($i = 0; $i < count($content); $i++){
         if ($content[$i]['email'] === $_SESSION['email']){
-            $content[$i]['payment']['card'] = $card;
-            $content[$i]['payment']['date'] = $date;
-            $content[$i]['payment']['cvv'] = $cvv;
+            $content[$i]['card']['number'] = $card;
+            $content[$i]['card']['date'] = $date;
+            $content[$i]['card']['cvv'] = $cvv;
             file_put_contents($jsonFile, json_encode($content, JSON_PRETTY_PRINT));
         }
     }
