@@ -16,7 +16,7 @@ function user_modification($email, $password, $firstname, $name){
     $password_hash = password_hash($password, PASSWORD_DEFAULT);
     if (isset($content)) {
         for ($i = 0; $i < count($content); $i++) {
-            if ($content[$i]['email'] === $_SESSION['email']) {
+            if ($content[$i]['email'] === $email) {
 
                 $content[$i]['name'] = $name;
                 $content[$i]['firstname'] = $firstname;

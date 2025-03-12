@@ -97,7 +97,7 @@ require_once "../php_pages/header.php";
                                     <div class="grid-line-container">
                                         <div>
                                             <a>Adresse mail : </a>
-                                            <input type="text" name="mail" value="<?php echo $mail; ?>"
+                                            <input type="mail" name="email" value="<?php echo $mail; ?>"
                                                    required>
                                         </div>
                                     </div>

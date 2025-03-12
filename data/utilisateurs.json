@@ -1,31 +1,12 @@
 [
     {
         "name": "Morille",
-        "firstname": "Paul1",
+        "firstname": "Paul",
         "email": "paul.morille11@gmail.com",
-        "password": "$2y$10$9A4yvc9ctZpBINNu1w6h4OUn16mLTeoFWLAMN566h9VlfrliapadC",
+        "password": "$2y$10$xTZ0POZ8I9ZDKx\/XpCkITuoQ945HRFwl6N\/Kf8KITOKGDZ95pkzLu",
         "inscription_date": "11-03-2025 21:59:25",
-        "connexion_date": "11-03-2025 22:00:08",
+        "connexion_date": "12-03-2025 10:41:17",
         "role": "Admin",
-        "Travels": [
-            {
-                "Country": [],
-                "Date": [],
-                "Number of persone": [],
-                "Price": [],
-                "Duration": [],
-                "Days": []
-            }
-        ]
-    },
-    {
-        "name": "P",
-        "firstname": "P",
-        "email": "p@gmail.com",
-        "password": "$2y$10$R8CmcC.8CdnKXLAxIjhuaukro0ytKJFLg0ekWMY7sXzhlL0SuDdRW",
-        "inscription_date": "12-03-2025 10:06:11",
-        "connexion_date": "12-03-2025 10:17:39",
-        "role": "Utilisateur",
         "Travels": [
             {
                 "Country": [],
@@ -37,8 +18,8 @@
             }
         ],
         "payment": {
-            "card": "4973559567876787",
-            "date": "2025-12-12",
+            "card": "7878787878787878",
+            "date": "2025-03-13",
             "cvv": "789"
         }
     }
