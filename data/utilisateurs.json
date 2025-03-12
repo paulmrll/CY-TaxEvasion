@@ -3,11 +3,11 @@
         "name": "Morille",
         "firstname": "Paul",
         "email": "paul.morille11@gmail.com",
-        "password": "$2y$10$xTZ0POZ8I9ZDKx\/XpCkITuoQ945HRFwl6N\/Kf8KITOKGDZ95pkzLu",
-        "inscription_date": "11-03-2025 21:59:25",
-        "connexion_date": "12-03-2025 10:41:17",
-        "role": "Admin",
-        "Travels": [
+        "password": "$2y$10$nJbkq5zgjG8hP4B42luRP.zP03PxDza65gwEBWrM10jfdW.sWpGBO",
+        "inscription_date": "12-03-2025 11:31:12",
+        "connexion_date": "12-03-2025 11:31:12",
+        "role": "Utilisateur",
+        "travels": [
             {
                 "Country": [],
                 "Date": [],
@@ -17,10 +17,15 @@
                 "Days": []
             }
         ],
+        "card": {
+            "card": 0,
+            "date": 0,
+            "cvv": 0
+        },
         "payment": {
-            "card": "7878787878787878",
-            "date": "2025-03-13",
-            "cvv": "789"
+            "card": "9090909090909090",
+            "date": "2025-03-14",
+            "cvv": "123"
         }
     }
 ]

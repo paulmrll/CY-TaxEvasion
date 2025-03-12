@@ -9,7 +9,7 @@ session_start();
     <title>Nous contacter</title>
     <link rel="icon" type="image" href="../image/logo-site.webp">
     <link rel="stylesheet" href="../css/styles.css">
-    <link rel="stylesheet" href="../css/payment.css">
+    <link rel="stylesheet" href="../css/add_card.css">
 
 
 </head>
@@ -25,7 +25,7 @@ require_once "../php_pages/header.php";
     <div class="payment_container">
         <fieldset>
             <legend>Payment</legend>
-            <form action="../php/payment.php" method="post">
+            <form action="../php/add_card.php" method="post">
                 <div class="payment_form_case">
                     <label for="card">Card number:</label>
                     <input type="text" id="card" minlength="7" name="card" placeholder="4973 5595 9089 7878"required>

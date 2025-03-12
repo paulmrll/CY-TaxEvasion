@@ -27,7 +27,7 @@ function create_user($name, $firstname, $email, $password){
             "inscription_date" => date("d-m-Y H:i:s"),
             "connexion_date" => date("d-m-Y H:i:s"),
             "role" => "Utilisateur",
-            "Travels" => [[
+            "travels" => [[
                 "Country" => [],
                 "Date" => [],
                 "Number of persone" => [],
@@ -35,7 +35,7 @@ function create_user($name, $firstname, $email, $password){
                 "Duration" => [],
                 "Days" => []
             ]], 
-            "payment" => [
+            "card" => [
                 "card" => 0,
                 "date" => 0,
                 "cvv" => 0
