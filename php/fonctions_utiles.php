@@ -15,8 +15,7 @@ function change_email($email){
     $email = strtolower($email);
     return $email;
 }
-function change_connexionDate()
-{
+function change_connexionDate(){
     if (file_exists("../data/utilisateurs.json")) {
         $content = json_decode(file_get_contents("../data/utilisateurs.json"), true);
         for ($i = 0; $i < count($content); $i++) {

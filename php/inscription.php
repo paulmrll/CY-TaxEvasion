@@ -33,9 +33,13 @@ function create_user($name, $firstname, $email, $password){
                 "Number of persone" => [],
                 "Price" => [],
                 "Duration" => [],
-                "Days" => [
-                ]
-            ]]
+                "Days" => []
+            ]], 
+            "payment" => [
+                "card" => 0,
+                "date" => 0,
+                "cvv" => 0
+            ]
         ];
         
     }
