@@ -10,10 +10,9 @@
         "travels": [
             {
                 "destination": "Samoa",
-                "hotel": "5 etoiles premium",
+                "hotel": "5 etoiles Premium VIP Deluxe",
                 "loisir": [
-                    "visite de Banque",
-                    "Jet-Ski"
+                    "visite de Banque"
                 ],
                 "visite": [
                     "visite de Banque",
@@ -23,8 +22,8 @@
                     "Spa et Jacuzzi Prive",
                     "Diner gastronomique 5 etoiles"
                 ],
-                "departure": "2025-03-15",
-                "return": "2025-03-22",
+                "departure": "2025-03-07",
+                "return": "2025-03-31",
                 "reservation": "Paiement en attente"
             }
         ],

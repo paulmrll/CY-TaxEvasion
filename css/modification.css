@@ -1,0 +1,237 @@
+
+h1{
+    text-align: center;
+    color: var(--color-header-active);
+}
+
+img{
+    display: block;
+    max-width: 40%;
+    margin-top : 2rem;
+    margin-bottom : 2rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin : 2rem;
+    background-color: var(--color-background-2);
+    border-radius: 1rem;
+}
+
+
+
+
+.reservation-slider-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 2rem;
+
+}
+
+
+.reservation-checkbox {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.reservation-select {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+
+.reservation-select select {
+    cursor: pointer;
+    font-size: 1.2rem;
+    padding: 0.3rem 1.5rem;
+    border: 0.1rem solid #ccc;
+    border-radius: 0.5rem;
+    text-align: center;
+    color: var(--color-dark-writing);
+    appearance: none;
+    background-image: url("../image/fleche-bas.jpg");
+    background-repeat: no-repeat;
+    background-position: right 0.1rem center;
+    background-size: 1rem;
+}
+
+
+.reservation-date {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.reservation-checkbox input[type=checkbox] {
+    display: none;
+}
+
+.reservation-date input[type=date] {
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 0.3rem 1.5rem;
+    border: 0.1rem solid var(--color-light-border);
+    border-radius: 0.5rem;
+    text-align: center;
+    color: var(--color-dark-writing);
+}
+
+
+.reservation-checkbox input[type="checkbox"]:checked + .reservation-button {
+    background-color: var(--color-dark-writing);
+    color: var(--color-light-writing);
+}
+
+.reservation-checkbox div {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+input[type="date"] {
+    font-size: 1.2rem;
+}
+
+input[type="radio"] {
+    font-size: 1.2rem;
+    display: none;
+
+}
+
+.reservation-checkbox input[type="radio"]:checked + .reservation-button {
+    background-color: var(--color-dark-writing);
+    color: var(--color-light-writing);
+}
+
+input[type="date"]:hover {
+    transform: scale(1.05);
+}
+
+
+select:hover {
+    transform: scale(1.05);
+}
+
+select:focus {
+    transform: scale(1.05);
+}
+
+
+.reservation-button {
+    cursor: pointer;
+    border-radius: 1rem;
+    padding: 0 0.5rem;
+    background: var(--color-header-active-lighter);
+    font-size: 1.2rem;
+}
+
+
+.reservation-checkbox label:hover {
+    transform: scale(1.1);
+}
+
+.reservation-checkbox label:checked {
+    transform: scale(0.8);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+
+}
+
+input[type="checkbox"]:checked + label {
+    transform: scale(0.8);
+    opacity: 0.7;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+input[type="radio"]:checked + label {
+    transform: scale(0.9);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+
+.button-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+button {
+    color: var(--color-dark-writing);
+    text-align: center;
+    font-size: 1.5rem;
+    border-radius: 1rem 0.1rem;
+    background-color: var(--color-light-writing);
+    padding: 0.4rem 0.8rem;
+    border: 0.1rem var(--color-dark-writing) solid;
+    cursor: pointer;
+}
+
+
+button:hover[type="submit"] {
+    background-color: var(--color-submit);
+    border: 0.1rem var(--color-submit) solid;
+
+}
+
+button:hover[type="reset"] {
+    background-color: var(--color-reset);
+    border: 0.1rem var(--color-reset) solid;
+
+}
+
+
+button:active {
+    transform: scale(0.9);
+}
+
+
+.reservation-prix {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+h5 {
+    color: var(--color-header-active);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+h6 {
+    color: var(--color-map-grey);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+table button:hover[type="submit"]{
+    background-color: var(--color-submit);
+    border: 0.1rem var(--color-submit) solid;
+}
+
+
+table button:hover[type="reset"]{
+    background-color: var(--color-reset);
+    border: 0.1rem var(--color-reset) solid;
+}
+
+
+
+
