@@ -21,7 +21,8 @@ function register_travel($destination, $hotel, $loisir, $visite, $relaxation, $d
                 "visite" => $visite,
                 "relaxation" => $relaxation,
                 "departure" => $departure,
-                "return" => $return
+                "return" => $return,
+                "reservation" => "paiement en attente"
             );
             file_put_contents($jsonFile, json_encode($content, JSON_PRETTY_PRINT));
             header('Location: ../php_pages/user.php');

@@ -30,7 +30,7 @@ if (isset($_POST['card']) && isset($_POST['date']) && isset($_POST['cvv'])) {
     $date = $_POST['date'];
     $cvv = $_POST['cvv'];
     if (strlen($card) != 16 || strlen($cvv) != 3 || ($date < Date('Y-m-d'))){
-        header('Location: ../php_pages/payment.php');
+        header('Location: ../php_pages/add_card.php');
         exit();
     }
     echo "1";
