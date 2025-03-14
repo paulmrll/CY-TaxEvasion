@@ -21,6 +21,7 @@ img{
     margin : 2rem;
     background-color: var(--color-background-2);
     border-radius: 1rem;
+    padding: 2rem;
 }
 
 
@@ -164,11 +165,9 @@ input[type="radio"]:checked + label {
 
 
 .button-container {
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-    padding: 1rem;
-    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 button {
@@ -189,8 +188,8 @@ button:hover[type="submit"] {
 
 }
 
-button:hover[type="reset"] {
-    background-color: var(--color-reset);
+button:hover[id="delete"] {
+    background-color: red;
     border: 0.1rem var(--color-reset) solid;
 
 }

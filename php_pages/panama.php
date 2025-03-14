@@ -60,7 +60,7 @@ Ajoutez à cela des plages paradisiaques, une qualité de vie élevée et une fi
                 <div class="reservation-checkbox">
                     <h5>Activités nautiques :</h5>
                     <div>
-                        <input type="checkbox" id="loisir1" name="loisir[]" value="visite de Banque">
+                        <input type="checkbox" id="loisir1" name="loisir[]" value="Visite de Banque">
                         <label class="reservation-button" for="loisir1">Nage avec les requins</label>
 
                         <input type="checkbox" id="loisir2" name="loisir[]" value="Jet-Ski">
@@ -78,7 +78,7 @@ Ajoutez à cela des plages paradisiaques, une qualité de vie élevée et une fi
                 <div class="reservation-checkbox">
                     <h5>Visite guidée :</h5>
                     <div>
-                        <input type="checkbox" id="visite1" name="visite[]" value="visite de Banque">
+                        <input type="checkbox" id="visite1" name="visite[]" value="Visite de Banque">
                         <label class="reservation-button" for="visite1">Visite de la Banque Centrale</label>
 
                         <input type="checkbox" id="visite2" name="visite[]" value="Visite d'un Musee Colonialiste">

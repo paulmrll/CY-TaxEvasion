@@ -3,30 +3,11 @@
         "name": "Morille",
         "firstname": "Paul",
         "email": "paul.morille11@gmail.com",
-        "password": "$2y$10$w\/A2J3jIJglN22wWIwlg1.KEdM5JFcyBOc6r44\/nfQ32H0DByGnz6",
-        "inscription_date": "14-03-2025 21:34:51",
-        "connexion_date": "14-03-2025 21:34:51",
+        "password": "$2y$10$J36evJDkgO2MXCnfYcjYJ.vKdjhy1zspsh8A6dJSeETs4U41gppTC",
+        "inscription_date": "15-03-2025 00:29:17",
+        "connexion_date": "15-03-2025 00:29:17",
         "role": "Utilisateur",
-        "travels": [
-            {
-                "destination": "Samoa",
-                "hotel": "5 etoiles Premium VIP Deluxe",
-                "loisir": [
-                    "visite de Banque"
-                ],
-                "visite": [
-                    "visite de Banque",
-                    "Visite d'un Musee Colonialiste"
-                ],
-                "relaxation": [
-                    "Spa et Jacuzzi Prive",
-                    "Diner gastronomique 5 etoiles"
-                ],
-                "departure": "2025-03-07",
-                "return": "2025-03-31",
-                "reservation": "Paiement en attente"
-            }
-        ],
+        "travels": [],
         "card": {
             "name": "A",
             "number": 0,

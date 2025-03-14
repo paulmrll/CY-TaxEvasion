@@ -177,10 +177,19 @@ require_once "../php_pages/header.php";
                                             <p>Date de retour : <strong><?php echo $content[$a]['travels'][$i]['return']?></strong></p>
                                         </div>
                                         <div class="modification-container">
-                                            <?php $_SESSION['index-travel']=$i;
-                                            echo $_SESSION['index-travel'];?>
-                                            <a href="../php_pages/modification.php">Modifier</a>
+                                            <form action="../php/define-index-travel.php" method="post">
+                                                <input type="hidden" name="index-travel" value="<?php echo $i ?>">
+                                                <input type="hidden" name="todo" value="modify">
+                                                <button class="button-modifier">Modifier</button>
+                                            </form>
                                         </div>  
+                                        <div class="modification-container">
+                                            <form action="../php/define-index-travel.php" method="post">
+                                                <input type="hidden" name="index-travel" value="<?php echo $i ?>">
+                                                <input type="hidden" name="todo" value="see">
+                                                <button class="button-modifier">Voir</button>
+                                            </form>
+                                        </div> 
                                     </div>
                                     
                                         

@@ -283,11 +283,18 @@ main div button img {
     border-radius: 1rem;
     padding: 1rem;
     font-size: 1.1rem;
-}
-.modification-container a{
-    text-decoration: none;
-    color: var(--color-light-writing);
+    text-align: center;
 }
 a {
     text-decoration: none;
+}
+button{
+    background: grey;
+    border: 0.08rem solid grey;
+    border-radius: 0.3rem;
+    padding: 0.5rem 1rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+    margin-right: 1.5rem;
+
 }

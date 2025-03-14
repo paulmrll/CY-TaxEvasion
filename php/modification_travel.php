@@ -32,23 +32,61 @@ function modification_travel($destination, $hotel, $loisir, $visite, $relaxation
             header('Location: ../php_pages/user.php');
     }
 }
+function delete_travel(){
+    $jsonFile = "../data/utilisateurs.json";
+    if (!file_exists($jsonFile)) {
+        header('Location: ../php/inscription.php');
+    }
+    if (!isset($_SESSION['email']) || !isset($_SESSION['index-travel'])) {
+        header("Location: ../php_pages/connexion.php");
+        exit();
+    }
+    $content = json_decode(file_get_contents($jsonFile), true);
+    if ($content == null){
+        header('Location: ../php_pages/inscription.php');
+        exit();
+    }
+    $i = find_user();
+    if ($content[$i]['email'] === $_SESSION["email"]){
+        unset($content[$i]['travels'][$_SESSION['index-travel']]);
+        file_put_contents($jsonFile, json_encode($content, JSON_PRETTY_PRINT));
+        header('Location: ../php_pages/user.php');
+        exit();
+    }
+}
 
 
 
 
 
-if (isset($_POST['destination']) && isset($_POST['hotel']) && isset($_POST['loisir']) && isset($_POST['visite']) && 
-isset($_POST['relaxation']) && isset($_POST['departure']) && isset($_POST['return'])){
-    $destination = $_POST['destination'];
-    $hotel = $_POST['hotel'];
-    $loisir = $_POST['loisir'];
-    $visite = $_POST['visite'];
-    $relaxation = $_POST['relaxation'];
-    $departure = $_POST['departure'];
-    $return = $_POST['return'];
-    modification_travel($destination, $hotel, $loisir, $visite, $relaxation, $departure, $return);
+if (isset($_POST['todo'])) {
+    switch ($_POST['todo']){
+        case "modify":
+            if (isset($_POST['destination']) && isset($_POST['hotel']) && isset($_POST['loisir']) && isset($_POST['visite']) && 
+            isset($_POST['relaxation']) && isset($_POST['departure']) && isset($_POST['return'])) {
+                $destination = $_POST['destination'];
+                $hotel = $_POST['hotel'];
+                $loisir = $_POST['loisir'];
+                $visite = $_POST['visite'];
+                $relaxation = $_POST['relaxation'];
+                $departure = $_POST['departure'];
+                $return = $_POST['return'];
+            modification_travel($destination, $hotel, $loisir, $visite, $relaxation, $departure, $return);
+            } else {
+                header('Location: ../php_pages/inscription.php');
+                exit();
+            }
+            break;
+        case "delete":
+            delete_travel();
+            break;
+        default:
+            header('Location: ../php_pages/user.php');
+    }
+
 } else {
-    echo "All fields are required";
+    header('Location: ../php_pages/inscription.php');
+    exit();
 }
 
 
