@@ -1,6 +1,6 @@
 <?php
 session_start();
-function add_card($card, $date, $cvv){
+function add_card($name, $card, $date, $cvv){
     $jsonFile = "../data/utilisateurs.json";
     if (!file_exists($jsonFile)) {
         exit("Erreur : Le fichier json n'existe pas");
@@ -14,6 +14,7 @@ function add_card($card, $date, $cvv){
     }
     for ($i = 0; $i < count($content); $i++){
         if ($content[$i]['email'] === $_SESSION['email']){
+            $content[$i]['card']['name'] = $name;
             $content[$i]['card']['number'] = $card;
             $content[$i]['card']['date'] = $date;
             $content[$i]['card']['cvv'] = $cvv;
@@ -24,8 +25,8 @@ function add_card($card, $date, $cvv){
 }
     
 
-if (isset($_POST['card']) && isset($_POST['date']) && isset($_POST['cvv'])) {
-
+if (isset($_POST['name']) &&isset($_POST['card']) && isset($_POST['date']) && isset($_POST['cvv'])) {
+    $name = $_POST['name'];
     $card = $_POST['card'];
     $date = $_POST['date'];
     $cvv = $_POST['cvv'];
@@ -33,8 +34,8 @@ if (isset($_POST['card']) && isset($_POST['date']) && isset($_POST['cvv'])) {
         header('Location: ../php_pages/add_card.php');
         exit();
     }
-    echo "1";
-    add_card($card, $date, $cvv);
+
+    add_card($name, $card, $date, $cvv);
 
     header('Location: ../php_pages/user.php');
     exit();

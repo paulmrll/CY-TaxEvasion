@@ -74,5 +74,36 @@
             "date": "2025-03-15",
             "cvv": "789"
         }
+    },
+    {
+        "name": "P",
+        "firstname": "P",
+        "email": "p@gmail.com",
+        "password": "$2y$10$vPL98guA7sB5fLYY09Aax.xhgkyOEjIW\/1AeKq4XWaHwfBiicL9ki",
+        "inscription_date": "14-03-2025 20:33:37",
+        "connexion_date": "14-03-2025 20:33:37",
+        "role": "Utilisateur",
+        "travels": [],
+        "card": {
+            "number": 0,
+            "date": 0,
+            "cvv": 0
+        }
+    },
+    {
+        "name": "A",
+        "firstname": "A",
+        "email": "a@gmail.com",
+        "password": "$2y$10$aEqliN8VdFtMWBFBhFw5tuLTKQmC68WJCgySTHLxqj\/4uyn9Am5Za",
+        "inscription_date": "14-03-2025 20:39:49",
+        "connexion_date": "14-03-2025 20:39:49",
+        "role": "Utilisateur",
+        "travels": [],
+        "card": {
+            "name": "Paul Morille",
+            "number": "9090909090909090",
+            "date": "2025-03-19",
+            "cvv": "789"
+        }
     }
 ]

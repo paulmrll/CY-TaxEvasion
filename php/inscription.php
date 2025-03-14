@@ -29,6 +29,7 @@ function create_user($name, $firstname, $email, $password){
             "role" => "Utilisateur",
             "travels" => [], 
             "card" => [
+                "name" => "A",
                 "number" => 0,
                 "date" => 0,
                 "cvv" => 0
