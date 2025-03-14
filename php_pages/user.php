@@ -177,8 +177,9 @@ require_once "../php_pages/header.php";
                                             <p>Date de retour : <strong><?php echo $content[$a]['travels'][$i]['return']?></strong></p>
                                         </div>
                                         <div class="modification-container">
-                                        <a href="../php_pages/modification.php">Modifier</a>
-                                    </div>
+                                            <?php $_SESSION['index-travel']=$i?>
+                                            <a href="../php_pages/modification.php">Modifier</a>
+                                        </div>  
                                     </div>
                                     
                                         

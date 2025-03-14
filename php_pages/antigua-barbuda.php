@@ -48,10 +48,10 @@ Investissez, installez-vous, profitez. Le paradis vous attend.
                     <label>
                         <select id="hotel" name="hotel" required>
                             <option value="" selected hidden>Choisissez une option</option>
-                            <option value="5 étoiles">5 étoiles</option>
-                            <option value="5 étoiles premium">5 étoiles premium</option>
-                            <option value="5 étoiles Premium VIP">5 étoiles Premium VIP</option>
-                            <option value="5 étoiles Premium VIP Deluxe">5 étoiles Premium VIP Deluxe</option>
+                            <option value="5 etoiles">5 étoiles</option>
+                            <option value="5 etoiles premium">5 étoiles premium</option>
+                            <option value="5 etoiles Premium VIP">5 étoiles Premium VIP</option>
+                            <option value="5 etoiles Premium VIP Deluxe">5 étoiles Premium VIP Deluxe</option>
                         </select>
                     </label>
                 </div>
@@ -60,16 +60,16 @@ Investissez, installez-vous, profitez. Le paradis vous attend.
                 <div class="reservation-checkbox">
                     <h5>Activités nautiques :</h5>
                     <div>
-                        <input type="checkbox" id="loisir1" name="loisir" value="visite de Banque">
+                        <input type="checkbox" id="loisir1" name="loisir[]" value="visite de Banque">
                         <label class="reservation-button" for="loisir1">Nage avec les requins</label>
 
-                        <input type="checkbox" id="loisir2" name="loisir" value="Jet-Ski">
+                        <input type="checkbox" id="loisir2" name="loisir[]" value="Jet-Ski">
                         <label class="reservation-button" for="loisir2">Balade à Jet-Ski</label>
 
-                        <input type="checkbox" id="loisir3" name="loisir" value="Plongé sous-marine">
+                        <input type="checkbox" id="loisir3" name="loisir[]" value="Plonge sous-marine">
                         <label class="reservation-button" for="loisir3">Plongé Sous-Marine</label>
 
-                        <input type="checkbox" id="loisir4" name="loisir" value="Balade en yacht">
+                        <input type="checkbox" id="loisir4" name="loisir[]" value="Balade en yacht">
                         <label class="reservation-button" for="loisir4">Balade en Yacht</label>
                     </div>
                 </div>
@@ -78,13 +78,13 @@ Investissez, installez-vous, profitez. Le paradis vous attend.
                 <div class="reservation-checkbox">
                     <h5>Visite guidée :</h5>
                     <div>
-                        <input type="checkbox" id="visite1" name="visite" value="visite de Banque">
+                        <input type="checkbox" id="visite1" name="visite[]" value="visite de Banque">
                         <label class="reservation-button" for="visite1">Visite de la Banque Centrale</label>
 
-                        <input type="checkbox" id="visite2" name="visite" value="Visite d'un Musée Colonialiste">
+                        <input type="checkbox" id="visite2" name="visite[]" value="Visite d'un Musee Colonialiste">
                         <label class="reservation-button" for="visite2">Visite d'un Musée Colonialiste</label>
 
-                        <input type="checkbox" id="visite3" name="visite" value="Visite d'un vignoble">
+                        <input type="checkbox" id="visite3" name="visite[]" value="Visite d'un vignoble">
                         <label class="reservation-button" for="visite3">Visite d'un vignoble</label>
                     </div>
                 </div>
@@ -93,14 +93,14 @@ Investissez, installez-vous, profitez. Le paradis vous attend.
                 <div class="reservation-checkbox">
                     <h5>Activité de détentes :</h5>
                     <div>
-                        <input type="checkbox" id="détente1" name="relaxation" value="Spa et Jacuzzi Privée">
+                        <input type="checkbox" id="détente1" name="relaxation[]" value="Spa et Jacuzzi Prive">
                         <label class="reservation-button" for="détente1">Spa et Jacuzzi Privée</label>
 
-                        <input type="checkbox" id="détente2" name="relaxation" value="Dîner gastronomique 5 étoiles">
+                        <input type="checkbox" id="détente2" name="relaxation[]" value="Diner gastronomique 5 etoiles">
                         <label class="reservation-button" for="détente2">Dîner gastronomique 5 étoiles</label>
 
-                        <input type="checkbox" id="détente3" name="relaxation"
-                               value="Soirée VIP exécutif business  class">
+                        <input type="checkbox" id="détente3" name="relaxation[]"
+                               value="Soiree VIP exécutif business  class">
                         <label class="reservation-button" for="détente3">Soirée VIP exécutif business class</label>
                     </div>
                 </div>

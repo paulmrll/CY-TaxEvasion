@@ -3,107 +3,36 @@
         "name": "Morille",
         "firstname": "Paul",
         "email": "paul.morille11@gmail.com",
-        "password": "$2y$10$gA1LcmGAW\/.VrEZDCPFM0OX9xDTDa8BxGLJbvEh06p.Uw6dXO6tCG",
-        "inscription_date": "14-03-2025 10:52:14",
-        "connexion_date": "14-03-2025 19:40:53",
+        "password": "$2y$10$w\/A2J3jIJglN22wWIwlg1.KEdM5JFcyBOc6r44\/nfQ32H0DByGnz6",
+        "inscription_date": "14-03-2025 21:34:51",
+        "connexion_date": "14-03-2025 21:34:51",
         "role": "Utilisateur",
         "travels": [
             {
-                "destination": "Antigua",
-                "hotel": "5 \u00e9toiles premium",
-                "loisir": "visite de Banque",
-                "visite": "Visite d'un Mus\u00e9e Colonialiste",
-                "relaxation": "D\u00eener gastronomique 5 \u00e9toiles",
-                "departure": "2025-03-15",
-                "return": "2025-04-06",
-                "reservation": "Paiement en attente"
-            },
-            {
                 "destination": "Samoa",
-                "hotel": "5 \u00e9toiles",
-                "loisir": "visite de Banque",
-                "visite": "visite de Banque",
-                "relaxation": "D\u00eener gastronomique 5 \u00e9toiles",
-                "departure": "2025-03-01",
-                "return": "2025-03-30",
-                "reservation": "Paiement en attente"
-            },
-            {
-                "destination": "Anguilla",
-                "hotel": "5 \u00e9toiles premium",
-                "loisir": "visite de Banque",
-                "visite": "Visite d'un Mus\u00e9e Colonialiste",
-                "relaxation": "D\u00eener gastronomique 5 \u00e9toiles",
-                "departure": "2025-03-20",
-                "return": "2025-03-30",
-                "reservation": "Paiement en attente"
-            },
-            {
-                "destination": "Fidji",
-                "hotel": "5 \u00e9toiles premium",
-                "loisir": "visite de Banque",
-                "visite": "Visite d'un Mus\u00e9e Colonialiste",
-                "relaxation": "D\u00eener gastronomique 5 \u00e9toiles",
-                "departure": "2025-03-21",
-                "return": "2025-03-30",
-                "reservation": "Paiement en attente"
-            },
-            {
-                "destination": "Palaos",
-                "hotel": "5 \u00e9toiles Premium VIP Deluxe",
-                "loisir": "visite de Banque",
-                "visite": "Visite d'un Mus\u00e9e Colonialiste",
-                "relaxation": "D\u00eener gastronomique 5 \u00e9toiles",
-                "departure": "2025-03-28",
-                "return": "2025-03-30",
-                "reservation": "Paiement en attente"
-            },
-            {
-                "destination": "Panama",
-                "hotel": "5 \u00e9toiles Premium VIP",
-                "loisir": "Jet-Ski",
-                "visite": "visite de Banque",
-                "relaxation": "D\u00eener gastronomique 5 \u00e9toiles",
-                "departure": "2025-03-05",
-                "return": "2025-03-23",
+                "hotel": "5 etoiles premium",
+                "loisir": [
+                    "visite de Banque",
+                    "Jet-Ski"
+                ],
+                "visite": [
+                    "visite de Banque",
+                    "Visite d'un Musee Colonialiste"
+                ],
+                "relaxation": [
+                    "Spa et Jacuzzi Prive",
+                    "Diner gastronomique 5 etoiles"
+                ],
+                "departure": "2025-03-15",
+                "return": "2025-03-22",
                 "reservation": "Paiement en attente"
             }
         ],
         "card": {
-            "number": "9090909090909090",
-            "date": "2025-03-15",
-            "cvv": "789"
-        }
-    },
-    {
-        "name": "P",
-        "firstname": "P",
-        "email": "p@gmail.com",
-        "password": "$2y$10$vPL98guA7sB5fLYY09Aax.xhgkyOEjIW\/1AeKq4XWaHwfBiicL9ki",
-        "inscription_date": "14-03-2025 20:33:37",
-        "connexion_date": "14-03-2025 20:33:37",
-        "role": "Utilisateur",
-        "travels": [],
-        "card": {
+            "name": "A",
             "number": 0,
             "date": 0,
             "cvv": 0
-        }
-    },
-    {
-        "name": "A",
-        "firstname": "A",
-        "email": "a@gmail.com",
-        "password": "$2y$10$aEqliN8VdFtMWBFBhFw5tuLTKQmC68WJCgySTHLxqj\/4uyn9Am5Za",
-        "inscription_date": "14-03-2025 20:39:49",
-        "connexion_date": "14-03-2025 20:39:49",
-        "role": "Utilisateur",
-        "travels": [],
-        "card": {
-            "name": "Paul Morille",
-            "number": "9090909090909090",
-            "date": "2025-03-19",
-            "cvv": "789"
         }
     }
 ]

@@ -82,6 +82,8 @@ function inscription($name, $firstname, $email, $password){
 
 if (isset($_POST["name"]) && isset($_POST["firstname"]) && isset($_POST["email"]) && isset($_POST["password"])) {
     date_default_timezone_set('Europe/Paris');
+    session_unset();    
+    session_destroy();
     $name = $_POST["name"];
     $firstname = $_POST["firstname"];
     $email = $_POST["email"];
