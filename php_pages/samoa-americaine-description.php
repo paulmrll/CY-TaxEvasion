@@ -44,7 +44,8 @@ require_once "../php_pages/header.php";
 
     <div class="reservation-option-container">
         <h2>Votre réservation</h2>
-        <form method="post" action="../php_pages/samoa-americaine.php">
+        <form method="post" action="../php/register_travel.php">
+            <input type="hidden" name="destination" value="Samoa">
             <div class="reservation-slider-container">
 
                 <div class="reservation-select">
@@ -97,13 +98,13 @@ require_once "../php_pages/header.php";
                 <div class="reservation-checkbox">
                     <h5>Activité de détentes :</h5>
                     <div>
-                        <input type="checkbox" id="détente1" name="détente" value="Spa et Jacuzzi Privée">
+                        <input type="checkbox" id="détente1" name="relaxation" value="Spa et Jacuzzi Privée">
                         <label class="reservation-button" for="détente1">Spa et Jacuzzi Privée</label>
 
-                        <input type="checkbox" id="détente2" name="détente" value="Dîner gastronomique 5 étoiles">
+                        <input type="checkbox" id="détente2" name="relaxation" value="Dîner gastronomique 5 étoiles">
                         <label class="reservation-button" for="détente2">Dîner gastronomique 5 étoiles</label>
 
-                        <input type="checkbox" id="détente3" name="détente"
+                        <input type="checkbox" id="détente3" name="relaxation"
                                value="Soirée VIP exécutif business  class">
                         <label class="reservation-button" for="détente3">Soirée VIP exécutif business class</label>
                     </div>
@@ -129,7 +130,7 @@ require_once "../php_pages/header.php";
 
                 <div class="reservation-date">
                     <h5>Dates de départ :</h5>
-                    <input id="date-départ" name="date-départ" type="date" placeholder="jj/mm/aaaa" required></td>
+                    <input id="departure" name="departure" type="date" placeholder="jj/mm/aaaa" required></td>
 
                 </div>
 
@@ -137,7 +138,7 @@ require_once "../php_pages/header.php";
                 <div class="reservation-date">
 
                     <h5>Dates de retour :</h5>
-                    <input id="date-retour" name="date-retour" type="date" placeholder="jj/mm/aaaa" required></td>
+                    <input id="return" name="return" type="date" placeholder="jj/mm/aaaa" required></td>
 
                 </div>
 

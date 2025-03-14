@@ -3,24 +3,25 @@
         "name": "Morille",
         "firstname": "Paul",
         "email": "paul.morille11@gmail.com",
-        "password": "$2y$10$nJbkq5zgjG8hP4B42luRP.zP03PxDza65gwEBWrM10jfdW.sWpGBO",
-        "inscription_date": "12-03-2025 11:31:12",
-        "connexion_date": "12-03-2025 11:31:12",
+        "password": "$2y$10$micpGBP1QSgUdol7THA2gesZlbY3a7w7xvj.4fd0DiNZRiAIcwdLe",
+        "inscription_date": "14-03-2025 10:52:14",
+        "connexion_date": "14-03-2025 10:52:14",
         "role": "Utilisateur",
         "travels": [
             {
-                "Country": [],
-                "Date": [],
-                "Number of persone": [],
-                "Price": [],
-                "Duration": [],
-                "Days": []
+                "destination": "Antigua",
+                "hotel": "5 \u00e9toiles premium",
+                "loisir": "visite de Banque",
+                "visite": "Visite d'un Mus\u00e9e Colonialiste",
+                "relaxation": "D\u00eener gastronomique 5 \u00e9toiles",
+                "departure": "2025-03-15",
+                "return": "2025-04-06"
             }
         ],
         "card": {
-            "number": "1212121212121214",
-            "date": "2025-03-20",
-            "cvv": "234"
+            "number": 0,
+            "date": 0,
+            "cvv": 0
         }
     }
 ]
