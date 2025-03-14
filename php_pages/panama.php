@@ -38,7 +38,7 @@ Ajoutez à cela des plages paradisiaques, une qualité de vie élevée et une fi
     <div class="reservation-option-container">
         <h2>Votre réservation</h2>
         <form method="post" action="../php/register_travel.php">
-            <input type="hidden" name="destination" value="Paname">
+            <input type="hidden" name="destination" value="Panama">
 
 
             <div class="reservation-slider-container">

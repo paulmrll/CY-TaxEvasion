@@ -103,7 +103,7 @@
         <div class="ping-container">
             <img class="map-image" src="image/map.jpg" alt="map">
 
-            <a href="php_pages/samoa-americaine-description.php" class="ping" style="top: 57%; left: 15.2%">
+            <a href="php_pages/samoa-americaine.php" class="ping" style="top: 57%; left: 15.2%">
                 <div class="ping-text">Les Samoa-Américaines</div>
             </a>
 

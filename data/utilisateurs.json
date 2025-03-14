@@ -1,11 +1,11 @@
 [
     {
-        "name": "Morille1",
+        "name": "Morille",
         "firstname": "Paul",
         "email": "paul.morille11@gmail.com",
-        "password": "$2y$10$pu5d6XvXB956OuAx9\/s1E.A51WvYXJ5S4y4e.t3Q8TmdFMrZIyeG.",
+        "password": "$2y$10$gA1LcmGAW\/.VrEZDCPFM0OX9xDTDa8BxGLJbvEh06p.Uw6dXO6tCG",
         "inscription_date": "14-03-2025 10:52:14",
-        "connexion_date": "14-03-2025 10:52:14",
+        "connexion_date": "14-03-2025 19:40:53",
         "role": "Utilisateur",
         "travels": [
             {
@@ -15,16 +15,58 @@
                 "visite": "Visite d'un Mus\u00e9e Colonialiste",
                 "relaxation": "D\u00eener gastronomique 5 \u00e9toiles",
                 "departure": "2025-03-15",
-                "return": "2025-04-06"
+                "return": "2025-04-06",
+                "reservation": "Paiement en attente"
             },
             {
-                "destination": "Antigua",
+                "destination": "Samoa",
+                "hotel": "5 \u00e9toiles",
+                "loisir": "visite de Banque",
+                "visite": "visite de Banque",
+                "relaxation": "D\u00eener gastronomique 5 \u00e9toiles",
+                "departure": "2025-03-01",
+                "return": "2025-03-30",
+                "reservation": "Paiement en attente"
+            },
+            {
+                "destination": "Anguilla",
                 "hotel": "5 \u00e9toiles premium",
                 "loisir": "visite de Banque",
                 "visite": "Visite d'un Mus\u00e9e Colonialiste",
                 "relaxation": "D\u00eener gastronomique 5 \u00e9toiles",
-                "departure": "2025-03-23",
-                "return": "2025-05-04"
+                "departure": "2025-03-20",
+                "return": "2025-03-30",
+                "reservation": "Paiement en attente"
+            },
+            {
+                "destination": "Fidji",
+                "hotel": "5 \u00e9toiles premium",
+                "loisir": "visite de Banque",
+                "visite": "Visite d'un Mus\u00e9e Colonialiste",
+                "relaxation": "D\u00eener gastronomique 5 \u00e9toiles",
+                "departure": "2025-03-21",
+                "return": "2025-03-30",
+                "reservation": "Paiement en attente"
+            },
+            {
+                "destination": "Palaos",
+                "hotel": "5 \u00e9toiles Premium VIP Deluxe",
+                "loisir": "visite de Banque",
+                "visite": "Visite d'un Mus\u00e9e Colonialiste",
+                "relaxation": "D\u00eener gastronomique 5 \u00e9toiles",
+                "departure": "2025-03-28",
+                "return": "2025-03-30",
+                "reservation": "Paiement en attente"
+            },
+            {
+                "destination": "Panama",
+                "hotel": "5 \u00e9toiles Premium VIP",
+                "loisir": "Jet-Ski",
+                "visite": "visite de Banque",
+                "relaxation": "D\u00eener gastronomique 5 \u00e9toiles",
+                "departure": "2025-03-05",
+                "return": "2025-03-23",
+                "reservation": "Paiement en attente"
             }
         ],
         "card": {

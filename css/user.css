@@ -234,6 +234,12 @@ main div button img {
     padding: 0 0.5rem;
     border-radius: 1rem;
 }
+.Non-réservé {
+    color: var(--color-background);
+    background: red;
+    padding: 0 0.5rem;
+    border-radius: 1rem;
+}
 
 .Annulé {
     background: var(--color-map-red);
@@ -267,4 +273,21 @@ main div button img {
     border-radius: 1rem;
     padding: 1rem;
     font-size: 1.1rem;
+}
+.modification-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background: grey;
+    border-radius: 1rem;
+    padding: 1rem;
+    font-size: 1.1rem;
+}
+.modification-container a{
+    text-decoration: none;
+    color: var(--color-light-writing);
+}
+a {
+    text-decoration: none;
 }

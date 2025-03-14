@@ -98,7 +98,7 @@ require_once "../php_pages/header.php";
     <div class="destination-grid">
         <div class="grid-container">
 
-            <a href="samoa-americaine-description.php" class="grid-line-container">
+            <a href="samoa-americaine.php" class="grid-line-container">
                 <div class="grid-item">
                     <div class="image-select">
                         <img src="../image/les-samoa-americaine.jpeg" alt="les-samoa_américaines">
