@@ -223,6 +223,118 @@ require_once "../php_pages/header.php";
                     entre gratte-ciels modernes et plages paradisiaques.
                 </div>
             </a>
+            <a href="monaco.php" class="grid-line-container">
+                <div class="grid-item">
+                    <div class="image-select">
+                        <img src="../image/monaco.jpeg" alt="monaco.jpeg">
+                        <h3>Monaco</h3>
+                        <div class="flag">
+                            <img src="../image/monaco-flag.png" alt="monaco-flag.png">
+                        </div>
+                    </div>
+                </div>
+                <div class="description-texte">
+                Monaco : Le Refuge Fiscal de Prestige 🏝️💰
+                Zéro impôt sur le revenu, aucune taxe sur la fortune ni sur les plus-values :
+                     Monaco est le paradis fiscal européen par excellence. Avec sa stabilité politique, 
+                     son cadre de vie luxueux et son accès privilégié aux marchés internationaux, la Principauté attire 
+                     les grandes fortunes et les entrepreneurs en quête d’optimisation fiscale dans un environnement sécurisé et prestigieux.
+                </div>
+            </a>
+            <a href="bermudes.php" class="grid-line-container">
+                <div class="grid-item">
+                    <div class="image-select">
+                        <img src="../image/bermudes.jpg" alt="bermudes.jpeg">
+                        <h3>Bermudes</h3>
+                        <div class="flag">
+                            <img src="../image/bermudes-flag.png" alt="bermudes-flag.png">
+                        </div>
+                    </div>
+                 </div>
+                <div class="description-texte">
+                Les Bermudes : Le Paradis Fiscal de l'Atlantique 🌴💼
+                Aucune taxe sur le revenu, les sociétés, les plus-values ou les dividendes :
+                les Bermudes sont l'escale idéale pour l'optimisation fiscale. Grâce à leur fiscalité ultra-attractive,
+                leur stabilité économique et leur discrétion financière, l'archipel séduit les investisseurs et les entreprises 
+                à la recherche d'un environnement propice à la rentabilité et à la sécurité.
+                    </div>
+                </a>
+               
+            <a href="chypre.php" class="grid-line-container">
+                <div class="grid-item">
+                    <div class="image-select">
+                        <img src="../image/chypre.jpeg" alt="chypre.jpeg">
+                        <h3>Chypre</h3>
+                        <div class="flag">
+                            <img src="../image/chypre.png" alt="chypre-flag.png">
+                        </div>
+                    </div>
+                 </div>
+                <div class="description-texte">
+                Chypre : Un Hub Fiscal en Méditerranée 🌞💼
+                Taux d’imposition sur les sociétés de seulement 12,5 %, exonération des plus-values et des dividendes :
+                 Chypre offre une fiscalité des plus compétitives au cœur de l’UE. Avec son cadre juridique stable et ses avantages
+                  fiscaux, l'île attire les entrepreneurs et investisseurs cherchant à optimiser leurs bénéfices dans un environnement 
+                  sécurisé et stratégique.
+                </div>
+             </a>
+             <a href="malte.php" class="grid-line-container">
+                <div class="grid-item">
+                    <div class="image-select">
+                        <img src="../image/malte.jpg" alt="malte.jpeg">
+                        <h3>Malte</h3>
+                        <div class="flag">
+                            <img src="../image/malte-flag.png" alt="malte-flag.png">
+                        </div>
+                    </div>
+                </div>
+                <div class="description-texte">
+                Malte : Optimisation Fiscale au Cœur de l’UE 🇲🇹💼
+                Taux d’imposition sur les sociétés à partir de 5 % grâce à un système de remboursement, plus aucune taxe 
+                sur les plus-values et les dividendes : Malte combine fiscalité avantageuse et accès au marché européen. 
+                L'île attire les investisseurs et entreprises recherchant un cadre fiscal compétitif dans un environnement stable et prospère.
+                </div>
+            </a>
+            <a href="EAU.php" class="grid-line-container">
+                <div class="grid-item">
+                    <div class="image-select">
+                        <img src="../image/EAU.jpg" alt="EAU.jpeg">
+                        <h3>Émirats arabes unis</h3>
+                        <div class="flag">
+                            <img src="../image/EAU-flag.png" alt="EAU-flag.png">
+                        </div>
+                    </div>
+                </div>
+                <div class="description-texte">
+                EAU : Un Paradis Fiscal au Cœur du Moyen-Orient 🏙️💼
+                Aucune taxe sur le revenu, les sociétés, les plus-values ou les dividendes : les Émirats arabes unis sont une destination 
+                fiscale de premier choix. Grâce à leur fiscalité ultra-compétitive, leur stabilité politique et leur environnement économique 
+                prospère, les EAU attirent les entreprises et les investisseurs à la recherche d’un cadre fiscal optimal dans un centre d’affaires
+                 dynamique.
+                </div>
+            </a>
+            <a href="caimans.php" class="grid-line-container">
+                <div class="grid-item">
+                    <div class="image-select">
+                        <img src="../image/caimans.jpg" alt="caimans.jpeg">
+                        <h3>Caïmans</h3>
+                        <div class="flag">
+                            <img src="../image/caimans-flag.png" alt="caimans-flag.png">
+                        </div>
+                    </div>
+                </div>
+                <div class="description-texte">
+                Caïmans : Le Centre Financier Offshore Idéal 🌴💰
+                Zéro impôt sur le revenu, les sociétés, les plus-values ou les dividendes : les îles Caïmans offrent une fiscalité 
+                exceptionnelle pour les entreprises et les investisseurs. Grâce à leur stabilité économique, leur cadre juridique souple
+                 et leur discrétion financière, les Caïmans sont une destination privilégiée pour l’optimisation fiscale.
+                </div>
+            </a>
+
+
+
+
+
         </div>
 
     </div>
