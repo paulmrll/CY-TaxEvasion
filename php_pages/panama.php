@@ -7,7 +7,7 @@ session_start();
 
 <head>
     <meta charset="UTF-8">
-    <title>Anguilla</title>
+    <title>Panama</title>
     <link rel="icon" type="image" href="../image/logo-site.webp">
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/destination-description.css">
