@@ -109,44 +109,11 @@ require_once "../php_pages/header.php";
                                             echo "<h1>Mes Voyages :</h1>";
                                         }
                                         for ($i = 0; $i < count($content[$a]['travels']); $i++):
-                                            switch ($content[$a]['travels'][$i]['destination']){
-                                                case "Anguilla":
-                                                    $name = "Anguilla";
-                                                    $url =  "../php_pages/anguilla.php";
-                                                    $url_image = "../image/anguilla.jpg";
-                                                    break;
-                                                case "Panama":
-                                                    $name = "Le Panama";
-                                                    $url = "../php_pages/panama.php";
-                                                    $url_image = "../image/le-panama.jpg";
-                                                    break;
-                                                case "Fidji":
-                                                    $name = "Les Fidji";
-                                                    $url = "../php_pages/fidji.php";
-                                                    $url_image = "../image/les-fidji.jpeg"; 
-                                                    break;
-                                                case "Palaos":
-                                                    $name = "Les Palaos";
-                                                    $url = "../php_pages/les-palaos.php";
-                                                    $url_image = "../image/les-palaos.jpg";
-                                                    break;
-                                                case "Antigua":
-                                                    $name = "Antigua";
-                                                    $url =  "../php_pages/antigua-barbuda.php";
-                                                    $url_image = "../image/antigua-et-barbuda.jpg";
-                                                    break;
-                                                case "Samoa":
-                                                    $name = "Samoa";
-                                                    $url =  "../php_pages/samoa-americaine.php";
-                                                    $url_image = "../image/les-samoa-americaine.jpeg";
-                                                    break;
-                                                default:
-                                                    $name = "Destination inconnue";
-                                                    $url =  "../php_pages/inscription.php";
-                                                    $url_image = "../image/destination-inconnue.jpg";
-                                                    break;
-                                            
-                                            }?>
+                                            $infos = get_url($content[$a]['travels'][$i]['destination']);
+                                            $name = $infos[0];
+                                            $url = $infos[1];
+                                            $url_image = $infos[2];
+                                                ?>
                                             
                         <div class="compte-info-container">
                             <div class="grid-container">

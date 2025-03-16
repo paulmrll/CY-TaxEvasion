@@ -136,9 +136,9 @@ require_once "../php_pages/header.php";
     </div>
 
     <div class="maps">
-        <img src="../image/les-palaos-maps.png" alt="Palaos-Maps">
+        <img src="../image/chypre-maps.png" alt="Chypre-Maps">
         <br>
-        <p>Carte Les Palaos</p>
+        <p>Carte de Chypre</p>
     </div>
 </main>
 

@@ -42,7 +42,7 @@ require_once "../php_pages/header.php";
     <div class="reservation-option-container">
         <h2>Votre réservation</h2>
         <form method="post" action="../php/register_travel.php">
-            <input type="hidden" name="destination" value="EAU">
+            <input type="hidden" name="destination" value="eau">
 
 
             <div class="reservation-slider-container">
@@ -136,9 +136,9 @@ require_once "../php_pages/header.php";
     </div>
 
     <div class="maps">
-        <img src="../image/les-palaos-maps.png" alt="Palaos-Maps">
+        <img src="../image/EAU-maps.png" alt="Palaos-Maps">
         <br>
-        <p>Carte Les Palaos</p>
+        <p>Carte Des Emirats Arabes Unis</p>
     </div>
 </main>
 

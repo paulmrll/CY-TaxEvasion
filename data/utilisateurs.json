@@ -5,9 +5,123 @@
         "email": "paul.morille11@gmail.com",
         "password": "$2y$10$J36evJDkgO2MXCnfYcjYJ.vKdjhy1zspsh8A6dJSeETs4U41gppTC",
         "inscription_date": "15-03-2025 00:29:17",
-        "connexion_date": "15-03-2025 00:29:17",
+        "connexion_date": "16-03-2025 09:27:08",
         "role": "Utilisateur",
-        "travels": [],
+        "travels": [
+            {
+                "destination": "monaco",
+                "hotel": "5 etoiles Premium VIP",
+                "loisir": [
+                    "Jet-Ski",
+                    "Plonge sous-marine"
+                ],
+                "visite": [
+                    "Visite de Banque",
+                    "Visite d'un Musee Colonialiste"
+                ],
+                "relaxation": [
+                    "Spa et Jacuzzi Prive",
+                    "Diner gastronomique 5 etoiles"
+                ],
+                "departure": "2025-03-21",
+                "return": "2025-03-30",
+                "reservation": "Paiement en attente"
+            },
+            {
+                "destination": "bermudes",
+                "hotel": "5 etoiles Premium VIP",
+                "loisir": [
+                    "Visite de Banque"
+                ],
+                "visite": [
+                    "Visite de Banque"
+                ],
+                "relaxation": [
+                    "Spa et Jacuzzi Prive",
+                    "Diner gastronomique 5 etoiles"
+                ],
+                "departure": "2025-03-12",
+                "return": "2025-05-24",
+                "reservation": "Paiement en attente"
+            },
+            {
+                "destination": "chypre",
+                "hotel": "5 etoiles Premium VIP",
+                "loisir": [
+                    "Visite de Banque",
+                    "Jet-Ski"
+                ],
+                "visite": [
+                    "Visite de Banque",
+                    "Visite d'un Musee Colonialiste"
+                ],
+                "relaxation": [
+                    "Spa et Jacuzzi Prive",
+                    "Diner gastronomique 5 etoiles"
+                ],
+                "departure": "2025-03-14",
+                "return": "2025-03-20",
+                "reservation": "Paiement en attente"
+            },
+            {
+                "destination": "malte",
+                "hotel": "5 etoiles Premium VIP",
+                "loisir": [
+                    "Visite de Banque",
+                    "Jet-Ski"
+                ],
+                "visite": [
+                    "Visite de Banque",
+                    "Visite d'un Musee Colonialiste"
+                ],
+                "relaxation": [
+                    "Spa et Jacuzzi Prive",
+                    "Diner gastronomique 5 etoiles"
+                ],
+                "departure": "2025-03-12",
+                "return": "2025-05-24",
+                "reservation": "Paiement en attente"
+            },
+            {
+                "destination": "eau",
+                "hotel": "5 etoiles Premium VIP",
+                "loisir": [
+                    "Visite de Banque",
+                    "Jet-Ski"
+                ],
+                "visite": [
+                    "Visite de Banque",
+                    "Visite d'un Musee Colonialiste"
+                ],
+                "relaxation": [
+                    "Spa et Jacuzzi Prive",
+                    "Diner gastronomique 5 etoiles",
+                    "Soiree VIP ex\u00e9cutif business  class"
+                ],
+                "departure": "2025-03-28",
+                "return": "2025-03-30",
+                "reservation": "Paiement en attente"
+            },
+            {
+                "destination": "caimans",
+                "hotel": "5 etoiles Premium VIP",
+                "loisir": [
+                    "Visite de Banque",
+                    "Jet-Ski"
+                ],
+                "visite": [
+                    "Visite d'un Musee Colonialiste"
+                ],
+                "relaxation": [
+                    "Spa et Jacuzzi Prive",
+                    "Diner gastronomique 5 etoiles",
+                    "Soiree VIP ex\u00e9cutif business  class"
+                ],
+                "departure": "2025-03-05",
+                "return": "2025-03-30",
+                "reservation": "Paiement en attente"
+            }
+        ],
         "card": {
             "name": "A",
             "number": 0,
