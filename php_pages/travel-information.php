@@ -43,10 +43,14 @@ require_once "../php_pages/header.php";
                 $name = $infos[0];
                 $url = $infos[1];
                 $url_image = $infos[2];
-    } else {
-        header('Location: ../php_pages/connexion.php');
-        exit();
-    }
+                } else {
+                    header('Location: ../php_pages/connexion.php');
+                    exit();
+                }
+            } else {
+                header('Location: ../php_pages/connexion.php');
+                exit();
+            }
     ?>
 
    
