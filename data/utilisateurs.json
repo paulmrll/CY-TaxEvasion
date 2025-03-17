@@ -5,8 +5,8 @@
         "email": "paul.morille11@gmail.com",
         "password": "$2y$10$ouXq5nCt8o89f\/nfmC.i\/Ody3lFE0WeQ6YSFvArp5vNpKSc6kuEjC",
         "inscription_date": "15-03-2025 00:29:17",
-        "connexion_date": "16-03-2025 09:27:08",
-        "role": "Utilisateur",
+        "connexion_date": "17-03-2025 10:08:11",
+        "role": "Admin",
         "travels": [
             {
                 "destination": "monaco",
@@ -119,39 +119,6 @@
                 ],
                 "departure": "2025-03-05",
                 "return": "2025-03-30",
-                "reservation": "Paiement en attente"
-            }
-        ],
-        "card": {
-            "name": "A",
-            "number": 0,
-            "date": 0,
-            "cvv": 0
-        }
-    },
-    {
-        "name": "Wingering",
-        "firstname": "Cyprien",
-        "email": "c.wingering@gmail.com",
-        "password": "$2y$10$wcXSgxSKpPU3vxbm7rL7hOKUSm1X8XucMN7JDzrdWlpjn.kZ2BZXS",
-        "inscription_date": "17-03-2025 09:48:34",
-        "connexion_date": "17-03-2025 09:48:34",
-        "role": "Utilisateur",
-        "travels": [
-            {
-                "destination": "bermudes",
-                "hotel": "5 etoiles Premium VIP",
-                "loisir": [
-                    "Jet-Ski"
-                ],
-                "visite": [
-                    "Visite d'un Musee Colonialiste"
-                ],
-                "relaxation": [
-                    "Spa et Jacuzzi Prive"
-                ],
-                "departure": "2025-03-29",
-                "return": "2025-03-31",
                 "reservation": "Paiement en attente"
             }
         ],
