@@ -1,8 +1,3 @@
-<?php
-    session_destroy();
-    session_start();
-?>
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
