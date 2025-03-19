@@ -5,7 +5,7 @@
         "email": "paul.morille11@gmail.com",
         "password": "$2y$10$ouXq5nCt8o89f\/nfmC.i\/Ody3lFE0WeQ6YSFvArp5vNpKSc6kuEjC",
         "inscription_date": "15-03-2025 00:29:17",
-        "connexion_date": "17-03-2025 10:08:11",
+        "connexion_date": "19-03-2025 08:55:35",
         "role": "Admin",
         "travels": [
             {
@@ -123,10 +123,10 @@
             }
         ],
         "card": {
-            "name": "A",
-            "number": 0,
-            "date": 0,
-            "cvv": 0
+            "name": "Jean Michel",
+            "number": "9090909090909090",
+            "date": "2025-03-27",
+            "cvv": "789"
         }
     }
 ]

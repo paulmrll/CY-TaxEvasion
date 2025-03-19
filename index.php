@@ -135,43 +135,56 @@
         <div class="carousel-content">
             <div class="grid-container">
 
-                <div class="grid-item">
-                    <a href="php_pages/anguilla.php" class="image-select">
-                        <img src="image/anguilla.jpg" alt="anguilla">
+            <div class="grid-item">
+                <form class="grid-line-container" method="post" action="php_pages/description-pages.php">
+                <input type="hidden" name="destination" value="Anguilla">
+                    <button type="submit" class="reservation-button">
+                        <img src="image/anguilla.jpg" alt="Anguilla">
                         <h3>Anguilla</h3>
                         <div class="flag">
-                            <img src="image/anguilla-flag.jpg" alt="anguilla-flag">
+                            <img src="image/Anguilla-flag.jpg" alt="les-fidji-flag">
                         </div>
-                    </a>
+                        </button>
+                        </form>
                 </div>
 
                 <div class="grid-item">
-                    <a href="php_pages/fidji.php" class="image-select">
+                <form class="grid-line-container" method="post" action="php_pages/description-pages.php">
+                <input type="hidden" name="destination" value="Fidji">
+                    <button type="submit" class="reservation-button">
                         <img src="image/les-fidji.jpeg" alt="les_fidji">
                         <h3>Les Fidji</h3>
                         <div class="flag">
                             <img src="image/les-fidji-flag.jpg" alt="les-fidji-flag">
                         </div>
-                    </a>
+                        </button>
+                        </form>
                 </div>
                 <div class="grid-item">
-                    <a href="php_pages/les-palaos.php" class="image-select">
+                <form class="grid-line-container" method="post" action="php_pages/description-pages.php">
+                <input type="hidden" name="destination" value="Palaos">
+                    <button type="submit" class="reservation-button">
                         <img src="image/les-palaos.jpg" alt="les-palaos">
                         <h3>Les Palaos</h3>
                         <div class="flag">
                             <img src="image/les-palaos-flag.jpg" alt="les-palaos">
                         </div>
-                    </a>
+                        </button>
+                        </form>
                 </div>
                 <div class="grid-item">
-                    <a href="php_pages/panama.php" class="image-select">
-                        <img src="image/le-panama.jpg" alt="le-panama">
-                        <h3>Le Panama</h3>
+                <form class="grid-line-container" method="post" action="php_pages/description-pages.php">
+                <input type="hidden" name="destination" value="Panama">
+                    <button type="submit" class="reservation-button">
+                        <img src="image/le-panama.jpg" alt="le panama">
+                        <h3>Les Palaos</h3>
                         <div class="flag">
-                            <img src="image/le-panama-flag.jpg" alt="le-panama-flag">
+                            <img src="image/le-panama-flag.jpg" alt="le panama">
                         </div>
-                    </a>
+                        </button>
+                        </form>
                 </div>
+                
             </div>
         </div>
     </div>

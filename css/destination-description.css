@@ -191,7 +191,6 @@ select:focus {
 .reservation-checkbox label:checked {
     transform: scale(0.8);
     transition: transform 0.3s ease, opacity 0.3s ease;
-
 }
 
 input[type="checkbox"]:checked + label {
@@ -282,6 +281,9 @@ table button:hover[type="reset"]{
     border: 0.1rem var(--color-reset) solid;
 }
 
-
-
+#reserve{
+    display: flex;
+    text-align: center;
+    margin: auto;
+}
 
