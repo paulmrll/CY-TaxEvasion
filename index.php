@@ -74,7 +74,6 @@
 
 
 <main>
-
     <div class="video-background">
         <video width="560" height="315" autoplay loop muted>
             <source src="videos/Tax-Evasion-Trailer.mp4" type="video/mp4">
@@ -82,20 +81,31 @@
         </video>
     </div>
 
-
     <div class="search-bar-container">
-        <label class="search-bar">
-            <a class="search-bar-title">Recherchez votre destination de rêve</a>
-            <input type="text" list="destination">
-            <datalist id="destination">
-                <option value="Les Samoa-Américaines"></option>
-                <option value="Anguilla"></option>
-                <option value="Les Fidji"></option>
-                <option value="Les Palaos"></option>
-                <option value="Le Panama"></option>
-            </datalist>
-        </label>
+        <form action="php_pages/description-pages.php" method="GET">
+            <label class="search-bar">
+                <span class="search-bar-title">Recherchez votre destination de rêve</span>
+                <input type="text" name="destination" list="destination" placeholder="Entrez une destination..." required>
+                <datalist id="destination">
+                    <option value="Les Samoa-Américaines" data-value="?destination=Samoa"></option>
+                    <option value="Anguilla"></option>
+                    <option value="Antigua-et-Barbuda"></option>
+                    <option value="Les Fidji"></option>
+                    <option value="Les Palaos"></option>
+                    <option value="Le Panama"></option>
+                    <option value="Monaco"></option>
+                    <option value="Bermudes"></option>
+                    <option value="Chypre"></option>
+                    <option value="Malte"></option>
+                    <option value="Les Emirats arabes unis"></option>
+                    <option value="Les Îles Caïmans"></option>
+                    <option value="Malte"></option>
+                </datalist>
+            </label>
+        </form>
     </div>
+
+    <a href="php_pages/description-pages.php?destination=Samoa">
 
 
     <div class="map-container">
@@ -141,7 +151,7 @@
                         <img src="image/anguilla.jpg" alt="Anguilla">
                         <h3>Anguilla</h3>
                         <div class="flag">
-                            <img src="image/Anguilla-flag.jpg" alt="les-fidji-flag">
+                            <img src="image/anguilla-flag.jpg" alt="les-fidji-flag">
                         </div>
         </a>
                 </div>

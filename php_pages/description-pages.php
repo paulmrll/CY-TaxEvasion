@@ -60,10 +60,7 @@ require_once "../php_pages/header.php";
         <input type="hidden" name="destination" value="<?php echo $content[$i]['destination'];?>">
         <button id="reserve" type="submit" class="reservation-button">Réserver</button>
     </form>
-
-
-   
-value
+    
     <div class="maps">
         <img src="<?php echo $content[$i]["image_maps"]?>" alt="<?php $content[$i]["destination"]?>-maps">
         <br>

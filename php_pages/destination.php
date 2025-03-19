@@ -82,16 +82,14 @@ require_once "../php_pages/header.php";
                 <label>
                     <select>
                         <option value="" selected hidden>Choisissez une option</option>
+                        <option value="Europe">Amérique-Centrale</option>
                         <option value="Amérique-Centrale">Amérique-Centrale</option>
                         <option value="Amérique-du-Sud">Amérique-du-Sud</option>
                         <option value="Océanie">Océanie</option>
                     </select>
                 </label>
             </div>
-
-
         </div>
-
     </div>
 
 
@@ -341,7 +339,7 @@ require_once "../php_pages/header.php";
                 <div class="grid-item">
                     <div class="image-select">
                         <img src="../image/caimans.jpg" alt="caimans.jpeg">
-                        <h3>Caïmans</h3>
+                        <h3>Les Îles Caïmans</h3>
                         <div class="flag">
                             <img src="../image/caimans-flag.png" alt="caimans-flag.png">
                         </div>
