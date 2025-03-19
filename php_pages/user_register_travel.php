@@ -51,7 +51,7 @@ if (isset($_POST["destination"])){
 
 
     <div class="reservation-option-container">
-        <h2>Votre réservation</h2>
+        <h2>Votre réservation à <?php echo $content[$i]["destination"]?></h2>
         <form method="post" action="../php/register_travel.php">
             <input type="hidden" name="destination" value="malte">
 
