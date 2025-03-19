@@ -7,8 +7,8 @@ session_start();
 
 
 <?php
-if (isset($_POST["destination"])){
-    $destination = $_POST["destination"];
+if (isset($_GET["destination"])){
+    $destination = $_GET["destination"];
     $destination = strtolower($destination);
     $destination[0] = strtoupper($destination[0]);
     $jsonFile = "../data/travel.json";

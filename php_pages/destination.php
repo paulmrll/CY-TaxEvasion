@@ -98,8 +98,7 @@ require_once "../php_pages/header.php";
     <div class="destination-grid">
         <div class="grid-container">
 
-        <form class="grid-line-container" method="post" action="../php_pages/description-pages.php">
-        <input type="hidden" name="destination" value="Samoa">
+        <a class="grid-line-container" href="../php_pages/description-pages.php?destination=Samoa">
         <button type="submit" class="reservation-button">
                 <div class="grid-item">
                     <div class="image-select">
@@ -117,12 +116,10 @@ require_once "../php_pages/header.php";
                         entreprises offshore</strong> bénéficiant d'une réglementation souple et d'un cadre tropical
                     idyllique.
                 </div>
-                </button>
-                </form>
+</a>
 
-                <form class="grid-line-container" method="post" action="../php_pages/description-pages.php">
-                <input type="hidden" name="destination" value="Anguilla">
-                <button type="submit" class="reservation-button">
+                <a class="grid-line-container" href="../php_pages/description-pages.php?destination=Anguilla">
+                
                 <div class="grid-item">
                     <div class="image-select">
                         <img src="../image/anguilla.jpg" alt="anguilla">
@@ -141,12 +138,9 @@ require_once "../php_pages/header.php";
                     établies. Profitez d’une
                     fiscalité avantageuse sous le soleil des Caraïbes !
                 </div>
-                </button>
-                </form>
+                </a>
 
-                <form class="grid-line-container" method="post" action="../php_pages/description-pages.php">
-                <input type="hidden" name="destination" value="Antigua">
-                <button type="submit" class="reservation-button">
+                <a class="grid-line-container" href="../php_pages/description-pages.php?destination=Antigua">
                 <div class="grid-item">
                     <div class="image-select">
                         <img src="../image/antigua-et-barbuda.jpg" alt="antigua-et-barbuda">
@@ -164,12 +158,9 @@ require_once "../php_pages/header.php";
                     climat fiscal et
                     tropical parfait pour vos affaires !
                 </div>
-                </button>
-                </form>
+                </a> 
 
-                <form class="grid-line-container" method="post" action="../php_pages/description-pages.php">
-                <input type="hidden" name="destination" value="Fidji">
-                <button type="submit" class="reservation-button">
+                <a class="grid-line-container" href="../php_pages/description-pages.php?destination=Fidji">
                 <div class="grid-item">
                     <div class="image-select">
                         <img src="../image/les-fidji.jpeg" alt="les_fidji">
@@ -189,13 +180,9 @@ require_once "../php_pages/header.php";
                     <strong>évasion fiscale et évasion tropicale</strong> en faisant des Fidji votre prochaine
                     destination d’affaires !
                 </div>
-                </button>
-                </form>
+                </a>
 
-            <form class="grid-line-container" method="post" action="../php_pages/description-pages.php">
-                <input type="hidden" name="destination" value="Palaos">
-                <button type="submit" class="reservation-button">
-
+                <a class="grid-line-container" href="../php_pages/description-pages.php?destination=Palaos">
                 <div class="grid-item">
                     <div class="image-select">
                         <img src="../image/les-palaos.jpg" alt="les-palaos">
@@ -216,13 +203,10 @@ require_once "../php_pages/header.php";
                     et luxe tropical en toute sérénité.
                 </div>
 
-                </button>
-                </form>
+            </a>
 
             
-                <form class="grid-line-container" method="post" action="../php_pages/description-pages.php">
-                <input type="hidden" name="destination" value="Panama">
-                <button type="submit" class="reservation-button">
+            <a class="grid-line-container" href="../php_pages/description-pages.php?destination=panama">
                 <div class="grid-item">
                     <div class="image-select">
                         <img src="../image/le-panama.jpg" alt="le-panama.jpg">
@@ -238,12 +222,9 @@ require_once "../php_pages/header.php";
                     et investisseurs. Profitez d’un cadre fiscal avantageux tout en vivant sous le <strong>soleil des Caraïbes,</strong>
                     entre gratte-ciels modernes et plages paradisiaques.
                 </div>
-                </button>
-                </form>
+            </a>
 
-                <form class="grid-line-container" method="post" action="../php_pages/description-pages.php">
-                <input type="hidden" name="destination" value="Monaco">
-                <button type="submit" class="reservation-button">
+            <a class="grid-line-container" href="../php_pages/description-pages.php?destination=Monaco">
                 <div class="grid-item">
                     <div class="image-select">
                         <img src="../image/monaco.jpeg" alt="monaco.jpeg">
@@ -260,13 +241,9 @@ require_once "../php_pages/header.php";
                      son cadre de vie luxueux et son accès privilégié aux marchés internationaux, la Principauté attire 
                      les grandes fortunes et les entrepreneurs en quête d’optimisation fiscale dans un environnement sécurisé et prestigieux.
                 </div>
-                </button>
-                </form>
+                </a>
 
-                <form class="grid-line-container" method="post" action="../php_pages/description-pages.php">
-                <input type="hidden" name="destination" value="Bermudes">
-                <button type="submit" class="reservation-button">
-            <a href="bermudes.php" class="grid-line-container">
+                <a class="grid-line-container" href="../php_pages/description-pages.php?destination=Bermudes">
                 <div class="grid-item">
                     <div class="image-select">
                         <img src="../image/bermudes.jpg" alt="bermudes.jpeg">
@@ -283,11 +260,9 @@ require_once "../php_pages/header.php";
                 leur stabilité économique et leur discrétion financière, l'archipel séduit les investisseurs et les entreprises 
                 à la recherche d'un environnement propice à la rentabilité et à la sécurité.
                     </div>
-                </button>
-                </form>
+                </a>
                
-                <form class="grid-line-container" method="post" action="../php_pages/description-pages.php">
-                <input type="hidden" name="destination" value="chypre">
+                <a class="grid-line-container" href="../php_pages/description-pages.php?destination=Chypre">
                 <div class="grid-item">
                     <div class="image-select">
                         <img src="../image/chypre.jpeg" alt="chypre.jpeg">
@@ -304,11 +279,9 @@ require_once "../php_pages/header.php";
                   fiscaux, l'île attire les entrepreneurs et investisseurs cherchant à optimiser leurs bénéfices dans un environnement 
                   sécurisé et stratégique.
                 </div>
-                </button>
-                </form>
+                </a>
 
-                <form class="grid-line-container" method="post" action="../php_pages/description-pages.php">
-                <input type="hidden" name="destination" value="malte">
+                <a class="grid-line-container" href="../php_pages/description-pages.php?destination=Malte">
                 <div class="grid-item">
                     <div class="image-select">
                         <img src="../image/malte.jpg" alt="malte.jpeg">
@@ -324,11 +297,9 @@ require_once "../php_pages/header.php";
                 sur les plus-values et les dividendes : Malte combine fiscalité avantageuse et accès au marché européen. 
                 L'île attire les investisseurs et entreprises recherchant un cadre fiscal compétitif dans un environnement stable et prospère.
                 </div>
-                </button>
-                </form>
+                </a>
 
-                <form class="grid-line-container" method="post" action="../php_pages/description-pages.php">
-                <input type="hidden" name="destination" value="Eau">
+                <a class="grid-line-container" href="../php_pages/description-pages.php?destination=Eau">
                 <div class="grid-item">
                     <div class="image-select">
                         <img src="../image/EAU.jpg" alt="EAU.jpeg">
@@ -345,10 +316,8 @@ require_once "../php_pages/header.php";
                 prospère, les EAU attirent les entreprises et les investisseurs à la recherche d’un cadre fiscal optimal dans un centre d’affaires
                  dynamique.
                 </div>
-                </button>
-                </form>
-            <form class="grid-line-container" method="post" action="../php_pages/description-pages.php">
-                <input type="hidden" name="destination" value="Caimans">
+                </a>
+                <a class="grid-line-container" href="../php_pages/description-pages.php?destination=Caimans">
                 <div class="grid-item">
                     <div class="image-select">
                         <img src="../image/caimans.jpg" alt="caimans.jpeg">
@@ -364,8 +333,7 @@ require_once "../php_pages/header.php";
                 exceptionnelle pour les entreprises et les investisseurs. Grâce à leur stabilité économique, leur cadre juridique souple
                  et leur discrétion financière, les Caïmans sont une destination privilégiée pour l’optimisation fiscale.
                 </div>
-                </button>
-                </form>
+                </a>
 
 
 
