@@ -30,7 +30,7 @@ if (file_exists("../data/utilisateurs.json")) {
                 exit();
             }
             if ($content[$a]['card']['number'] != 0 && $content[$a]['card']['date'] != 0 && $content[$a]['card']['date'] != 0){
-                header('Location: ../php_pages/payment.php');
+                header('Location: ../php_pages/paiement.php');
             }
     }
 } else {
