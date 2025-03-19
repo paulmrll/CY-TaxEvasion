@@ -61,7 +61,7 @@ require_once "../php_pages/header.php";
                                 $url_image = $content_travel[$p]['image'];
                                 $index_travel = $p;
                                 $index = $i;
-                                $name = $content_travel[$p]['name']
+                                $name = $content_travel[$p]['name'];
                                 break;
                         }
                     }

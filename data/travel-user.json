@@ -24,62 +24,6 @@
                 "departure": "2025-03-20",
                 "return": "2025-03-29",
                 "reservation": "Paiement en attente"
-            },
-            {
-                "destination": "Anguilla",
-                "hotel": "5 étoiles premium",
-                "loisir": [
-                    "Visite de Banque",
-                    "Jet-Ski",
-                    "Plongée sous-marine",
-                    "Balade en yacht"
-                ],
-                "visite": [
-                    "Visite de Banque",
-                    "Visite d'un Musée Colonialiste",
-                    "Visite d'un vignoble"
-                ],
-                "relaxation": [
-                    "Spa et Jacuzzi Privé",
-                    "Diner gastronomique 5 étoiles",
-                    "Soiree VIP éxecutif business class"
-                ],
-                "departure": "2025-03-20",
-                "return": "2025-03-30",
-                "reservation": "Paiement en attente"
-            },
-            {
-                "destination": "Anguilla",
-                "hotel": "5 étoiles Premium VIP",
-                "loisir": [
-                    "Visite de Banque"
-                ],
-                "visite": [
-                    "Visite d'un Musée Colonialiste"
-                ],
-                "relaxation": [
-                    "Diner gastronomique 5 étoiles"
-                ],
-                "departure": "2025-03-20",
-                "return": "2025-03-26",
-                "reservation": "Paiement en attente"
-            },
-            {
-                "destination": "Anguilla",
-                "hotel": "5 étoiles premium",
-                "loisir": [
-                    "Visite de Banque",
-                    "Jet-Ski"
-                ],
-                "visite": [
-                    "Visite d'un Musée Colonialiste"
-                ],
-                "relaxation": [
-                    "Spa et Jacuzzi Privé"
-                ],
-                "departure": "2025-03-20",
-                "return": "2025-03-29",
-                "reservation": "Paiement en attente"
             }
         ]
     },
@@ -175,7 +119,8 @@
                 "destination": "Eau",
                 "hotel": "5 étoiles premium",
                 "loisir": [
-                    "Plongée sous-marine"
+                    "Plongée sous-marine",
+                    "Balade en yacht"
                 ],
                 "visite": [
                     "Visite de Banque",
