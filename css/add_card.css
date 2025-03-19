@@ -1,0 +1,51 @@
+.payment_container{
+    padding: 20vmin;
+    height : 80vh;
+}
+
+legend{
+    font-size: 5vmin;
+    font-weight: bold;
+    text-align: center;
+}
+fieldset{
+    margin: 2vmin;
+    border : 0.1vmin solid var(--color-dark-writing);
+    border-radius: 1vmin;
+    background-color: var(--color-background-2);
+}
+form{
+    width: 50%;
+    margin: auto;
+    text-align: center;
+}
+form input{
+    border : 0.1vmin solid var(--color-dark-writing);
+    text-align : center;
+    border-radius: 1vmin;
+    font-size: 1.5vmin;
+}
+form button[type="submit"]{
+    border : 0.1vmin solid var(--color-dark-writing);
+    text-align : center;
+    border-radius: 1vmin;
+    background-color: var(--color-submit);
+    cursor: pointer;
+    margin: 2vmin;
+    padding: 1vmin 3vmin;
+}
+form button[type="submit"]:active{
+    border : 0.1vmin solid var(--color-dark-writing);
+    text-align : center;
+    border-radius: 1vmin;
+    background-color: var(--color-submit);
+    cursor: pointer;
+    margin: 2vmin;
+    padding: 1vmin 3vmin;
+    zoom:0.8;
+}
+form label{
+    font-size: 2vmin;
+    font-weight: bold;
+    color: var( --color-submit);
+}

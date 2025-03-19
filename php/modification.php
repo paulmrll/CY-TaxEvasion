@@ -4,7 +4,8 @@ session_start();
 function user_modification($email, $password, $firstname, $name){
     $jsonFile = "../data/utilisateurs.json";
     if (!file_exists($jsonFile)) {
-        exit("Erreur : Le fichier json n'existe pas");
+
+        header('Location: ../php/inscription.php');
     }
 
     $content = json_decode(file_get_contents($jsonFile), true);
@@ -15,7 +16,7 @@ function user_modification($email, $password, $firstname, $name){
     $password_hash = password_hash($password, PASSWORD_DEFAULT);
     if (isset($content)) {
         for ($i = 0; $i < count($content); $i++) {
-            if ($content[$i]['email'] === $_SESSION['email']) {
+            if ($content[$i]['email'] === $email) {
 
                 $content[$i]['name'] = $name;
                 $content[$i]['firstname'] = $firstname;

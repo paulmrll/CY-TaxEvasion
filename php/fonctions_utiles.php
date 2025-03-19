@@ -15,8 +15,7 @@ function change_email($email){
     $email = strtolower($email);
     return $email;
 }
-function change_connexionDate()
-{
+function change_connexionDate(){
     if (file_exists("../data/utilisateurs.json")) {
         $content = json_decode(file_get_contents("../data/utilisateurs.json"), true);
         for ($i = 0; $i < count($content); $i++) {
@@ -28,6 +27,26 @@ function change_connexionDate()
         file_put_contents("../data/utilisateurs.json", json_encode($content, JSON_PRETTY_PRINT));
     }
 }
+function find_user(){
+    if (file_exists("../data/utilisateurs.json")) {
+            $content = json_decode(file_get_contents("../data/utilisateurs.json"), true);
+            if ($content === null){
+                header('Location: ../php_pages/inscription.php');
+                exit();
+            }
+            for ($i = 0; $i < count($content); $i++) {
+                if ($content[$i]['email'] === $_SESSION['email']) {
+                    return $i;
+                }
+            }
+            header('Location: ../php_pages/inscription.php');
+            exit();
+    } else {
+        header('Location: ../php_pages/inscription.php');
+        exit();
+    }
+} 
+
 function start_session($mail, $name, $firstname, $password, $role){
     $_SESSION['firstname'] = $firstname;
     $_SESSION['name'] = $name;

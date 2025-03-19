@@ -36,6 +36,7 @@ body {
     line-height: 2;
     background-color: var(--color-background);
     color: var(--color-dark-writing);
+    height: 100vh;
 }
 
 

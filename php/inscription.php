@@ -11,7 +11,6 @@ function exist($email){
         }
         return false;
     }
-
 }
 
 
@@ -27,17 +26,14 @@ function create_user($name, $firstname, $email, $password){
             "inscription_date" => date("d-m-Y H:i:s"),
             "connexion_date" => date("d-m-Y H:i:s"),
             "role" => "Utilisateur",
-            "Travels" => [[
-                "Country" => [],
-                "Date" => [],
-                "Number of persone" => [],
-                "Price" => [],
-                "Duration" => [],
-                "Days" => [
-                ]
-            ]]
+            "travels" => [], 
+            "card" => [
+                "name" => "A",
+                "number" => 0,
+                "date" => 0,
+                "cvv" => 0
+            ]
         ];
-        
     }
     return $tab;
 }
@@ -84,6 +80,8 @@ function inscription($name, $firstname, $email, $password){
 
 if (isset($_POST["name"]) && isset($_POST["firstname"]) && isset($_POST["email"]) && isset($_POST["password"])) {
     date_default_timezone_set('Europe/Paris');
+    session_unset();    
+    session_destroy();
     $name = $_POST["name"];
     $firstname = $_POST["firstname"];
     $email = $_POST["email"];

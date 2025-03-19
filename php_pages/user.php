@@ -1,6 +1,6 @@
 <?php
+require_once "../php/fonctions_utiles.php";
 
-session_start();
 
 if (!isset($_SESSION['email'])) {
     header("Location: ../php_pages/connexion.php");
@@ -94,58 +94,81 @@ require_once "../php_pages/header.php";
 
                 <div class="box-container">
                     <div class="part-container">
-                        <h1>Mes Voyages :</h1>
+                            <?php
+                                if (file_exists("../data/utilisateurs.json")) {
+                                    $content = json_decode(file_get_contents("../data/utilisateurs.json"), true);
+                                    if ($content === null){
+                                        header('Location: ../php_pages/inscription.php');
+                                        exit();
+                                    }
+                                    if (isset($_SESSION['email'])) {
+                                        $a = find_user($_SESSION['email']);
+                                        if (count($content[$a]['travels']) == 0) {
+                                            echo "<h1>Vous n'avez pas encore réservé de voyage</h1>";
+                                        } else {
+                                            echo "<h1>Mes Voyages :</h1>";
+                                        }
+                                        for ($i = 0; $i < count($content[$a]['travels']); $i++):
+                                            $infos = get_url($content[$a]['travels'][$i]['destination']);
+                                            $name = $infos[0];
+                                            $url = $infos[1];
+                                            $url_image = $infos[2];
+                                                ?>
+                                            
                         <div class="compte-info-container">
                             <div class="grid-container">
-
                                 <div class="line-container">
                                     <div class="grid-item">
-                                        <a href="../php_pages/anguilla.php" class="image-select">
-                                            <img src="../image/anguilla.jpg" alt="anguilla">
-                                            <h3>Anguilla</h3>
+                                        <a href="<?php echo $url ?>" class="image-select">
+                                            <img src="<?php echo $url_image?>" alt="image">
+                                            <h3><?php echo $name ?></h3>
                                         </a>
                                     </div>
-
-                                    <p class="Réservé">Reservé</p>
-
-                                    <div class="date-container">
-                                        <p>Date de départ : <strong>00/00/0000</strong></p>
-                                        <p>Date de retour : <strong>00/00/0000</strong></p>
+                                <?php 
+                                    if ($content[$a]['travels'][$i]['reservation'] == "Paiement en attente"):?>
+                                    <a href="../php_pages/add_card.php">
+                                    <p class="Non-réservé">
+                                        <?php
+                                        echo $content[$a]['travels'][$i]['reservation'];
+                                        ?>
+                                    </p></a>
+                                    <?php else: ?>
+                                    <p class="Réservé">
+                                        <?php
+                                        echo $content[$a]['travels'][$i]['reservation'];
+                                        ?>
+                                    </p>
+                                    <?php endif; ?>
+                                        <div class="date-container">
+                                            <p>Date de départ : <strong><?php echo $content[$a]['travels'][$i]['departure']?></strong></p>
+                                            <p>Date de retour : <strong><?php echo $content[$a]['travels'][$i]['return']?></strong></p>
+                                        </div>
+                                        <div class="modification-container">
+                                            <form action="../php/define-index-travel.php" method="post">
+                                                <input type="hidden" name="index-travel" value="<?php echo $i ?>">
+                                                <input type="hidden" name="todo" value="modify">
+                                                <button class="button-modifier">Modifier</button>
+                                            </form>
+                                        </div>  
+                                        <div class="modification-container">
+                                            <form action="../php/define-index-travel.php" method="post">
+                                                <input type="hidden" name="index-travel" value="<?php echo $i ?>">
+                                                <input type="hidden" name="todo" value="see">
+                                                <button class="button-modifier">Voir</button>
+                                            </form>
+                                        </div> 
                                     </div>
-                                </div>
+                                    
+                                        
+                                <?php
+                                endfor;
+                                    }
+                                } else {
+                                    header('Location: ../php_pages/inscription.php');
+                                    exit();
+                                    }
+                                ?>
 
-                                <div class="line-container">
-                                    <div class="grid-item">
-                                        <a href="../php_pages/panama.php" class="image-select">
-                                            <img src="../image/le-panama.jpg" alt="le-panama">
-                                            <h3>Le Panama</h3>
-                                        </a>
-                                    </div>
-                                    <p class="Payment">En Attente de Payment : 150 000$</p>
-                                    <div class="button-payer">
-                                        <button>Payer</button>
-                                    </div>
-                                </div>
-
-                                <div class="line-container">
-                                    <div class="grid-item">
-                                        <a href="../php_pages/fidji.php" class="image-select">
-                                            <img src="../image/les-fidji.jpeg" alt="les_fidji">
-                                            <h3>Les Fidji</h3>
-                                        </a>
-                                    </div>
-                                    <p class="Annulé">Annulé</p>
-                                </div>
-
-                                <div class="line-container">
-                                    <div class="grid-item">
-                                        <a href="../php_pages/les-palaos.php" class="image-select">
-                                            <img src="../image/les-palaos.jpg" alt="les-palaos">
-                                            <h3>Les Palaos</h3>
-                                        </a>
-                                    </div>
-                                    <p class="Effectué">Effectué</p>
-                                </div>
 
 
                             </div>
