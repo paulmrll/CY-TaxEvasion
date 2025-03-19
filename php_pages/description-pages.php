@@ -12,6 +12,9 @@ if (isset($_GET["destination"])){
     $destination = strtolower($destination);
     $destination[0] = strtoupper($destination[0]);
     $jsonFile = "../data/travel.json";
+    if (!file_exists($jsonFile)){
+        header('Location: ../php_pages/add_travel.php');
+    }
     $content = json_decode(file_get_contents($jsonFile), true);
     if ($content == null){
         header('Location: ../php_pages/add_travel.php');

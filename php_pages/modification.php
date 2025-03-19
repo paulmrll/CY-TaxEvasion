@@ -27,37 +27,61 @@ require_once "../php_pages/header.php";
 ?>
 
 <main>
-    <?php if (isset($_SESSION['index-travel'])){
-            if (file_exists("../data/utilisateurs.json")) {
-                $content = json_decode(file_get_contents("../data/utilisateurs.json"), true);
-                if ($content === null){
-                    header('Location: ../php_pages/inscription.php');
-                    exit();
-                }
-                $a = find_user();
-                if ($_SESSION['index-travel'] >= count($content[$a]['travels'])){
-                    header('Location: ../php_pages/inscription.php');
-                    exit();
-                }
-                $infos = get_url($content[$a]['travels'][$_SESSION['index-travel']]['destination']);
-                $name = $infos[0];
-                $url = $infos[1];
-                $url_image = $infos[2];
-        }
-    } else {
-        header('Location: ../php_pages/connexion.php');
+    <?php
+    if (!isset($_GET['travel'])){
+        header('Location: ../php_pages/user.php');
         exit();
     }
+    $file = "../data/travel-user.json";
+            if (file_exists($file)) {
+                $content = json_decode(file_get_contents($file), true);
+                if ($content === null){
+                    header('Location: ../php_pages/user_register_travel.php');
+                    exit();
+                }
+                for ($i = 0; $i < count($content); $i++){
+                    if ($content[$i]['email'] === $_SESSION['email']){
+                        $a = $i;
+                    }
+                }
+                if (file_exists("../data/travel.json")) {
+                    $content_travel = json_decode(file_get_contents("../data/travel.json"), true);
+                } else {
+                    header('Location: ../php_pages/inscription.php');
+                    exit();
+                }
+                if ($content_travel === null) {
+                    header('Location: ../php_pages/user_register_travel.php');
+                    exit();
+                }
+                for ($i = 0; $i < count($content[$a]['travels']); $i++){
+                    if ($content[$a]['travels'][$i]['destination'] == $_GET['travel']){
+                        for ($p = 0; $p < count($content_travel); $p++){
+                            if ($content_travel[$p]['destination'] == $_GET['travel']){
+                                $url_image = $content_travel[$p]['image'];
+                                $index_travel = $p;
+                                $index = $i;
+
+                                break;
+                        }
+                    }
+                }
+                }
+            }
+
+                    
+                
+            
     ?>
 
    
 
     <img src="<?php echo $url_image?>" alt="Image de la destination">
-    <h1>Modifier votre voyage</h1>
+    <h1>Modifier votre voyage à <?php echo $content_travel[$index_travel]["destination"]?></h1>
     <div class="container">
     <form method="post" action="../php/modification_travel.php">
-        <input type="hidden" name="destination" value="<?php echo $content[$a]['travels'][$_SESSION['index-travel']]['destination']?>">
-
+       
+        <input type="hidden" name="destination" value="<?php echo $content_travel[$index_travel]["destination"]?>">
 
             <div class="reservation-slider-container">
 
@@ -65,11 +89,10 @@ require_once "../php_pages/header.php";
                     <h5>Hotêl :</h5>
                     <label>
                         <select id="hotel" name="hotel" required>
-                            <option value="" selected hidden>Choisissez une option</option>
-                            <option value="5 etoiles">5 étoiles</option>
-                            <option value="5 etoiles premium">5 étoiles premium</option>
-                            <option value="5 etoiles Premium VIP">5 étoiles Premium VIP</option>
-                            <option value="5 etoiles Premium VIP Deluxe">5 étoiles Premium VIP Deluxe</option>
+                        <option value="<?php echo $content[$a]['travels'][$index]['hotel']?>"><?php echo $content[$a]['travels'][$index]['hotel']?></option>
+                            <?php for ($o= 0; $o < count($content_travel[$index_travel]["hotel"]); $o++):?>
+                            <option value="<?php echo $content_travel[$index_travel]["hotel"][$o]?>"><?php echo $content_travel[$index_travel]["hotel"][$o]?></option>
+                            <?php endfor;?>
                         </select>
                     </label>
                 </div>
@@ -78,17 +101,16 @@ require_once "../php_pages/header.php";
                 <div class="reservation-checkbox">
                     <h5>Activités nautiques :</h5>
                     <div>
-                        <input type="checkbox" id="loisir1" name="loisir[]" value="Visite de Banque">
-                        <label class="reservation-button" for="loisir1">Nage avec les requins</label>
+                    <?php for ($o = 0; $o < count($content_travel[$index_travel]["loisir"]); $o++): ?>
+                    <input type="checkbox" id="loisir<?php echo $o ?>" name="loisir[]" value="<?php echo $content_travel[$index_travel]["loisir"][$o] ?>"
+                    <?php if (in_array($content_travel[$index_travel]["loisir"][$o], $content[$a]['travels'][$index]['loisir'])){
+                        echo "checked";
+                    }
+                    ?>
+                    >
+                    <label class="reservation-button" for="loisir<?php echo $o ?>"><?php echo $content_travel[$index_travel]["loisir"][$o] ?></label>
+                    <?php endfor; ?>
 
-                        <input type="checkbox" id="loisir2" name="loisir[]" value="Jet-Ski">
-                        <label class="reservation-button" for="loisir2">Balade à Jet-Ski</label>
-
-                        <input type="checkbox" id="loisir3" name="loisir[]" value="Plonge sous-marine">
-                        <label class="reservation-button" for="loisir3">Plongé Sous-Marine</label>
-
-                        <input type="checkbox" id="loisir4" name="loisir[]" value="Balade en yacht">
-                        <label class="reservation-button" for="loisir4">Balade en Yacht</label>
                     </div>
                 </div>
 
@@ -96,14 +118,15 @@ require_once "../php_pages/header.php";
                 <div class="reservation-checkbox">
                     <h5>Visite guidée :</h5>
                     <div>
-                        <input type="checkbox" id="visite1" name="visite[]" value="Visite de Banque">
-                        <label class="reservation-button" for="visite1">Visite de la Banque Centrale</label>
-
-                        <input type="checkbox" id="visite2" name="visite[]" value="Visite d'un Musee Colonialiste">
-                        <label class="reservation-button" for="visite2">Visite d'un Musée Colonialiste</label>
-
-                        <input type="checkbox" id="visite3" name="visite[]" value="Visite d'un vignoble">
-                        <label class="reservation-button" for="visite3">Visite d'un vignoble</label>
+                    <?php for ($o = 0; $o < count($content_travel[$index_travel]["visite"]); $o++): ?>
+                    <input type="checkbox" id="visite<?php echo $o ?>" name="visite[]" value="<?php echo $content_travel[$index_travel]["visite"][$o] ?>"
+                    <?php if (in_array($content_travel[$index_travel]["visite"][$o], $content[$a]['travels'][$index]['visite'])){
+                        echo "checked";
+                    }
+                    ?>
+                    >
+                    <label class="reservation-button" for="visite<?php echo $o ?>"><?php echo $content_travel[$index_travel]["visite"][$o] ?></label>
+                    <?php endfor; ?>
                     </div>
                 </div>
 
@@ -111,21 +134,21 @@ require_once "../php_pages/header.php";
                 <div class="reservation-checkbox">
                     <h5>Activité de détentes :</h5>
                     <div>
-                        <input type="checkbox" id="détente1" name="relaxation[]" value="Spa et Jacuzzi Prive">
-                        <label class="reservation-button" for="détente1">Spa et Jacuzzi Privée</label>
-
-                        <input type="checkbox" id="détente2" name="relaxation[]" value="Diner gastronomique 5 etoiles">
-                        <label class="reservation-button" for="détente2">Dîner gastronomique 5 étoiles</label>
-
-                        <input type="checkbox" id="détente3" name="relaxation[]"
-                               value="Soiree VIP exécutif business  class">
-                        <label class="reservation-button" for="détente3">Soirée VIP exécutif business class</label>
+                    <?php for ($o = 0; $o < count($content_travel[$index_travel]["relaxation"]); $o++): ?>
+                    <input type="checkbox" id="relaxation<?php echo $o ?>" name="relaxation[]" value="<?php echo $content_travel[$index_travel]["relaxation"][$o] ?>"
+                    <?php if (in_array($content_travel[$index_travel]["relaxation"][$o], $content[$a]['travels'][$index]['relaxation'])){
+                        echo "checked";
+                    }
+                    ?>
+                    >
+                    <label class="reservation-button" for="relaxation<?php echo $o ?>"><?php echo $content_travel[$index_travel]["relaxation"][$o] ?></label>
+                    <?php endfor; ?>
                     </div>
                 </div>
 
                 <div class="reservation-checkbox">
                     <h5>Dates de départ :</h5>
-                    <input id="departure" name="departure" type="date" placeholder="jj/mm/aaaa" required>
+                    <input id="departure" name="departure" type="date" value="<?php echo $content[$a]["travels"][$index]["departure"]?>"required>
 
                 </div>
 
@@ -133,7 +156,7 @@ require_once "../php_pages/header.php";
                 <div class="reservation-checkbox">
 
                     <h5>Dates de retour :</h5>
-                    <input id="return" name="return" type="date" placeholder="jj/mm/aaaa" required>
+                    <input id="return" name="return" type="date" value="<?php echo $content[$a]["travels"][$index]["return"]?>" required>
 
                 </div>
 
@@ -149,9 +172,11 @@ require_once "../php_pages/header.php";
             </div>
         </form>
         <form method="post" action="../php/modification_travel.php">
+        <input type="hidden" name="destination" value="<?php echo $content_travel[$index_travel]["destination"]?>">
         <input type="hidden" name="todo" value="delete">
         <button type="submit" id="delete">Supprimer le voyage</button>
         </form>
+
     </div>
 </main>
 

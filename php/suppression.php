@@ -5,7 +5,7 @@ function supprimer($mail){
     if (file_exists("../data/utilisateurs.json")){
         $content = json_decode(file_get_contents("../data/utilisateurs.json"), true);
         if ($content === null){
-            header('Location : ../php_pages/inscription.php');
+            header('Location: ../php_pages/inscription.php');
             exit();
         }
         if (isset($content)){

@@ -1,4 +1,5 @@
 <?php
+
 require_once "../php/fonctions_utiles.php";
 
 
@@ -95,33 +96,45 @@ require_once "../php_pages/header.php";
                 <div class="box-container">
                     <div class="part-container">
                             <?php
-                                if (file_exists("../data/utilisateurs.json")) {
-                                    $content = json_decode(file_get_contents("../data/utilisateurs.json"), true);
-                                    if ($content === null){
+
+                                 if (file_exists("../data/travel-user.json")) {
+                                     $content = json_decode(file_get_contents("../data/travel-user.json"), true);
+                                     if ($content == null) {
                                         header('Location: ../php_pages/inscription.php');
                                         exit();
-                                    }
-                                    if (isset($_SESSION['email'])) {
-                                        $a = find_user($_SESSION['email']);
-                                        if (count($content[$a]['travels']) == 0) {
-                                            echo "<h1>Vous n'avez pas encore réservé de voyage</h1>";
-                                        } else {
-                                            echo "<h1>Mes Voyages :</h1>";
-                                        }
-                                        for ($i = 0; $i < count($content[$a]['travels']); $i++):
-                                            $infos = get_url($content[$a]['travels'][$i]['destination']);
-                                            $name = $infos[0];
-                                            $url = $infos[1];
-                                            $url_image = $infos[2];
-                                                ?>
+                                     }
+                                     if (isset($_SESSION['email'])) {
+                                         $a = find_user($_SESSION['email']);
+                                         if (count($content[0]['travels']) == 0) {
+                                             echo "<h1>Vous n'avez pas encore réservé de voyage</h1>";
+                                         } else {
+                                             echo "<h1>Mes Voyages :</h1>";
+                                             if (file_exists("../data/travel.json")) {
+                                                 $content_travel = json_decode(file_get_contents("../data/travel.json"), true);
+                                             } else {
+                                                 header('Location: ../php_pages/inscription.php');
+                                                 exit();
+                                             }
+                                             if ($content_travel === null) {
+                                                 header('Location: ../php_pages/user_register_travel.php');
+                                                 exit();
+                                             }
+                                             for ($i = 0; $i < count($content[0]['travels']); $i++):
+                                                 for ($o = 0; $o < count($content_travel); $o++):
+                                                     if ($content[0]['travels'][$i]['destination'] === $content_travel[$o]['destination']) {
+                                                         $url_image = $content_travel[$o]['image'];
+                                                         break;
+                                                     }
+                                                 endfor;
+                                                 ?>
                                             
                         <div class="compte-info-container">
                             <div class="grid-container">
                                 <div class="line-container">
                                     <div class="grid-item">
-                                        <a href="<?php echo $url ?>" class="image-select">
+                                        <a href="../destination-pages<?php echo $content[$a]["travels"][$i]["destination"] ?>" class="image-select">
                                             <img src="<?php echo $url_image?>" alt="image">
-                                            <h3><?php echo $name ?></h3>
+                                            <h3><?php  echo $content[$a]["travels"][$i]["destination"] ?></h3>
                                         </a>
                                     </div>
                                 <?php 
@@ -144,18 +157,10 @@ require_once "../php_pages/header.php";
                                             <p>Date de retour : <strong><?php echo $content[$a]['travels'][$i]['return']?></strong></p>
                                         </div>
                                         <div class="modification-container">
-                                            <form action="../php/define-index-travel.php" method="post">
-                                                <input type="hidden" name="index-travel" value="<?php echo $i ?>">
-                                                <input type="hidden" name="todo" value="modify">
-                                                <button class="button-modifier">Modifier</button>
-                                            </form>
+                                            <a href="../php/define-index-travel.php?action=modify&travel=<?php echo $content[$a]["travels"][$i]["destination"]?>" method="get">Modifier</a>
                                         </div>  
                                         <div class="modification-container">
-                                            <form action="../php/define-index-travel.php" method="post">
-                                                <input type="hidden" name="index-travel" value="<?php echo $i ?>">
-                                                <input type="hidden" name="todo" value="see">
-                                                <button class="button-modifier">Voir</button>
-                                            </form>
+                                            <a href="../php/define-index-travel.php?action=see&travel=<?php echo $content[$a]['travels'][$i]['destination']?>">Voir</a>
                                         </div> 
                                     </div>
                                     
@@ -163,6 +168,7 @@ require_once "../php_pages/header.php";
                                 <?php
                                 endfor;
                                     }
+                                }
                                 } else {
                                     header('Location: ../php_pages/inscription.php');
                                     exit();

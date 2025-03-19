@@ -1,11 +1,10 @@
 <?php
 
 session_start();
-if(isset($_POST['index-travel']) && isset($_POST['todo'])){
-    $_SESSION['index-travel'] = $_POST['index-travel'];
-    switch ($_POST['todo']){
+if(isset($_GET['action']) && isset($_GET['travel'])){
+    switch ($_GET['action']){
         case "modify":
-            header('Location: ../php_pages/modification.php');
+            header('Location: ../php_pages/modification.php?travel='.$_GET['travel']);
             exit();
             break;
         case "delete":
@@ -13,7 +12,7 @@ if(isset($_POST['index-travel']) && isset($_POST['todo'])){
             exit();
             break;
         case "see" :
-            header('Location: ../php_pages/travel-information.php');
+            header('Location: ../php_pages/travel-information.php?travel='.$_GET['travel']);
             exit();
         default:
             header('Location: ../php_pages/user.php');

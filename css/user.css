@@ -36,6 +36,7 @@ h1 {
     background: var(--color-background-2);
     border-radius: 2rem;
     padding: 1.5rem 2rem;
+    min-width: 60rem;
 }
 
 
@@ -74,6 +75,7 @@ h1 {
     border-radius: 2rem;
     align-items: center;
     justify-content: center;
+    min-width: 10rem;
 }
 
 .utilisateur-image img {

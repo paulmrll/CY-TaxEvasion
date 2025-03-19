@@ -132,7 +132,7 @@ if (isset($_POST["destination"])){
             </div>
             <div class="button-container" id="buttons">
                 <input type="hidden" name="todo" value="modify">
-                <button type="submit">Modifier</button>
+                <button type="submit">Réserver</button>
 
             </div>
         </form>
