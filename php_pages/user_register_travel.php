@@ -59,7 +59,7 @@ if (isset($_POST["destination"])){
     <img src="<?php echo $content[$i]["image"]?>" alt="Image de la destination">
     <h1>Commander votre voyage à <?php echo $content[$i]["destination"]?></h1>
     <div class="container">
-    <form method="post" action="../php/modification_travel.php">
+    <form method="post" action="../php/register_travel.php">
        
 
 
