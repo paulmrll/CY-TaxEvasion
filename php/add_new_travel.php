@@ -40,7 +40,7 @@ function add_travel($destination, $hotel, $loisir, $visite, $relaxation) {
     ];
 
     // Enregistrer les nouvelles données
-    file_put_contents($jsonFile, json_encode($content, JSON_PRETTY_PRINT));
+    file_put_contents($jsonFile, json_encode($content, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT));
 
     // Redirection vers la page d'administration
     header('Location: ../php_pages/admin.php');

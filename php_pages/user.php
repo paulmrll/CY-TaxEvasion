@@ -104,8 +104,17 @@ require_once "../php_pages/header.php";
                                         exit();
                                      }
                                      if (isset($_SESSION['email'])) {
-                                         $a = find_user($_SESSION['email']);
-                                         if (count($content[0]['travels']) == 0) {
+                                         for ($i = 0; $i < count($content); $i++){
+                                            if ($content[$i]["email"] === $_SESSION['email']){
+                                                $a = $i;
+                                                break;
+                                            } else {
+                                                $a = -2;
+                                            }
+                                         }if ($a < 0){
+                                            header("Location: ../php_pages/connexion.php");
+                                         }
+                                         if (count($content[$a]['travels']) == 0) {
                                              echo "<h1>Vous n'avez pas encore réservé de voyage</h1>";
                                          } else {
                                              echo "<h1>Mes Voyages :</h1>";
@@ -119,10 +128,12 @@ require_once "../php_pages/header.php";
                                                  header('Location: ../php_pages/user_register_travel.php');
                                                  exit();
                                              }
-                                             for ($i = 0; $i < count($content[0]['travels']); $i++):
+                                             for ($i = 0; $i < count($content[$a]['travels']); $i++):
+
                                                  for ($o = 0; $o < count($content_travel); $o++):
-                                                     if ($content[0]['travels'][$i]['destination'] === $content_travel[$o]['destination']) {
+                                                     if ($content[$a]['travels'][$i]['destination'] === $content_travel[$o]['destination']) {
                                                          $url_image = $content_travel[$o]['image'];
+                                                         $name = $content_travel[$o]['name'];
                                                          break;
                                                      }
                                                  endfor;
@@ -134,7 +145,7 @@ require_once "../php_pages/header.php";
                                     <div class="grid-item">
                                         <a href="../destination-pages<?php echo $content[$a]["travels"][$i]["destination"] ?>" class="image-select">
                                             <img src="<?php echo $url_image?>" alt="image">
-                                            <h3><?php  echo $content[$a]["travels"][$i]["destination"] ?></h3>
+                                            <h3><?php  echo $name ?></h3>
                                         </a>
                                     </div>
                                 <?php 

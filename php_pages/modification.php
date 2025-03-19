@@ -61,7 +61,7 @@ require_once "../php_pages/header.php";
                                 $url_image = $content_travel[$p]['image'];
                                 $index_travel = $p;
                                 $index = $i;
-
+                                $name = $content_travel[$p]['name']
                                 break;
                         }
                     }
@@ -77,7 +77,7 @@ require_once "../php_pages/header.php";
    
 
     <img src="<?php echo $url_image?>" alt="Image de la destination">
-    <h1>Modifier votre voyage à <?php echo $content_travel[$index_travel]["destination"]?></h1>
+    <h1>Modifier votre voyage à <?php echo $name?></h1>
     <div class="container">
     <form method="post" action="../php/modification_travel.php">
        

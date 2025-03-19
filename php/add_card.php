@@ -18,7 +18,7 @@ function add_card($name, $card, $date, $cvv){
             $content[$i]['card']['number'] = $card;
             $content[$i]['card']['date'] = $date;
             $content[$i]['card']['cvv'] = $cvv;
-            file_put_contents($jsonFile, json_encode($content, JSON_PRETTY_PRINT));
+            file_put_contents($jsonFile, json_encode($content, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT));
         }
     }
     header('Location: ../php/inscription.php');

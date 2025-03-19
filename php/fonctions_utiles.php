@@ -24,7 +24,7 @@ function change_connexionDate(){
                 break;
             }
         }
-        file_put_contents("../data/utilisateurs.json", json_encode($content, JSON_PRETTY_PRINT));
+        file_put_contents("../data/utilisateurs.json", json_encode($content, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT));
     }
 }
 function find_user(){

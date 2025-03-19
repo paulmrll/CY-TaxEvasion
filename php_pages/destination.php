@@ -114,10 +114,10 @@ require_once "../php_pages/header.php";
             <a class="grid-line-container" href="../php_pages/description-pages.php?destination=<?php echo $content[$i]['destination'];?>">
                 <div class="grid-item">
                     <div class="image-select">
-                        <img src="<?php echo $content[$i]["image"]?>" alt="<?php echo $content[$i]['destination'];?>">
-                        <h3><?php echo $content[$i]['destination'];?></h3>
+                        <img src="<?php echo $content[$i]["image"]?>" alt="<?php echo $content[$i]['name'];?>">
+                        <h3><?php echo $content[$i]['name'];?></h3>
                         <div class="flag">
-                            <img src="<?php echo $content[$i]["image-flag"]?>" alt="<?php echo $content[$i]['destination'];?>-flag">
+                            <img src="<?php echo $content[$i]["image-flag"]?>" alt="<?php echo $content[$i]['name'];?>-flag">
                         </div>
                     </div>
                 </div>

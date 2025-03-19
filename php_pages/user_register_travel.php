@@ -57,7 +57,7 @@ if (isset($_POST["destination"])){
    
 
     <img src="<?php echo $content[$i]["image"]?>" alt="Image de la destination">
-    <h1>Commander votre voyage à <?php echo $content[$i]["destination"]?></h1>
+    <h1>Réserver votre voyage à <?php echo $content[$i]["destination"]?></h1>
     <div class="container">
     <form method="post" action="../php/register_travel.php">
        
@@ -136,10 +136,7 @@ if (isset($_POST["destination"])){
 
             </div>
         </form>
-        <form method="post" action="../php/modification_travel.php">
-        <input type="hidden" name="todo" value="delete">
-        <button type="submit" id="delete">Supprimer le voyage</button>
-        </form>
+        
     </div>
 </main>
 

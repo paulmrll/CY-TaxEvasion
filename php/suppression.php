@@ -12,7 +12,7 @@ function supprimer($mail){
             for ($i = 0; $i < count($content); $i++){
                 if ($content[$i]['email'] === $mail){
                     unset($content[$i]);
-                    file_put_contents("../data/utilisateurs.json", json_encode($content, JSON_PRETTY_PRINT));
+                    file_put_contents("../data/utilisateurs.json", json_encode($content, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT));
                     session_destroy();
                     header('Location: ../php_pages/admin.php');
                     exit();

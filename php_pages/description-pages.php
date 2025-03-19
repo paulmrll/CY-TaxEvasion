@@ -50,7 +50,7 @@ require_once "../php_pages/header.php";
 
 <main>
     <div class="title-container">
-        <h1><?php echo $content[$i]["destination"] ?></h1>
+        <h1><?php echo $content[$i]["name"] ?></h1>
         <img class="main-image" src="<?php echo $content[$i]["image"] ?>" alt="<?php echo $content[$i]["image"] ?>">
     </div>
 
@@ -65,7 +65,7 @@ require_once "../php_pages/header.php";
     </form>
     
     <div class="maps">
-        <img src="<?php echo $content[$i]["image_maps"]?>" alt="<?php $content[$i]["destination"]?>-maps">
+        <img src="<?php echo $content[$i]["image_maps"]?>" alt="<?php echo $content[$i]["destination"]?>-maps">
         <br>
         <p>Carte <?php echo $content[$i]["destination"] ?></p>
     </div>

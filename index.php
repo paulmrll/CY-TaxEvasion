@@ -87,19 +87,22 @@
                 <span class="search-bar-title">Recherchez votre destination de rêve</span>
                 <input type="text" name="destination" list="destination" placeholder="Entrez une destination..." required>
                 <datalist id="destination">
-                    <option value="Les Samoa-Américaines" data-value="?destination=Samoa"></option>
-                    <option value="Anguilla"></option>
-                    <option value="Antigua-et-Barbuda"></option>
-                    <option value="Les Fidji"></option>
-                    <option value="Les Palaos"></option>
-                    <option value="Le Panama"></option>
-                    <option value="Monaco"></option>
-                    <option value="Bermudes"></option>
-                    <option value="Chypre"></option>
-                    <option value="Malte"></option>
-                    <option value="Les Emirats arabes unis"></option>
-                    <option value="Les Îles Caïmans"></option>
-                    <option value="Malte"></option>
+                    <?php 
+                        $file = "data/travel.json";
+                        if (!file_exists($file)){
+                            header("Location: php_pages/user.php");
+                            exit();
+                        }
+                        $content = json_decode(file_get_contents($file), true);
+                        if ($content == null){
+                            header("Location: php_pages/user.php");
+                            exit();
+                        }
+                        for ($i = 0; $i < count($content); $i++):
+                    ?>
+                    <option value="<?php echo $content[$i]["name"]?>"></option>
+                    <?php endfor;?>
+                    
                 </datalist>
             </label>
         </form>

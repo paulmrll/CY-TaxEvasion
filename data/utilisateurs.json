@@ -5,7 +5,39 @@
         "email": "paul.morille11@gmail.com",
         "password": "$2y$10$iSy5edG0RbP4l9EarOeD\/uspI.xmunPJXOnD6o\/qrUPgV8jawrYyC",
         "inscription_date": "19-03-2025 21:04:45",
-        "connexion_date": "19-03-2025 22:27:06",
+        "connexion_date": "19-03-2025 23:42:25",
+        "role": "Admin",
+        "travels": [],
+        "card": {
+            "name": "",
+            "number": 0,
+            "date": 0,
+            "cvv": 0
+        }
+    },
+    {
+        "name": "A",
+        "firstname": "Aa",
+        "email": "a@gmail.com",
+        "password": "$2y$10$tPNq\/jHTM\/EMCOxIbFALEeqVeH7cqVvHZ684E0q9ec0vAXHXknId2",
+        "inscription_date": "19-03-2025 23:50:02",
+        "connexion_date": "19-03-2025 23:50:02",
+        "role": "Utilisateur",
+        "travels": [],
+        "card": {
+            "name": "",
+            "number": 0,
+            "date": 0,
+            "cvv": 0
+        }
+    },
+    {
+        "name": "B",
+        "firstname": "B",
+        "email": "b@gmail.com",
+        "password": "$2y$10$17K9O1K7UAyVEaoTb5JGKe3wloe54FvleT2eBhYK\/zvbD4ad8M6Ry",
+        "inscription_date": "19-03-2025 23:53:51",
+        "connexion_date": "20-03-2025 00:13:25",
         "role": "Utilisateur",
         "travels": [],
         "card": {

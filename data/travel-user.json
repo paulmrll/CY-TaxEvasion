@@ -4,22 +4,22 @@
         "travels": [
             {
                 "destination": "Monaco",
-                "hotel": "5 etoiles premium",
+                "hotel": "5 étoiles premium",
                 "loisir": [
                     "Visite de Banque",
                     "Jet-Ski",
-                    "Plonge sous-marine",
+                    "Plongée sous-marine",
                     "Balade en yacht"
                 ],
                 "visite": [
                     "Visite de Banque",
-                    "Visite d'un Musee Colonialiste",
+                    "Visite d'un Musée Colonialiste",
                     "Visite d'un vignoble"
                 ],
                 "relaxation": [
-                    "Spa et Jacuzzi Prive",
-                    "Diner gastronomique 5 etoiles",
-                    "Soiree VIP executif business class"
+                    "Spa et Jacuzzi Privé",
+                    "Diner gastronomique 5 étoiles",
+                    "Soiree VIP éxecutif business class"
                 ],
                 "departure": "2025-03-20",
                 "return": "2025-03-29",
@@ -27,24 +27,164 @@
             },
             {
                 "destination": "Anguilla",
-                "hotel": "5 etoiles premium",
+                "hotel": "5 étoiles premium",
                 "loisir": [
                     "Visite de Banque",
                     "Jet-Ski",
-                    "Plonge sous-marine",
+                    "Plongée sous-marine",
                     "Balade en yacht"
                 ],
                 "visite": [
                     "Visite de Banque",
-                    "Visite d'un Musee Colonialiste",
+                    "Visite d'un Musée Colonialiste",
                     "Visite d'un vignoble"
                 ],
                 "relaxation": [
-                    "Spa et Jacuzzi Prive",
-                    "Diner gastronomique 5 etoiles",
-                    "Soiree VIP executif business class"
+                    "Spa et Jacuzzi Privé",
+                    "Diner gastronomique 5 étoiles",
+                    "Soiree VIP éxecutif business class"
                 ],
                 "departure": "2025-03-20",
+                "return": "2025-03-30",
+                "reservation": "Paiement en attente"
+            },
+            {
+                "destination": "Anguilla",
+                "hotel": "5 étoiles Premium VIP",
+                "loisir": [
+                    "Visite de Banque"
+                ],
+                "visite": [
+                    "Visite d'un Musée Colonialiste"
+                ],
+                "relaxation": [
+                    "Diner gastronomique 5 étoiles"
+                ],
+                "departure": "2025-03-20",
+                "return": "2025-03-26",
+                "reservation": "Paiement en attente"
+            },
+            {
+                "destination": "Anguilla",
+                "hotel": "5 étoiles premium",
+                "loisir": [
+                    "Visite de Banque",
+                    "Jet-Ski"
+                ],
+                "visite": [
+                    "Visite d'un Musée Colonialiste"
+                ],
+                "relaxation": [
+                    "Spa et Jacuzzi Privé"
+                ],
+                "departure": "2025-03-20",
+                "return": "2025-03-29",
+                "reservation": "Paiement en attente"
+            }
+        ]
+    },
+    {
+        "email": "a@gmail.com",
+        "travels": [
+            {
+                "destination": "Anguilla",
+                "hotel": "5 étoiles",
+                "loisir": [
+                    "Visite de Banque"
+                ],
+                "visite": [
+                    "Visite d'un Musée Colonialiste"
+                ],
+                "relaxation": [
+                    "Spa et Jacuzzi Privé"
+                ],
+                "departure": "2025-03-20",
+                "return": "2025-03-27",
+                "reservation": "Paiement en attente"
+            }
+        ]
+    },
+    {
+        "email": "b@gmail.com",
+        "travels": [
+            {
+                "destination": "Anguilla",
+                "hotel": "5 étoiles premium",
+                "loisir": [
+                    "Visite de Banque"
+                ],
+                "visite": [
+                    "Visite d'un Musée Colonialiste"
+                ],
+                "relaxation": [
+                    "Spa et Jacuzzi Privé"
+                ],
+                "departure": "2025-03-20",
+                "return": "2025-03-25",
+                "reservation": "Paiement en attente"
+            },
+            {
+                "destination": "Monaco",
+                "hotel": "5 étoiles premium",
+                "loisir": [
+                    "Jet-Ski"
+                ],
+                "visite": [
+                    "Visite d'un Musée Colonialiste"
+                ],
+                "relaxation": [
+                    "Spa et Jacuzzi Privé"
+                ],
+                "departure": "2025-03-21",
+                "return": "2025-03-31",
+                "reservation": "Paiement en attente"
+            },
+            {
+                "destination": "Antigua",
+                "hotel": "5 étoiles Premium VIP Deluxe",
+                "loisir": [
+                    "Jet-Ski"
+                ],
+                "visite": [
+                    "Visite d'un Musée Colonialiste"
+                ],
+                "relaxation": [
+                    "Spa et Jacuzzi Privé"
+                ],
+                "departure": "2025-03-22",
+                "return": "2025-03-31",
+                "reservation": "Paiement en attente"
+            },
+            {
+                "destination": "Chypre",
+                "hotel": "5 étoiles Premium VIP",
+                "loisir": [
+                    "Plongée sous-marine"
+                ],
+                "visite": [
+                    "Visite d'un Musée Colonialiste"
+                ],
+                "relaxation": [
+                    "Spa et Jacuzzi Privé"
+                ],
+                "departure": "2025-03-21",
+                "return": "2025-03-28",
+                "reservation": "Paiement en attente"
+            },
+            {
+                "destination": "Eau",
+                "hotel": "5 étoiles premium",
+                "loisir": [
+                    "Plongée sous-marine"
+                ],
+                "visite": [
+                    "Visite de Banque",
+                    "Visite d'un Musée Colonialiste"
+                ],
+                "relaxation": [
+                    "Spa et Jacuzzi Privé"
+                ],
+                "departure": "2025-03-21",
                 "return": "2025-03-30",
                 "reservation": "Paiement en attente"
             }

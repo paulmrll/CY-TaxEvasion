@@ -32,7 +32,7 @@ function modification_travel($destination, $hotel, $loisir, $visite, $relaxation
                     $content[$i]["travels"][$o]["departure"] = $departure;
                     $content[$i]["travels"][$o]["return"] = $return;
                     $content[$i]["travels"][$o]["loisir"] = $loisir;
-                    file_put_contents($jsonFile, json_encode($content, JSON_PRETTY_PRINT));
+                    file_put_contents($jsonFile, json_encode($content, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT));
                     header("Location: ../php_pages/user.php");
                     exit();
                 }
@@ -63,7 +63,7 @@ function delete_travel($destination){
             for ($o = 0; $o < count($content[$i]["travels"]); $o++){
                 if ($content[$i]["travels"][$o]["destination"] === $destination){
                     unset($content[$i]["travels"][$o]);
-                    file_put_contents($jsonFile, json_encode($content, JSON_PRETTY_PRINT));
+                    file_put_contents($jsonFile, json_encode($content, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT));
                     echo "1";
                 }
             }

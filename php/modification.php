@@ -23,7 +23,7 @@ function user_modification($email, $password, $firstname, $name){
                 $content[$i]['password'] = $password_hash;
                 $content[$i]['email'] = $email;
 
-                file_put_contents($jsonFile, json_encode($content, JSON_PRETTY_PRINT));
+                file_put_contents($jsonFile, json_encode($content, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT));
 
                 $_SESSION['email'] = $email;
                 $_SESSION['name'] = $name;
