@@ -136,7 +136,7 @@
         "password": "$2y$10$17F2x4zLxK0oQcedGcHBhuq6KkNop8u6TD7nuYaUG4duOWC50K5t6",
         "inscription_date": "19-03-2025 10:54:41",
         "connexion_date": "19-03-2025 10:59:09",
-        "role": "Utilisateur",
+        "role": "Admin",
         "travels": [
             {
                 "destination": "Samoa",

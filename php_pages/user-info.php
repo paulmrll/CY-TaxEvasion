@@ -65,6 +65,7 @@ require_once "../php_pages/header.php";
         <div class="main-grid">
             <div class="compte-info-container">
                 <div class="utilisateur-line-container">
+
                     <div class="box-container">
 
                         <form action="../php/modification.php" method="post">
@@ -172,13 +173,22 @@ require_once "../php_pages/header.php";
                                     <p class="Effectué">Effectué</p>
                                 </div>
 
+                                <div class="button-ajouter-voyage">
+                                    <button>Ajouter un voyage</button>
+                                </div>
+
 
                             </div>
                         </div>
 
                     </div>
 
+
+
+
                 </div>
+
+
             </div>
         </div>
 

@@ -63,7 +63,7 @@ require_once "../php_pages/header.php";
 
 
    
-
+value
     <div class="maps">
         <img src="<?php echo $content[$i]["image_maps"]?>" alt="<?php $content[$i]["destination"]?>-maps">
         <br>

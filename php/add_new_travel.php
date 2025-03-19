@@ -1,13 +1,6 @@
 <?php
 
 require_once "../php/fonctions_utiles.php";
-
-
-
-
-
-
-
 require_once "../php/fonctions_utiles.php";
 
 function add_travel($destination, $hotel, $loisir, $visite, $relaxation) {
@@ -67,11 +60,5 @@ if (isset($_POST['destination']) && isset($_POST['hotel']) && isset($_POST['lois
 
     exit();
 }
-
-
-
-
-
-
 
 ?>

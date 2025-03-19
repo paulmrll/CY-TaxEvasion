@@ -98,8 +98,7 @@ require_once "../php_pages/header.php";
     <div class="destination-grid">
         <div class="grid-container">
 
-        <a class="grid-line-container" href="../php_pages/description-pages.php?destination=Samoa">
-        <button type="submit" class="reservation-button">
+            <a class="grid-line-container" href="../php_pages/description-pages.php?destination=Samoa">
                 <div class="grid-item">
                     <div class="image-select">
                         <img src="../image/les-samoa-americaine.jpeg" alt="les-samoa_américaines">
@@ -116,10 +115,10 @@ require_once "../php_pages/header.php";
                         entreprises offshore</strong> bénéficiant d'une réglementation souple et d'un cadre tropical
                     idyllique.
                 </div>
-</a>
+            </a>
 
-                <a class="grid-line-container" href="../php_pages/description-pages.php?destination=Anguilla">
-                
+            <a class="grid-line-container" href="../php_pages/description-pages.php?destination=Anguilla">
+
                 <div class="grid-item">
                     <div class="image-select">
                         <img src="../image/anguilla.jpg" alt="anguilla">
@@ -131,16 +130,17 @@ require_once "../php_pages/header.php";
                 </div>
                 <div class="description-texte">
                     L’un des paradis fiscaux les plus attractifs, avec <strong>0%
-                    d'impôt
-                    sur les sociétés, les plus-values et les revenus.</strong> Aucune exigence de déclaration financière
+                        d'impôt
+                        sur les sociétés, les plus-values et les revenus.</strong> Aucune exigence de déclaration
+                    financière
                     et un
                     secret bancaire renforcé. Plus de <strong>250 000 entreprises offshore</strong> y sont déjà
                     établies. Profitez d’une
                     fiscalité avantageuse sous le soleil des Caraïbes !
                 </div>
-                </a>
+            </a>
 
-                <a class="grid-line-container" href="../php_pages/description-pages.php?destination=Antigua">
+            <a class="grid-line-container" href="../php_pages/description-pages.php?destination=Antigua">
                 <div class="grid-item">
                     <div class="image-select">
                         <img src="../image/antigua-et-barbuda.jpg" alt="antigua-et-barbuda">
@@ -152,15 +152,15 @@ require_once "../php_pages/header.php";
                 </div>
                 <div class="description-texte">
                     Un refuge fiscal idéal avec <strong>0% d'impôt sur le
-                    revenu,</strong>
+                        revenu,</strong>
                     les plus-values et les successions. Bénéficiez d’un passeport puissant grâce au programme de
                     citoyenneté par investissement, tout en profitant de <strong>365 plages paradisiaques.</strong> Un
                     climat fiscal et
                     tropical parfait pour vos affaires !
                 </div>
-                </a> 
+            </a>
 
-                <a class="grid-line-container" href="../php_pages/description-pages.php?destination=Fidji">
+            <a class="grid-line-container" href="../php_pages/description-pages.php?destination=Fidji">
                 <div class="grid-item">
                     <div class="image-select">
                         <img src="../image/les-fidji.jpeg" alt="les_fidji">
@@ -173,16 +173,16 @@ require_once "../php_pages/header.php";
 
                 <div class="description-texte">
                     Avec <strong>0 % d’impôt sur le revenu des sociétés étrangères et un
-                    secret
-                    bancaire strict,</strong> les Fidji offrent un cadre fiscal avantageux pour les investisseurs.
+                        secret
+                        bancaire strict,</strong> les Fidji offrent un cadre fiscal avantageux pour les investisseurs.
                     Profitez de
                     plages paradisiaques tout en bénéficiant d’un environnement financier souple et discret. Alliez
                     <strong>évasion fiscale et évasion tropicale</strong> en faisant des Fidji votre prochaine
                     destination d’affaires !
                 </div>
-                </a>
+            </a>
 
-                <a class="grid-line-container" href="../php_pages/description-pages.php?destination=Palaos">
+            <a class="grid-line-container" href="../php_pages/description-pages.php?destination=Palaos">
                 <div class="grid-item">
                     <div class="image-select">
                         <img src="../image/les-palaos.jpg" alt="les-palaos">
@@ -205,7 +205,7 @@ require_once "../php_pages/header.php";
 
             </a>
 
-            
+
             <a class="grid-line-container" href="../php_pages/description-pages.php?destination=panama">
                 <div class="grid-item">
                     <div class="image-select">
@@ -219,7 +219,8 @@ require_once "../php_pages/header.php";
                 <div class="description-texte">
                     Avec une <strong>imposition nulle sur les revenus étrangers</strong> et un système
                     bancaire réputé pour sa confidentialité, le Panama est un choix stratégique pour les entrepreneurs
-                    et investisseurs. Profitez d’un cadre fiscal avantageux tout en vivant sous le <strong>soleil des Caraïbes,</strong>
+                    et investisseurs. Profitez d’un cadre fiscal avantageux tout en vivant sous le <strong>soleil des
+                        Caraïbes,</strong>
                     entre gratte-ciels modernes et plages paradisiaques.
                 </div>
             </a>
@@ -235,15 +236,18 @@ require_once "../php_pages/header.php";
                     </div>
                 </div>
                 <div class="description-texte">
-                Monaco : Le Refuge Fiscal de Prestige 🏝️💰
-                Zéro impôt sur le revenu, aucune taxe sur la fortune ni sur les plus-values :
-                     Monaco est le paradis fiscal européen par excellence. Avec sa stabilité politique, 
-                     son cadre de vie luxueux et son accès privilégié aux marchés internationaux, la Principauté attire 
-                     les grandes fortunes et les entrepreneurs en quête d’optimisation fiscale dans un environnement sécurisé et prestigieux.
+                    <strong>Zéro impôt</strong> sur le revenu, <strong>aucune taxe sur la fortune</strong> ni sur les
+                    plus-values :
+                    Monaco est le <strong>paradis fiscal européen</strong> par excellence. Avec sa <strong>stabilité
+                        politique</strong>,
+                    son cadre de vie luxueux et son accès privilégié aux marchés internationaux, la Principauté attire
+                    les <strong>grandes fortunes</strong> et les <strong>entrepreneurs</strong> en quête d’optimisation
+                    fiscale dans un <strong>environnement
+                        sécurisé et prestigieux</strong>.
                 </div>
-                </a>
+            </a>
 
-                <a class="grid-line-container" href="../php_pages/description-pages.php?destination=Bermudes">
+            <a class="grid-line-container" href="../php_pages/description-pages.php?destination=Bermudes">
                 <div class="grid-item">
                     <div class="image-select">
                         <img src="../image/bermudes.jpg" alt="bermudes.jpeg">
@@ -252,17 +256,19 @@ require_once "../php_pages/header.php";
                             <img src="../image/bermudes-flag.png" alt="bermudes-flag.png">
                         </div>
                     </div>
-                 </div>
+                </div>
                 <div class="description-texte">
-                Les Bermudes : Le Paradis Fiscal de l'Atlantique 🌴💼
-                Aucune taxe sur le revenu, les sociétés, les plus-values ou les dividendes :
-                les Bermudes sont l'escale idéale pour l'optimisation fiscale. Grâce à leur fiscalité ultra-attractive,
-                leur stabilité économique et leur discrétion financière, l'archipel séduit les investisseurs et les entreprises 
-                à la recherche d'un environnement propice à la rentabilité et à la sécurité.
-                    </div>
-                </a>
-               
-                <a class="grid-line-container" href="../php_pages/description-pages.php?destination=Chypre">
+                    <strong>Aucune taxe sur le revenu, les sociétés, les plus-values ou les dividendes</strong> :
+                    les Bermudes sont l'escale idéale pour l'optimisation fiscale. Grâce à leur fiscalité
+                    ultra-attractive,
+                    leur <strong>stabilité économique</strong> et leur <strong>discrétion financière</strong>,
+                    l'archipel séduit les investisseurs et les
+                    entreprises à la recherche d'un environnement propice à la <strong>rentabilité</strong> et à la
+                    <strong>sécurité</strong>.
+                </div>
+            </a>
+
+            <a class="grid-line-container" href="../php_pages/description-pages.php?destination=Chypre">
                 <div class="grid-item">
                     <div class="image-select">
                         <img src="../image/chypre.jpeg" alt="chypre.jpeg">
@@ -271,17 +277,21 @@ require_once "../php_pages/header.php";
                             <img src="../image/chypre.png" alt="chypre-flag.png">
                         </div>
                     </div>
-                 </div>
-                <div class="description-texte">
-                Chypre : Un Hub Fiscal en Méditerranée 🌞💼
-                Taux d’imposition sur les sociétés de seulement 12,5 %, exonération des plus-values et des dividendes :
-                 Chypre offre une fiscalité des plus compétitives au cœur de l’UE. Avec son cadre juridique stable et ses avantages
-                  fiscaux, l'île attire les entrepreneurs et investisseurs cherchant à optimiser leurs bénéfices dans un environnement 
-                  sécurisé et stratégique.
                 </div>
-                </a>
+                <div class="description-texte">
+                    <strong>Taux d’imposition sur les sociétés</strong> de seulement <strong>12,5 %</strong>,
+                    exonération des plus-values et des
+                    dividendes :
+                    Chypre offre une fiscalité des plus compétitives au <strong>cœur de l’UE</strong>. Avec son <strong>cadre
+                        juridique stable</strong> et
+                    ses <strong>avantages fiscaux</strong>,
+                    l'île attire les <strong>entrepreneurs et investisseurs</strong> cherchant à optimiser leurs
+                    bénéfices dans
+                    un <strong>environnement sécurisé et stratégique</strong>.
+                </div>
+            </a>
 
-                <a class="grid-line-container" href="../php_pages/description-pages.php?destination=Malte">
+            <a class="grid-line-container" href="../php_pages/description-pages.php?destination=Malte">
                 <div class="grid-item">
                     <div class="image-select">
                         <img src="../image/malte.jpg" alt="malte.jpeg">
@@ -292,14 +302,19 @@ require_once "../php_pages/header.php";
                     </div>
                 </div>
                 <div class="description-texte">
-                Malte : Optimisation Fiscale au Cœur de l’UE 🇲🇹💼
-                Taux d’imposition sur les sociétés à partir de 5 % grâce à un système de remboursement, plus aucune taxe 
-                sur les plus-values et les dividendes : Malte combine fiscalité avantageuse et accès au marché européen. 
-                L'île attire les investisseurs et entreprises recherchant un cadre fiscal compétitif dans un environnement stable et prospère.
+                    Taux d’<strong>imposition sur les sociétés à partir de 5 %</strong> grâce à un système de
+                    remboursement, plus aucune
+                    taxe
+                    sur les plus-values et les dividendes : Malte <strong>combine fiscalité avantageuse et accès au
+                        marché
+                        européen</strong>.
+                    L'île attire les investisseurs et <strong>entreprises</strong> recherchant <strong>un cadre fiscal
+                        compétitif</strong> dans un
+                    <strong>environnement stable et prospère</strong>.
                 </div>
-                </a>
+            </a>
 
-                <a class="grid-line-container" href="../php_pages/description-pages.php?destination=Eau">
+            <a class="grid-line-container" href="../php_pages/description-pages.php?destination=Eau">
                 <div class="grid-item">
                     <div class="image-select">
                         <img src="../image/EAU.jpg" alt="EAU.jpeg">
@@ -310,14 +325,19 @@ require_once "../php_pages/header.php";
                     </div>
                 </div>
                 <div class="description-texte">
-                EAU : Un Paradis Fiscal au Cœur du Moyen-Orient 🏙️💼
-                Aucune taxe sur le revenu, les sociétés, les plus-values ou les dividendes : les Émirats arabes unis sont une destination 
-                fiscale de premier choix. Grâce à leur fiscalité ultra-compétitive, leur stabilité politique et leur environnement économique 
-                prospère, les EAU attirent les entreprises et les investisseurs à la recherche d’un cadre fiscal optimal dans un centre d’affaires
-                 dynamique.
+                    <strong>Aucune taxe sur le revenu</strong>, les sociétés, les plus-values ou les dividendes : les
+                    Émirats arabes unis
+                    sont une <strong>destination fiscale de premier choix</strong>.
+                    Grâce à leur <strong>fiscalité ultra-compétitive</strong>, leur stabilité
+                    politique et leur
+                    environnement économique
+                    prospère, les EAU attirent les <strong>entreprises</strong> et les <strong>investisseurs</strong> à
+                    la recherche d’un cadre fiscal
+                    optimal dans un <strong>centre d’affaires
+                        dynamique</strong>.
                 </div>
-                </a>
-                <a class="grid-line-container" href="../php_pages/description-pages.php?destination=Caimans">
+            </a>
+            <a class="grid-line-container" href="../php_pages/description-pages.php?destination=Caimans">
                 <div class="grid-item">
                     <div class="image-select">
                         <img src="../image/caimans.jpg" alt="caimans.jpeg">
@@ -328,15 +348,16 @@ require_once "../php_pages/header.php";
                     </div>
                 </div>
                 <div class="description-texte">
-                Caïmans : Le Centre Financier Offshore Idéal 🌴💰
-                Zéro impôt sur le revenu, les sociétés, les plus-values ou les dividendes : les îles Caïmans offrent une fiscalité 
-                exceptionnelle pour les entreprises et les investisseurs. Grâce à leur stabilité économique, leur cadre juridique souple
-                 et leur discrétion financière, les Caïmans sont une destination privilégiée pour l’optimisation fiscale.
+                    <strong>Zéro impôt</strong> sur le <strong>revenu</strong>, les <strong>sociétés</strong>, les
+                    <strong>plus-values</strong> ou les <strong>dividendes</strong> : les îles Caïmans offrent
+                    une <strong>fiscalité
+                        exceptionnelle</strong> pour les entreprises et les investisseurs. Grâce à leur stabilité
+                    économique, leur
+                    <strong>cadre juridique souple</strong>
+                    et leur <strong>discrétion financière</strong>, les Caïmans sont une <strong>destination privilégiée pour l’optimisation
+                    fiscale</strong>.
                 </div>
-                </a>
-
-
-
+            </a>
 
 
         </div>

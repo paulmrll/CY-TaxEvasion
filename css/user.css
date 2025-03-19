@@ -210,9 +210,32 @@ main div button img {
     border-radius: 5px;
 }
 
-
-
 .button-payer button {
+
+    color: var(--color-light-writing);
+    text-align: center;
+    font-size: 1.4rem;
+    border-radius: 1rem 0.1rem;
+    background-color: var(--color-submit);
+    border: 0.1rem var(--color-submit) solid;
+    padding: 0.4rem 0.8rem;
+}
+
+.button-payer button:hover {
+    cursor: pointer;
+    background-color: var(--color-header-active-lighter);
+}
+
+
+
+.button-ajouter-voyage{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.button-ajouter-voyage button{
+    margin-right: 32rem;
     color: var(--color-light-writing);
     text-align: center;
     font-size: 1.4rem;
@@ -223,7 +246,7 @@ main div button img {
 }
 
 
-.button-payer button:hover {
+.button-ajouter-voyage button:hover {
     cursor: pointer;
     background-color: var(--color-header-active-lighter);
 }
@@ -288,13 +311,4 @@ main div button img {
 a {
     text-decoration: none;
 }
-button{
-    background: grey;
-    border: 0.08rem solid grey;
-    border-radius: 0.3rem;
-    padding: 0.5rem 1rem;
-    font-size: 1.1rem;
-    cursor: pointer;
-    margin-right: 1.5rem;
 
-}
