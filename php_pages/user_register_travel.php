@@ -61,7 +61,7 @@ if (isset($_POST["destination"])){
     <div class="container">
     <form method="post" action="../php/register_travel.php">
        
-
+            <input type="hidden" value="<?php echo $content[$i]["destination"]?>" name="destination">
 
             <div class="reservation-slider-container">
 

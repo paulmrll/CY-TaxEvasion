@@ -1,6 +1,53 @@
 [
     {
         "email": "paul.morille11@gmail.com",
-        "travels": []
+        "travels": [
+            {
+                "destination": "Monaco",
+                "hotel": "5 etoiles premium",
+                "loisir": [
+                    "Visite de Banque",
+                    "Jet-Ski",
+                    "Plonge sous-marine",
+                    "Balade en yacht"
+                ],
+                "visite": [
+                    "Visite de Banque",
+                    "Visite d'un Musee Colonialiste",
+                    "Visite d'un vignoble"
+                ],
+                "relaxation": [
+                    "Spa et Jacuzzi Prive",
+                    "Diner gastronomique 5 etoiles",
+                    "Soiree VIP executif business class"
+                ],
+                "departure": "2025-03-20",
+                "return": "2025-03-29",
+                "reservation": "Paiement en attente"
+            },
+            {
+                "destination": "Anguilla",
+                "hotel": "5 etoiles premium",
+                "loisir": [
+                    "Visite de Banque",
+                    "Jet-Ski",
+                    "Plonge sous-marine",
+                    "Balade en yacht"
+                ],
+                "visite": [
+                    "Visite de Banque",
+                    "Visite d'un Musee Colonialiste",
+                    "Visite d'un vignoble"
+                ],
+                "relaxation": [
+                    "Spa et Jacuzzi Prive",
+                    "Diner gastronomique 5 etoiles",
+                    "Soiree VIP executif business class"
+                ],
+                "departure": "2025-03-20",
+                "return": "2025-03-30",
+                "reservation": "Paiement en attente"
+            }
+        ]
     }
 ]
