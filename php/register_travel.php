@@ -67,6 +67,10 @@ isset($_POST['relaxation']) && isset($_POST['departure']) && isset($_POST['retur
     $relaxation = $_POST['relaxation'];
     $departure = $_POST['departure'];
     $return = $_POST['return'];
+    if (depart < date("Y-m-d") || $return < date("Y-m-d") || $return < $departure){
+        header('Location: ../php_pages/add_travel.php');
+        exit();
+    }
     register_travel($destination, $hotel, $loisir, $visite, $relaxation, $departure, $return);
 } else {
     echo "All fields are required";
