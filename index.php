@@ -183,7 +183,7 @@
                 <a class="grid-line-container" href="php_pages/description-pages.php?destination=Panama">
                     <button type="submit" class="reservation-button">
                         <img src="image/le-panama.jpg" alt="le panama">
-                        <h3>Les Palaos</h3>
+                        <h3>Le Panama</h3>
                         <div class="flag">
                             <img src="image/le-panama-flag.jpg" alt="le panama">
                         </div>
