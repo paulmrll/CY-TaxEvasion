@@ -11,7 +11,6 @@ function exist($email){
         }
         return false;
     }
-
 }
 
 
@@ -35,7 +34,6 @@ function create_user($name, $firstname, $email, $password){
                 "cvv" => 0
             ]
         ];
-        
     }
     return $tab;
 }

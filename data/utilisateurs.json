@@ -128,5 +128,38 @@
             "date": "2025-03-27",
             "cvv": "789"
         }
+    },
+    {
+        "name": "Flo",
+        "firstname": "Go",
+        "email": "tkt@gmail",
+        "password": "$2y$10$17F2x4zLxK0oQcedGcHBhuq6KkNop8u6TD7nuYaUG4duOWC50K5t6",
+        "inscription_date": "19-03-2025 10:54:41",
+        "connexion_date": "19-03-2025 10:59:09",
+        "role": "Utilisateur",
+        "travels": [
+            {
+                "destination": "Samoa",
+                "hotel": "5 etoiles",
+                "loisir": [
+                    "Visite de Banque"
+                ],
+                "visite": [
+                    "Visite d'un Musee Colonialiste"
+                ],
+                "relaxation": [
+                    "Spa et Jacuzzi Prive"
+                ],
+                "departure": "2025-03-20",
+                "return": "2025-03-28",
+                "reservation": "Paiement en attente"
+            }
+        ],
+        "card": {
+            "name": "A",
+            "number": 0,
+            "date": 0,
+            "cvv": 0
+        }
     }
 ]
