@@ -182,7 +182,7 @@ require_once "../php_pages/header.php";
                                 <?php
                                 endfor;
                                     }
-                                
+            
                                 } else {
                                     echo "<h1>Vous n'avez pas encore de Voyages</h1>";
                                     exit();

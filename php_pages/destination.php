@@ -1,5 +1,16 @@
 <?php
 session_start();
+
+    $jsonFile = "../data/travel.json";
+    if (!file_exists($jsonFile)){
+        header('Location: ../php_pages/add_travel.php');
+        exit();
+    }
+    $content = json_decode(file_get_contents($jsonFile), true);
+    if ($content == null){
+        header('Location: ../php_pages/add_travel.php');
+        exit();
+    }
 ?>
 
 <!DOCTYPE html>
@@ -96,19 +107,7 @@ require_once "../php_pages/header.php";
     <div class="destination-grid">
         <div class="grid-container">
         <?php
-        if (!isset($_SESSION['email'])) {
-            header('Location: ../php_pages/connexion.php');
-            exit();
-
-        }
-            $jsonFile = "../data/travel.json";
-            if (!file_exists($jsonFile)){
-                header('Location: ../php_pages/add_travel.php');
-            }
-            $content = json_decode(file_get_contents($jsonFile), true);
-            if ($content == null){
-                header('Location: ../php_pages/add_travel.php');
-            }
+        
             for ($i = 0; $i < count($content); $i++):
         ?>
             <a class="grid-line-container" href="../php_pages/description-pages.php?destination=<?php echo $content[$i]['destination'];?>">

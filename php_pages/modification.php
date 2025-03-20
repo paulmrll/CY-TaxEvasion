@@ -6,6 +6,31 @@ if (!isset($_SESSION['email'])) {
     header("Location: ../php_pages/connexion.php");
     exit();
 }
+if (file_exists("../data/travel.json")) {
+    $content_travel = json_decode(file_get_contents("../data/travel.json"), true);
+} else {
+    header('Location: ../php_pages/connexion.php');
+    exit();
+}
+if ($content_travel == null) {
+    header('Location: ../php_pages/user_register_travel.php');
+    exit();
+}
+if (!isset($_GET['travel'])){
+    header('Location: ../php_pages/user.php');
+    exit();
+}
+$file = "../data/travel-user.json";
+        if (!file_exists($file)) {
+        } else {
+            $content = json_decode(file_get_contents($file), true);
+            if ($content == null){
+                header('Location: ../php_pages/user_register_travel.php');
+                exit();
+            }
+        }
+           
+        
 ?>
 
 
@@ -28,17 +53,7 @@ require_once "../php_pages/header.php";
 
 <main>
     <?php
-    if (!isset($_GET['travel'])){
-        header('Location: ../php_pages/user.php');
-        exit();
-    }
-    $file = "../data/travel-user.json";
-            if (file_exists($file)) {
-                $content = json_decode(file_get_contents($file), true);
-                if ($content == null){
-                    header('Location: ../php_pages/user_register_travel.php');
-                    exit();
-                }
+    
                 $a = -1;
                 for ($i = 0; $i < count($content); $i++){
                     if ($content[$i]['email'] === $_SESSION['email']){
@@ -50,16 +65,7 @@ require_once "../php_pages/header.php";
                     header('Location: connexion.php');
                     exit();
                 }
-                if (file_exists("../data/travel.json")) {
-                    $content_travel = json_decode(file_get_contents("../data/travel.json"), true);
-                } else {
-                    header('Location: ../php_pages/inscription.php');
-                    exit();
-                }
-                if ($content_travel == null) {
-                    header('Location: ../php_pages/user_register_travel.php');
-                    exit();
-                }
+                
                 $index_travel = -1;
                 $index = -1;
                 for ($i = 0; $i < count($content[$a]['travels']); $i++){
@@ -79,8 +85,8 @@ require_once "../php_pages/header.php";
                 if ($index_travel == -1 || !isset($name)){
                     header("Location: user.php");
                     exit();
-                 }
-            }
+                }
+            
 
                     
                 

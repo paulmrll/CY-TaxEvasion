@@ -1,0 +1,28 @@
+[
+    {
+        "email": "p@gmail.com",
+        "travels": []
+    },
+    {
+        "email": "paul.morille11@gmail.com",
+        "travels": [
+            {
+                "destination": "Monaco",
+                "hotel": "5 étoiles Premium VIP Deluxe",
+                "loisir": [
+                    "Visite de Banque",
+                    "Jet-Ski"
+                ],
+                "visite": [
+                    "Visite d'un Musée Colonialiste"
+                ],
+                "relaxation": [
+                    "Spa et Jacuzzi Privé"
+                ],
+                "departure": "2025-03-21",
+                "return": "2025-04-25",
+                "reservation": "Paiement en attente"
+            }
+        ]
+    }
+]

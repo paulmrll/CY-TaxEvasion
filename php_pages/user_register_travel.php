@@ -131,7 +131,7 @@ if (isset($_GET["destination"])){
                 </div>
 
                 <div class="reservation-prix">
-                    <h5>Prix :</h5><h6>Beaucoup Trop Cher</h6>
+                    <h5>Prix :</h5><h6><?php echo $content[$i]["prix"]?></h6>
                 </div>
 
             </div>

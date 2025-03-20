@@ -1,5 +1,15 @@
 <?php
     session_start();
+    $file = "data/travel.json";
+                        if (!file_exists($file)){
+                            header("Location: php_pages/user.php");
+                            exit();
+                        }
+                        $content = json_decode(file_get_contents($file), true);
+                        if ($content == null){
+                            header("Location: php_pages/user.php");
+                            exit();
+                        }
 ?>
 
 <!DOCTYPE html>
@@ -88,16 +98,6 @@
                 <input type="text" name="destination" list="destination" placeholder="Entrez une destination..." required>
                 <datalist id="destination">
                     <?php 
-                        $file = "data/travel.json";
-                        if (!file_exists($file)){
-                            header("Location: php_pages/user.php");
-                            exit();
-                        }
-                        $content = json_decode(file_get_contents($file), true);
-                        if ($content == null){
-                            header("Location: php_pages/user.php");
-                            exit();
-                        }
                         for ($i = 0; $i < count($content); $i++):
                     ?>
                     <option value="<?php echo $content[$i]["name"]?>"></option>
