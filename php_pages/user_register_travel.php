@@ -27,14 +27,15 @@ if (!isset($_SESSION['email'])) {
 require_once "../php_pages/header.php";
 ?>
 <?php
-if (isset($_POST["destination"])){
-    $destination = $_POST["destination"];
+if (isset($_GET["destination"])){
+    $destination = $_GET["destination"];
     $destination = strtolower($destination);
     $destination[0] = strtoupper($destination[0]);
     $jsonFile = "../data/travel.json";
     $content = json_decode(file_get_contents($jsonFile), true);
     if ($content == null){
-        header('Location: ../php_pages/add_travel.php');
+        header('Location: ../php_pages/add_new_travel.php');
+        exit();
     }
     $a = 0;
     $i = -1;
@@ -47,7 +48,11 @@ if (isset($_POST["destination"])){
     }
     if ($a === 0){
         header('Location: ../php_pages/add_travel.php');
+        exit();
     }
+} else {
+    header("Location: user.php");
+    exit();
 }
 ?>
 

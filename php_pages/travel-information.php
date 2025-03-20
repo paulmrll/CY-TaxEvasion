@@ -39,10 +39,16 @@ require_once "../php_pages/header.php";
                     header('Location: ../php_pages/user_register_travel.php');
                     exit();
                 }
+                $a = -2;
                 for ($i = 0; $i < count($content); $i++){
                     if ($content[$i]['email'] === $_SESSION['email']){
                         $a = $i;
+                        break;
                     }
+                }
+                if ($a < 0){
+                    header("Location: user.php");
+                    exit();
                 }
                 if (file_exists("../data/travel.json")) {
                     $content_travel = json_decode(file_get_contents("../data/travel.json"), true);
@@ -54,6 +60,8 @@ require_once "../php_pages/header.php";
                     header('Location: ../php_pages/user_register_travel.php');
                     exit();
                 }
+                $index_travel = -1;
+                $index = -1;
                 for ($i = 0; $i < count($content[$a]['travels']); $i++){
                     if ($content[$a]['travels'][$i]['destination'] == $_GET['travel']){
                         for ($p = 0; $p < count($content_travel); $p++){
@@ -67,6 +75,10 @@ require_once "../php_pages/header.php";
                     }
                 }
                 }
+                if ($index_travel == -1 || !isset($name)){
+                    header("Location: user.php");
+                    exit();
+                 }
             }
     ?>
 

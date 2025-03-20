@@ -117,18 +117,20 @@ require_once "../php_pages/header.php";
                                          }
                                          if (count($content[$a]['travels']) == 0) {
                                              echo "<h1>Vous n'avez pas encore réservé de voyage</h1>";
-                                         } else {
-                                             echo "<h1>Mes Voyages :</h1>";
+                                             exit();
+                                         }
+                                            
                                              if (file_exists("../data/travel.json")) {
                                                  $content_travel = json_decode(file_get_contents("../data/travel.json"), true);
                                              } else {
-                                                 header('Location: ../php_pages/inscription.php');
+                                                echo "<h1>Vous n'avez pas encore réservé de voyage</h1>";
                                                  exit();
                                              }
                                              if ($content_travel === null) {
-                                                 header('Location: ../php_pages/user_register_travel.php');
+                                                echo "<h1>Vous n'avez pas encore réservé de voyage</h1>";
                                                  exit();
                                              }
+                                             echo "<h1>Mes Voyages :</h1>";
                                              for ($i = 0; $i < count($content[$a]['travels']); $i++):
 
                                                  for ($o = 0; $o < count($content_travel); $o++):
@@ -144,9 +146,9 @@ require_once "../php_pages/header.php";
                             <div class="grid-container">
                                 <div class="line-container">
                                     <div class="grid-item">
-                                        <a href="../destination-pages<?php echo $content[$a]["travels"][$i]["destination"] ?>" class="image-select">
+                                        <a href="description-pages.php?destination=<?php echo $content[$a]["travels"][$i]["destination"] ?>" class="image-select">
                                             <img src="<?php echo $url_image?>" alt="image">
-                                            <h3><?php  echo $name ?></h3>
+                                            <h3><?php echo $name ?></h3>
                                         </a>
                                     </div>
                                 <?php 
@@ -180,7 +182,7 @@ require_once "../php_pages/header.php";
                                 <?php
                                 endfor;
                                     }
-                                }
+                                
                                 } else {
                                     echo "<h1>Vous n'avez pas encore de Voyages</h1>";
                                     exit();

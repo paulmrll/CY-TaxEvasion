@@ -59,10 +59,9 @@ require_once "../php_pages/header.php";
             <?php echo $content[$i]['description'];?>
         </p>
     </div>
-    <form method="post" action="../php_pages/user_register_travel.php">
-        <input type="hidden" name="destination" value="<?php echo $content[$i]['destination'];?>">
-        <button id="reserve" type="submit" class="reservation-button">Réserver</button>
-    </form>
+
+    <a href="user_register_travel.php?destination=<?php echo $content[$i]['destination'];?>">Réserver</a>
+
     
     <div class="maps">
         <img src="<?php echo $content[$i]["image_maps"]?>" alt="<?php echo $content[$i]["destination"]?>-maps">

@@ -135,7 +135,7 @@ isset($_POST['relaxation']) && isset($_POST['departure']) && isset($_POST['retur
     $departure = $_POST['departure'];
     $return = $_POST['return'];
     if ($departure < date("Y-m-d") || $return < date("Y-m-d") || $return < $departure){
-        header('Location: ../php_pages/add_travel.php');
+        header('Location: ../php_pages/user_register_travel.php?destination='.$destination);
         exit();
     }
     register_travel($destination, $hotel, $loisir, $visite, $relaxation, $departure, $return);

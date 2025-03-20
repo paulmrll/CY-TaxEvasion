@@ -7,23 +7,6 @@
         "inscription_date": "19-03-2025 21:04:45",
         "connexion_date": "20-03-2025 11:47:08",
         "role": "Admin",
-        "travels": [],
-        "card": {
-            "name": "",
-            "number": 0,
-            "date": 0,
-            "cvv": 0
-        }
-    },
-    {
-        "name": "Ba",
-        "firstname": "B",
-        "email": "b@gmail.com",
-        "password": "$2y$10$8MSbQcIIqMo5AiMK92E\/0u8je32KePyK\/INtMlsxQ4FTpy3u0zZRu",
-        "inscription_date": "19-03-2025 23:53:51",
-        "connexion_date": "20-03-2025 00:13:25",
-        "role": "Utilisateur",
-        "travels": [],
         "card": {
             "name": "",
             "number": 0,
@@ -35,11 +18,10 @@
         "name": "P",
         "firstname": "P",
         "email": "p@gmail.com",
-        "password": "$2y$10$EZFm9RnMoW\/UsEcgYEIltueFw2MLfKoNPypE.YwJkjuDWdmBethNS",
-        "inscription_date": "20-03-2025 11:47:02",
-        "connexion_date": "20-03-2025 11:47:02",
+        "password": "$2y$10$rT.5ZfTnI6rXics133BdxOcCWEMAc6MdTxFRzlqQXOimheUEVTrQK",
+        "inscription_date": "20-03-2025 11:54:44",
+        "connexion_date": "20-03-2025 11:54:44",
         "role": "Utilisateur",
-        "travels": [],
         "card": {
             "name": "",
             "number": 0,

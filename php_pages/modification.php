@@ -35,14 +35,20 @@ require_once "../php_pages/header.php";
     $file = "../data/travel-user.json";
             if (file_exists($file)) {
                 $content = json_decode(file_get_contents($file), true);
-                if ($content === null){
+                if ($content == null){
                     header('Location: ../php_pages/user_register_travel.php');
                     exit();
                 }
+                $a = -1;
                 for ($i = 0; $i < count($content); $i++){
                     if ($content[$i]['email'] === $_SESSION['email']){
                         $a = $i;
+                        break;
                     }
+                }
+                if ($a < 0){
+                    header('Location: connexion.php');
+                    exit();
                 }
                 if (file_exists("../data/travel.json")) {
                     $content_travel = json_decode(file_get_contents("../data/travel.json"), true);
@@ -50,10 +56,12 @@ require_once "../php_pages/header.php";
                     header('Location: ../php_pages/inscription.php');
                     exit();
                 }
-                if ($content_travel === null) {
+                if ($content_travel == null) {
                     header('Location: ../php_pages/user_register_travel.php');
                     exit();
                 }
+                $index_travel = -1;
+                $index = -1;
                 for ($i = 0; $i < count($content[$a]['travels']); $i++){
                     if ($content[$a]['travels'][$i]['destination'] == $_GET['travel']){
                         for ($p = 0; $p < count($content_travel); $p++){
@@ -64,9 +72,14 @@ require_once "../php_pages/header.php";
                                 $name = $content_travel[$p]['name'];
                                 break;
                         }
+                        
                     }
                 }
                 }
+                if ($index_travel == -1 || !isset($name)){
+                    header("Location: user.php");
+                    exit();
+                 }
             }
 
                     
@@ -77,7 +90,7 @@ require_once "../php_pages/header.php";
    
 
     <img src="<?php echo $url_image?>" alt="Image de la destination">
-    <h1>Modifier votre voyage à <?php echo $name?></h1>
+    <h1>Modifier votre voyage à <?php echo $name;?></h1>
     <div class="container">
     <form method="post" action="../php/modification_travel.php">
        

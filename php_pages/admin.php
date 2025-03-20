@@ -78,19 +78,24 @@ require_once "../php_pages/header.php";
                     </tr>
                 <?php endforeach; ?>
             </table>
+                </div>
+                <div class="travels-container">
             <table>
                 <?php 
 
                 $file = "../data/travel.json";
                 if (!file_exists($file)){?>
-                    <tr><td><?php echo "Aucun Voyage";?></td></tr>
+                    <tr><th colspan="4"><?php echo "Aucun Voyage";?></th></tr>
                 <?php
                 } else {
                     $content_travel = json_decode(file_get_contents($file), true);
                     if ($content_travel == null){?>
-                        <tr><td><?php echo "Aucun Voyage";?></td></tr>
+                        <tr><th colspan="4"><?php echo "Aucun Voyage";?></th></tr>
                     <?php
                     } else {
+                        ?>
+                        <tr><th colspan="4"><?php echo "Les voyages que vous proposez";?></th></tr>
+                        <?php
                         for ($i = 0; $i < count($content_travel); $i++){?>
                         <tr>
                             <td><?php echo "#" . $i+1;?></td>

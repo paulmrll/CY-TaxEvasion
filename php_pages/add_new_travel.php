@@ -31,8 +31,8 @@ require_once "../php_pages/header.php";
 
    
 
-    <img src="<?php echo $url_image?>" alt="Image de la destination">
-    <h1>Modifier votre voyage à </h1>
+   
+    <h1>Ajouter une Destination à votre catalogue</h1>
     <div class="container">
     <form method="post" action="../php/add_new_travel.php" enctype="multipart/form-data">
        
