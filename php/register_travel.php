@@ -75,7 +75,7 @@ function register_travel($destination, $hotel, $loisir, $visite, $relaxation, $d
         exit();
     }
     if (is_already_going_to($destination, $jsonFile) == 1){
-        header("Location: ../php_pages/user.php");
+        header("Location: ../php_pages/modification.php?travel=".$destination);
         exit();
     }
     for ($i = 0; $i < count($content); $i++){

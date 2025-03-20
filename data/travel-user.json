@@ -55,6 +55,22 @@
                 "departure": "2025-03-21",
                 "return": "2025-03-28",
                 "reservation": "Paiement en attente"
+            },
+            {
+                "destination": "Monaco",
+                "hotel": "5 étoiles Premium VIP",
+                "loisir": [
+                    "Visite de Banque"
+                ],
+                "visite": [
+                    "Visite d'un Musée Colonialiste"
+                ],
+                "relaxation": [
+                    "Spa et Jacuzzi Privé"
+                ],
+                "departure": "2025-03-21",
+                "return": "2025-03-31",
+                "reservation": "Paiement en attente"
             }
         ]
     },
