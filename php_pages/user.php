@@ -111,7 +111,7 @@ require_once "../php_pages/header.php";
                                             } else {
                                                 $a = -2;
                                             }
-                                         }if ($a <= 0){
+                                         }if ($a < 0){
                                             echo "<h1>Vous n'avez pas encore de voyages :</h1>";
                                             exit();
                                          }
