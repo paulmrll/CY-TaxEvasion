@@ -180,7 +180,7 @@ require_once "../php_pages/header.php";
                 </div>
 
                 <div class="reservation-prix">
-                    <h5>Prix :</h5><h6>Beaucoup Trop Cher</h6>
+                    <h5>Prix :</h5><h6><?php echo $content[$a]["travels"][$index]["prix"] . " €"?></h6>
                 </div>
 
             </div>

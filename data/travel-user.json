@@ -15,7 +15,6 @@
                     "Plongée sous-marine"
                 ],
                 "visite": [
-                    "Visite d'un Musée Colonialiste",
                     "Visite d'un vignoble"
                 ],
                 "relaxation": [
@@ -25,7 +24,7 @@
                 "departure": "2025-03-21",
                 "return": "2025-04-25",
                 "reservation": "Paiement en attente",
-                "prix": 55105244
+                "prix": 55101145
             },
             {
                 "destination": "Anguilla",

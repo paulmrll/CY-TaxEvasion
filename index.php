@@ -108,7 +108,6 @@
         </form>
     </div>
 
-    <a href="php_pages/description-pages.php?destination=Samoa">
 
 
     <div class="map-container">

@@ -27,8 +27,8 @@
         "description": "Membre de l’organisation des états du caraïbe oriental depuis 1995, l’île Anguilla est un territoire britannique d’outre-mer. Anguilla est un paradis fiscal par excellence. Les personnes physiques résidentes et non-résidentes bénéficient d’un impôt zéro, et ce pour les : impôt sur le revenu, les droits de successions ainsi que l’impôt sur la fortune. Nous notons toutefois une taxe de 3% sur les biens immobiliers localisés sur l’île d’Anguilla pour les non-résidents.",
         "image": "..\/image\/anguilla.jpg",
         "image_maps": "..\/image\/anguilla-maps.png",
-        "image-flag": "..\/image\/anguilla-flag.jpg", 
-        "prix" : "18000€"
+        "image-flag": "..\/image\/anguilla-flag.jpg",
+        "prix": "18000€"
     },
     {
         "destination": "Monaco",
@@ -59,7 +59,7 @@
         "image": "..\/image\/monaco.jpeg",
         "image_maps": "..\/image\/monaco-maps.png",
         "image-flag": "..\/image\/monaco-flag.png",
-        "prix" : "18000€"
+        "prix": "18000€"
     },
     {
         "destination": "Antigua",
@@ -90,7 +90,7 @@
         "image": "..\/image\/antigua-et-barbuda.jpg",
         "image_maps": "..\/image\/antigua-barbuda-maps.png",
         "image-flag": "..\/image\/antigua-et-barbuda-flag.jpg",
-        "prix" : "18000€"
+        "prix": "18000€"
     },
     {
         "destination": "Bermudes",
@@ -120,7 +120,7 @@
         "image": "..\/image\/bermudes.jpg",
         "image_maps": "..\/image\/bermudes-maps.png",
         "image-flag": "..\/image\/bermudes-flag.png",
-        "prix" : "18000€"
+        "prix": "18000€"
     },
     {
         "destination": "Caimans",
@@ -150,7 +150,7 @@
         "image": "..\/image\/caimans.jpg",
         "image_maps": "..\/image\/caïmans-maps.png",
         "image-flag": "..\/image\/caimans-flag.png",
-        "prix" : "18000€"
+        "prix": "18000€"
     },
     {
         "destination": "Chypre",
@@ -180,7 +180,7 @@
         "image": "..\/image\/chypre.jpeg",
         "image_maps": "..\/image\/chypre-maps.png",
         "image-flag": "..\/image\/chypre-flag.png",
-        "prix" : "18000€"
+        "prix": "18000€"
     },
     {
         "destination": "Eau",
@@ -209,7 +209,7 @@
         "image": "..\/image\/EAU.jpg",
         "image_maps": "..\/image\/EAU-maps.png",
         "image-flag": "..\/image\/EAU-flag.png",
-        "prix" : "18000€"
+        "prix": "18000€"
     },
     {
         "destination": "Hongkong",
@@ -239,7 +239,7 @@
         "image": "..\/image\/hongkong.jpg",
         "image_maps": "..\/image\/hongkong-maps.png",
         "image-flag": "..\/image\/hongkong-flag.png",
-        "prix" : "18000€"
+        "prix": "18000€"
     },
     {
         "destination": "Fidji",
@@ -269,7 +269,7 @@
         "image": "..\/image\/les-fidji.jpeg",
         "image_maps": "..\/image\/fidji-maps.png",
         "image-flag": "..\/image\/les-fidji-flag.jpg",
-        "prix" : "18000€"
+        "prix": "18000€"
     },
     {
         "destination": "Jersey",
@@ -299,7 +299,7 @@
         "image": "..\/image\/jersey.jpeg",
         "image_maps": "..\/image\/jersey-maps.png",
         "image-flag": "..\/image\/jersey-flag.png",
-        "prix" : "18000€"
+        "prix": "18000€"
     },
     {
         "destination": "Palaos",
@@ -329,7 +329,7 @@
         "image": "..\/image\/les-palaos.jpg",
         "image_maps": "..\/image\/les-palaos-maps.png",
         "image-flag": "..\/image\/les-palaos-flag.jpg",
-        "prix" : "18000€"
+        "prix": "18000€"
     },
     {
         "destination": "Malte",
@@ -359,7 +359,7 @@
         "image": "..\/image\/malte.jpg",
         "image_maps": "..\/image\/malte-maps.png",
         "image-flag": "..\/image\/malte-flag.png",
-        "prix" : "18000€"
+        "prix": "18000€"
     },
     {
         "destination": "Panama",
@@ -389,7 +389,7 @@
         "image": "..\/image\/le-panama.jpg",
         "image_maps": "..\/image\/le-panama-maps.png",
         "image-flag": "..\/image\/le-panama-flag.jpg",
-        "prix" : "18000€"
+        "prix": "18000€"
     },
     {
         "destination": "Samoa",
@@ -419,7 +419,7 @@
         "image": "..\/image\/les-samoa-americaine.jpeg",
         "image_maps": "..\/image\/samoa-americaine-maps.png",
         "image-flag": "..\/image\/samoa-americaine-flag.jpg",
-        "prix" : "18000€"
+        "prix": "18000€"
     },
     {
         "destination": "Vierges",
@@ -449,6 +449,6 @@
         "image": "..\/image\/vierges.jpg",
         "image_maps": "..\/image\/vierge-maps.png",
         "image-flag": "..\/image\/vierges-flag.png",
-        "prix" : "18000€"
+        "prix": "18000€"
     }
 ]

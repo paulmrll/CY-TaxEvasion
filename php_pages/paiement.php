@@ -30,7 +30,7 @@ require_once "../php_pages/header.php";
     <h1>Récapitulatif de la commande</h1>
     <p>Montant total : 18000.99 €</p>
     <p>Numéro de transaction : 154632ABCD</p>
-    <p>Vendeur : TEST</p>
+    <p>Vendeur : CY TAXEVASION SARL</p>
 <form action='https://www.plateforme-smc.fr/cybank/index.php' method='POST'>
     <input type='hidden' name='transaction' value='154632ABCD'>
     <input type='hidden' name='montant' value='18000.99'>

@@ -37,7 +37,7 @@ if (isset($_POST['name']) &&isset($_POST['card']) && isset($_POST['date']) && is
 
     add_card($name, $card, $date, $cvv);
 
-    header('Location: ../php_pages/user.php');
+    header('Location: ../php_pages/paiement.php');
     exit();
 }
 ?>
