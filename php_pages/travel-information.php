@@ -6,13 +6,65 @@ if (!isset($_SESSION['email'])) {
     header("Location: ../php_pages/connexion.php");
     exit();
 }
+if (!isset($_GET['travel'])){
+    header('Location: ../php_pages/user.php');
+    exit();
+}
+$file = "../data/travel-user.json";
+        if (file_exists($file)) {
+            $content = json_decode(file_get_contents($file), true);
+            if ($content === null){
+                header('Location: ../php_pages/user_register_travel.php');
+                exit();
+            }
+            $a = -2;
+            for ($i = 0; $i < count($content); $i++){
+                if ($content[$i]['email'] === $_SESSION['email']){
+                    $a = $i;
+                    break;
+                }
+            }
+            if ($a < 0){
+                header("Location: user.php");
+                exit();
+            }
+            if (file_exists("../data/travel.json")) {
+                $content_travel = json_decode(file_get_contents("../data/travel.json"), true);
+            } else {
+                header('Location: ../php_pages/inscription.php');
+                exit();
+            }
+            if ($content_travel === null) {
+                header('Location: ../php_pages/user_register_travel.php');
+                exit();
+            }
+            $index_travel = -1;
+            $index = -1;
+            for ($i = 0; $i < count($content[$a]['travels']); $i++){
+                if ($content[$a]['travels'][$i]['destination'] == $_GET['travel']){
+                    for ($p = 0; $p < count($content_travel); $p++){
+                        if ($content_travel[$p]['destination'] == $_GET['travel']){
+                            $url_image = $content_travel[$p]['image'];
+                            $index_travel = $p;
+                            $index = $i;
+                            $name = $content_travel[$p]['name'];
+                            break;
+                    }
+                }
+            }
+            }
+            if ($index_travel == -1 || !isset($name)){
+                header("Location: user.php");
+                exit();
+             }
+        }
 ?>
 
 
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <title>Utilisateur</title>
+    <title>Votre voyage à <?php echo $name?></title>
     <link rel="icon" type="image" href="../image/logo-site.webp">
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/travel-information.css">
@@ -27,65 +79,12 @@ require_once "../php_pages/header.php";
 ?>
 
 <main>
-    <?php
-    if (!isset($_GET['travel'])){
-        header('Location: ../php_pages/user.php');
-        exit();
-    }
-    $file = "../data/travel-user.json";
-            if (file_exists($file)) {
-                $content = json_decode(file_get_contents($file), true);
-                if ($content === null){
-                    header('Location: ../php_pages/user_register_travel.php');
-                    exit();
-                }
-                $a = -2;
-                for ($i = 0; $i < count($content); $i++){
-                    if ($content[$i]['email'] === $_SESSION['email']){
-                        $a = $i;
-                        break;
-                    }
-                }
-                if ($a < 0){
-                    header("Location: user.php");
-                    exit();
-                }
-                if (file_exists("../data/travel.json")) {
-                    $content_travel = json_decode(file_get_contents("../data/travel.json"), true);
-                } else {
-                    header('Location: ../php_pages/inscription.php');
-                    exit();
-                }
-                if ($content_travel === null) {
-                    header('Location: ../php_pages/user_register_travel.php');
-                    exit();
-                }
-                $index_travel = -1;
-                $index = -1;
-                for ($i = 0; $i < count($content[$a]['travels']); $i++){
-                    if ($content[$a]['travels'][$i]['destination'] == $_GET['travel']){
-                        for ($p = 0; $p < count($content_travel); $p++){
-                            if ($content_travel[$p]['destination'] == $_GET['travel']){
-                                $url_image = $content_travel[$p]['image'];
-                                $index_travel = $p;
-                                $index = $i;
-                                $name = $content_travel[$p]['name'];
-                                break;
-                        }
-                    }
-                }
-                }
-                if ($index_travel == -1 || !isset($name)){
-                    header("Location: user.php");
-                    exit();
-                 }
-            }
-    ?>
+
 
    
 
     <img src="<?php echo $url_image?>" alt="Image de la destination">
-    <h1>Modifier votre voyage à <?php echo $name?></h1>
+    <h1>Votre voyage à <?php echo $name?></h1>
     <div class="container">
 
        
@@ -142,14 +141,18 @@ require_once "../php_pages/header.php";
                     <h6><?php echo $content[$a]['travels'][$index]['return']?></h6>
 
                 </div>
+                <div class="reservation-prix">
+                    <h5>Nombres de personnes :</h5><h6><?php echo $content[$a]["travels"][$index]["person"]?> personnes</h6>
+                </div>
 
                 <div class="reservation-prix">
                     <h5>Prix :</h5><h6><?php echo $content[$a]["travels"][$index]["prix"] . " €"?></h6>
                 </div>
 
             </div>
+            <?php if ($content[$a]['travels'][$index]['reservation'] == "Paiement en attente"){?>
             <a href="../php/define-index-travel.php?action=modify&travel=<?php echo $content[$a]['travels'][$index]['destination']?>">Modifier</a>
-       
+            <?php }?>
     </div>
 </main>
 

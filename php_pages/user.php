@@ -82,6 +82,7 @@ require_once "../php_pages/header.php";
                                 </div>
                             </div>
                         </form>
+                        <a href="../php_pages/add_card.php">Ajouter Votre CB</a>
                     </div>
 
                     <div class="utilisateur-image">
@@ -153,7 +154,7 @@ require_once "../php_pages/header.php";
                                     </div>
                                 <?php 
                                     if ($content[$a]['travels'][$i]['reservation'] == "Paiement en attente"):?>
-                                    <a href="../php_pages/add_card.php">
+                                    <a href="../php_pages/paiement.php?destination=<?php echo $content[$a]["travels"][$i]["destination"]?>">
                                     <p class="Non-réservé">
                                         <?php
                                         echo $content[$a]['travels'][$i]['reservation'] . " de " . $content[$a]['travels'][$i]['prix'] .  "€";
@@ -170,9 +171,11 @@ require_once "../php_pages/header.php";
                                             <p>Date de départ : <strong><?php echo $content[$a]['travels'][$i]['departure']?></strong></p>
                                             <p>Date de retour : <strong><?php echo $content[$a]['travels'][$i]['return']?></strong></p>
                                         </div>
+                                        <?php if ($content[$a]['travels'][$i]['reservation'] == "Paiement en attente"){?>
                                         <div class="modification-container">
                                             <a href="../php/define-index-travel.php?action=modify&travel=<?php echo $content[$a]["travels"][$i]["destination"]?>" method="get">Modifier</a>
                                         </div>  
+                                        <?php }?>
                                         <div class="modification-container">
                                             <a href="../php/define-index-travel.php?action=see&travel=<?php echo $content[$a]['travels'][$i]['destination']?>">Voir</a>
                                         </div> 
@@ -188,7 +191,7 @@ require_once "../php_pages/header.php";
                                     exit();
                                     }
                                 ?>
-
+                                
 
 
                             </div>

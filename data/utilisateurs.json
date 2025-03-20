@@ -5,7 +5,7 @@
         "email": "p@gmail.com",
         "password": "$2y$10$BNulMXqEEWeGu44fHPue8uxxz2iZASgWeoZ1VRaI5SoIV.XDgVZfm",
         "inscription_date": "20-03-2025 12:42:08",
-        "connexion_date": "20-03-2025 12:42:08",
+        "connexion_date": "20-03-2025 22:49:22",
         "role": "Admin",
         "card": {
             "name": "",
@@ -21,7 +21,7 @@
         "password": "$2y$10$uLQOJtI73gVJDPWjkmvFUu00yWd02LpMoR1wl7OiWFrVCeGIi6y0S",
         "inscription_date": "20-03-2025 14:59:57",
         "connexion_date": "20-03-2025 16:47:08",
-        "role": "Admin",
+        "role": "Utilisateurs",
         "card": {
             "name": "pa",
             "number": "9090909090909090",

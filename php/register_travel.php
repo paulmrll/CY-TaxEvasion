@@ -26,9 +26,9 @@ function is_already_going_to($destination, $jsonFile){
     return 0;
 }
 
-function register_travel($destination, $hotel, $loisir, $visite, $relaxation, $departure, $return){
+function register_travel($destination, $hotel, $loisir, $visite, $relaxation, $departure, $return, $person){
     $jsonFile = "../data/travel-user.json";
-    $prix = update_price($hotel, $loisir, $visite, $relaxation, $departure, $return);
+    $prix = update_price($hotel, $loisir, $visite, $relaxation, $departure, $return, $person);
     if ($prix < 0){
         header('Location: ../php_pages/user_register_travel.php?destination=' . $destination);
     }
@@ -48,7 +48,9 @@ function register_travel($destination, $hotel, $loisir, $visite, $relaxation, $d
                     "departure" => $departure,
                     "return" => $return,
                     "reservation" => "Paiement en attente",
-                    "prix" => $prix
+                    "prix" => $prix,
+                    "transaction" => "0",
+                    "person" => $person
                 )
             )
     );
@@ -71,7 +73,9 @@ function register_travel($destination, $hotel, $loisir, $visite, $relaxation, $d
                         "departure" => $departure,
                         "return" => $return,
                         "reservation" => "Paiement en attente",
-                        "prix" => $prix
+                        "prix" => $prix,
+                        "transaction" => "0",
+                        "person" => $person
                     )
                 )
         );
@@ -94,7 +98,9 @@ function register_travel($destination, $hotel, $loisir, $visite, $relaxation, $d
                         "departure" => $departure,
                         "return" => $return,
                         "reservation" => "Paiement en attente",
-                        "prix" => $prix
+                        "prix" => $prix,
+                        "transaction" => "0",
+                        "person" => $person
             );
                 
 
@@ -103,7 +109,7 @@ function register_travel($destination, $hotel, $loisir, $visite, $relaxation, $d
             exit();
         }
     }
-    $content[]['travels'][] = array(
+    $content[] = array(
         "email" => $_SESSION["email"],
         "travels" => array(
             array(
@@ -115,10 +121,12 @@ function register_travel($destination, $hotel, $loisir, $visite, $relaxation, $d
                 "departure" => $departure,
                 "return" => $return,
                 "reservation" => "Paiement en attente",
-                "prix" => $prix
+                "prix" => $prix,
+                "transaction" => "0",
+                "person" => $person
             )
         )
-    );
+);
     file_put_contents($jsonFile, json_encode($content, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT));
     header('Location: ../php_pages/user.php');
     exit();
@@ -129,7 +137,7 @@ function register_travel($destination, $hotel, $loisir, $visite, $relaxation, $d
 
 
 if (isset($_POST['destination']) && isset($_POST['hotel']) && isset($_POST['loisir']) && isset($_POST['visite']) && 
-isset($_POST['relaxation']) && isset($_POST['departure']) && isset($_POST['return'])){
+isset($_POST['relaxation']) && isset($_POST['departure']) && isset($_POST['return']) && isset($_POST['person'])){
     if (!isset($_SESSION['email'])){
         header('Location: ../php_pages/connexion.php');
         exit();
@@ -141,11 +149,12 @@ isset($_POST['relaxation']) && isset($_POST['departure']) && isset($_POST['retur
     $relaxation = $_POST['relaxation'];
     $departure = $_POST['departure'];
     $return = $_POST['return'];
+    $person = $_POST['person'];
     if ($departure < date("Y-m-d") || $return < date("Y-m-d") || $return < $departure){
         header('Location: ../php_pages/user_register_travel.php?destination='.$destination);
         exit();
     }
-    register_travel($destination, $hotel, $loisir, $visite, $relaxation, $departure, $return);
+    register_travel($destination, $hotel, $loisir, $visite, $relaxation, $departure, $return, $person);
 } else {
     echo "All fields are required";
 }

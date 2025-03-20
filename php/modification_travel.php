@@ -4,8 +4,8 @@ require_once "../php/fonctions_utiles.php";
 
 
 
-function modification_travel($destination, $hotel, $loisir, $visite, $relaxation, $departure, $return){
-    $prix = update_price($hotel, $loisir, $visite, $relaxation, $departure, $return);
+function modification_travel($destination, $hotel, $loisir, $visite, $relaxation, $departure, $return, $person){
+    $prix = update_price($hotel, $loisir, $visite, $relaxation, $departure, $return, $person);
     if ($prix < 0){
         header('Location: ../php_pages/user_register_travel.php?destination=' . $destination);
     }
@@ -37,6 +37,7 @@ function modification_travel($destination, $hotel, $loisir, $visite, $relaxation
                     $content[$i]["travels"][$o]["return"] = $return;
                     $content[$i]["travels"][$o]["loisir"] = $loisir;
                     $content[$i]["travels"][$o]["prix"] = $prix;
+                    $content[$i]["travels"][$o]["person"] = $person;
                     file_put_contents($jsonFile, json_encode($content, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT));
                     header("Location: ../php_pages/user.php");
                     exit();
@@ -87,7 +88,7 @@ if (isset($_POST['todo'])) {
     switch ($_POST['todo']){
         case "modify":
             if (isset($_POST['destination']) && isset($_POST['hotel']) && isset($_POST['loisir']) && isset($_POST['visite']) && 
-            isset($_POST['relaxation']) && isset($_POST['departure']) && isset($_POST['return'])) {
+            isset($_POST['relaxation']) && isset($_POST['departure']) && isset($_POST['return']) && isset($_POST['person'])) {
                 $destination = $_POST['destination'];
                 $hotel = $_POST['hotel'];
                 $loisir = $_POST['loisir'];
@@ -95,8 +96,8 @@ if (isset($_POST['todo'])) {
                 $relaxation = $_POST['relaxation'];
                 $departure = $_POST['departure'];
                 $return = $_POST['return'];
-                echo "1";
-            modification_travel($destination, $hotel, $loisir, $visite, $relaxation, $departure, $return);
+                $person = $_POST['person'];
+            modification_travel($destination, $hotel, $loisir, $visite, $relaxation, $departure, $return, $person);
             } else {
                 header('Location: ../php_pages/modification.php');
                 exit();

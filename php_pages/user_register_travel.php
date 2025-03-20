@@ -7,26 +7,6 @@ if (!isset($_SESSION['email'])) {
     header("Location: ../php_pages/connexion.php");
     exit();
 }
-?>
-
-
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <title>Utilisateur</title>
-    <link rel="icon" type="image" href="../image/logo-site.webp">
-    <link rel="stylesheet" href="../css/styles.css">
-    <link rel="stylesheet" href="../css/modification.css">
-
-
-    <meta charset="UTF-8">
-</head>
-<body>
-
-<?php
-require_once "../php_pages/header.php";
-?>
-<?php
 if (isset($_GET["destination"])){
     $destination = $_GET["destination"];
     $destination = strtolower($destination);
@@ -55,6 +35,25 @@ if (isset($_GET["destination"])){
     exit();
 }
 ?>
+
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <title>Utilisateur</title>
+    <link rel="icon" type="image" href="../image/logo-site.webp">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/modification.css">
+
+
+    <meta charset="UTF-8">
+</head>
+<body>
+
+<?php
+require_once "../php_pages/header.php";
+?>
+
 
 <main>
 
@@ -115,12 +114,15 @@ if (isset($_GET["destination"])){
                     <?php endfor; ?>
                     </div>
                 </div>
-
+                <div class="reservation-checkbox">
+                    <h5>Nombre de personnes</h5>
+                    <input id="person" name="person" type="number" placeholder="1" required>
+                </div>
                 <div class="reservation-checkbox">
                     <h5>Dates de départ :</h5>
                     <input id="departure" name="departure" type="date" placeholder="jj/mm/aaaa" required>
-
                 </div>
+                
 
 
                 <div class="reservation-checkbox">
@@ -129,9 +131,8 @@ if (isset($_GET["destination"])){
                     <input id="return" name="return" type="date" placeholder="jj/mm/aaaa" required>
 
                 </div>
-
                 <div class="reservation-prix">
-                    <h5>Prix :</h5><h6><?php echo $content[$i]["prix"]?></h6>
+                    <h5>Prix de base :</h5><h6><?php echo $content[$i]["prix"]?></h6>
                 </div>
 
             </div>

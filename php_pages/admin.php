@@ -61,6 +61,8 @@ require_once "../php_pages/header.php";
                         <td><?php echo htmlspecialchars($user["email"]) ?></td>
                         <td><?php echo htmlspecialchars($user["role"]) ?></td>
                         <td>
+                            <?php if ($user["role"] != "Admin"){
+                            ?>
                             <div class="button-container">
 
                                 <form action="../php_pages/user-info.php" method="POST">
@@ -74,6 +76,7 @@ require_once "../php_pages/header.php";
                                     <button class="sup-button" type="submit">Supprimer</button>
                                 </form>
                             </div>
+                            <?php }?>
                         </td>
                     </tr>
                 <?php endforeach; ?>

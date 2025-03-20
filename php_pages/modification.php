@@ -29,6 +29,38 @@ $file = "../data/travel-user.json";
                 exit();
             }
         }
+        $a = -1;
+        for ($i = 0; $i < count($content); $i++){
+            if ($content[$i]['email'] === $_SESSION['email']){
+                $a = $i;
+                break;
+            }
+        }
+        if ($a < 0){
+            header('Location: connexion.php');
+            exit();
+        }
+        
+        $index_travel = -1;
+        $index = -1;
+        for ($i = 0; $i < count($content[$a]['travels']); $i++){
+            if ($content[$a]['travels'][$i]['destination'] == $_GET['travel']){
+                for ($p = 0; $p < count($content_travel); $p++){
+                    if ($content_travel[$p]['destination'] == $_GET['travel']){
+                        $url_image = $content_travel[$p]['image'];
+                        $index_travel = $p;
+                        $index = $i;
+                        $name = $content_travel[$p]['name'];
+                        break;
+                }
+                
+            }
+        }
+        }
+        if ($index_travel == -1 || !isset($name)){
+            header("Location: user.php");
+            exit();
+        }
            
         
 ?>
@@ -37,7 +69,7 @@ $file = "../data/travel-user.json";
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <title>Utilisateur</title>
+    <title>Modifier votre voyage à <?php echo $name?></title>
     <link rel="icon" type="image" href="../image/logo-site.webp">
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/modification.css">
@@ -52,46 +84,7 @@ require_once "../php_pages/header.php";
 ?>
 
 <main>
-    <?php
-    
-                $a = -1;
-                for ($i = 0; $i < count($content); $i++){
-                    if ($content[$i]['email'] === $_SESSION['email']){
-                        $a = $i;
-                        break;
-                    }
-                }
-                if ($a < 0){
-                    header('Location: connexion.php');
-                    exit();
-                }
-                
-                $index_travel = -1;
-                $index = -1;
-                for ($i = 0; $i < count($content[$a]['travels']); $i++){
-                    if ($content[$a]['travels'][$i]['destination'] == $_GET['travel']){
-                        for ($p = 0; $p < count($content_travel); $p++){
-                            if ($content_travel[$p]['destination'] == $_GET['travel']){
-                                $url_image = $content_travel[$p]['image'];
-                                $index_travel = $p;
-                                $index = $i;
-                                $name = $content_travel[$p]['name'];
-                                break;
-                        }
-                        
-                    }
-                }
-                }
-                if ($index_travel == -1 || !isset($name)){
-                    header("Location: user.php");
-                    exit();
-                }
-            
-
-                    
-                
-            
-    ?>
+   
 
    
 
@@ -164,13 +157,18 @@ require_once "../php_pages/header.php";
                     <?php endfor; ?>
                     </div>
                 </div>
+                <div class="reservation-checkbox">
 
+                    <h5>Nombres de personnes :</h5>
+                    <input id="number" name="person" type="number" value="<?php echo $content[$a]["travels"][$index]["person"]?>" required>
+
+                </div>
                 <div class="reservation-checkbox">
                     <h5>Dates de départ :</h5>
                     <input id="departure" name="departure" type="date" value="<?php echo $content[$a]["travels"][$index]["departure"]?>"required>
 
                 </div>
-
+                
 
                 <div class="reservation-checkbox">
 
@@ -187,7 +185,6 @@ require_once "../php_pages/header.php";
             <div class="button-container" id="buttons">
                 <input type="hidden" name="todo" value="modify">
                 <button type="submit">Modifier</button>
-
             </div>
         </form>
         <form method="post" action="../php/modification_travel.php">

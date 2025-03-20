@@ -55,7 +55,7 @@ function start_session($mail, $name, $firstname, $password, $role){
     $_SESSION['role'] = $role;
 }
 
-function update_price($hotel, $loisir, $visite, $relaxation, $departure, $return){
+function update_price($hotel, $loisir, $visite, $relaxation, $departure, $return, $person){
     $departure = new DateTime($departure);
     $return = new DateTime($return);
     $base_price = 18000;
@@ -76,8 +76,10 @@ function update_price($hotel, $loisir, $visite, $relaxation, $departure, $return
     } else{
         $price_day = 1;
     }
-    return $base_price + $nb_loisirs * $option_loisir + $nb_relaxation * $option_relaxation + $nb_visite * $option_visite + $price_day
-    * $nb_hotel * $surclassement_hotel;
+    $montant = ($base_price + $nb_loisirs * $option_loisir + $nb_relaxation * $option_relaxation + $nb_visite * $option_visite + $price_day
+    * $nb_hotel * $surclassement_hotel) * $person;
+    $montant = $montant + 0.00;
+    return $montant;
 }
 
 ?>
