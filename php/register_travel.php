@@ -1,5 +1,5 @@
 <?php
-session_start();
+require_once "../php/fonctions_utiles.php";
 
 
 function is_already_going_to($destination, $jsonFile){
@@ -28,7 +28,10 @@ function is_already_going_to($destination, $jsonFile){
 
 function register_travel($destination, $hotel, $loisir, $visite, $relaxation, $departure, $return){
     $jsonFile = "../data/travel-user.json";
-    
+    $prix = update_price($hotel, $loisir, $visite, $relaxation, $departure, $return);
+    if ($prix < 0){
+        header('Location: ../php_pages/user_register_travel.php?destination=' . $destination);
+    }
     if (!isset($_SESSION["email"])){
         header('Location: ../php_pages/connexion.php');
     }
@@ -44,7 +47,8 @@ function register_travel($destination, $hotel, $loisir, $visite, $relaxation, $d
                     "relaxation" => $relaxation,
                     "departure" => $departure,
                     "return" => $return,
-                    "reservation" => "Paiement en attente"
+                    "reservation" => "Paiement en attente",
+                    "prix" => $prix
                 )
             )
     );
@@ -66,7 +70,8 @@ function register_travel($destination, $hotel, $loisir, $visite, $relaxation, $d
                         "relaxation" => $relaxation,
                         "departure" => $departure,
                         "return" => $return,
-                        "reservation" => "Paiement en attente"
+                        "reservation" => "Paiement en attente",
+                        "prix" => $prix
                     )
                 )
         );
@@ -88,7 +93,8 @@ function register_travel($destination, $hotel, $loisir, $visite, $relaxation, $d
                         "relaxation" => $relaxation,
                         "departure" => $departure,
                         "return" => $return,
-                        "reservation" => "Paiement en attente"
+                        "reservation" => "Paiement en attente",
+                        "prix" => $prix
             );
                 
 
@@ -108,7 +114,8 @@ function register_travel($destination, $hotel, $loisir, $visite, $relaxation, $d
                 "relaxation" => $relaxation,
                 "departure" => $departure,
                 "return" => $return,
-                "reservation" => "Paiement en attente"
+                "reservation" => "Paiement en attente",
+                "prix" => $prix
             )
         )
     );

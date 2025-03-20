@@ -11,17 +11,41 @@
                 "hotel": "5 étoiles Premium VIP Deluxe",
                 "loisir": [
                     "Visite de Banque",
-                    "Jet-Ski"
+                    "Jet-Ski",
+                    "Plongée sous-marine"
                 ],
                 "visite": [
-                    "Visite d'un Musée Colonialiste"
+                    "Visite d'un Musée Colonialiste",
+                    "Visite d'un vignoble"
                 ],
                 "relaxation": [
-                    "Spa et Jacuzzi Privé"
+                    "Spa et Jacuzzi Privé",
+                    "Diner gastronomique 5 étoiles"
                 ],
                 "departure": "2025-03-21",
                 "return": "2025-04-25",
-                "reservation": "Paiement en attente"
+                "reservation": "Paiement en attente",
+                "prix": 55105244
+            },
+            {
+                "destination": "Anguilla",
+                "hotel": "5 étoiles Premium VIP",
+                "loisir": [
+                    "Visite de Banque",
+                    "Jet-Ski"
+                ],
+                "visite": [
+                    "Visite d'un Musée Colonialiste",
+                    "Visite d'un vignoble"
+                ],
+                "relaxation": [
+                    "Spa et Jacuzzi Privé",
+                    "Diner gastronomique 5 étoiles"
+                ],
+                "departure": "2025-03-21",
+                "return": "2025-03-29",
+                "reservation": "Paiement en attente",
+                "prix": 41310
             }
         ]
     }

@@ -5,6 +5,10 @@ require_once "../php/fonctions_utiles.php";
 
 
 function modification_travel($destination, $hotel, $loisir, $visite, $relaxation, $departure, $return){
+    $prix = update_price($hotel, $loisir, $visite, $relaxation, $departure, $return);
+    if ($prix < 0){
+        header('Location: ../php_pages/user_register_travel.php?destination=' . $destination);
+    }
     if ($departure > $return || $return < $currentDate || $departure < $currentDate){
         header('Location: ../php_page/modification.php?travel='.$destination);
     }
@@ -32,6 +36,7 @@ function modification_travel($destination, $hotel, $loisir, $visite, $relaxation
                     $content[$i]["travels"][$o]["departure"] = $departure;
                     $content[$i]["travels"][$o]["return"] = $return;
                     $content[$i]["travels"][$o]["loisir"] = $loisir;
+                    $content[$i]["travels"][$o]["prix"] = $prix;
                     file_put_contents($jsonFile, json_encode($content, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT));
                     header("Location: ../php_pages/user.php");
                     exit();

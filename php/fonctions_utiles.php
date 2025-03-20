@@ -55,4 +55,29 @@ function start_session($mail, $name, $firstname, $password, $role){
     $_SESSION['role'] = $role;
 }
 
+function update_price($hotel, $loisir, $visite, $relaxation, $departure, $return){
+    $departure = new DateTime($departure);
+    $return = new DateTime($return);
+    $base_price = 18000;
+    $option_loisir = 5036;
+    $option_relaxation = 2019;
+    $option_visite = 4099;
+    $price_per_day = 1099;
+    $surclassement_hotel = 1002;
+
+    $nb_loisirs = count($loisir);
+    $nb_relaxation = count($relaxation);
+    $nb_hotel = explode(" ",$hotel);
+    $nb_hotel = count($nb_hotel) - 3;
+    $nb_visite = count($visite);
+    $diff = $departure->diff($return);
+    if ($diff->days > 10){
+        $price_day = ($diff->days - 10)*$price_per_day;
+    } else{
+        $price_day = 1;
+    }
+    return $base_price + $nb_loisirs * $option_loisir + $nb_relaxation * $option_relaxation + $nb_visite * $option_visite + $price_day
+    * $nb_hotel * $surclassement_hotel;
+}
+
 ?>
