@@ -156,7 +156,7 @@ require_once "../php_pages/header.php";
                                     <a href="../php_pages/add_card.php">
                                     <p class="Non-réservé">
                                         <?php
-                                        echo $content[$a]['travels'][$i]['reservation'] . " de " . $content[$a]['travels'][$i]['prix'] . " €";
+                                        echo $content[$a]['travels'][$i]['reservation'] . " de " . $content[$a]['travels'][$i]['prix'] .  "€";
                                         ?>
                                     </p></a>
                                     <?php else: ?>
