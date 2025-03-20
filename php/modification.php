@@ -4,8 +4,7 @@ session_start();
 function user_modification($email, $password, $firstname, $name){
     $jsonFile = "../data/utilisateurs.json";
     if (!file_exists($jsonFile)) {
-
-        header('Location: ../php/inscription.php');
+        header('Location: ../php_pages/inscription.php');
     }
 
     $content = json_decode(file_get_contents($jsonFile), true);

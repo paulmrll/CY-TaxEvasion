@@ -100,7 +100,7 @@ require_once "../php_pages/header.php";
                                  if (file_exists("../data/travel-user.json")) {
                                      $content = json_decode(file_get_contents("../data/travel-user.json"), true);
                                      if ($content == null) {
-                                        header('Location: ../php_pages/inscription.php');
+                                        echo "<h1>Vous n'avez pas encore de voyages :</h1>";
                                         exit();
                                      }
                                      if (isset($_SESSION['email'])) {
@@ -111,8 +111,9 @@ require_once "../php_pages/header.php";
                                             } else {
                                                 $a = -2;
                                             }
-                                         }if ($a < 0){
-                                            header("Location: ../php_pages/connexion.php");
+                                         }if ($a <= 0){
+                                            echo "<h1>Vous n'avez pas encore de voyages :</h1>";
+                                            exit();
                                          }
                                          if (count($content[$a]['travels']) == 0) {
                                              echo "<h1>Vous n'avez pas encore réservé de voyage</h1>";
@@ -181,7 +182,7 @@ require_once "../php_pages/header.php";
                                     }
                                 }
                                 } else {
-                                    header('Location: ../php_pages/inscription.php');
+                                    echo "<h1>Vous n'avez pas encore de Voyages</h1>";
                                     exit();
                                     }
                                 ?>

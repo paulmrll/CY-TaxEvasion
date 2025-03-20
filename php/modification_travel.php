@@ -47,7 +47,7 @@ function modification_travel($destination, $hotel, $loisir, $visite, $relaxation
 function delete_travel($destination){
     $jsonFile = "../data/travel-user.json";
     if (!file_exists($jsonFile)) {
-        header('Location: ../php/inscription.php');
+        header('Location: ../php_pages/destination.php');
     }
     if (!isset($_SESSION['email'])) {
         header("Location: ../php_pages/connexion.php");
@@ -55,7 +55,7 @@ function delete_travel($destination){
     }
     $content = json_decode(file_get_contents($jsonFile), true);
     if ($content == null){
-        header('Location: ../php_pages/inscription.php');
+        header('Location: ../php_pages/destination.php');
         exit();
     }
     for ($i = 0; $i < count($content); $i++){
@@ -93,7 +93,7 @@ if (isset($_POST['todo'])) {
                 echo "1";
             modification_travel($destination, $hotel, $loisir, $visite, $relaxation, $departure, $return);
             } else {
-                header('Location: ../php_pages/inscription.php');
+                header('Location: ../php_pages/modification.php');
                 exit();
             }
             break;
@@ -102,7 +102,7 @@ if (isset($_POST['todo'])) {
                 $destination = $_POST['destination'];
                 delete_travel($_POST['destination']);
             } else {
-                header('Location: ../php_pages/inscription.php');
+                header('Location: ../php_pages/modification.php');
                 exit();
             }
             break;
@@ -112,7 +112,7 @@ if (isset($_POST['todo'])) {
     }
 
 } else {
-    header('Location: ../php_pages/inscription.php');
+    header('Location: ../php_pages/modification.php');
     exit();
 }
 

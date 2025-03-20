@@ -128,3 +128,10 @@ button:active{
     align-items: center;
     gap: 1rem;
 }
+img{
+    max-width: 10%;
+    height : auto;
+}
+#flag-case{
+    width: 50px;
+}

@@ -28,13 +28,30 @@ function is_already_going_to($destination, $jsonFile){
 
 function register_travel($destination, $hotel, $loisir, $visite, $relaxation, $departure, $return){
     $jsonFile = "../data/travel-user.json";
-    if (!file_exists($jsonFile)) {
-        header('Location: ../php/travel-user.php');
-    }
+    
     if (!isset($_SESSION["email"])){
         header('Location: ../php_pages/connexion.php');
     }
-    
+    if (!file_exists($jsonFile)) {
+        $tab[] = array(
+            "email" => $_SESSION["email"],
+            "travels" => array(
+                array(
+                    "destination" => $destination,
+                    "hotel" => $hotel,
+                    "loisir" => $loisir,
+                    "visite" => $visite,
+                    "relaxation" => $relaxation,
+                    "departure" => $departure,
+                    "return" => $return,
+                    "reservation" => "Paiement en attente"
+                )
+            )
+    );
+    file_put_contents($jsonFile, json_encode($tab, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT));
+        header('Location: ../php_pages/user.php');
+    exit();
+    }
 
     $content = json_decode(file_get_contents($jsonFile), true);
     if ($content == null){
