@@ -65,6 +65,7 @@ require_once "../php_pages/header.php";
     <a class="button-reserver" href="user_register_travel.php?destination=<?php echo $content[$i]['destination']; ?>">Réserver</a>
 
 
+
     <div class="maps">
         <img src="<?php echo $content[$i]["image_maps"] ?>" alt="<?php echo $content[$i]["destination"] ?>-maps">
         <br>

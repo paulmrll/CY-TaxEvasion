@@ -1,0 +1,26 @@
+[
+    {
+        "email": "tkt@gmail",
+        "travels": [
+            {
+                "destination": "Bermudes",
+                "hotel": "5 étoiles premium",
+                "loisir": [
+                    "Plongée sous-marine"
+                ],
+                "visite": [
+                    "Visite d'un Musée Colonialiste"
+                ],
+                "relaxation": [
+                    "Spa et Jacuzzi Privé"
+                ],
+                "departure": "2025-03-25",
+                "return": "2025-04-02",
+                "reservation": "Paiement en attente",
+                "prix": 116616,
+                "transaction": "67dd67f91b175",
+                "person": "4"
+            }
+        ]
+    }
+]
