@@ -101,16 +101,14 @@ function add_travel($name, $hotel, $loisir, $visite, $relaxation, $description, 
 
 
 
-
 if (isset($_POST['destination']) && isset($_POST['hotel']) && isset($_POST['loisir']) && isset($_POST['visite']) && isset($_POST['relaxation'])
 && isset($_POST['description']) && isset($_FILES['photo']) && isset($_FILES['photo_drapeau']) && isset($_FILES['photo_carte'])) {
     add_travel($_POST['destination'], $_POST['hotel'], $_POST['loisir'], $_POST['visite'], $_POST['relaxation'], $_POST['description']
 , $_FILES['photo'], $_FILES['photo_drapeau'], $_FILES['photo_carte']);
     header('Location: ../php_pages/admin.php');
-
     exit();
 } else {
-    header("Location: ../php_pages/add_new_travel");
+    //header("Location: ../php_pages/add_new_travel.php");
     exit();
 }
 

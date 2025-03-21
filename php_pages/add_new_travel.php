@@ -83,7 +83,7 @@ require_once "../php_pages/header.php";
                     <label class="reservation-button" for="visite1">Visite de Banque</label>
                     <input type="checkbox" id="visite2" name="visite[]" value="Visite d'un Musée Colonialiste">
                     <label class="reservation-button" for="visite2">Visite d'un Musée Colonialiste</label>
-                    <input type="checkbox" id="visite3" name="visite[]" value="Visite de Banque">
+                    <input type="checkbox" id="visite3" name="visite[]" value="Visite d'un vignoble'">
                     <label class="reservation-button" for="visite3">Visite d'un vignoble</label>
                     </div>
                     
@@ -102,7 +102,7 @@ require_once "../php_pages/header.php";
                     </div>
                 </div>
                 <div>
-                <form action="upload.php" method="post" enctype="multipart/form-data">
+
                 <label for="photo">Choisissez une photo :</label>
                 <input type="file" id="photo" name="photo" accept="image/*" required>
                 <label for="photodrapeau">Choisissez une photo du drapeau :</label>
