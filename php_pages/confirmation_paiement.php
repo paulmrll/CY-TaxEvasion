@@ -11,13 +11,13 @@ if (!isset($_GET["status"]) && !isset($_GET["montant"]) && !isset($_GET["transac
     header("Location: ../php_pages/user.php");
     exit();
 }
-$statut = $_GET["status"];
+$status = $_GET["status"];
 $montant = $_GET["montant"];
 $transaction = $_GET["transaction"];
 $vendeur = $_GET["vendeur"];
 $control = $_GET["control"];
 
-$control_verification = getapikey($vendeur) . "#" . $transaction . "#" . $montant . "#" . $vendeur . "#" . $statut . "#";
+$control_verification = getapikey($vendeur) . "#" . $transaction . "#" . $montant . "#" . $vendeur . "#" . $status . "#";
 
 
 
@@ -46,7 +46,7 @@ if (!isset($index_travel) || !isset($index_email)){
     header("Location: destination.php");
     exit();
 }
-if (md5($control_verification) == $control){
+if (md5($control_verification) == $control && $status == "accepted"){
     $content[$index_email]["travels"][$index_travel]["reservation"] = "Payé";
     file_put_contents($file, json_encode($content, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT));
     $a =1;

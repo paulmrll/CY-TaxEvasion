@@ -22,5 +22,29 @@
                 "person": "4"
             }
         ]
+    },
+    {
+        "email": "paul.morille11@gmail.com",
+        "travels": [
+            {
+                "destination": "Anguilla",
+                "hotel": "5 étoiles premium",
+                "loisir": [
+                    "Jet-Ski"
+                ],
+                "visite": [
+                    "Visite d'un Musée Colonialiste"
+                ],
+                "relaxation": [
+                    "Spa et Jacuzzi Privé"
+                ],
+                "departure": "2025-03-22",
+                "return": "2025-03-30",
+                "reservation": "Paiement en attente",
+                "prix": 87462,
+                "transaction": "67ddce669ecbb",
+                "person": "3"
+            }
+        ]
     }
 ]

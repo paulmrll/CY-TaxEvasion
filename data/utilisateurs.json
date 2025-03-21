@@ -20,5 +20,27 @@
             "ville": "a",
             "cdp": "95000"
         }
+    },
+    {
+        "name": "Morille",
+        "firstname": "paul",
+        "email": "paul.morille11@gmail.com",
+        "password": "$2y$10$XN94QRyBBQccRFRTdRuvyei\/WIw.TrcsIX0VJwvWbrRLva0fKLqUa",
+        "inscription_date": "21-03-2025 19:01:29",
+        "connexion_date": "21-03-2025 19:01:29",
+        "role": "Utilisateur",
+        "card": {
+            "name": "",
+            "number": 0,
+            "date": 0,
+            "cvv": 0
+        },
+        "birth": "2025-03-20",
+        "adress": {
+            "number": "98",
+            "rue": "verdun",
+            "ville": "la frette sur seine",
+            "cdp": "95530"
+        }
     }
 ]
