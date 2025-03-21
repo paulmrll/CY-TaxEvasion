@@ -62,9 +62,10 @@ if (!is_numeric($montant)){
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <title>Confirmation de Paiement voyage à <?phpecho $destination?></title>
+    <title>Confirmation de Paiement voyage à <?php echo $destination?></title>
     <link rel="icon" type="image" href="../image/logo-site.webp">
     <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/paiement.css">
 
 
 

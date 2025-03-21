@@ -35,20 +35,20 @@
             <td colspan="2"><input id="password" name="password" type="password" placeholder="Mot de passe" required></td>
         </tr>
         <tr>
-            <td colspan="2"><input id="numero" name="numero" type="number" placeholder="numéro de rue" required></td>
+            <td colspan="2"><input id="numero" name="numero" type="number" placeholder="Numéro de rue" required></td>
         </tr>
         <tr>
-            <td colspan="2"><input id="rue" name="rue" type="text" placeholder="rue" required></td>
+            <td colspan="2"><input id="rue" name="rue" type="text" placeholder="Rue" required></td>
         </tr>
         <tr>
-            <td colspan="2"><input id="ville" name="ville" type="text" placeholder="ville" required></td>
+            <td colspan="2"><input id="ville" name="ville" type="text" placeholder="Ville" required></td>
         </tr>
         <tr>
             <td colspan="2"><input id="code postal" name="cdp" type="text" placeholder="95000" required></td>
         </tr>
         <tr>
-            <td><label for="anniversaire" >Anniversaire : </label></td>
-            <td><input id="anniversaire" name="birth" type="date" placeholder="anniversaire" required></td>
+            <td><label for="anniversaire" >Date de naissance : </label></td>
+            <td><input id="anniversaire" name="birth" type="date" required></td>
         </tr>
         <tr>
             <td colspan="2">

@@ -102,7 +102,7 @@ h1 {
 .line-container {
     display: flex;
     align-items: center;
-    gap: 3rem;
+    gap: 1.5rem;
     font-size: 1.2rem;
 }
 
@@ -294,10 +294,11 @@ main div button img {
     align-items: center;
     justify-content: flex-start;
     color: var(--color-light-writing);
-    background: var(--color-header-active);
+    background: var(--color-map-grey);
     border-radius: 1rem;
     padding: 1rem;
     font-size: 1.1rem;
+    text-wrap: nowrap;
 }
 .modification-container{
     display: flex;
@@ -310,6 +311,23 @@ main div button img {
     font-size: 1.1rem;
     text-align: center;
 }
+
+
+.button{
+    padding: 0.3rem 0.5rem;
+    color: var(--color-light-writing);
+    background: var(--color-header-active);
+    border-radius: 0.8rem;
+}
+
+
+.button-voyage{
+    padding: 0.2rem 0.4rem;
+    color: var(--color-light-writing);
+    background: var(--color-header-active);
+    border-radius: 0.8rem;
+}
+
 a {
     text-decoration: none;
 }
