@@ -116,6 +116,12 @@ if (isset($_POST["name"]) && isset($_POST["firstname"]) && isset($_POST["email"]
     $ville = $_POST["ville"];
     $cdp = $_POST["cdp"];
     $birth = $_POST["birth"];
+    $birth_time = strtotime($birth);
+    $birth_time = date("Y-m-d", $birth_time);
+    if ($birth_time >= date("Y-m-d")){
+        header("Location: ../php_pages/inscription.php");
+        exit();
+    }
     inscription($name, $firstname, $email, $password, $nb_rue, $rue, $ville, $cdp, $birth);
     create_travel_user();
     

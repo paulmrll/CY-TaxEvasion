@@ -91,6 +91,41 @@ require_once "../php_pages/header.php";
                                                    value="<?php echo $_SESSION['password']; ?>" required>
                                         </div>
                                     </div>
+                                    <div class="grid-line-container">
+                                        <div>
+                                            <a>Numéro de rue : </a>
+                                            <input type="number" name="nb"
+                                                   value="<?php echo $content_user[$index_user]["adress"]['number']; ?>" required>
+                                        </div>
+                                    </div>
+                                    <div class="grid-line-container">
+                                        <div>
+                                            <a>Rue : </a>
+                                            <input type="text" name="rue"
+                                                   value="<?php echo $content_user[$index_user]["adress"]['rue']; ?>" required>
+                                        </div>
+                                    </div>
+                                    <div class="grid-line-container">
+                                        <div>
+                                            <a>Ville : </a>
+                                            <input type="text" name="ville"
+                                                   value="<?php echo $content_user[$index_user]["adress"]['ville']; ?>" required>
+                                        </div>
+                                    </div>
+                                    <div class="grid-line-container">
+                                        <div>
+                                            <a>Code postal : </a>
+                                            <input type="text" name="cdp"
+                                                   value="<?php echo $content_user[$index_user]["adress"]['cdp']; ?>" required>
+                                        </div>
+                                    </div>
+                                    <div class="grid-line-container">
+                                        <div>
+                                            <a>Date de Naissance : </a>
+                                            <input type="date" name="birth"
+                                                   value="<?php echo $content_user[$index_user]['birth']; ?>" required>
+                                        </div>
+                                    </div>
                                     
                                     <div class="button-container">
                                         <button class="button-modifier">Modifier</button>
