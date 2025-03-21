@@ -22,12 +22,12 @@
         }
     },
     {
-        "name": "Flo",
-        "firstname": "Go",
+        "name": "Florian",
+        "firstname": "Goupil",
         "email": "tkt@gmail",
-        "password": "$2y$10$crsFZIa1.jzpzG3\/bNUi.OQuI7PMjAq0U4KeI3jtj9hb2k7AfCuhi",
+        "password": "$2y$10$SZ6G5ZTtV0zH75.XfY7Slu.vJRCbCih2FUOkbA24lcoEXd\/RC9z.K",
         "inscription_date": "21-03-2025 10:38:58",
-        "connexion_date": "21-03-2025 10:40:38",
+        "connexion_date": "21-03-2025 10:59:33",
         "role": "Admin",
         "card": {
             "name": "",
