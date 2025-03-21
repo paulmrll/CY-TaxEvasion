@@ -26,5 +26,29 @@
     {
         "email": "paul.morille11@gmail.com",
         "travels": []
+    },
+    {
+        "email": "tkt@gmail",
+        "travels": [
+            {
+                "destination": "Anguilla",
+                "hotel": "5 étoiles premium",
+                "loisir": [
+                    "Visite de Banque"
+                ],
+                "visite": [
+                    "Visite d'un Musée Colonialiste"
+                ],
+                "relaxation": [
+                    "Spa et Jacuzzi Privé"
+                ],
+                "departure": "2025-03-22",
+                "return": "2025-03-27",
+                "reservation": "Paiement en attente",
+                "prix": 87462,
+                "transaction": "0",
+                "person": "3"
+            }
+        ]
     }
 ]

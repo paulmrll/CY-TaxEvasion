@@ -60,7 +60,7 @@ require_once "../php_pages/header.php";
 
    
 
-    <img src="<?php echo $content[$i]["image"]?>" alt="Image de la destination">
+    <img class="main-image" src="<?php echo $content[$i]["image"]?>" alt="Image de la destination">
     <h1>Réserver votre voyage à <?php echo $content[$i]["destination"]?></h1>
     <div class="container">
     <form method="post" action="../php/register_travel.php">

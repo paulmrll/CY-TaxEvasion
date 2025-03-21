@@ -294,7 +294,7 @@ main div button img {
     align-items: center;
     justify-content: flex-start;
     color: var(--color-light-writing);
-    background: var(--color-header-active);
+    background: var(--color-map-grey);
     border-radius: 1rem;
     padding: 1rem;
     font-size: 1.1rem;
