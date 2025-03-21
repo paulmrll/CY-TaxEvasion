@@ -54,10 +54,10 @@ require_once "../php_pages/header.php";
                 <label>
                     <select>
                         <option value="" selected hidden>Choisissez une option</option>
-                        <option value="-1000">< 1000 $</option>
-                        <option value="1000-2000">1000-2000 $</option>
-                        <option value="2000-3000">2000-3000 $</option>
-                        <option value="+3000"> > 3000 $</option>
+                        <option value="-10000"> - 10000 $</option>
+                        <option value="10000-20000">10000 - 20000 $</option>
+                        <option value="20000-30000">20000 - 30000 $</option>
+                        <option value="+30000"> + 30000 $</option>
                     </select>
                 </label>
             </div>
@@ -93,9 +93,11 @@ require_once "../php_pages/header.php";
                 <label>
                     <select>
                         <option value="" selected hidden>Choisissez une option</option>
-                        <option value="Europe">Amérique-Centrale</option>
+                        <option value="Europe">Europe</option>
                         <option value="Amérique-Centrale">Amérique-Centrale</option>
                         <option value="Amérique-du-Sud">Amérique-du-Sud</option>
+                        <option value="Moyen-Orient">Moyen-Orient</option>
+                        <option value="Asie">Asie</option>
                         <option value="Océanie">Océanie</option>
                     </select>
                 </label>

@@ -25,7 +25,7 @@ header, main, footer {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transform: translate(-50%, -55%);
+    transform: translate(-50%, -53%);
     pointer-events: none;
 }
 
@@ -263,7 +263,7 @@ header, main, footer {
 
 
 .ping-text {
-    font-size: 1.1rem;
+    font-size: 1rem;
     position: relative;
     color: var(--color-light-writing);
     transform: translateX(1.1rem) translateY(-1.5rem);

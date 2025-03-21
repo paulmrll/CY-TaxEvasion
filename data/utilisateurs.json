@@ -20,5 +20,20 @@
             "ville": "la frette sur seine",
             "cdp": "95530"
         }
+    },
+    {
+        "name": "Flo",
+        "firstname": "Go",
+        "email": "tkt@gmail",
+        "password": "$2y$10$crsFZIa1.jzpzG3\/bNUi.OQuI7PMjAq0U4KeI3jtj9hb2k7AfCuhi",
+        "inscription_date": "21-03-2025 10:38:58",
+        "connexion_date": "21-03-2025 10:40:38",
+        "role": "Admin",
+        "card": {
+            "name": "",
+            "number": 0,
+            "date": 0,
+            "cvv": 0
+        }
     }
 ]
