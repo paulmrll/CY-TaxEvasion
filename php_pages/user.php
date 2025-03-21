@@ -3,7 +3,7 @@
 require_once "../php/fonctions_utiles.php";
 
 
-if (!isset($_SESSION['email']) || !isset($_SESSION['name']) !isset($_SESSION['firstname']) || !isset($_SESSION['role']) || !isset($_SESSION['password'])) {
+if (!isset($_SESSION['email']) || !isset($_SESSION['name']) || !isset($_SESSION['firstname']) || !isset($_SESSION['role']) || !isset($_SESSION['password'])) {
     header("Location: ../php_pages/connexion.php");
     exit();
 }
