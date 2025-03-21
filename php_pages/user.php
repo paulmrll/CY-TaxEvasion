@@ -18,7 +18,7 @@ if ($content_user == null){
     exit();
 }
 for ($i = 0; $i < count($content_user); $i++){
-    if ($content[$i]["email"] == $_SESSION["email"]){
+    if ($content_user[$i]["email"] == $_SESSION["email"]){
         $index_user = $i;
     }
 }
