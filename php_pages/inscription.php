@@ -22,17 +22,33 @@
             <th colspan="2">Inscription</th>
         </tr>
         <tr>
-            <td><input id="firstname" name="firstname" type="text" placeholder="Prénom" required></td>
+            <td colspan="2"><input id="firstname" name="firstname" type="text" placeholder="Prénom" required></td>
         </tr>
         <tr>
-            <td><input id="name" name="name" type="text" placeholder="Nom" required></td>
+            <td colspan="2"><input id="name" name="name" type="text" placeholder="Nom" required></td>
         </tr>
 
         <tr>
-            <td><input id="email" name="email" type="email" placeholder="e-mail@gmail.com" required></td>
+            <td colspan="2"><input id="email" name="email" type="email" placeholder="e-mail@gmail.com" required></td>
         </tr>
         <tr>
-            <td><input id="password" name="password" type="password" placeholder="Mot de passe" required></td>
+            <td colspan="2"><input id="password" name="password" type="password" placeholder="Mot de passe" required></td>
+        </tr>
+        <tr>
+            <td colspan="2"><input id="numero" name="numero" type="number" placeholder="numéro de rue" required></td>
+        </tr>
+        <tr>
+            <td colspan="2"><input id="rue" name="rue" type="text" placeholder="rue" required></td>
+        </tr>
+        <tr>
+            <td colspan="2"><input id="ville" name="ville" type="text" placeholder="ville" required></td>
+        </tr>
+        <tr>
+            <td colspan="2"><input id="code postal" name="cdp" type="text" placeholder="95000" required></td>
+        </tr>
+        <tr>
+            <td><label for="anniversaire" >Anniversaire : </label></td>
+            <td><input id="anniversaire" name="birth" type="date" placeholder="anniversaire" required></td>
         </tr>
         <tr>
             <td colspan="2">

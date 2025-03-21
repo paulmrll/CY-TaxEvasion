@@ -14,7 +14,7 @@ function exist($email){
 }
 
 
-function create_user($name, $firstname, $email, $password){
+function create_user($name, $firstname, $email, $password, $nb_rue, $rue, $ville, $cdp, $birth){
     if (isset($name) && isset($firstname) && isset($email) && isset($password)) {
         $mdp_hash = password_hash($password, PASSWORD_DEFAULT);
         
@@ -31,6 +31,13 @@ function create_user($name, $firstname, $email, $password){
                 "number" => 0,
                 "date" => 0,
                 "cvv" => 0
+            ],
+            "birth" => $birth,
+            "adress" => [
+                "number" => $nb_rue,
+                "rue" => $rue,
+                "ville" => $ville,
+                "cdp" => $cdp
             ]
         ];
     }
@@ -39,14 +46,14 @@ function create_user($name, $firstname, $email, $password){
 
 
 
-function inscription($name, $firstname, $email, $password){
+function inscription($name, $firstname, $email, $password, $nb_rue, $rue, $ville, $cdp, $birth){
     $role = "Utilisateur";
+    $tab = create_user($name, $firstname, $email, $password, $nb_rue, $rue, $ville, $cdp, $birth);
     if (file_exists("../data/utilisateurs.json")) {
         $content = json_decode(file_get_contents("../data/utilisateurs.json"), true);
         $name = change_variable($name);
         $firstname = change_variable($firstname);
         $email = change_email($email);
-        $tab = create_user($name, $firstname, $email, $password);
         if ($content === null){
             file_put_contents("../data/utilisateurs.json", json_encode([$tab], JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT));
             session_start();
@@ -63,11 +70,9 @@ function inscription($name, $firstname, $email, $password){
             }
         }
     } else {
-        $tab = create_user($name, $firstname, $email, $password);
             file_put_contents("../data/utilisateurs.json", json_encode([$tab], JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT));
             session_start();
             start_session($email, $name, $firstname, $password, $role);
-            
     }
 }
 
@@ -97,7 +102,8 @@ function create_travel_user(){
 }
 
 
-if (isset($_POST["name"]) && isset($_POST["firstname"]) && isset($_POST["email"]) && isset($_POST["password"])) {
+if (isset($_POST["name"]) && isset($_POST["firstname"]) && isset($_POST["email"]) && isset($_POST["password"]) && isset($_POST["numero"])
+&& isset($_POST["rue"]) && isset($_POST["rue"]) && isset($_POST["ville"]) && isset($_POST["cdp"]) && isset($_POST["birth"])) {
     date_default_timezone_set('Europe/Paris');
     session_unset();    
     session_destroy();
@@ -105,7 +111,12 @@ if (isset($_POST["name"]) && isset($_POST["firstname"]) && isset($_POST["email"]
     $firstname = $_POST["firstname"];
     $email = $_POST["email"];
     $password = $_POST["password"];
-    inscription($name, $firstname, $email, $password);
+    $nb_rue = $_POST["numero"];
+    $rue = $_POST["rue"];
+    $ville = $_POST["ville"];
+    $cdp = $_POST["cdp"];
+    $birth = $_POST["birth"];
+    inscription($name, $firstname, $email, $password, $nb_rue, $rue, $ville, $cdp, $birth);
     create_travel_user();
     
 } else {

@@ -1,32 +1,24 @@
 [
     {
-        "name": "P",
-        "firstname": "P",
-        "email": "p@gmail.com",
-        "password": "$2y$10$BNulMXqEEWeGu44fHPue8uxxz2iZASgWeoZ1VRaI5SoIV.XDgVZfm",
-        "inscription_date": "20-03-2025 12:42:08",
-        "connexion_date": "20-03-2025 22:49:22",
-        "role": "Admin",
+        "name": "Morille",
+        "firstname": "Paul",
+        "email": "paul.morille11@gmail.com",
+        "password": "$2y$10$vZjQJ6xzqlcOAIllE8Z4SuCfEdOFONhdZV0YfGM0C1VGHYaT081R2",
+        "inscription_date": "21-03-2025 10:49:06",
+        "connexion_date": "21-03-2025 10:49:18",
+        "role": "Utilisateur",
         "card": {
             "name": "",
             "number": 0,
             "date": 0,
             "cvv": 0
-        }
-    },
-    {
-        "name": "Morille",
-        "firstname": "Paul",
-        "email": "paul.morille11@gmail.com",
-        "password": "$2y$10$uLQOJtI73gVJDPWjkmvFUu00yWd02LpMoR1wl7OiWFrVCeGIi6y0S",
-        "inscription_date": "20-03-2025 14:59:57",
-        "connexion_date": "20-03-2025 16:47:08",
-        "role": "Utilisateurs",
-        "card": {
-            "name": "pa",
-            "number": "9090909090909090",
-            "date": "2025-03-21",
-            "cvv": "908"
+        },
+        "birth": "2025-02-05",
+        "adress": {
+            "number": "98",
+            "rue": "rue de Verdun",
+            "ville": "la frette sur seine",
+            "cdp": "95530"
         }
     }
 ]

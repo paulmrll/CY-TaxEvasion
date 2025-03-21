@@ -3,9 +3,24 @@
 require_once "../php/fonctions_utiles.php";
 
 
-if (!isset($_SESSION['email'])) {
+if (!isset($_SESSION['email']) || !isset($_SESSION['name']) !isset($_SESSION['firstname']) || !isset($_SESSION['role']) || !isset($_SESSION['password'])) {
     header("Location: ../php_pages/connexion.php");
     exit();
+}
+$file = "../data/utilisateurs.json";
+if (!file_exists("../data/utilisateurs.json")) {
+    header('Location: inscription.php');
+    exit();
+}
+$content_user = json_decode(file_get_contents($file), true);
+if ($content_user == null){
+    header('Location: inscription.php');
+    exit();
+}
+for ($i = 0; $i < count($content_user); $i++){
+    if ($content[$i]["email"] == $_SESSION["email"]){
+        $index_user = $i;
+    }
 }
 ?>
 
@@ -76,6 +91,7 @@ require_once "../php_pages/header.php";
                                                    value="<?php echo $_SESSION['password']; ?>" required>
                                         </div>
                                     </div>
+                                    
                                     <div class="button-container">
                                         <button class="button-modifier">Modifier</button>
                                     </div>
