@@ -83,8 +83,15 @@ require_once "../php_pages/header.php";
 
    
 
-    <img src="<?php echo $url_image?>" alt="Image de la destination">
-    <h1>Votre voyage à <?php echo $name?></h1>
+    <img class="main-img" src="<?php echo $url_image?>" alt="Image de la destination">
+
+    <?php if ($content[$a]['travels'][$index]['reservation'] == "Paiement en attente"){?>
+        <h1>Votre voyage en attente de réservation à <?php echo $name?></h1>
+    <?php }elseif ($content[$a]['travels'][$index]['reservation'] == "Payé"){?>
+        <h1>Votre voyage réservé à <?php echo $name?></h1>
+    <?php }?>
+
+
     <div class="container">
 
        
@@ -141,18 +148,20 @@ require_once "../php_pages/header.php";
                     <h6><?php echo $content[$a]['travels'][$index]['return']?></h6>
 
                 </div>
-                <div class="reservation-prix">
+                <div class="reservation-checkbox">
                     <h5>Nombres de personnes :</h5><h6><?php echo $content[$a]["travels"][$index]["person"]?> personnes</h6>
                 </div>
 
-                <div class="reservation-prix">
+                <div class="reservation-checkbox">
                     <h5>Prix :</h5><h6><?php echo $content[$a]["travels"][$index]["prix"] . " €"?></h6>
                 </div>
 
             </div>
             <?php if ($content[$a]['travels'][$index]['reservation'] == "Paiement en attente"){?>
-            <a href="../php/define-index-travel.php?action=modify&travel=<?php echo $content[$a]['travels'][$index]['destination']?>">Modifier</a>
+            <a class="modifier-button" href="../php/define-index-travel.php?action=modify&travel=<?php echo $content[$a]['travels'][$index]['destination']?>">Modifier</a>
             <?php }?>
+
+
     </div>
 </main>
 

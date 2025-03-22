@@ -9,6 +9,11 @@ h1 {
     text-shadow: 1px 1px var(--color-background);
 }
 
+h2{
+    font-size: 0.8rem;
+    color: var(--color-dark-writing);
+}
+
 
 .main-grid {
     display: flex;
@@ -76,6 +81,7 @@ h1 {
     align-items: center;
     justify-content: center;
     min-width: 20rem;
+    max-height: 25rem;
 }
 
 .utilisateur-image img {
@@ -194,6 +200,7 @@ main div button img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    max-width: 20rem;
 }
 
 
@@ -266,27 +273,8 @@ main div button img {
     border-radius: 1rem;
 }
 
-.Annulé {
-    background: var(--color-map-red);
-    color: var(--color-background);
-    padding: 0 0.5rem;
-    border-radius: 1rem;
-}
 
-.Payment {
-    color: var(--color-background);
-    background: var(--color-reset);
-    padding: 0.1rem 0.5rem;
-    border-radius: 1rem;
-    white-space: nowrap;
-}
 
-.Effectué {
-    color: var(--color-background);
-    background: var(--color-header-active);
-    padding: 0 0.5rem;
-    border-radius: 1rem;
-}
 
 .date-container{
     display: flex;

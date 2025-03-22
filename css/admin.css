@@ -139,3 +139,11 @@ button:active{
     gap: 1rem;
 }
 
+a{
+    text-decoration: none;
+    color: var(--color-header-active);
+}
+
+a:hover{
+    color: var(--color-header-active-lighter);
+}

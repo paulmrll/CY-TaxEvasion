@@ -88,7 +88,7 @@ require_once "../php_pages/header.php";
 
    
 
-    <img src="<?php echo $url_image?>" alt="Image de la destination">
+    <img class="main-image" src="<?php echo $url_image?>" alt="Image de la destination">
     <h1>Modifier votre voyage à <?php echo $name;?></h1>
     <div class="container">
     <form method="post" action="../php/modification_travel.php">
@@ -184,7 +184,7 @@ require_once "../php_pages/header.php";
             </div>
             <div class="button-container" id="buttons">
                 <input type="hidden" name="todo" value="modify">
-                <button type="submit">Modifier</button>
+                <button type="submit">Confirmer Modification</button>
             </div>
         </form>
         <form method="post" action="../php/modification_travel.php">

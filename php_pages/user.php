@@ -13,12 +13,12 @@ if (!file_exists("../data/utilisateurs.json")) {
     exit();
 }
 $content_user = json_decode(file_get_contents($file), true);
-if ($content_user == null){
+if ($content_user == null) {
     header('Location: inscription.php');
     exit();
 }
-for ($i = 0; $i < count($content_user); $i++){
-    if ($content_user[$i]["email"] == $_SESSION["email"]){
+for ($i = 0; $i < count($content_user); $i++) {
+    if ($content_user[$i]["email"] == $_SESSION["email"]) {
         $index_user = $i;
     }
 }
@@ -57,7 +57,6 @@ require_once "../php_pages/header.php";
                                 <div class="compte-info-container-top">
 
 
-
                                     <div class="grid-line-container">
                                         <div>
                                             <a>Nom : </a>
@@ -70,8 +69,9 @@ require_once "../php_pages/header.php";
                                     <div class="grid-line-container">
                                         <div>
                                             <a>Prénom : </a>
-                                            <input type="text" name="firstname" value="<?php echo $_SESSION['firstname']; ?>"
-                                                    required>
+                                            <input type="text" name="firstname"
+                                                   value="<?php echo $_SESSION['firstname']; ?>"
+                                                   required>
                                         </div>
 
                                     </div>
@@ -95,28 +95,32 @@ require_once "../php_pages/header.php";
                                         <div>
                                             <a>Numéro de rue : </a>
                                             <input type="number" name="nb"
-                                                   value="<?php echo $content_user[$index_user]["adress"]['number']; ?>" required>
+                                                   value="<?php echo $content_user[$index_user]["adress"]['number']; ?>"
+                                                   required>
                                         </div>
                                     </div>
                                     <div class="grid-line-container">
                                         <div>
                                             <a>Rue : </a>
                                             <input type="text" name="rue"
-                                                   value="<?php echo $content_user[$index_user]["adress"]['rue']; ?>" required>
+                                                   value="<?php echo $content_user[$index_user]["adress"]['rue']; ?>"
+                                                   required>
                                         </div>
                                     </div>
                                     <div class="grid-line-container">
                                         <div>
                                             <a>Ville : </a>
                                             <input type="text" name="ville"
-                                                   value="<?php echo $content_user[$index_user]["adress"]['ville']; ?>" required>
+                                                   value="<?php echo $content_user[$index_user]["adress"]['ville']; ?>"
+                                                   required>
                                         </div>
                                     </div>
                                     <div class="grid-line-container">
                                         <div>
                                             <a>Code postal : </a>
                                             <input type="text" name="cdp"
-                                                   value="<?php echo $content_user[$index_user]["adress"]['cdp']; ?>" required>
+                                                   value="<?php echo $content_user[$index_user]["adress"]['cdp']; ?>"
+                                                   required>
                                         </div>
                                     </div>
                                     <div class="grid-line-container">
@@ -126,7 +130,7 @@ require_once "../php_pages/header.php";
                                                    value="<?php echo $content_user[$index_user]['birth']; ?>" required>
                                         </div>
                                     </div>
-                                    
+
                                     <div class="button-container">
                                         <button class="button-modifier">Modifier</button>
                                     </div>
@@ -147,98 +151,108 @@ require_once "../php_pages/header.php";
 
                 <div class="box-container">
                     <div class="part-container">
-                            <?php
+                        <?php
 
-                                 if (file_exists("../data/travel-user.json")) {
-                                     $content = json_decode(file_get_contents("../data/travel-user.json"), true);
-                                     if ($content == null) {
-                                        echo "<h1>Vous n'avez pas encore de voyages :</h1>";
-                                        exit();
-                                     }
-                                     if (isset($_SESSION['email'])) {
-                                         for ($i = 0; $i < count($content); $i++){
-                                            if ($content[$i]["email"] === $_SESSION['email']){
-                                                $a = $i;
-                                                break;
-                                            } else {
-                                                $a = -2;
-                                            }
-                                         }if ($a < 0){
-                                            echo "<h1>Vous n'avez pas encore de voyages :</h1>";
-                                            exit();
-                                         }
-                                         if (count($content[$a]['travels']) == 0) {
-                                             echo "<h1>Vous n'avez pas encore réservé de voyage</h1>";
-                                             exit();
-                                         }
-                                            
-                                             if (file_exists("../data/travel.json")) {
-                                                 $content_travel = json_decode(file_get_contents("../data/travel.json"), true);
-                                             } else {
-                                                echo "<h1>Vous n'avez pas encore réservé de voyage</h1>";
-                                                 exit();
-                                             }
-                                             if ($content_travel === null) {
-                                                echo "<h1>Vous n'avez pas encore réservé de voyage</h1>";
-                                                 exit();
-                                             }
-                                             echo "<h1>Mes Voyages :</h1>";
-                                             for ($i = 0; $i < count($content[$a]['travels']); $i++):
+                        if (file_exists("../data/travel-user.json")) {
+                        $content = json_decode(file_get_contents("../data/travel-user.json"), true);
+                        if ($content == null) {
+                            echo "<h1>Vous n'avez pas encore de voyages :</h1>";
+                            exit();
+                        }
+                        if (isset($_SESSION['email'])) {
+                        for ($i = 0; $i < count($content); $i++) {
+                            if ($content[$i]["email"] === $_SESSION['email']) {
+                                $a = $i;
+                                break;
+                            } else {
+                                $a = -2;
+                            }
+                        }
+                        if ($a < 0) {
+                            echo "<h1>Vous n'avez pas encore de voyages :</h1>";
+                            exit();
+                        }
+                        if (count($content[$a]['travels']) == 0) {
+                            echo "<h1>Vous n'avez pas encore réservé de voyage</h1>";
+                            exit();
+                        }
 
-                                                 for ($o = 0; $o < count($content_travel); $o++):
-                                                     if ($content[$a]['travels'][$i]['destination'] === $content_travel[$o]['destination']) {
-                                                         $url_image = $content_travel[$o]['image'];
-                                                         $name = $content_travel[$o]['name'];
-                                                         break;
-                                                     }
-                                                 endfor;
-                                                 ?>
-                                            
+                        if (file_exists("../data/travel.json")) {
+                            $content_travel = json_decode(file_get_contents("../data/travel.json"), true);
+                        } else {
+                            echo "<h1>Vous n'avez pas encore réservé de voyage</h1>";
+                            exit();
+                        }
+                        if ($content_travel === null) {
+                            echo "<h1>Vous n'avez pas encore réservé de voyage</h1>";
+                            exit();
+                        }
+                        echo "<h1>Mes Voyages :</h1>";
+                        for ($i = 0;
+                        $i < count($content[$a]['travels']);
+                        $i++):
+
+                        for ($o = 0; $o < count($content_travel); $o++):
+                            if ($content[$a]['travels'][$i]['destination'] === $content_travel[$o]['destination']) {
+                                $url_image = $content_travel[$o]['image'];
+                                $name = $content_travel[$o]['name'];
+                                break;
+                            }
+                        endfor;
+                        ?>
+
                         <div class="compte-info-container">
                             <div class="grid-container">
                                 <div class="line-container">
                                     <div class="grid-item">
-                                        <a href="description-pages.php?destination=<?php echo $content[$a]["travels"][$i]["destination"] ?>" class="image-select">
-                                            <img src="<?php echo $url_image?>" alt="image">
+                                        <a href="description-pages.php?destination=<?php echo $content[$a]["travels"][$i]["destination"] ?>"
+                                           class="image-select">
+                                            <img src="<?php echo $url_image ?>" alt="image">
                                             <h3><?php echo $name ?></h3>
                                         </a>
                                     </div>
-                                <?php 
+                                    <?php
                                     if ($content[$a]['travels'][$i]['reservation'] == "Paiement en attente"):?>
-                                    <a href="../php_pages/paiement.php?destination=<?php echo $content[$a]["travels"][$i]["destination"]?>">
-                                    <p class="Non-réservé">
-                                        <?php
-                                        echo $content[$a]['travels'][$i]['reservation'] . " de " . $content[$a]['travels'][$i]['prix'] .  "€";
-                                        ?>
-                                    </p></a>
+                                        <a href="../php_pages/paiement.php?destination=<?php echo $content[$a]["travels"][$i]["destination"] ?>">
+                                            <p class="Non-réservé">
+                                                <?php
+                                                echo $content[$a]['travels'][$i]['reservation'] . " de " . $content[$a]['travels'][$i]['prix'] . "€";
+                                                ?> <h2>Cliquer ci-dessus pour payer</h2>
+                                            </p></a>
                                     <?php else: ?>
-                                    <p class="Réservé">
-                                        <?php
-                                        echo $content[$a]['travels'][$i]['reservation'];
-                                        ?>
-                                    </p>
+                                        <p class="Réservé">
+                                            <?php
+                                            echo $content[$a]['travels'][$i]['reservation'];
+                                            ?>
+                                        </p>
                                     <?php endif; ?>
-                                        <div class="date-container">
-                                            <p>Du : <strong><?php echo $content[$a]['travels'][$i]['departure']?></strong></p>
-                                            <p>Au : <strong><?php echo $content[$a]['travels'][$i]['return']?></strong></p>
-                                        </div>
-                                        <?php if ($content[$a]['travels'][$i]['reservation'] == "Paiement en attente"){?>
-                                            <a class="button-voyage" href="../php/define-index-travel.php?action=modify&travel=<?php echo $content[$a]["travels"][$i]["destination"]?>" method="get">Modifier</a>
-                                        <?php }?>
-                                            <a class="button-voyage" href="../php/define-index-travel.php?action=see&travel=<?php echo $content[$a]['travels'][$i]['destination']?>">Voir</a>
+                                    <div class="date-container">
+                                        <p>Du : <strong><?php echo $content[$a]['travels'][$i]['departure'] ?></strong>
+                                        </p>
+                                        <p>Au : <strong><?php echo $content[$a]['travels'][$i]['return'] ?></strong></p>
                                     </div>
-                                    
-                                        
+                                    <?php if ($content[$a]['travels'][$i]['reservation'] == "Paiement en attente") { ?>
+                                        <a class="button-voyage"
+                                           href="../php/define-index-travel.php?action=modify&travel=<?php echo $content[$a]["travels"][$i]["destination"] ?>"
+                                           method="get">Modifier</a>
+                                    <?php } ?>
+                                    <a class="button-voyage"
+                                       href="../php/define-index-travel.php?action=see&travel=<?php echo $content[$a]['travels'][$i]['destination'] ?>">Voir</a>
+
+
+
+                                </div>
+
+
                                 <?php
                                 endfor;
-                                    }
-            
+                                }
+
                                 } else {
                                     echo "<h1>Vous n'avez pas encore de Voyages</h1>";
                                     exit();
-                                    }
+                                }
                                 ?>
-                                
 
 
                             </div>

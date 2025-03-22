@@ -156,7 +156,8 @@ isset($_POST['relaxation']) && isset($_POST['departure']) && isset($_POST['retur
     }
     register_travel($destination, $hotel, $loisir, $visite, $relaxation, $departure, $return, $person);
 } else {
-    echo "All fields are required";
+    $destination = $_POST['destination'];
+    header('Location: ../php_pages/user_register_travel.php?destination='.$destination);
 }
 
 

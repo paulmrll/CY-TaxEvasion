@@ -62,6 +62,7 @@ if (md5($control_verification) == $control && $status == "accepted"){
     <title>Utilisateur</title>
     <link rel="icon" type="image" href="../image/logo-site.webp">
     <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/paiement.css">
 
 
 
@@ -74,18 +75,27 @@ require_once "../php_pages/header.php";
 ?>
 
 <main>
-    <h1>Confirmation de la commande pour le voyage à <?php echo $content[$index_email]["travels"][$index_travel]["destination"]?></h1>
-    <p>Montant total : <?php echo $content[$index_email]["travels"][$index_travel]["prix"]?></p>
-    <p>Numéro de transaction : <?php echo $transaction?></p>
-    <p>Vendeur : CY TAXEVASION SARL</p>
-    <p>Votre paiment à été <?php
-        if ($a == 0){
-            echo "refusé";
-        } if ($a == 1){
-            echo "accepté";
-        }
-    ?></p>
-    <a href="../php_pages/travel-information.php?travel=<?php echo $content[$index_email]["travels"][$index_travel]["destination"]?>">Voir votre Voyage à <?php echo $content[$index_email]["travels"][$index_travel]["destination"]?></a>
+    <div class="main-grid">
+
+        <div class="content">
+            <h1>Confirmation de la commande pour le voyage à <?php echo $content[$index_email]["travels"][$index_travel]["destination"]?></h1>
+            <p>Montant total : <?php echo $content[$index_email]["travels"][$index_travel]["prix"]?></p>
+            <p>Numéro de transaction : <?php echo $transaction?></p>
+            <p>Vendeur : CY TAXEVASION SARL</p>
+            <p>Votre paiment à été <?php
+                if ($a == 0){
+                    echo "refusé";
+                } if ($a == 1){
+                    echo "accepté";
+                }
+                ?></p>
+        </div>
+
+        <div class="button-container">
+            <a class="retour" href="../php_pages/travel-information.php?travel=<?php echo $content[$index_email]["travels"][$index_travel]["destination"]?>">Voir votre Voyage à <?php echo $content[$index_email]["travels"][$index_travel]["destination"]?></a>
+        </div>
+
+    </div>
 
 
 </main>

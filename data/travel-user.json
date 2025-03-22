@@ -16,10 +16,29 @@
                 ],
                 "departure": "2025-03-25",
                 "return": "2025-04-02",
-                "reservation": "Paiement en attente",
+                "reservation": "Payé",
                 "prix": 116616,
-                "transaction": "67dd67f91b175",
+                "transaction": "67de88d16e097",
                 "person": "4"
+            },
+            {
+                "destination": "Monaco",
+                "hotel": "5 étoiles Premium VIP",
+                "loisir": [
+                    "Visite de Banque"
+                ],
+                "visite": [
+                    "Visite d'un Musée Colonialiste"
+                ],
+                "relaxation": [
+                    "Spa et Jacuzzi Privé"
+                ],
+                "departure": "2025-04-03",
+                "return": "2025-04-05",
+                "reservation": "Paiement en attente",
+                "prix": 150780,
+                "transaction": "0",
+                "person": "5"
             }
         ]
     },
