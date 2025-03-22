@@ -1,0 +1,69 @@
+[
+    {
+        "email": "tkt@gmail",
+        "travels": [
+            {
+                "destination": "Bermudes",
+                "hotel": "5 étoiles premium",
+                "loisir": [
+                    "Plongée sous-marine"
+                ],
+                "visite": [
+                    "Visite d'un Musée Colonialiste"
+                ],
+                "relaxation": [
+                    "Spa et Jacuzzi Privé"
+                ],
+                "departure": "2025-03-25",
+                "return": "2025-04-02",
+                "reservation": "Payé",
+                "prix": 116616,
+                "transaction": "67de88d16e097",
+                "person": "4"
+            },
+            {
+                "destination": "Monaco",
+                "hotel": "5 étoiles Premium VIP",
+                "loisir": [
+                    "Visite de Banque"
+                ],
+                "visite": [
+                    "Visite d'un Musée Colonialiste"
+                ],
+                "relaxation": [
+                    "Spa et Jacuzzi Privé"
+                ],
+                "departure": "2025-04-03",
+                "return": "2025-04-05",
+                "reservation": "Paiement en attente",
+                "prix": 150780,
+                "transaction": "0",
+                "person": "5"
+            }
+        ]
+    },
+    {
+        "email": "paul.morille11@gmail.com",
+        "travels": [
+            {
+                "destination": "Anguilla",
+                "hotel": "5 étoiles premium",
+                "loisir": [
+                    "Jet-Ski"
+                ],
+                "visite": [
+                    "Visite d'un Musée Colonialiste"
+                ],
+                "relaxation": [
+                    "Spa et Jacuzzi Privé"
+                ],
+                "departure": "2025-03-22",
+                "return": "2025-03-30",
+                "reservation": "Paiement en attente",
+                "prix": 87462,
+                "transaction": "67dd3f5320f92",
+                "person": "3"
+            }
+        ]
+    }
+]

@@ -1,132 +1,46 @@
 [
     {
-        "name": "Morille",
-        "firstname": "Paul",
-        "email": "paul.morille11@gmail.com",
-        "password": "$2y$10$ouXq5nCt8o89f\/nfmC.i\/Ody3lFE0WeQ6YSFvArp5vNpKSc6kuEjC",
-        "inscription_date": "15-03-2025 00:29:17",
-        "connexion_date": "19-03-2025 08:55:35",
-        "role": "Admin",
-        "travels": [
-            {
-                "destination": "monaco",
-                "hotel": "5 etoiles Premium VIP",
-                "loisir": [
-                    "Jet-Ski",
-                    "Plonge sous-marine"
-                ],
-                "visite": [
-                    "Visite de Banque",
-                    "Visite d'un Musee Colonialiste"
-                ],
-                "relaxation": [
-                    "Spa et Jacuzzi Prive",
-                    "Diner gastronomique 5 etoiles"
-                ],
-                "departure": "2025-03-21",
-                "return": "2025-03-30",
-                "reservation": "Paiement en attente"
-            },
-            {
-                "destination": "bermudes",
-                "hotel": "5 etoiles Premium VIP",
-                "loisir": [
-                    "Visite de Banque"
-                ],
-                "visite": [
-                    "Visite de Banque"
-                ],
-                "relaxation": [
-                    "Spa et Jacuzzi Prive",
-                    "Diner gastronomique 5 etoiles"
-                ],
-                "departure": "2025-03-12",
-                "return": "2025-05-24",
-                "reservation": "Paiement en attente"
-            },
-            {
-                "destination": "chypre",
-                "hotel": "5 etoiles Premium VIP",
-                "loisir": [
-                    "Visite de Banque",
-                    "Jet-Ski"
-                ],
-                "visite": [
-                    "Visite de Banque",
-                    "Visite d'un Musee Colonialiste"
-                ],
-                "relaxation": [
-                    "Spa et Jacuzzi Prive",
-                    "Diner gastronomique 5 etoiles"
-                ],
-                "departure": "2025-03-14",
-                "return": "2025-03-20",
-                "reservation": "Paiement en attente"
-            },
-            {
-                "destination": "malte",
-                "hotel": "5 etoiles Premium VIP",
-                "loisir": [
-                    "Visite de Banque",
-                    "Jet-Ski"
-                ],
-                "visite": [
-                    "Visite de Banque",
-                    "Visite d'un Musee Colonialiste"
-                ],
-                "relaxation": [
-                    "Spa et Jacuzzi Prive",
-                    "Diner gastronomique 5 etoiles"
-                ],
-                "departure": "2025-03-12",
-                "return": "2025-05-24",
-                "reservation": "Paiement en attente"
-            },
-            {
-                "destination": "eau",
-                "hotel": "5 etoiles Premium VIP",
-                "loisir": [
-                    "Visite de Banque",
-                    "Jet-Ski"
-                ],
-                "visite": [
-                    "Visite de Banque",
-                    "Visite d'un Musee Colonialiste"
-                ],
-                "relaxation": [
-                    "Spa et Jacuzzi Prive",
-                    "Diner gastronomique 5 etoiles",
-                    "Soiree VIP ex\u00e9cutif business  class"
-                ],
-                "departure": "2025-03-28",
-                "return": "2025-03-30",
-                "reservation": "Paiement en attente"
-            },
-            {
-                "destination": "caimans",
-                "hotel": "5 etoiles Premium VIP",
-                "loisir": [
-                    "Visite de Banque",
-                    "Jet-Ski"
-                ],
-                "visite": [
-                    "Visite d'un Musee Colonialiste"
-                ],
-                "relaxation": [
-                    "Spa et Jacuzzi Prive",
-                    "Diner gastronomique 5 etoiles",
-                    "Soiree VIP ex\u00e9cutif business  class"
-                ],
-                "departure": "2025-03-05",
-                "return": "2025-03-30",
-                "reservation": "Paiement en attente"
-            }
-        ],
+        "name": "go",
+        "firstname": "flo",
+        "email": "tkt@gmail",
+        "password": "$2y$10$ozs11JH2NXv7d.NNzGSpeOStR9UaDG\/hRudN5NtonL6EtnThhHBoa",
+        "inscription_date": "21-03-2025 14:14:48",
+        "connexion_date": "21-03-2025 14:14:48",
+        "role": "Utilisateur",
         "card": {
-            "name": "Jean Michel",
-            "number": "9090909090909090",
-            "date": "2025-03-27",
-            "cvv": "789"
+            "name": "",
+            "number": 0,
+            "date": 0,
+            "cvv": 0
+        },
+        "birth": "2025-03-03",
+        "adress": {
+            "number": "2",
+            "rue": "a",
+            "ville": "a",
+            "cdp": "95000"
+        }
+    },
+    {
+        "name": "Morille",
+        "firstname": "paul",
+        "email": "paul.morille11@gmail.com",
+        "password": "$2y$10$XN94QRyBBQccRFRTdRuvyei\/WIw.TrcsIX0VJwvWbrRLva0fKLqUa",
+        "inscription_date": "21-03-2025 19:01:29",
+        "connexion_date": "21-03-2025 19:01:29",
+        "role": "Utilisateur",
+        "card": {
+            "name": "",
+            "number": 0,
+            "date": 0,
+            "cvv": 0
+        },
+        "birth": "2025-03-20",
+        "adress": {
+            "number": "98",
+            "rue": "verdun",
+            "ville": "la frette sur seine",
+            "cdp": "95530"
         }
     }
 ]

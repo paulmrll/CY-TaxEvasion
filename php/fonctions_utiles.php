@@ -24,7 +24,7 @@ function change_connexionDate(){
                 break;
             }
         }
-        file_put_contents("../data/utilisateurs.json", json_encode($content, JSON_PRETTY_PRINT));
+        file_put_contents("../data/utilisateurs.json", json_encode($content, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT));
     }
 }
 function find_user(){
@@ -54,75 +54,32 @@ function start_session($mail, $name, $firstname, $password, $role){
     $_SESSION['password'] = $password;
     $_SESSION['role'] = $role;
 }
-function get_url($destination){
-    switch ($destination){
-        case "Anguilla":
-            $name = "Anguilla";
-            $url =  "../php_pages/anguilla.php";
-            $url_image = "../image/anguilla.jpg";
-            break;
-        case "Panama":
-            $name = "Le Panama";
-            $url = "../php_pages/panama.php";
-            $url_image = "../image/le-panama.jpg";
-            break;
-        case "Fidji":
-            $name = "Les Fidji";
-            $url = "../php_pages/fidji.php";
-            $url_image = "../image/les-fidji.jpeg"; 
-            break;
-        case "Palaos":
-            $name = "Les Palaos";
-            $url = "../php_pages/les-palaos.php";
-            $url_image = "../image/les-palaos.jpg";
-            break;
-        case "Antigua":
-            $name = "Antigua";
-            $url =  "../php_pages/antigua-barbuda.php";
-            $url_image = "../image/antigua-et-barbuda.jpg";
-            break;
-        case "Samoa":
-            $name = "Samoa";
-            $url =  "../php_pages/samoa-americaine.php";
-            $url_image = "../image/les-samoa-americaine.jpeg";
-            break;
-        case "malte":
-            $name = "Malte";
-            $url =  "../php_pages/malte.php";
-            $url_image = "../image/malte.jpg";
-            break;
-        case "monaco":
-            $name = "Monaco";
-            $url =  "../php_pages/monaco.php";
-            $url_image = "../image/monaco.jpeg";
-            break;
-        case "chypre":
-            $name = "Chypre";
-            $url =  "../php_pages/chypre.php";
-            $url_image = "../image/chypre.jpeg";
-            break;
-        case "caimans":
-            $name = "Caïmans";
-            $url =  "../php_pages/caimans.php";
-            $url_image = "../image/caimans.jpg";
-            break;
-        case "bermudes":
-            $name = "Bermudes";
-            $url =  "../php_pages/bermudes.php";
-            $url_image = "../image/bermudes.jpg";
-            break;
-        case "eau":
-            $name = "Émirats arabes unis";
-            $url =  "../php_pages/EAU.php";
-            $url_image = "../image/EAU.jpg";
-            break;
-        default:
-            $name = "Destination inconnue";
-            $url =  "../php_pages/inscription.php";
-            $url_image = "../image/destination-inconnue.jpg";
-            break;
+
+function update_price($hotel, $loisir, $visite, $relaxation, $departure, $return, $person){
+    $departure = new DateTime($departure);
+    $return = new DateTime($return);
+    $base_price = 18000;
+    $option_loisir = 5036;
+    $option_relaxation = 2019;
+    $option_visite = 4099;
+    $price_per_day = 1099;
+    $surclassement_hotel = 1002;
+
+    $nb_loisirs = count($loisir);
+    $nb_relaxation = count($relaxation);
+    $nb_hotel = explode(" ",$hotel);
+    $nb_hotel = count($nb_hotel) - 3;
+    $nb_visite = count($visite);
+    $diff = $departure->diff($return);
+    if ($diff->days > 10){
+        $price_day = ($diff->days - 10)*$price_per_day;
+    } else{
+        $price_day = 1;
     }
-    $infos = array($name, $url, $url_image);
-    return $infos;
+    $montant = ($base_price + $nb_loisirs * $option_loisir + $nb_relaxation * $option_relaxation + $nb_visite * $option_visite + $price_day
+    * $nb_hotel * $surclassement_hotel) * $person;
+    $montant = $montant + 0.00;
+    return $montant;
 }
+
 ?>

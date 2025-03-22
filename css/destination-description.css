@@ -270,20 +270,32 @@ h6 {
     font-weight: bold;
 }
 
-table button:hover[type="submit"]{
+table button:hover[type="submit"] {
     background-color: var(--color-submit);
     border: 0.1rem var(--color-submit) solid;
 }
 
 
-table button:hover[type="reset"]{
+table button:hover[type="reset"] {
     background-color: var(--color-reset);
     border: 0.1rem var(--color-reset) solid;
 }
 
-#reserve{
+
+
+.button-reserver {
     display: flex;
-    text-align: center;
-    margin: auto;
+    align-items: center;
+    justify-content: center;
+    margin: var(--spacing-sm) 30rem;
+    padding: 0.3rem 0.5rem;
+    color: var(--color-light-writing);
+    background: var(--color-header-active);
+    border-radius: 0.8rem;
+    text-decoration: none;
+    font-size: 1.5rem;
 }
 
+.button-reserver:hover{
+    scale: 1.1;
+}

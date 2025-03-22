@@ -30,7 +30,7 @@ if (file_exists("../data/utilisateurs.json")) {
                 exit();
             }
             if ($content[$a]['card']['number'] != 0 && $content[$a]['card']['date'] != 0 && $content[$a]['card']['date'] != 0){
-                header('Location: ../php_pages/paiement.php');
+                header('Location: ../php_pages/user.php');
             }
     }
 } else {
@@ -45,19 +45,19 @@ if (file_exists("../data/utilisateurs.json")) {
             <legend>Payment</legend>
             <form action="../php/add_card.php" method="post">
             <div class="payment_form_case">
-                    <label for="name">Card number:</label>
+                    <label for="name">Owner :</label>
                     <input type="text" id="name" name="name" placeholder="Jean Michel"required>
                 </div>
                 <div class="payment_form_case">
-                    <label for="card">Card number:</label>
+                    <label for="card">Card number :</label>
                     <input type="text" id="card" minlength="7" name="card" placeholder="4973 5595 9089 7878"required>
                 </div>
                 <div class="payment_form_case">
-                    <label for="date">Expiration date:</label>
+                    <label for="date">Expiration date :</label>
                     <input type="date" id="date" name="date" required>
                 </div>
                 <div class="payment_form_case">
-                    <label type="text"  for="cvv">CVV:</label>
+                    <label type="text"  for="cvv">CVV :</label>
                     <input minlength="2" type="text" id="cvv" name="cvv" placeholder="789" required>
                 </div>
                 <button type="submit">Save</button>

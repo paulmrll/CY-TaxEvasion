@@ -11,7 +11,16 @@ h1 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 12rem var(--spacing-sm);
+    margin: var(--spacing-sm);
+}
+.travels-container{
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 2rem;
+
 }
 
 
@@ -41,6 +50,7 @@ tr:not(:first-child):hover {
 td {
     border-top: 0.1rem solid var(--color-dark-writing);
     border-right: 0.1rem solid var(--color-light-border);
+    text-align : center;
 }
 
 
@@ -127,4 +137,13 @@ button:active{
     justify-content: space-between;
     align-items: center;
     gap: 1rem;
+}
+
+a{
+    text-decoration: none;
+    color: var(--color-header-active);
+}
+
+a:hover{
+    color: var(--color-header-active-lighter);
 }

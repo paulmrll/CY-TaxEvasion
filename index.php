@@ -1,5 +1,15 @@
 <?php
-    session_start();
+session_start();
+$file = "data/travel.json";
+if (!file_exists($file)) {
+    header("Location: php_pages/user.php");
+    exit();
+}
+$content = json_decode(file_get_contents($file), true);
+if ($content == null) {
+    header("Location: php_pages/user.php");
+    exit();
+}
 ?>
 
 <!DOCTYPE html>
@@ -34,14 +44,14 @@
             </div>
 
             <?php
-            if(isset($_SESSION['email'])){
+            if (isset($_SESSION['email'])) {
 
                 ?>
                 <a href="php/deconnexion.php" class="header-link">
                     <div class="header-connect">Se déconnecter</div>
                 </a>
                 <?php
-            }else{
+            } else {
                 ?>
                 <a href="php_pages/connexion.php" class="header-link">
                     <div class="header-connect">Se connecter</div>
@@ -51,16 +61,16 @@
             ?>
 
             <a href="php_pages/user.php" class="header-link"><img class="header-user-logo"
-                                                                     src="image/user-icone.png"
-                                                                     alt="user-logo"></a>
+                                                                  src="image/user-icone.png"
+                                                                  alt="user-logo"></a>
 
             <?php
-            if(isset($_SESSION['email'])) {
-                if($_SESSION['role'] == 'Admin'){
+            if (isset($_SESSION['email'])) {
+                if ($_SESSION['role'] == 'Admin') {
                     ?>
                     <a href="php_pages/admin.php" class="header-link"><img class="header-user-logo"
-                                                                              src="image/admin-logo.png"
-                                                                              alt="admin-logo"></a>
+                                                                           src="image/admin-logo.png"
+                                                                           alt="admin-logo"></a>
 
                     <?php
                 }
@@ -74,7 +84,6 @@
 
 
 <main>
-
     <div class="video-background">
         <video width="560" height="315" autoplay loop muted>
             <source src="videos/Tax-Evasion-Trailer.mp4" type="video/mp4">
@@ -82,19 +91,22 @@
         </video>
     </div>
 
-
     <div class="search-bar-container">
-        <label class="search-bar">
-            <a class="search-bar-title">Recherchez votre destination de rêve</a>
-            <input type="text" list="destination">
-            <datalist id="destination">
-                <option value="Les Samoa-Américaines"></option>
-                <option value="Anguilla"></option>
-                <option value="Les Fidji"></option>
-                <option value="Les Palaos"></option>
-                <option value="Le Panama"></option>
-            </datalist>
-        </label>
+        <form action="php_pages/description-pages.php" method="GET">
+            <label class="search-bar">
+                <span class="search-bar-title">Recherchez votre destination de rêve</span>
+                <input type="text" name="destination" list="destination" placeholder="Entrez une destination..."
+                       required>
+                <datalist id="destination">
+                    <?php
+                    for ($i = 0; $i < count($content); $i++):
+                        ?>
+                        <option value="<?php echo $content[$i]["name"] ?>"></option>
+                    <?php endfor; ?>
+
+                </datalist>
+            </label>
+        </form>
     </div>
 
 
@@ -103,31 +115,65 @@
         <div class="ping-container">
             <img class="map-image" src="image/map.jpg" alt="map">
 
-            <a href="php_pages/samoa-americaine.php" class="ping" style="top: 57%; left: 15.2%">
+            <a href="php_pages/description-pages.php?destination=Samoa" class="ping" style="top: 57%; left: 15.2%">
                 <div class="ping-text">Les Samoa-Américaines</div>
             </a>
 
-            <a href="php_pages/anguilla.php" class="ping" style="top:36.5%; left: 30.5%;">
+            <a href="php_pages/description-pages.php?destination=Anguilla" class="ping" style="top:36.5%; left: 30.5%;">
                 <div class="ping-text">Anguilla</div>
             </a>
 
-            <a href="php_pages/antigua-barbuda.php" class="ping" style="top:39.5%; left: 31.5%;">
+            <a href="php_pages/description-pages.php?destination=Antigua" class="ping" style="top:39.5%; left: 31.5%;">
                 <div class="ping-text">Antigua-et-Barbuda</div>
             </a>
 
-            <a href="php_pages/fidji.php" class="ping" style="top: 60%; left: 93.5%;">
+            <a href="php_pages/description-pages.php?destination=Fidji" class="ping" style="top: 60%; left: 93.5%;">
                 <div class="ping-text">Les Fidji</div>
             </a>
 
-            <a href="php_pages/les-palaos.php" class="ping" style="top: 45.5%; left: 86%;">
+            <a href="php_pages/description-pages.php?destination=Palaos" class="ping" style="top: 45.5%; left: 86%;">
                 <div class="ping-text">Le Palaos</div>
             </a>
 
-            <a href="php_pages/panama.php" class="ping" style="top:43.8%; left: 27.2%;">
+            <a href="php_pages/description-pages.php?destination=Panama" class="ping" style="top:43.8%; left: 27.2%;">
                 <div class="ping-text">Le Panama</div>
             </a>
+
+            <a href="php_pages/description-pages.php?destination=Monaco" class="ping" style="top:25%; left: 51%;">
+                <div class="ping-text">Monaco</div>
+            </a>
+
+            <a href="php_pages/description-pages.php?destination=Bermudes" class="ping" style="top:31%; left: 31.5%;">
+                <div class="ping-text">Les Bermudes</div>
+            </a>
+
+            <a href="php_pages/description-pages.php?destination=Caimans" class="ping" style="top:34.8%; left: 26%;">
+                <div class="ping-text">Les îles Caimans</div>
+            </a>
+
+            <a href="php_pages/description-pages.php?destination=Chypre" class="ping" style="top:29.5%; left: 58.8%;">
+                <div class="ping-text">Chypre</div>
+            </a>
+
+            <a href="php_pages/description-pages.php?destination=Eau" class="ping" style="top:35%; left: 64%;">
+                <div class="ping-text">Emirats Arabes Unis</div>
+            </a>
+
+            <a href="php_pages/description-pages.php?destination=Hongkong" class="ping" style="top:36.5%; left: 81%;">
+                <div class="ping-text">Hongkong</div>
+            </a>
+
+            <a href="php_pages/description-pages.php?destination=Jersey" class="ping" style="top:21%; left: 48.5%;">
+                <div class="ping-text">Jersey</div>
+            </a>
+
+            <a href="php_pages/description-pages.php?destination=Malte" class="ping" style="top:29.7%; left: 53.8%;">
+                <div class="ping-text">Malte</div>
+            </a>
+
         </div>
     </div>
+
 
 
     <div class="carousel-container">
@@ -135,56 +181,44 @@
         <div class="carousel-content">
             <div class="grid-container">
 
-            <div class="grid-item">
-                <form class="grid-line-container" method="post" action="php_pages/description-pages.php">
-                <input type="hidden" name="destination" value="Anguilla">
-                    <button type="submit" class="reservation-button">
-                        <img src="image/anguilla.jpg" alt="Anguilla">
-                        <h3>Anguilla</h3>
-                        <div class="flag">
-                            <img src="image/Anguilla-flag.jpg" alt="les-fidji-flag">
-                        </div>
-                        </button>
-                        </form>
+                <div class="grid-item">
+                    <a class="grid-line-container" href="php_pages/description-pages.php?destination=Anguilla">
+                            <img src="image/anguilla.jpg" alt="Anguilla">
+                            <h3>Anguilla</h3>
+                            <div class="flag">
+                                <img src="image/anguilla-flag.jpg" alt="les-fidji-flag">
+                            </div>
+                    </a>
                 </div>
 
                 <div class="grid-item">
-                <form class="grid-line-container" method="post" action="php_pages/description-pages.php">
-                <input type="hidden" name="destination" value="Fidji">
-                    <button type="submit" class="reservation-button">
-                        <img src="image/les-fidji.jpeg" alt="les_fidji">
-                        <h3>Les Fidji</h3>
-                        <div class="flag">
-                            <img src="image/les-fidji-flag.jpg" alt="les-fidji-flag">
-                        </div>
-                        </button>
-                        </form>
+                    <a class="grid-line-container" href="php_pages/description-pages.php?destination=Fidji">
+                            <img src="image/les-fidji.jpeg" alt="les_fidji">
+                            <h3>Les Fidji</h3>
+                            <div class="flag">
+                                <img src="image/les-fidji-flag.jpg" alt="les-fidji-flag">
+                            </div>
+                    </a>
                 </div>
                 <div class="grid-item">
-                <form class="grid-line-container" method="post" action="php_pages/description-pages.php">
-                <input type="hidden" name="destination" value="Palaos">
-                    <button type="submit" class="reservation-button">
-                        <img src="image/les-palaos.jpg" alt="les-palaos">
-                        <h3>Les Palaos</h3>
-                        <div class="flag">
-                            <img src="image/les-palaos-flag.jpg" alt="les-palaos">
-                        </div>
-                        </button>
-                        </form>
+                    <a class="grid-line-container" href="php_pages/description-pages.php?destination=Palaos">
+                            <img src="image/les-palaos.jpg" alt="les-palaos">
+                            <h3>Les Palaos</h3>
+                            <div class="flag">
+                                <img src="image/les-palaos-flag.jpg" alt="les-palaos">
+                            </div>
+                    </a>
                 </div>
                 <div class="grid-item">
-                <form class="grid-line-container" method="post" action="php_pages/description-pages.php">
-                <input type="hidden" name="destination" value="Panama">
-                    <button type="submit" class="reservation-button">
-                        <img src="image/le-panama.jpg" alt="le panama">
-                        <h3>Les Palaos</h3>
-                        <div class="flag">
-                            <img src="image/le-panama-flag.jpg" alt="le panama">
-                        </div>
-                        </button>
-                        </form>
+                    <a class="grid-line-container" href="php_pages/description-pages.php?destination=Panama">
+                            <img src="image/le-panama.jpg" alt="le panama">
+                            <h3>Le Panama</h3>
+                            <div class="flag">
+                                <img src="image/le-panama-flag.jpg" alt="le panama">
+                            </div>
+                    </a>
                 </div>
-                
+
             </div>
         </div>
     </div>

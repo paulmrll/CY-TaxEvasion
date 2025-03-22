@@ -61,6 +61,8 @@ require_once "../php_pages/header.php";
                         <td><?php echo htmlspecialchars($user["email"]) ?></td>
                         <td><?php echo htmlspecialchars($user["role"]) ?></td>
                         <td>
+                            <?php if ($user["role"] != "Admin"){
+                            ?>
                             <div class="button-container">
 
                                 <form action="../php_pages/user-info.php" method="POST">
@@ -74,10 +76,50 @@ require_once "../php_pages/header.php";
                                     <button class="sup-button" type="submit">Supprimer</button>
                                 </form>
                             </div>
+                            <?php }?>
                         </td>
                     </tr>
                 <?php endforeach; ?>
             </table>
+                </div>
+                <div class="travels-container">
+            <table>
+                <?php 
+
+                $file = "../data/travel.json";
+                if (!file_exists($file)){?>
+                    <tr><th colspan="4"><?php echo "Aucun Voyage";?></th></tr>
+                <?php
+                } else {
+                    $content_travel = json_decode(file_get_contents($file), true);
+                    if ($content_travel == null){?>
+                        <tr><th colspan="4"><?php echo "Aucun Voyage";?></th></tr>
+                    <?php
+                    } else {
+                        ?>
+                        <tr><th colspan="4"><?php echo "Les voyages que vous proposez";?></th></tr>
+                        <?php
+                        for ($i = 0; $i < count($content_travel); $i++){?>
+                        <tr>
+                            <td><?php echo "#" . $i+1;?></td>
+                            <td><?php  echo $content_travel[$i]['name'];?>
+                            <td><a href="description-pages.php?destination=<?php echo $content_travel[$i]['destination']?>">Voir</a></td>
+                            <td><form action="../php/suppression.php" method="post">
+                                    <input type="hidden" name="travel" value="<?php echo $content_travel[$i]['destination']?>">
+                                    <input type="hidden" name="action" value="delete-travel">
+                                    <button class="sup-button" type="submit">Supprimer</button>
+                                </form></td>
+                        </tr>
+                            
+                            
+                        <?php
+                        }
+                    }
+                }
+                ?>
+                <tr><td colspan="4"><a href="add_new_travel.php">Ajouter une destination</a></td></tr>
+            </table>
+            
     </div>
 </main>
 

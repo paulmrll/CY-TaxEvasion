@@ -1,0 +1,57 @@
+.main-grid{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: var(--color-background-2);
+    margin: var(--spacing-md);
+    padding: var(--spacing-sm);
+    border-radius: 1.3rem;
+    font-size: 1.1rem;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.button-container{
+    margin-top: 2rem;
+
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-paiement{
+    padding: 0.4rem 0.5rem;
+    color: var(--color-light-writing);
+    background: var(--color-header-active);
+    border-radius: 0.8rem;
+    border: none;
+    font-size: 1.4rem;
+}
+
+.retour{
+    padding: 0 0.2rem;
+    color: var(--color-light-writing);
+    background: var(--color-header-active);
+    border-radius: 0.8rem;
+    border: none;
+    font-size: 1.3rem;
+    text-decoration: none;
+}
+
+.button-paiement:hover{
+    scale: 1.1;
+    background: var(--color-header-active-lighter);
+}
+
+.retour:hover{
+    scale: 1.1;
+    background: var(--color-header-active-lighter);
+
+}

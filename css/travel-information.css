@@ -1,52 +1,117 @@
-.container-liste {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    align-items: center;
-    justify-items: center;
-
-}
-.container{
-    background-color: var(--color-background-2);
-    text-align: center;
-    margin: 1rem;
-    padding: 1rem;
-    border-radius: 1rem;
-}
 
 h1{
     text-align: center;
+    color: var(--color-header-active);
 }
 
-.title{
-    display: flex;
-    background-color: var(--color-background-1);
-    justify-content: center;
-
-}
-.title h2,
-.title p{
-    display: flex;
-    background-color: var(--color-background-1);
-    font-size: 1.5rem;
-    margin : 0.5rem;
-
-}
-ul{
-    list-style-type: none;
-    padding: 0;
-}
-.voyage-image{
-    width : 30%;
+.main-img{
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top : 2rem;
-    border-radius: 1rem;
+    max-width: 40%;
+    margin: 2rem auto;
 }
-.column{
-    height: 100%;
-    background: var(--color-header-active-lighter);
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin : 3rem;
+    background-color: var(--color-background-2);
     border-radius: 1rem;
-    width: 80%;
+    padding: 2rem;
 }
+
+
+
+
+.reservation-slider-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 2rem;
+
+}
+
+
+.reservation-checkbox {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+
+
+
+.reservation-select {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+
+.button-container {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+button {
+    color: var(--color-dark-writing);
+    text-align: center;
+    font-size: 1.5rem;
+    border-radius: 1rem 0.1rem;
+    background-color: var(--color-light-writing);
+    padding: 0.4rem 0.8rem;
+    border: 0.1rem var(--color-dark-writing) solid;
+    cursor: pointer;
+}
+
+
+button:hover[type="submit"] {
+    background-color: var(--color-submit);
+    border: 0.1rem var(--color-submit) solid;
+
+}
+
+
+button:active {
+    transform: scale(0.9);
+}
+
+
+h5 {
+    color: var(--color-header-active);
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+h6{
+    color: var(--color-map-grey);
+    font-size: 1.3rem;
+    font-weight: bold;
+    border-radius: 1.5rem;
+    border: 2px solid white;
+    padding : 0 0.5rem;
+    background-color : var(--color-background);
+}
+
+.modifier-button{
+    font-size: 1.3rem;
+    text-decoration: none;
+    padding: 0.3rem 0.5rem;
+    color: var(--color-light-writing);
+    background: var(--color-header-active);
+    border-radius: 0.8rem;
+}
+
+
+
+
+
 

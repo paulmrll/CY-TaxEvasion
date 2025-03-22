@@ -4,14 +4,13 @@ h1{
     color: var(--color-header-active);
 }
 
-img{
+.main-image{
     display: block;
     max-width: 40%;
-    margin-top : 2rem;
-    margin-bottom : 2rem;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 2rem auto;
+    border-radius: 0.3rem;
 }
+
 .container {
     display: flex;
     flex-direction: column;
