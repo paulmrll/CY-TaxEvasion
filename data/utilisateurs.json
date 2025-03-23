@@ -1,33 +1,11 @@
 [
     {
-        "name": "go",
-        "firstname": "flo",
-        "email": "tkt@gmail",
-        "password": "$2y$10$ozs11JH2NXv7d.NNzGSpeOStR9UaDG\/hRudN5NtonL6EtnThhHBoa",
-        "inscription_date": "21-03-2025 14:14:48",
-        "connexion_date": "21-03-2025 14:14:48",
-        "role": "Utilisateur",
-        "card": {
-            "name": "",
-            "number": 0,
-            "date": 0,
-            "cvv": 0
-        },
-        "birth": "2025-03-03",
-        "adress": {
-            "number": "2",
-            "rue": "a",
-            "ville": "a",
-            "cdp": "95000"
-        }
-    },
-    {
-        "name": "Morille",
-        "firstname": "Paul",
-        "email": "paul.morille11@gmail.com",
-        "password": "$2y$10$5uJ6B1NASnFsk\/gDPy36a.mWecVX\/o696Zb\/oTQ8PjBTEjfaXYmE.",
-        "inscription_date": "21-03-2025 19:01:29",
-        "connexion_date": "23-03-2025 21:17:39",
+        "name": "Foupil",
+        "firstname": "Florian",
+        "email": "flo@gmail.com",
+        "password": "$2y$10$5e8xG6uvA6qfoGEXZhEpJOrIBAYkzzWF2FuieAPqLLSoBKfsz.Aou",
+        "inscription_date": "23-03-2025 21:41:15",
+        "connexion_date": "23-03-2025 21:41:15",
         "role": "Admin",
         "card": {
             "name": "",
@@ -35,21 +13,43 @@
             "date": 0,
             "cvv": 0
         },
-        "birth": "2025-03-20",
+        "birth": "2025-03-11",
         "adress": {
-            "number": "98",
-            "rue": "verdun1",
-            "ville": "la frette sur seine",
-            "cdp": "95530"
+            "number": "01",
+            "rue": "charles de gaulle",
+            "ville": "Cergy",
+            "cdp": "95000"
         }
     },
     {
         "name": "Morille",
-        "firstname": "Paul1",
-        "email": "p@gmail.com",
-        "password": "$2y$10$TRnPzJdgjwtQWigF6juTmOf9rJYmaujAAzW3zMfwfrRjkN1y8B2oy",
-        "inscription_date": "23-03-2025 21:17:17",
-        "connexion_date": "23-03-2025 21:17:17",
+        "firstname": "Paul",
+        "email": "paul@gmail.com",
+        "password": "$2y$10$YRMMqX4.WH2M6qFLg6a\/pO8zh8OEWSVoXayTdgPyZPJes42Hwpfxe",
+        "inscription_date": "23-03-2025 21:41:57",
+        "connexion_date": "23-03-2025 21:42:53",
+        "role": "Admin",
+        "card": {
+            "name": "",
+            "number": 0,
+            "date": 0,
+            "cvv": 0
+        },
+        "birth": "2025-03-05",
+        "adress": {
+            "number": "01",
+            "rue": "du port",
+            "ville": "cergy",
+            "cdp": "95000"
+        }
+    },
+    {
+        "name": "Wingering",
+        "firstname": "Cyprien",
+        "email": "cyp@gmail.com",
+        "password": "$2y$10$ZGvi5zJnf8oGfksQT17h\/Oruzbs4mrYrjvhVqthJti\/HLEYvqcIg2",
+        "inscription_date": "23-03-2025 21:42:41",
+        "connexion_date": "23-03-2025 21:42:41",
         "role": "Utilisateur",
         "card": {
             "name": "",
@@ -57,11 +57,55 @@
             "date": 0,
             "cvv": 0
         },
-        "birth": "2025-03-14",
+        "birth": "2025-03-05",
         "adress": {
-            "number": "98",
-            "rue": "verdun1",
-            "ville": "la frette ",
+            "number": "01",
+            "rue": "du port",
+            "ville": "cergy",
+            "cdp": "95000"
+        }
+    },
+    {
+        "name": "Delacroix",
+        "firstname": "Romain",
+        "email": "romain@gmail.com",
+        "password": "$2y$10$G1.HuakSshMtsJzlFkvVCeZSoK8I1CNkhAJAUVE2AZp5mUC4UsU9.",
+        "inscription_date": "23-03-2025 21:44:35",
+        "connexion_date": "23-03-2025 21:44:35",
+        "role": "Utilisateur",
+        "card": {
+            "name": "",
+            "number": 0,
+            "date": 0,
+            "cvv": 0
+        },
+        "birth": "2025-03-05",
+        "adress": {
+            "number": "01",
+            "rue": "de paris",
+            "ville": "cergy",
+            "cdp": "95000"
+        }
+    },
+    {
+        "name": "Dufour",
+        "firstname": "Olivier",
+        "email": "olivier@gmail.com",
+        "password": "$2y$10$Xnx5\/wQ4Exjv4MnQLUqzRO1KDDRJi5sndomrjfB2B1sS1Wp36dbJS",
+        "inscription_date": "23-03-2025 21:45:39",
+        "connexion_date": "23-03-2025 21:45:39",
+        "role": "Utilisateur",
+        "card": {
+            "name": "",
+            "number": 0,
+            "date": 0,
+            "cvv": 0
+        },
+        "birth": "2025-03-11",
+        "adress": {
+            "number": "01",
+            "rue": "de provence",
+            "ville": "cergy",
             "cdp": "95000"
         }
     }

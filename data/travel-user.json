@@ -1,50 +1,22 @@
 [
     {
-        "email": "paul.morille11@gmail.com",
-        "travels": [
-            {
-                "destination": "Anguilla",
-                "hotel": "5 étoiles premium",
-                "loisir": [
-                    "Visite de Banque"
-                ],
-                "visite": [
-                    "Visite d'un Musée Colonialiste"
-                ],
-                "relaxation": [
-                    "Spa et Jacuzzi Privé"
-                ],
-                "departure": "2025-03-23",
-                "return": "2025-03-30",
-                "reservation": "Paiement en attente",
-                "prix": 29154,
-                "transaction": "0",
-                "person": "1"
-            }
-        ]
+        "email": "flo@gmail.com",
+        "travels": []
     },
     {
-        "email": "p@gmail.com",
-        "travels": [
-            {
-                "destination": "Anguilla",
-                "hotel": "5 étoiles Premium VIP Deluxe",
-                "loisir": [
-                    "Jet-Ski"
-                ],
-                "visite": [
-                    "Visite d'un Musée Colonialiste"
-                ],
-                "relaxation": [
-                    "Spa et Jacuzzi Privé"
-                ],
-                "departure": "2025-03-27",
-                "return": "2025-03-30",
-                "reservation": "Paiement en attente",
-                "prix": 31158,
-                "transaction": "0",
-                "person": "1"
-            }
-        ]
+        "email": "paul@gmail.com",
+        "travels": []
+    },
+    {
+        "email": "cyp@gmail.com",
+        "travels": []
+    },
+    {
+        "email": "romain@gmail.com",
+        "travels": []
+    },
+    {
+        "email": "olivier@gmail.com",
+        "travels": []
     }
 ]
