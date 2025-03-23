@@ -71,5 +71,7 @@ if (isset($_POST['email']) && isset($_POST['password']) && isset($_POST['firstna
     }
 
 
+} else {
+    header('Location: ../index.php');
 }
 ?>
