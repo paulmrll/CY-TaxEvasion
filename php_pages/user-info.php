@@ -6,39 +6,55 @@ if (isset($_SESSION['role']) != "Admin") {
     header("Location: ../php_pages/connexion.php");
     exit();
 }
-
-
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-
-    $jsonFile = "../data/utilisateurs.json";
-    if (!file_exists($jsonFile)) {
-        exit();
-    }
-
-    $json = file_get_contents($jsonFile);
-    $user_list = json_decode($json, true);
-
-
-    if (!isset($_POST['user_id'])) {
-        header("Location: ../php_pages/admin.php");
-        exit();
-    }
-
-    $user_id = $_POST['user_id'];
-
-    $n = 0;
-    foreach ($user_list as $user) {
-        if ($user_id == $n) {
-
-            $name = $user["name"];
-            $firstname = $user["firstname"];
-            $email = $user["email"];
-            $password = $user["password"];
-            $role = $user["role"];
-        }
-        $n++;
+if (!isset($_POST['user_id'])) {
+    header('Location: admin.php');
+    exit();
+}
+$file = "../data/utilisateurs.json";
+if (!file_exists($file)) {
+    header('Location: inscription.php');
+    exit();
+}
+$content_user = json_decode(file_get_contents($file), true);
+if ($content_user == null) {
+    header('Location: admin.php');
+    exit();
+}
+$file_travel = "../data/travel.json";
+if (!file_exists($file_travel)) {
+    header('Location: inscription.php');
+    exit();
+}
+$content_travel = json_decode(file_get_contents($file_travel), true);
+if ($content_travel == null) {
+    header('Location: admin.php');
+    exit();
+}
+$file_travel_user = "../data/travel-user.json";
+if (!file_exists($file_travel_user)) {
+    header('Location: inscription.php');
+    exit();
+}
+$content = json_decode(file_get_contents($file_travel_user), true);
+if ($content == null) {
+    header('Location: admin.php');
+    exit();
+}
+$id = $_POST['user_id'];
+if ($id > count($content_user) - 1 || $id < 0){
+    header('Location: inscription.php');
+    exit();
+}
+$a = 0;
+$id_travel = -1;
+for($i = 0; $i < count($content); $i++){
+    if ($content[$i]["email"] == $content_user[$id]["email"]){
+        $id_travel = $i;
+        $a = 1;
     }
 }
+
+
 ?>
 
 <!DOCTYPE html>
@@ -70,7 +86,7 @@ require_once "../php_pages/header.php";
 
                         <form action="../php/modification.php" method="post">
                             <div class="part-container">
-                                <h1>Compte de <?php echo $firstname; ?> :</h1>
+                                <h1>Compte de <?php echo $content_user[$id]['firstname']; ?> :</h1>
                                 <div class="compte-info-container-top">
 
 
@@ -78,7 +94,7 @@ require_once "../php_pages/header.php";
                                     <div class="grid-line-container">
                                         <div>
                                             <a>Nom : </a>
-                                            <input type="text" name="name" value="<?php echo $name; ?>"
+                                            <input type="text" name="name" value="<?php echo $content_user[$id]['name']; ?>"
                                                    required>
                                         </div>
 
@@ -87,7 +103,7 @@ require_once "../php_pages/header.php";
                                     <div class="grid-line-container">
                                         <div>
                                             <a>Prénom : </a>
-                                            <input type="text" value="<?php echo $firstname; ?>"
+                                            <input type="text" value="<?php echo $content_user[$id]['firstname']; ?>"
                                                    name="firstname" required>
                                         </div>
 
@@ -95,11 +111,18 @@ require_once "../php_pages/header.php";
 
                                     <div class="grid-line-container">
                                         <div>
-                                            <a>Adresse mail : <?php echo $_SESSION['email']?></a>
-                                            <input type="mail" name="email" value="<?php echo $mail; ?>"
+                                            <a>Adresse mail : <?php echo $content_user[$id]['email'];?></a>
+                                            <input type="hidden" name="email" value="<?php echo $content_user[$id]['email'];?>"
                                                    required>
                                         </div>
                                     </div>
+                                    <input type="hidden" name="password" value="<?php echo $content_user[$id]['password'];?>" required>
+                                    <input type="hidden" name="nb" value="<?php echo $content_user[$id]['adress']["number"];?>" required>
+                                    <input type="hidden" name="rue" value="<?php echo $content_user[$id]['adress']["rue"];?>" required>
+                                    <input type="hidden" name="ville" value="<?php echo $content_user[$id]['adress']["ville"];?>" required>
+                                    <input type="hidden" name="cdp" value="<?php echo $content_user[$id]['adress']["cdp"];?>" required>
+                                    <input type="hidden" name="birth" value="<?php echo $content_user[$id]["birth"];?>" required>
+                                    <input type="hidden" name="todo" value="modify_client_by_admin">
 
                                     <div class="button-container">
                                         <button class="button-modifier">Modifier</button>
@@ -113,69 +136,62 @@ require_once "../php_pages/header.php";
                         <button>
                             <img src="../image/user-icone.png" alt="image-utilisateur">
                         </button>
-                        <?php echo $role; ?>
+                        <?php echo $content_user[$id]['role']; ?>
                     </div>
                 </div>
 
 
                 <div class="box-container">
                     <div class="part-container">
-                        <h1>Voyages de <?php echo $firstname; ?> :</h1>
+                        <h1>Voyages de <?php echo $content_user[$id]['firstname']; ?> :</h1>
+                        <?php
+                        if ($id_travel < 0){
+                            echo "aucun voyage pour cet utilisateur";
+                            exit();
+                        }
+                        for ($i = 0; $i < count($content[$id_travel]['travels']); $i++){
+                            for ($o = 0; $o < count($content_travel); $o++){
+                                if ($content[$id_travel]['travels'][$i]["destination"] == $content_travel[$o]["destination"]){
+                                    $name = $content_travel[$o]["name"];
+                                    $url_image = $content_travel[$o]["image"];
+                                    break;
+                                }
+                            }
+                        
+                        ?>
                         <div class="compte-info-container">
                             <div class="grid-container">
 
                                 <div class="line-container">
                                     <div class="grid-item">
-                                        <a href="../php_pages/anguilla.php" class="image-select">
-                                            <img src="../image/anguilla.jpg" alt="anguilla">
-                                            <h3>Anguilla</h3>
+                                        <a href="../php_pages/destination-pages?destination=<?php echo $content[$id_travel]["travels"][$i]["destination"] ?>" class="image-select">
+                                            <img src="../image/<?php echo $url_image?>" alt="<?php echo $name?>">
+                                            <h3><?php echo $name?></h3>
                                         </a>
                                     </div>
 
-                                    <p class="Réservé">Reservé</p>
+                                    <?php
+                                    if ($content[$id_travel]['travels'][$i]['reservation'] == "Paiement en attente"):?>
+                                            <p class="Non-réservé">
+                                                <?php
+                                                echo $content[$id_travel]['travels'][$i]['reservation'] . " de " . $content[$a]['travels'][$i]['prix'] . "€";?>
+                                            </p>
+                                    <?php else: ?>
+                                        <p class="Réservé">
+                                            <?php
+                                            echo $content[$id_travel]['travels'][$i]['reservation'];
+                                            ?>
+                                        </p>
+                                    <?php endif; ?>
 
                                     <div class="date-container">
-                                        <p>Date de départ : <strong>00/00/0000</strong></p>
-                                        <p>Date de retour : <strong>00/00/0000</strong></p>
+                                        <p>Date de départ : <strong><?php echo $content[$id_travel]['travels'][$i]['departure'];?></strong></p>
+                                        <p>Date de retour : <strong><?php echo $content[$id_travel]['travels'][$i]['return'];?></strong></p>
                                     </div>
                                 </div>
+                                <?php }?>
 
-                                <div class="line-container">
-                                    <div class="grid-item">
-                                        <a href="../php_pages/panama.php" class="image-select">
-                                            <img src="../image/le-panama.jpg" alt="le-panama">
-                                            <h3>Le Panama</h3>
-                                        </a>
-                                    </div>
-                                    <p class="Payment">En Attente de Payment : 150 000$</p>
-                                    <div class="button-payer">
-                                        <button>Payer</button>
-                                    </div>
-                                </div>
-
-                                <div class="line-container">
-                                    <div class="grid-item">
-                                        <a href="../php_pages/fidji.php" class="image-select">
-                                            <img src="../image/les-fidji.jpeg" alt="les_fidji">
-                                            <h3>Les Fidji</h3>
-                                        </a>
-                                    </div>
-                                    <p class="Annulé">Annulé</p>
-                                </div>
-
-                                <div class="line-container">
-                                    <div class="grid-item">
-                                        <a href="../php_pages/les-palaos.php" class="image-select">
-                                            <img src="../image/les-palaos.jpg" alt="les-palaos">
-                                            <h3>Les Palaos</h3>
-                                        </a>
-                                    </div>
-                                    <p class="Effectué">Effectué</p>
-                                </div>
-
-                                <div class="button-ajouter-voyage">
-                                    <button>Ajouter un voyage</button>
-                                </div>
+                                
 
 
                             </div>

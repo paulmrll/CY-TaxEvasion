@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-function user_modification($email, $password, $firstname, $name, $number, $rue, $ville, $cdp, $birth){
+function user_modification($email, $password, $firstname, $name, $number, $rue, $ville, $cdp, $birth, $todo){
     $jsonFile = "../data/utilisateurs.json";
     if (!file_exists($jsonFile)) {
         header('Location: ../php_pages/inscription.php');
@@ -28,20 +28,21 @@ function user_modification($email, $password, $firstname, $name, $number, $rue, 
                 $content[$i]['birth'] = $birth;
 
                 file_put_contents($jsonFile, json_encode($content, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT));
-
+                if ($todo != "modify_client_by_admin"){
                 $_SESSION['email'] = $email;
                 $_SESSION['name'] = $name;
                 $_SESSION['firstname'] = $firstname;
                 $_SESSION['password'] = $password;
-                header('Location: ../php_pages/user.php');
-                exit();
+                }
+
+
             }
         }
     }
 }
 
 
-if (isset($_POST['email']) && isset($_POST['password']) && isset($_POST['firstname']) && isset($_POST['name']) && isset($_POST['nb']) && isset($_POST['rue']) && isset($_POST['ville']) && isset($_POST['cdp']) && isset($_POST['birth'])) {
+if (isset($_POST['email']) && isset($_POST['password']) && isset($_POST['firstname']) && isset($_POST['name']) && isset($_POST['nb']) && isset($_POST['rue']) && isset($_POST['ville']) && isset($_POST['cdp']) && isset($_POST['birth'])&& isset($_POST['todo'])) {
 
     $email = $_POST['email'];
     $password = $_POST['password'];
@@ -58,10 +59,17 @@ if (isset($_POST['email']) && isset($_POST['password']) && isset($_POST['firstna
         header("Location: ../php_pages/user.php");
         exit();
     }
+    $todo = $_POST['todo'];
+    user_modification($email, $password, $firstname, $name, $nb_rue, $rue, $ville, $cdp, $birth, $todo);
 
-    user_modification($email, $password, $firstname, $name, $nb_rue, $rue, $ville, $cdp, $birth);
+    if ($todo == "modify_client_by_admin"){
+        header("Location: ../php_pages/admin.php");
+        exit();
+    } else {
+        header("Location: ../php_pages/user.php");
+        exit();
+    }
 
-    header('Location: ../php_pages/user.php');
-    exit();
+
 }
 ?>

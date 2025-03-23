@@ -23,12 +23,12 @@
     },
     {
         "name": "Morille",
-        "firstname": "paul",
+        "firstname": "Paul",
         "email": "paul.morille11@gmail.com",
-        "password": "$2y$10$XN94QRyBBQccRFRTdRuvyei\/WIw.TrcsIX0VJwvWbrRLva0fKLqUa",
+        "password": "$2y$10$5uJ6B1NASnFsk\/gDPy36a.mWecVX\/o696Zb\/oTQ8PjBTEjfaXYmE.",
         "inscription_date": "21-03-2025 19:01:29",
-        "connexion_date": "21-03-2025 19:01:29",
-        "role": "Utilisateur",
+        "connexion_date": "23-03-2025 21:17:39",
+        "role": "Admin",
         "card": {
             "name": "",
             "number": 0,
@@ -38,9 +38,31 @@
         "birth": "2025-03-20",
         "adress": {
             "number": "98",
-            "rue": "verdun",
+            "rue": "verdun1",
             "ville": "la frette sur seine",
             "cdp": "95530"
+        }
+    },
+    {
+        "name": "Morille",
+        "firstname": "Paul1",
+        "email": "p@gmail.com",
+        "password": "$2y$10$TRnPzJdgjwtQWigF6juTmOf9rJYmaujAAzW3zMfwfrRjkN1y8B2oy",
+        "inscription_date": "23-03-2025 21:17:17",
+        "connexion_date": "23-03-2025 21:17:17",
+        "role": "Utilisateur",
+        "card": {
+            "name": "",
+            "number": 0,
+            "date": 0,
+            "cvv": 0
+        },
+        "birth": "2025-03-14",
+        "adress": {
+            "number": "98",
+            "rue": "verdun1",
+            "ville": "la frette ",
+            "cdp": "95000"
         }
     }
 ]

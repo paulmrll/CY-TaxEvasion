@@ -130,6 +130,7 @@ require_once "../php_pages/header.php";
                                                    value="<?php echo $content_user[$index_user]['birth']; ?>" required>
                                         </div>
                                     </div>
+                                    <input type="hidden" name="todo" value="modify_client">
 
                                     <div class="button-container">
                                         <button class="button-modifier">Modifier</button>
@@ -188,9 +189,7 @@ require_once "../php_pages/header.php";
                             exit();
                         }
                         echo "<h1>Mes Voyages :</h1>";
-                        for ($i = 0;
-                        $i < count($content[$a]['travels']);
-                        $i++):
+                        for ($i = 0; $i < count($content[$a]['travels']); $i++):
 
                         for ($o = 0; $o < count($content_travel); $o++):
                             if ($content[$a]['travels'][$i]['destination'] === $content_travel[$o]['destination']) {

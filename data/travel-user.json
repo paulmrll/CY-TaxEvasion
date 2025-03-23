@@ -1,29 +1,10 @@
 [
     {
-        "email": "tkt@gmail",
+        "email": "paul.morille11@gmail.com",
         "travels": [
             {
-                "destination": "Bermudes",
+                "destination": "Anguilla",
                 "hotel": "5 étoiles premium",
-                "loisir": [
-                    "Plongée sous-marine"
-                ],
-                "visite": [
-                    "Visite d'un Musée Colonialiste"
-                ],
-                "relaxation": [
-                    "Spa et Jacuzzi Privé"
-                ],
-                "departure": "2025-03-25",
-                "return": "2025-04-02",
-                "reservation": "Payé",
-                "prix": 116616,
-                "transaction": "67de88d16e097",
-                "person": "4"
-            },
-            {
-                "destination": "Monaco",
-                "hotel": "5 étoiles Premium VIP",
                 "loisir": [
                     "Visite de Banque"
                 ],
@@ -33,21 +14,21 @@
                 "relaxation": [
                     "Spa et Jacuzzi Privé"
                 ],
-                "departure": "2025-04-03",
-                "return": "2025-04-05",
+                "departure": "2025-03-23",
+                "return": "2025-03-30",
                 "reservation": "Paiement en attente",
-                "prix": 150780,
+                "prix": 29154,
                 "transaction": "0",
-                "person": "5"
+                "person": "1"
             }
         ]
     },
     {
-        "email": "paul.morille11@gmail.com",
+        "email": "p@gmail.com",
         "travels": [
             {
                 "destination": "Anguilla",
-                "hotel": "5 étoiles premium",
+                "hotel": "5 étoiles Premium VIP Deluxe",
                 "loisir": [
                     "Jet-Ski"
                 ],
@@ -57,12 +38,12 @@
                 "relaxation": [
                     "Spa et Jacuzzi Privé"
                 ],
-                "departure": "2025-03-22",
+                "departure": "2025-03-27",
                 "return": "2025-03-30",
                 "reservation": "Paiement en attente",
-                "prix": 87462,
-                "transaction": "67dd3f5320f92",
-                "person": "3"
+                "prix": 31158,
+                "transaction": "0",
+                "person": "1"
             }
         ]
     }
