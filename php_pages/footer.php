@@ -33,6 +33,7 @@
     </div>
 </footer>
 
+<img src="../image/jet-icon.png" id="jet-cursor" class="cursor-image" alt="jet" />
 <script src="../js/main.js"></script>
 
 </body>

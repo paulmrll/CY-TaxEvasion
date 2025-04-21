@@ -23,13 +23,11 @@ if ($content == null) {
     <link rel="stylesheet" href="css/footer.css">
     <meta charset="UTF-8">
 
-    <script src="js/main.js"></script>
 
 </head>
 
 
 <body>
-
 
 <header>
     <div class="header-container">
@@ -279,6 +277,8 @@ if ($content == null) {
     </div>
 </footer>
 
+<img src="image/jet-icon.png" id="jet-cursor" class="cursor-image" alt="jet" />
+<script src="js/main.js"></script>
 
 </body>
 
