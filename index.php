@@ -175,7 +175,6 @@ if ($content == null) {
     </div>
 
 
-
     <div class="carousel-container">
         <div class="carousel-title"> 🌴Découvrez nos voyages les plus populaires🌴</div>
         <div class="carousel-content">
@@ -183,39 +182,39 @@ if ($content == null) {
 
                 <div class="grid-item">
                     <a class="grid-line-container" href="php_pages/description-pages.php?destination=Anguilla">
-                            <img src="image/anguilla.jpg" alt="Anguilla">
-                            <h3>Anguilla</h3>
-                            <div class="flag">
-                                <img src="image/anguilla-flag.jpg" alt="les-fidji-flag">
-                            </div>
+                        <img src="image/anguilla.jpg" alt="Anguilla">
+                        <h3>Anguilla</h3>
+                        <div class="flag">
+                            <img src="image/anguilla-flag.jpg" alt="les-fidji-flag">
+                        </div>
                     </a>
                 </div>
 
                 <div class="grid-item">
                     <a class="grid-line-container" href="php_pages/description-pages.php?destination=Fidji">
-                            <img src="image/les-fidji.jpeg" alt="les_fidji">
-                            <h3>Les Fidji</h3>
-                            <div class="flag">
-                                <img src="image/les-fidji-flag.jpg" alt="les-fidji-flag">
-                            </div>
+                        <img src="image/les-fidji.jpeg" alt="les_fidji">
+                        <h3>Les Fidji</h3>
+                        <div class="flag">
+                            <img src="image/les-fidji-flag.jpg" alt="les-fidji-flag">
+                        </div>
                     </a>
                 </div>
                 <div class="grid-item">
                     <a class="grid-line-container" href="php_pages/description-pages.php?destination=Palaos">
-                            <img src="image/les-palaos.jpg" alt="les-palaos">
-                            <h3>Les Palaos</h3>
-                            <div class="flag">
-                                <img src="image/les-palaos-flag.jpg" alt="les-palaos">
-                            </div>
+                        <img src="image/les-palaos.jpg" alt="les-palaos">
+                        <h3>Les Palaos</h3>
+                        <div class="flag">
+                            <img src="image/les-palaos-flag.jpg" alt="les-palaos">
+                        </div>
                     </a>
                 </div>
                 <div class="grid-item">
                     <a class="grid-line-container" href="php_pages/description-pages.php?destination=Panama">
-                            <img src="image/le-panama.jpg" alt="le panama">
-                            <h3>Le Panama</h3>
-                            <div class="flag">
-                                <img src="image/le-panama-flag.jpg" alt="le panama">
-                            </div>
+                        <img src="image/le-panama.jpg" alt="le panama">
+                        <h3>Le Panama</h3>
+                        <div class="flag">
+                            <img src="image/le-panama-flag.jpg" alt="le panama">
+                        </div>
                     </a>
                 </div>
 
@@ -261,6 +260,8 @@ if ($content == null) {
 <footer>
     <div class="footer-container">
         <div class="contact">
+            <a href="#" onclick="changeTheme()" class="footer-contact">Changer le thème</a>
+
             <a href="php_pages/contact.php" class="footer-contact">Nous contacter</a>
             <a href="php_pages/about-us.php" class="footer-contact">Qui sommes-nous ?</a>
         </div>
@@ -273,6 +274,7 @@ if ($content == null) {
         </div>
     </div>
 </footer>
+<script src="js/main.js"></script>
 </body>
 
 </html>
