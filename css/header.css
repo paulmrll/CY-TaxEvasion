@@ -62,12 +62,18 @@ header {
     margin-top: 0.9vmin;
 }
 
-
-
-
 .header-user-logo:hover{
     filter: brightness(0.8);
 }
+
+body.dark-theme .header-user-logo{
+    filter: brightness(0.7);
+}
+
+body.dark-theme .header-user-logo:hover{
+    filter: brightness(0.5);
+}
+
 
 
 .header-right a:hover, .header-left a:hover {
@@ -108,7 +114,13 @@ header {
     transition: transform 0.15s ease-in-out 0.1s;
     will-change: transform;
     pointer-events: none;
+
 }
+
+body.dark-theme .header-jet-icon{
+    filter: brightness(0.7);
+}
+
 
 .header-voir-voyage-text{
     text-wrap: nowrap;

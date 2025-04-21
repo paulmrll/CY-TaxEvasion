@@ -14,7 +14,6 @@
     --color-submit: #5cb8ec;
     --color-map-grey: #555555;
     --color-map-red: #b80707;
-    --color-blue: #3f4eeb;
     --font-style: normal;
     --spacing-sm: 4rem;
     --spacing-md: 10rem;
@@ -23,19 +22,18 @@
 
 
 .dark-theme {
-    --color-bar: red;
-    --color-background: #FAF9F6;
+    --color-bar: #041522;
+    --color-background: #C0C0BC;
     --color-dark-writing: #041522;
-    --color-light-writing: #FAF9F6;
+    --color-light-writing: #C0C0BC;
     --color-light-border: #ccc;
-    --color-background-2: #d6f1fc;
-    --color-header-active: #5cb8ec;
+    --color-background-2: #A5BAC2;
+    --color-header-active: #468BB3;
     --color-header-active-lighter: #75cbfa;
     --color-reset: #ed825f;
     --color-submit: #5cb8ec;
     --color-map-grey: #555555;
     --color-map-red: #b80707;
-    --color-blue: #3f4eeb;
 }
 
 * {

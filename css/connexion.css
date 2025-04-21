@@ -95,6 +95,6 @@ td{
 }
 
 form a{
-    color: var(--color-blue);
+    color: var(--color-header-active);
     text-decoration: underline 0.1vmin;
 }

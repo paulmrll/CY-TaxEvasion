@@ -16,7 +16,9 @@
 <footer>
     <div class="footer-container">
         <div class="contact">
-            <a href="#" onclick="changeTheme()" class="footer-contact" >Changer le thème</a>
+            <a href="#" onclick="changeTheme()" class="footer-contact">
+                <img class="theme-logo" id="theme-logo" src="../image/sun.png" alt="theme-logo">
+            </a>
 
             <a href="../php_pages/contact.php" class="footer-contact">Nous contacter</a>
             <a href="about-us.php" class="footer-contact">Qui sommes-nous ?</a>

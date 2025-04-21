@@ -23,6 +23,8 @@ if ($content == null) {
     <link rel="stylesheet" href="css/footer.css">
     <meta charset="UTF-8">
 
+    <script src="js/main.js"></script>
+
 </head>
 
 
@@ -260,7 +262,9 @@ if ($content == null) {
 <footer>
     <div class="footer-container">
         <div class="contact">
-            <a href="#" onclick="changeTheme()" class="footer-contact">Changer le thème</a>
+            <a href="#" onclick="changeTheme()" class="footer-contact">
+                <img class="theme-logo" id="theme-logo" src="image/sun.png" alt="theme-logo">
+            </a>
 
             <a href="php_pages/contact.php" class="footer-contact">Nous contacter</a>
             <a href="php_pages/about-us.php" class="footer-contact">Qui sommes-nous ?</a>
@@ -274,7 +278,8 @@ if ($content == null) {
         </div>
     </div>
 </footer>
-<script src="js/main.js"></script>
+
+
 </body>
 
 </html>
