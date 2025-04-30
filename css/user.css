@@ -274,8 +274,6 @@ main div button img {
 }
 
 
-
-
 .date-container{
     display: flex;
     flex-direction: column;
@@ -288,6 +286,7 @@ main div button img {
     font-size: 1.1rem;
     text-wrap: nowrap;
 }
+
 .modification-container{
     display: flex;
     flex-direction: column;
@@ -320,3 +319,9 @@ a {
     text-decoration: none;
 }
 
+
+.modif-image{
+    width: 40px;
+    height: auto;
+
+}
