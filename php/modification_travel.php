@@ -69,9 +69,8 @@ function delete_travel($destination){
             for ($o = 0; $o < count($content[$i]["travels"]); $o++){
                 if ($content[$i]["travels"][$o]["destination"] === $destination){
                     unset($content[$i]["travels"][$o]);
-                    $content = array_values($content);
+                    $content[$i]["travels"] = array_values($content[$i]["travels"]);
                     file_put_contents($jsonFile, json_encode($content, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT));
-                    echo "1";
                 }
             }
             header("Location: ../php_pages/user.php");

@@ -5,7 +5,27 @@
     },
     {
         "email": "paul@gmail.com",
-        "travels": []
+        "travels": [
+            {
+                "destination": "Bermudes",
+                "hotel": "5 étoiles Premium VIP",
+                "loisir": [
+                    "Plongée sous-marine"
+                ],
+                "visite": [
+                    "Visite de Banque"
+                ],
+                "relaxation": [
+                    "Diner gastronomique 5 étoiles"
+                ],
+                "departure": "2025-05-03",
+                "return": "2025-06-08",
+                "reservation": "Paiement en attente",
+                "prix": 85980906,
+                "transaction": "0",
+                "person": "3"
+            }
+        ]
     },
     {
         "email": "cyp@gmail.com",
