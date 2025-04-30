@@ -52,36 +52,7 @@ window.onload = function () {
 }
 
 
-document.addEventListener('click', (e) => {
 
-    const numberOfDollars = 15;
-
-    const radius = 80;
-
-    for (let i = 0; i < numberOfDollars; i++) {
-        const delay = i * 30;
-
-        const dollar = document.createElement('div');
-        dollar.classList.add('dollar');
-        dollar.innerText = '$';
-
-        const angle = Math.random() * 2 * Math.PI;
-        const distance = Math.random() * radius;
-        const offsetX = e.clientX + distance * Math.cos(angle);
-        const offsetY = e.clientY + distance * Math.sin(angle) + window.scrollY;
-
-        dollar.style.left = `${offsetX}px`;
-        dollar.style.top = `${offsetY}px`;
-
-        setTimeout(() => {
-            document.body.appendChild(dollar);
-        }, delay);
-
-        setTimeout(() => {
-            dollar.remove();
-        }, delay + 1500);
-    }
-});
 
 
 
