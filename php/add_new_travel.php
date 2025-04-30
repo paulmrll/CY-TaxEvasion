@@ -20,7 +20,7 @@ function register_photo($file){
 }
 
 
-function add_travel($name, $hotel, $loisir, $visite, $relaxation, $description, $photo, $photo_drapeau, $photo_carte) {
+function add_travel($name, $hotel, $loisir, $visite, $relaxation, $description, $photo, $photo_drapeau, $photo_carte, $prix, $continent) {
     $jsonFile = "../data/travel.json";
     
     $temp = explode(" ", $name);
@@ -71,7 +71,9 @@ function add_travel($name, $hotel, $loisir, $visite, $relaxation, $description, 
         "description" => $description,
         "image" => $photo_url,
         "image_maps" => $photo_carte_url,
-        "image-flag" => $photo_drapeau_url
+        "image-flag" => $photo_drapeau_url,
+        "prix" => $prix,
+        "continent" => $continent
     ];
 
     file_put_contents($jsonFile, json_encode($content, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT));
@@ -88,7 +90,9 @@ function add_travel($name, $hotel, $loisir, $visite, $relaxation, $description, 
             "description" => $description,
             "image" => $photo_url,
             "image_maps" => $photo_carte_url,
-            "image-flag" => $photo_drapeau_url
+            "image-flag" => $photo_drapeau_url,
+            "prix" => $prix,
+            "continent" => $continent
         ];
     
         file_put_contents($jsonFile, json_encode($content, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT));
@@ -102,13 +106,12 @@ function add_travel($name, $hotel, $loisir, $visite, $relaxation, $description, 
 
 
 if (isset($_POST['destination']) && isset($_POST['hotel']) && isset($_POST['loisir']) && isset($_POST['visite']) && isset($_POST['relaxation'])
-&& isset($_POST['description']) && isset($_FILES['photo']) && isset($_FILES['photo_drapeau']) && isset($_FILES['photo_carte'])) {
-    add_travel($_POST['destination'], $_POST['hotel'], $_POST['loisir'], $_POST['visite'], $_POST['relaxation'], $_POST['description']
-, $_FILES['photo'], $_FILES['photo_drapeau'], $_FILES['photo_carte']);
+&& isset($_POST['description']) && isset($_FILES['photo']) && isset($_FILES['photo_drapeau']) && isset($_FILES['photo_carte']) && isset($_POST['prix']) && isset($_POST['continent'])) {
+    add_travel($_POST['destination'], $_POST['hotel'], $_POST['loisir'], $_POST['visite'], $_POST['relaxation'], $_POST['description'], $_FILES['photo'], $_FILES['photo_drapeau'], $_FILES['photo_carte'], $_POST['prix'], $_POST['continent']);
     header('Location: ../php_pages/admin.php');
     exit();
 } else {
-    //header("Location: ../php_pages/add_new_travel.php");
+    header("Location: ../php_pages/add_new_travel.php");
     exit();
 }
 

@@ -136,6 +136,7 @@ require_once "../php_pages/header.php";
                 </div>
 
             </div>
+            <input id="continent" name="continent" type="hidden" value="<?php echo $content[$i]["continent"]?>">
             <div class="button-container" id="buttons">
                 <input type="hidden" name="todo" value="modify">
                 <button type="submit">Réserver</button>
