@@ -15,11 +15,17 @@ for (let i = 0; i < see.length; i++) {
         let parentDiv = this.closest('div');
         let input = parentDiv.querySelector('input');
         if (input.readOnly == true) {
+            if (input.name == "password") {
+                input.type = "text";
+            }
             input.readOnly = false;
             input.style.backgroundColor = "white";
             input.style.color = "black";
             see[i].src = "../image/no-visibility.png";
         } else if (input.readOnly == false) {
+            if (input.name == "password") {
+                input.type = "password";
+            }
             input.readOnly = true;
             input.style.backgroundColor = "grey";
             input.style.color = "white";

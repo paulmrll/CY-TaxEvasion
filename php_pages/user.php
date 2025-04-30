@@ -104,7 +104,7 @@ require_once "../php_pages/header.php";
                                             <a>Numéro de rue : </a>
                                             <input type="number" name="nb"
                                                    value="<?php echo $content_user[$index_user]["adress"]['number']; ?>"
-                                                   required>
+                                                   min="1" required>
                                             <img class="modif-image" src="../image/visibility-logo.png" alt="image-utilisateur">
 
                                         </div>
