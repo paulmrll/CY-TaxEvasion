@@ -148,10 +148,16 @@ require_once "../php_pages/header.php";
 
                                         </div>
                                     </div>
+                                    <div class="grid-line-container">
+                                        <div>
+                                            <img class="reload-image" src="../image/reload.png" alt="image-utilisateur">
+                                        </div>
+                                    </div>
                                     <input type="hidden" name="todo" value="modify_client">
 
                                     <div class="button-container">
                                         <button class="button-modifier">Modifier</button>
+                                        
                                     </div>
                                 </div>
                             </div>
