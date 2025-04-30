@@ -329,10 +329,15 @@ a {
 }
 
 
-.modif-image{
+.modif-image,
+.reload-image {
     width: 40px;
     height: auto;
 
+}
+.reload-image {
+   margin-left: auto;
+    margin-right: auto;
 }
 
 

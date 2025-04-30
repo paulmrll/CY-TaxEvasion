@@ -26,7 +26,7 @@ function is_already_going_to($destination, $jsonFile){
     return 0;
 }
 
-function register_travel($destination, $hotel, $loisir, $visite, $relaxation, $departure, $return, $person){
+function register_travel($destination, $hotel, $loisir, $visite, $relaxation, $departure, $return, $person, $continent){
     $jsonFile = "../data/travel-user.json";
     $prix = update_price($hotel, $loisir, $visite, $relaxation, $departure, $return, $person);
     if ($prix < 0){
@@ -50,7 +50,8 @@ function register_travel($destination, $hotel, $loisir, $visite, $relaxation, $d
                     "reservation" => "Paiement en attente",
                     "prix" => $prix,
                     "transaction" => "0",
-                    "person" => $person
+                    "person" => $person,
+                    "continent" => $continent
                 )
             )
     );
@@ -75,7 +76,8 @@ function register_travel($destination, $hotel, $loisir, $visite, $relaxation, $d
                         "reservation" => "Paiement en attente",
                         "prix" => $prix,
                         "transaction" => "0",
-                        "person" => $person
+                        "person" => $person,
+                        "continent" => $continent
                     )
                 )
         );
@@ -100,7 +102,8 @@ function register_travel($destination, $hotel, $loisir, $visite, $relaxation, $d
                         "reservation" => "Paiement en attente",
                         "prix" => $prix,
                         "transaction" => "0",
-                        "person" => $person
+                        "person" => $person,
+                        "continent" => $continent
             );
                 
 
@@ -123,7 +126,8 @@ function register_travel($destination, $hotel, $loisir, $visite, $relaxation, $d
                 "reservation" => "Paiement en attente",
                 "prix" => $prix,
                 "transaction" => "0",
-                "person" => $person
+                "person" => $person,
+                "continent" => $continent
             )
         )
 );
@@ -137,7 +141,7 @@ function register_travel($destination, $hotel, $loisir, $visite, $relaxation, $d
 
 
 if (isset($_POST['destination']) && isset($_POST['hotel']) && isset($_POST['loisir']) && isset($_POST['visite']) && 
-isset($_POST['relaxation']) && isset($_POST['departure']) && isset($_POST['return']) && isset($_POST['person'])){
+isset($_POST['relaxation']) && isset($_POST['departure']) && isset($_POST['return']) && isset($_POST['person']) && isset($_POST['continent'])){
     if (!isset($_SESSION['email'])){
         header('Location: ../php_pages/connexion.php');
         exit();
@@ -150,11 +154,12 @@ isset($_POST['relaxation']) && isset($_POST['departure']) && isset($_POST['retur
     $departure = $_POST['departure'];
     $return = $_POST['return'];
     $person = $_POST['person'];
+    $continent = $_POST['continent'];
     if ($departure < date("Y-m-d") || $return < date("Y-m-d") || $return < $departure){
         header('Location: ../php_pages/user_register_travel.php?destination='.$destination);
         exit();
     }
-    register_travel($destination, $hotel, $loisir, $visite, $relaxation, $departure, $return, $person);
+    register_travel($destination, $hotel, $loisir, $visite, $relaxation, $departure, $return, $person, $continent);
 } else {
     $destination = $_POST['destination'];
     header('Location: ../php_pages/user_register_travel.php?destination='.$destination);

@@ -115,6 +115,16 @@ require_once "../php_pages/header.php";
                     <textarea id="message" name="description" rows="6" cols="70" required></textarea>
                     </div>
                 </div>
+                <div class="reservation-checkbox">
+                    <h5>Prix : </h5>
+                    <input id="Prix" type="text" name="prix" placeholder="Prix" required>
+                </div>
+                <div class="reservation-checkbox">
+                    <h5>Continent : </h5>
+                    <input id="Continent" type="text" name="continent" placeholder="Continent" required>
+                </div>
+                
+                
             </div>
             <div class="button-container" id="buttons">
                 <button type="submit">Enregistrer</button>

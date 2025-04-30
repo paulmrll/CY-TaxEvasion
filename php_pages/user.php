@@ -104,7 +104,7 @@ require_once "../php_pages/header.php";
                                             <a>Numéro de rue : </a>
                                             <input type="number" name="nb"
                                                    value="<?php echo $content_user[$index_user]["adress"]['number']; ?>"
-                                                   required>
+                                                   min="1" required>
                                             <img class="modif-image" src="../image/visibility-logo.png" alt="image-utilisateur">
 
                                         </div>
@@ -148,10 +148,16 @@ require_once "../php_pages/header.php";
 
                                         </div>
                                     </div>
+                                    <div class="grid-line-container">
+                                        <div>
+                                            <img class="reload-image" src="../image/reload.png" alt="image-utilisateur">
+                                        </div>
+                                    </div>
                                     <input type="hidden" name="todo" value="modify_client">
 
                                     <div class="button-container">
                                         <button class="button-modifier">Modifier</button>
+                                        
                                     </div>
                                 </div>
                             </div>
@@ -288,7 +294,7 @@ require_once "../php_pages/header.php";
 <?php
 require_once "../php_pages/footer.php";
 ?>
-
+<script src="../js/user.js"></script>
 
 </body>
 </html>

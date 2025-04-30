@@ -86,9 +86,9 @@ require_once "../php_pages/header.php";
     <img class="main-img" src="<?php echo $url_image?>" alt="Image de la destination">
 
     <?php if ($content[$a]['travels'][$index]['reservation'] == "Paiement en attente"){?>
-        <h1>Votre voyage en attente de réservation à <?php echo $name?></h1>
+        <h1>Votre voyage en attente de réservation à <?php echo $name?> en <?php echo $content[$a]['travels'][$index]['continent'];?></h1>
     <?php }elseif ($content[$a]['travels'][$index]['reservation'] == "Payé"){?>
-        <h1>Votre voyage réservé à <?php echo $name?></h1>
+        <h1>Votre voyage réservé à <?php echo $name;?> en <?php echo $content[$a]['travels'][$index]['continent'];?></h1>
     <?php }?>
 
 
