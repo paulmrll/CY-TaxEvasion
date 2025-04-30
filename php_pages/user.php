@@ -288,7 +288,7 @@ require_once "../php_pages/header.php";
 <?php
 require_once "../php_pages/footer.php";
 ?>
-
+<script src="../js/user.js"></script>
 
 </body>
 </html>
