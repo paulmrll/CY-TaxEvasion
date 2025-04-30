@@ -62,6 +62,8 @@ require_once "../php_pages/header.php";
                                             <a>Nom : </a>
                                             <input type="text" name="name" value="<?php echo $_SESSION['name']; ?>"
                                                    required>
+                                            <img class="modif-image" src="../image/visibility-logo.png" alt="image-utilisateur">
+
                                         </div>
 
                                     </div>
@@ -72,6 +74,8 @@ require_once "../php_pages/header.php";
                                             <input type="text" name="firstname"
                                                    value="<?php echo $_SESSION['firstname']; ?>"
                                                    required>
+                                            <img class="modif-image" src="../image/visibility-logo.png" alt="image-utilisateur">
+
                                         </div>
 
                                     </div>
@@ -81,6 +85,8 @@ require_once "../php_pages/header.php";
                                             <a>Adresse mail : </a>
                                             <input type="text" name="email" value="<?php echo $_SESSION['email']; ?>"
                                                    required>
+                                            <img class="modif-image" src="../image/visibility-logo.png" alt="image-utilisateur">
+
                                         </div>
                                     </div>
 
@@ -89,6 +95,8 @@ require_once "../php_pages/header.php";
                                             <a>Mot de passe : </a>
                                             <input type="password" name="password"
                                                    value="<?php echo $_SESSION['password']; ?>" required>
+                                            <img class="modif-image" src="../image/visibility-logo.png" alt="image-utilisateur">
+
                                         </div>
                                     </div>
                                     <div class="grid-line-container">
@@ -97,6 +105,8 @@ require_once "../php_pages/header.php";
                                             <input type="number" name="nb"
                                                    value="<?php echo $content_user[$index_user]["adress"]['number']; ?>"
                                                    required>
+                                            <img class="modif-image" src="../image/visibility-logo.png" alt="image-utilisateur">
+
                                         </div>
                                     </div>
                                     <div class="grid-line-container">
@@ -105,6 +115,8 @@ require_once "../php_pages/header.php";
                                             <input type="text" name="rue"
                                                    value="<?php echo $content_user[$index_user]["adress"]['rue']; ?>"
                                                    required>
+                                            <img class="modif-image" src="../image/visibility-logo.png" alt="image-utilisateur">
+
                                         </div>
                                     </div>
                                     <div class="grid-line-container">
@@ -113,6 +125,8 @@ require_once "../php_pages/header.php";
                                             <input type="text" name="ville"
                                                    value="<?php echo $content_user[$index_user]["adress"]['ville']; ?>"
                                                    required>
+                                            <img class="modif-image" src="../image/visibility-logo.png" alt="image-utilisateur">
+
                                         </div>
                                     </div>
                                     <div class="grid-line-container">
@@ -121,6 +135,8 @@ require_once "../php_pages/header.php";
                                             <input type="text" name="cdp"
                                                    value="<?php echo $content_user[$index_user]["adress"]['cdp']; ?>"
                                                    required>
+                                            <img class="modif-image" src="../image/visibility-logo.png" alt="image-utilisateur">
+
                                         </div>
                                     </div>
                                     <div class="grid-line-container">
@@ -128,6 +144,8 @@ require_once "../php_pages/header.php";
                                             <a>Date de Naissance : </a>
                                             <input type="date" name="birth"
                                                    value="<?php echo $content_user[$index_user]['birth']; ?>" required>
+                                            <img class="modif-image" src="../image/visibility-logo.png" alt="image-utilisateur">
+
                                         </div>
                                     </div>
                                     <input type="hidden" name="todo" value="modify_client">

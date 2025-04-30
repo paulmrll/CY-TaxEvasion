@@ -105,6 +105,7 @@ require_once "../php_pages/header.php";
                                             <a>Prénom : </a>
                                             <input type="text" value="<?php echo $content_user[$id]['firstname']; ?>"
                                                    name="firstname" required>
+
                                         </div>
 
                                     </div>
@@ -114,10 +115,13 @@ require_once "../php_pages/header.php";
                                             <a>Adresse mail : <?php echo $content_user[$id]['email'];?></a>
                                             <input type="hidden" name="email" value="<?php echo $content_user[$id]['email'];?>"
                                                    required>
+
                                         </div>
                                     </div>
                                     <input type="hidden" name="password" value="<?php echo $content_user[$id]['password'];?>" required>
+
                                     <input type="hidden" name="nb" value="<?php echo $content_user[$id]['adress']["number"];?>" required>
+
                                     <input type="hidden" name="rue" value="<?php echo $content_user[$id]['adress']["rue"];?>" required>
                                     <input type="hidden" name="ville" value="<?php echo $content_user[$id]['adress']["ville"];?>" required>
                                     <input type="hidden" name="cdp" value="<?php echo $content_user[$id]['adress']["cdp"];?>" required>
