@@ -23,6 +23,10 @@ h2{
 
 }
 
+.utilisateur{
+    margin: var(--spacing-md) 0;
+}
+
 .compte-info-container-top {
     display: flex;
     flex-direction: column;
@@ -121,6 +125,11 @@ h2{
     gap: 5rem;
 }
 
+.button-container{
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+}
 
 .button-container button{
     width: 100%;
@@ -324,4 +333,25 @@ a {
     width: 40px;
     height: auto;
 
+}
+
+
+.button-modifier:hover{
+    cursor: pointer;
+}
+
+.loading-dots::after {
+    content: '.';
+    animation: dots 1s steps(3, end) infinite;
+}
+
+@keyframes dots {
+    0% { content: '.'; }
+    33% { content: '..'; }
+    66% { content: '...'; }
+}
+
+.button-modifier:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
 }

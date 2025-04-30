@@ -5,7 +5,7 @@
         "email": "flo@gmail.com",
         "password": "$2y$10$5e8xG6uvA6qfoGEXZhEpJOrIBAYkzzWF2FuieAPqLLSoBKfsz.Aou",
         "inscription_date": "23-03-2025 21:41:15",
-        "connexion_date": "23-03-2025 21:41:15",
+        "connexion_date": "30-04-2025 14:31:27",
         "role": "Admin",
         "card": {
             "name": "",
@@ -47,7 +47,7 @@
         "name": "Wingering",
         "firstname": "Cyprien",
         "email": "cyp@gmail.com",
-        "password": "$2y$10$ZGvi5zJnf8oGfksQT17h\/Oruzbs4mrYrjvhVqthJti\/HLEYvqcIg2",
+        "password": "$2y$10$P9zI7Xht7SBPqBFzg2Kiaefnai9l2tTlE\/m6gNulrwQ6cmLFmwb9W",
         "inscription_date": "23-03-2025 21:42:41",
         "connexion_date": "23-03-2025 21:42:41",
         "role": "Utilisateur",
@@ -69,7 +69,7 @@
         "name": "Delacroix",
         "firstname": "Romain",
         "email": "romain@gmail.com",
-        "password": "$2y$10$G1.HuakSshMtsJzlFkvVCeZSoK8I1CNkhAJAUVE2AZp5mUC4UsU9.",
+        "password": "$2y$10$QR9UygR.LtORkztVGGPN5ujlYik7jbZh3RK5b\/cXGYe\/pi2pEZVX2",
         "inscription_date": "23-03-2025 21:44:35",
         "connexion_date": "23-03-2025 21:44:35",
         "role": "Utilisateur",
@@ -91,7 +91,7 @@
         "name": "Dufour",
         "firstname": "Olivier",
         "email": "olivier@gmail.com",
-        "password": "$2y$10$Xnx5\/wQ4Exjv4MnQLUqzRO1KDDRJi5sndomrjfB2B1sS1Wp36dbJS",
+        "password": "$2y$10$gkXbXBfyQIcAdlk\/yMeHiOmRiDX45bre68LnTWnauQhyKqHE75HnC",
         "inscription_date": "23-03-2025 21:45:39",
         "connexion_date": "23-03-2025 21:45:39",
         "role": "Utilisateur",
@@ -107,6 +107,28 @@
             "rue": "de provence",
             "ville": "cergy",
             "cdp": "95000"
+        }
+    },
+    {
+        "name": "a",
+        "firstname": "a",
+        "email": "tkt@gmail",
+        "password": "$2y$10$4iKHtYJ0Ckhz53DU2MqM0uBa5G.4MkqMt0me7Wh19xHjX4i7QWxoG",
+        "inscription_date": "30-04-2025 14:25:47",
+        "connexion_date": "30-04-2025 14:25:47",
+        "role": "Utilisateur",
+        "card": {
+            "name": "",
+            "number": 0,
+            "date": 0,
+            "cvv": 0
+        },
+        "birth": "2000-02-05",
+        "adress": {
+            "number": "1",
+            "rue": "a",
+            "ville": "a",
+            "cdp": "9500"
         }
     }
 ]

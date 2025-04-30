@@ -84,7 +84,7 @@ require_once "../php_pages/header.php";
 
                     <div class="box-container">
 
-                        <form action="../php/modification.php" method="post">
+                        <form id="form-modifier" action="../php/modification.php" method="post">
                             <div class="part-container">
                                 <h1>Compte de <?php echo $content_user[$id]['firstname']; ?> :</h1>
                                 <div class="compte-info-container-top">
@@ -129,8 +129,10 @@ require_once "../php_pages/header.php";
                                     <input type="hidden" name="todo" value="modify_client_by_admin">
 
                                     <div class="button-container">
-                                        <button class="button-modifier">Modifier</button>
+                                        <button type="button" class="button-modifier">Modifier</button>
+                                        <button type="button" id="button-retour" onclick="history.back()">Retour</button>
                                     </div>
+
                                 </div>
                             </div>
                         </form>
@@ -161,7 +163,7 @@ require_once "../php_pages/header.php";
                                     break;
                                 }
                             }
-                        
+
                         ?>
                         <div class="compte-info-container">
                             <div class="grid-container">
@@ -195,20 +197,11 @@ require_once "../php_pages/header.php";
                                 </div>
                                 <?php }?>
 
-                                
-
 
                             </div>
                         </div>
-
                     </div>
-
-
-
-
                 </div>
-
-
             </div>
         </div>
 
@@ -218,6 +211,8 @@ require_once "../php_pages/header.php";
 <?php
 require_once "../php_pages/footer.php";
 ?>
+
+<script src="../js/admin.js"></script>
 
 
 </body>

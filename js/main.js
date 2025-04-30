@@ -53,14 +53,6 @@ window.onload = function () {
 
 
 
-
-
-
-
-
-
-
-
 const plane = document.getElementById('jet-cursor');
 
 let cursorX = window.innerWidth / 2;
