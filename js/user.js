@@ -5,6 +5,9 @@ for (let i = 0; i < inputAll.length; i++) {
     inputAll[i].style.backgroundColor = "grey";
     inputAll[i].style.color = "white";
 }
+let button = document.querySelector(".button-modifier");
+button.style.display = "none";
+
 
 
 for (let i = 0; i < see.length; i++) {
@@ -22,5 +25,13 @@ for (let i = 0; i < see.length; i++) {
             input.style.color = "white";
             see[i].src = "../image/visibility-logo.png";
         }
+    });
+}
+
+let inputAll2 = document.querySelectorAll("input");
+for (let i = 0; i < inputAll2.length; i++){
+    inputAll2[i].addEventListener('input', function() {
+        button.style.display = "flex";
+        button.style.justifyContent = "center";
     });
 }
