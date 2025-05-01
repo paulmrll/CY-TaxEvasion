@@ -36,6 +36,14 @@ for (let i = 0; i < inputs.length; i++) {
                         inputs[j].style.border = "2px solid red";
                         number = 0;
                     }
+                } else if (inputs[j].name == "numero"){
+                    if (inputs[j].value > 0 && !isNaN(inputs[j].value)){
+                        inputs[j].style.border = "2px solid green";
+                        number++;
+                    } else {
+                        inputs[j].style.border = "2px solid red";
+                        number = 0;
+                    }
                 } else {
                     inputs[j].style.border = "2px solid green";
                     number++;
