@@ -26,9 +26,9 @@ function is_already_going_to($destination, $jsonFile){
     return 0;
 }
 
-function register_travel($destination, $hotel, $loisir, $visite, $relaxation, $departure, $return, $person, $continent){
+function register_travel($destination, $hotel, $loisir, $visite, $relaxation, $departure, $return, $person, $continent, $prix){
     $jsonFile = "../data/travel-user.json";
-    $prix = update_price($hotel, $loisir, $visite, $relaxation, $departure, $return, $person);
+
     if ($prix < 0){
         header('Location: ../php_pages/user_register_travel.php?destination=' . $destination);
     }
@@ -61,6 +61,10 @@ function register_travel($destination, $hotel, $loisir, $visite, $relaxation, $d
     }
 
     $content = json_decode(file_get_contents($jsonFile), true);
+    if (is_already_going_to($destination, $jsonFile) == 1){
+        header("Location: ../php_pages/travel-information.php?travel=".$destination);
+        exit();
+    }
     if ($content == null){
         $tab[] = array(
                 "email" => $_SESSION["email"],
@@ -85,10 +89,7 @@ function register_travel($destination, $hotel, $loisir, $visite, $relaxation, $d
         header('Location: ../php_pages/user.php');
         exit();
     }
-    if (is_already_going_to($destination, $jsonFile) == 1){
-        header("Location: ../php_pages/travel-information.php?travel=".$destination);
-        exit();
-    }
+    
     for ($i = 0; $i < count($content); $i++){
         if ($content[$i]['email'] === $_SESSION["email"]){
             $content[$i]['travels'][] = array(
@@ -108,7 +109,7 @@ function register_travel($destination, $hotel, $loisir, $visite, $relaxation, $d
                 
 
             file_put_contents($jsonFile, json_encode($content, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT));
-            header('Location: ../php_pages/user.php');
+            header("Location: ../php_pages/travel-information.php?travel=".$destination);
             exit();
         }
     }
@@ -132,7 +133,7 @@ function register_travel($destination, $hotel, $loisir, $visite, $relaxation, $d
         )
 );
     file_put_contents($jsonFile, json_encode($content, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT));
-    header('Location: ../php_pages/user.php');
+    header("Location: ../php_pages/travel-information.php?travel=".$destination);
     exit();
 }
 
@@ -141,7 +142,7 @@ function register_travel($destination, $hotel, $loisir, $visite, $relaxation, $d
 
 
 if (isset($_POST['destination']) && isset($_POST['hotel']) && isset($_POST['loisir']) && isset($_POST['visite']) && 
-isset($_POST['relaxation']) && isset($_POST['departure']) && isset($_POST['return']) && isset($_POST['person']) && isset($_POST['continent'])){
+isset($_POST['relaxation']) && isset($_POST['departure']) && isset($_POST['return']) && isset($_POST['person']) && isset($_POST['continent']) && isset($_POST['prix_final'])){
     if (!isset($_SESSION['email'])){
         header('Location: ../php_pages/connexion.php');
         exit();
@@ -155,11 +156,12 @@ isset($_POST['relaxation']) && isset($_POST['departure']) && isset($_POST['retur
     $return = $_POST['return'];
     $person = $_POST['person'];
     $continent = $_POST['continent'];
+    $prix = $_POST['prix_final'];
     if ($departure < date("Y-m-d") || $return < date("Y-m-d") || $return < $departure){
         header('Location: ../php_pages/user_register_travel.php?destination='.$destination);
         exit();
     }
-    register_travel($destination, $hotel, $loisir, $visite, $relaxation, $departure, $return, $person, $continent);
+    register_travel($destination, $hotel, $loisir, $visite, $relaxation, $departure, $return, $person, $continent, $prix);
 } else {
     $destination = $_POST['destination'];
     header('Location: ../php_pages/user_register_travel.php?destination='.$destination);

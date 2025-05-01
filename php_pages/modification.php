@@ -178,8 +178,13 @@ require_once "../php_pages/header.php";
                 </div>
 
                 <div class="reservation-prix">
-                    <h5>Prix :</h5><h6><?php echo $content[$a]["travels"][$index]["prix"] . " €"?></h6>
+                    <h5>Prix :</h5>
+                    <input type="text" value="<?php echo $content[$a]["travels"][$index]["prix"]?>" name="prix_final" readonly>€
                 </div>
+                <div class="button-container" id="buttons">
+            <input type="hidden" value="<?php echo $content_travel[$index_travel]["prix"]?>" name="prix">
+
+            </div>
 
             </div>
             <div class="button-container" id="buttons">
@@ -202,6 +207,7 @@ require_once "../php_pages/footer.php";
 ?>
 
 
+<script src="../js/user_register_travel.js"></script>
 </body>
 </html>
 

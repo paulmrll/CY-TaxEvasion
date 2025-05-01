@@ -132,8 +132,13 @@ require_once "../php_pages/header.php";
 
                 </div>
                 <div class="reservation-prix">
-                    <h5>Prix de base :</h5><h6><?php echo $content[$i]["prix"]?></h6>
+                <h5>Prix de base :</h5>
+                <input type="text" value="0" name="prix_final" readonly>€
                 </div>
+                <div class="button-container" id="buttons">
+            <input type="hidden" value="<?php echo $content[$i]["prix"]?>" name="prix">
+
+            </div>
 
             </div>
             <input id="continent" name="continent" type="hidden" value="<?php echo $content[$i]["continent"]?>">
@@ -142,6 +147,7 @@ require_once "../php_pages/header.php";
                 <button type="submit">Réserver</button>
 
             </div>
+            
         </form>
         
     </div>
@@ -151,6 +157,8 @@ require_once "../php_pages/header.php";
 <?php
 require_once "../php_pages/footer.php";
 ?>
+
+<script src="../js/user_register_travel.js"></script>
 
 
 </body>
