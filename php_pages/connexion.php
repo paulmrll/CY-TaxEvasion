@@ -48,5 +48,6 @@
 <?php
 require_once "../php_pages/footer.php";
 ?>
+<script src="../js/connexion.js"></script>
 </body>
 </html>

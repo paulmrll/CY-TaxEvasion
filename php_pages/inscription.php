@@ -68,7 +68,7 @@
 require_once "../php_pages/footer.php";
 ?>
 
-
+<script src="../js/inscription.js"></script>
 </body>
 <script src="exo2.js"></script>
 </html>

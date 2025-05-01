@@ -77,7 +77,7 @@ for (let i = 0; i < see.length; i++) {
             input.readOnly = false;
             input.style.backgroundColor = "white";
             input.style.color = "black";
-            see[i].src = "../image/no-visibility.png";
+            see[i].src = "../image/validation.png";
         } else if (input.readOnly == false) {
             if (input.name == "password") {
                 input.type = "password";
