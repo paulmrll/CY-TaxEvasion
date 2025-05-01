@@ -53,6 +53,8 @@ for (let i = 0; i < inputs.length; i++) {
         if (number == inputs.length){
             button.style.display = "block";
             button.style.margin = "auto";
+        } else {
+            button.style.display = "none";
         }
     });
 }
