@@ -34,3 +34,10 @@ for (let i = 0; i < inputs.length; i++) {
     }
     });
 }
+let reset = document.querySelector("button[type=reset]");
+reset.addEventListener("click", function() {
+    for (let i = 0; i < inputs.length; i++){
+        inputs[i].style.border = "2px solid red";
+    }
+    button.style.display = "none";
+});
