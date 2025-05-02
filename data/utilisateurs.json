@@ -25,9 +25,9 @@
         "name": "Morille",
         "firstname": "Paul",
         "email": "paul@gmail.com",
-        "password": "$2y$10$DjChiWR9u1dyYLgzlEQvIObs1XePpZZqIClI5R9bPoCpTVCgie\/i.",
+        "password": "$2y$10$KJjKxuGRAurS7P56I6gEtOlfpkltjo4PWWL4bMIjTQtyxXO0TPIZy",
         "inscription_date": "23-03-2025 21:41:57",
-        "connexion_date": "02-05-2025 14:02:31",
+        "connexion_date": "02-05-2025 22:26:41",
         "role": "Admin",
         "card": {
             "name": "",
@@ -35,7 +35,7 @@
             "date": 0,
             "cvv": 0
         },
-        "birth": "2025-03-05",
+        "birth": "2025-03-28",
         "adress": {
             "number": "01",
             "rue": "du port",
@@ -45,9 +45,9 @@
     },
     {
         "name": "Wingering",
-        "firstname": "Cyprien",
+        "firstname": "Cyprie",
         "email": "cyp@gmail.com",
-        "password": "$2y$10$d.uNGk8QAy\/sf3SK\/esVWOQtGMq\/OdxEfkBb3vh\/XDzuePhM9nG5W",
+        "password": "$2y$10$HUaB3xChYrbUeTCbzKhWz.VP63PDPhvwIn8P7ZQFucXyIogpwxkzW",
         "inscription_date": "23-03-2025 21:42:41",
         "connexion_date": "23-03-2025 21:42:41",
         "role": "Utilisateur",

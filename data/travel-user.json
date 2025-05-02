@@ -1,7 +1,28 @@
 [
     {
         "email": "paul@gmail.com",
-        "travels": []
+        "travels": [
+            {
+                "destination": "Anguilla",
+                "hotel": "5 étoiles premium",
+                "loisir": [
+                    "Visite de Banque"
+                ],
+                "visite": [
+                    "Visite de Banque"
+                ],
+                "relaxation": [
+                    "Spa et Jacuzzi Privé"
+                ],
+                "departure": "2025-05-03",
+                "return": "2025-05-18",
+                "reservation": "Paiement en attente",
+                "prix": 940560,
+                "transaction": "0",
+                "person": "2",
+                "continent": "Amérique"
+            }
+        ]
     },
     {
         "email": "a@gmail.com",

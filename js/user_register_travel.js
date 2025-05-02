@@ -82,19 +82,19 @@ function calculer() {
     
     if (departure >= returnDate){
         numberNights = 1;
-        submitButton.style.display = "none";
+        submitButton.disabled = true;
     } else {
         numberNights = (returnDate - departure) / (1000 * 3600 * 24);
     }
     
     if (numberPersons < 1){
-        submitButton.style.display = "none";
+        submitButton.disabled = true;
     } if (numberPersons == 0){
         numberPersons = 1;
     }
     if (numberNights < 1){
         alert("Le nombre de nuits doit être supérieur à 0");
-        submitButton.style.display = "none";
+        submitButton.disabled = true;
     }
 
 
@@ -103,9 +103,9 @@ function calculer() {
     let total = document.querySelector("#prix_final");
     total.innerHTML = calcul;
     if (compteur == 4 && loisirNumber > 0 && visiteNumber > 0 && relaxationNumber && hotelIndex != 0){
-        submitButton.style.display = "block";
+        submitButton.disabled = false;
     } else {
-        submitButton.style.display = "none";
+        submitButton.disabled = true;
     }
 }
 
@@ -114,7 +114,7 @@ function calculer() {
 let inputs = document.querySelectorAll("input");
 let hotel = document.querySelector("#hotel");
 let submitButton = document.querySelector("button[type='submit']");
-submitButton.style.display = "none";
+submitButton.disabled = true;
 for (let j = 0; j < inputs.length; j++){
     inputs[j].addEventListener("input", calculer); 
 }

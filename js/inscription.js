@@ -1,6 +1,6 @@
 let inputs = document.querySelectorAll("input");
 let button = document.querySelector("button[type='submit']");
-button.style.display = "none";
+button.disabled = true;
 let number = 0; 
 for (let i = 0; i < inputs.length; i++) {
     inputs[i].addEventListener("input", function() {
@@ -51,10 +51,9 @@ for (let i = 0; i < inputs.length; i++) {
             }
         }
         if (number == inputs.length){
-            button.style.display = "block";
-            button.style.margin = "auto";
+            button.disabled = false;
         } else {
-            button.style.display = "none";
+            button.disabled = true;
         }
     });
 }
@@ -64,5 +63,5 @@ reset.addEventListener("click", function() {
     for (let i = 0; i < inputs.length; i++){
         inputs[i].style.border = "2px solid red";
     }
-    button.style.display = "none";
+    button.disabled = true;
 });

@@ -23,7 +23,7 @@ let see = document.querySelectorAll(".modif-image");
         inputAll[i].style.color = "white";
     }
     let button = document.querySelector(".button-modifier");
-    button.style.display = "none";
+    button.disabled = true;
 
 reload.addEventListener('click', function() {
     for (let i = 0; i < inputAll.length; i++) {
@@ -64,7 +64,7 @@ reload.addEventListener('click', function() {
             image.src = "../image/visibility-logo.png";
         }
         let button = document.querySelector(".button-modifier");
-    button.style.display = "none";
+    button.disabled = true;
     }
 });
 
@@ -172,10 +172,9 @@ for (let i = 0; i < inputAll2.length; i++) {
         console.log(number3);
         console.log(inputAll2.length);
         if (number > 0 && number2 == 0 && number3 && number3 != inputAll2.length -2){
-            button.style.display = "block";
-            button.style.margin = "auto";
+            button.disabled = false;
         } else {
-            button.style.display = "none";
+            button.disabled = true;
         }
 
     });
