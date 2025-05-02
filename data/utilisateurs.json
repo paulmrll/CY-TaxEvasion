@@ -1,11 +1,11 @@
 [
     {
-        "name": "Foupil",
+        "name": "Goupil",
         "firstname": "Florian",
         "email": "flo@gmail.com",
-        "password": "$2y$10$ncNJ9LOF4NteyipGseIRp.vI5qGdxcbDA4BPTHnOvnKU5ryCtJaMG",
+        "password": "$2y$10$OZQkP4bsiLpiNY0nJOtBhO8iZbTws.f4B4LdTEFA8fy\/Xry6gRxTO",
         "inscription_date": "23-03-2025 21:41:15",
-        "connexion_date": "30-04-2025 14:31:27",
+        "connexion_date": "02-05-2025 14:27:09",
         "role": "Admin",
         "card": {
             "name": "",
