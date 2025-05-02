@@ -180,38 +180,24 @@ require_once "../php_pages/header.php";
 
                         if (file_exists("../data/travel-user.json")) {
                         $content = json_decode(file_get_contents("../data/travel-user.json"), true);
-                        if ($content == null) {
-                            echo "<h1>Vous n'avez pas encore de voyages :</h1>";
-                            exit();
-                        }
-                        if (isset($_SESSION['email'])) {
-                        for ($i = 0; $i < count($content); $i++) {
-                            if ($content[$i]["email"] === $_SESSION['email']) {
-                                $a = $i;
-                                break;
-                            } else {
-                                $a = -2;
+                        if ($content != null) {
+                            if (isset($_SESSION['email'])) {
+                            for ($i = 0; $i < count($content); $i++) {
+                                if ($content[$i]["email"] === $_SESSION['email']) {
+                                    $a = $i;
+                                    break;
+                                } else {
+                                    $a = -2;
+                                }
                             }
                         }
-                        if ($a < 0) {
-                            echo "<h1>Vous n'avez pas encore de voyages :</h1>";
-                            exit();
-                        }
-                        if (count($content[$a]['travels']) == 0) {
-                            echo "<h1>Vous n'avez pas encore réservé de voyage</h1>";
-                            exit();
-                        }
-
                         if (file_exists("../data/travel.json")) {
                             $content_travel = json_decode(file_get_contents("../data/travel.json"), true);
-                        } else {
-                            echo "<h1>Vous n'avez pas encore réservé de voyage</h1>";
-                            exit();
-                        }
-                        if ($content_travel === null) {
-                            echo "<h1>Vous n'avez pas encore réservé de voyage</h1>";
-                            exit();
-                        }
+                        } 
+
+                        if ($a < 0 || count($content[$a]['travels']) == 0 || $content_travel === null || $content == null) {
+                            echo "<h1>Vous n'avez pas encore de voyages :</h1>";
+                        }  else {
                         echo "<h1>Mes Voyages :</h1>";
                         for ($i = 0; $i < count($content[$a]['travels']); $i++):
 
@@ -263,7 +249,7 @@ require_once "../php_pages/header.php";
                                        href="../php/define-index-travel.php?action=see&travel=<?php echo $content[$a]['travels'][$i]['destination'] ?>">Voir</a>
 
 
-
+                                        <?php ?>
                                 </div>
 
 
@@ -271,10 +257,10 @@ require_once "../php_pages/header.php";
                                 endfor;
                                 }
 
-                                } else {
-                                    echo "<h1>Vous n'avez pas encore de Voyages</h1>";
-                                    exit();
-                                }
+                                } 
+                            }else {
+                                echo "<h1>Vous n'avez pas encore de Voyages</h1>";
+                            }
                                 ?>
 
 
@@ -293,8 +279,6 @@ require_once "../php_pages/footer.php";
 ?>
 
 </main>
-
-
 
 <script src="../js/user.js"></script>
 

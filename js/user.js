@@ -91,9 +91,81 @@ for (let i = 0; i < see.length; i++) {
 }
 
 let inputAll2 = document.querySelectorAll("input");
-for (let i = 0; i < inputAll2.length; i++){
+
+
+for (let i = 0; i < inputAll2.length; i++) {
     inputAll2[i].addEventListener('input', function() {
-        button.style.display = "flex";
-        button.style.justifyContent = "center";
+        let number = 0;
+        let number2 = 0;
+        for (let j = 0; j < inputAll2.length; j++) {
+            if (inputAll2[j].value === ""){
+                border = "2px solid red";
+                inputAll2[j].style.border = border;
+                number2--;
+            } else {
+                if (inputAll2[j].type == "email"){
+                    if (inputAll2[j].value == registerData.email){
+                        inputAll2[j].style.border = "2px solid green";
+                    } else  if (inputAll2[j].value.includes("@") && inputAll2[j].value.includes(".")){
+                        inputAll2[j].style.border = "2px solid green";
+                        number++;
+                    } else {
+                        inputAll2[j].style.border = "2px solid red";
+                        number2--;
+                    }
+                } else if (inputAll2[j].name == "birth"){
+                    let date  = new Date(inputAll2[j].value);
+                    let today = new Date();
+                    if (inputAll2[j].value == registerData.birth){
+                        inputAll2[j].style.border = "2px solid green";
+                    } else if (today <= date){
+                        inputAll2[j].style.border = "2px solid red";
+                        number2--;
+                    } else {
+                        inputAll2[j].style.border = "2px solid green";
+                        number++;
+                    }
+                } else if (inputAll2[j].name == "cdp"){
+                    if (inputAll2[j].value == registerData.postalCode){
+                        inputAll2[j].style.border = "2px solid green";
+                    } else if (inputAll2[j].value.length == 5 && !isNaN(inputAll2[j].value)){
+                        inputAll2[j].style.border = "2px solid green";
+                        number++;
+                    } else {
+                        inputAll2[j].style.border = "2px solid red";
+                        number2--;
+                    }
+                } else if (inputAll2[j].name == "nb"){
+                    if (inputAll2[j].value == registerData.nb){
+                        inputAll2[j].style.border = "2px solid green";
+                    } else if (inputAll2[j].value > 0 && !isNaN(inputAll2[j].value)){
+                        inputAll2[j].style.border = "2px solid green";
+                        number++;
+                    } else  {
+                        inputAll2[j].style.border = "2px solid red";
+                        number2--;
+                    }
+                } else {
+                    if (inputAll2[j].value == registerData.name || inputAll2[j].value == registerData.surname || inputAll2[j].value == registerData.road || inputAll2[j].value == registerData.city || inputAll2[j].value == registerData.password){
+                        inputAll2[j].style.border = "2px solid green";
+                    } else if (inputAll2[j].value.length > 0){
+                        inputAll2[j].style.border = "2px solid green";
+                        number++;
+                    } else {
+                        inputAll2[j].style.border = "2px solid red";
+                        number2--
+                    }
+                }
+            }
+        }
+        console.log(number);
+        console.log(number2);
+        if (number > 0 && number2 == 0){
+            button.style.display = "block";
+            button.style.margin = "auto";
+        } else {
+            button.style.display = "none";
+        }
+
     });
 }

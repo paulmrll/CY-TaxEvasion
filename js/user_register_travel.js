@@ -14,7 +14,7 @@ function calculer() {
     let loisir_option = 5036;
     let relaxation_option = 2019;
     let visite_option = 4099;
-    console.log(inputs.length);
+
     for (let i = 0; i < inputs.length; i++){
         if (inputs[i].name == "prix"){
             basePrice = parseFloat(inputs[i].value);
@@ -22,7 +22,7 @@ function calculer() {
         if (inputs[i].value != "" && inputs[i].type != "hidden" && inputs[i].type != "submit"){
             
             if (inputs[i].type == "checkbox"){
-                console.log(i);
+
                 switch (inputs[i].name){
                     case "loisir[]":
                         if (inputs[i].checked){
@@ -97,14 +97,8 @@ function calculer() {
         submitButton.style.display = "none";
     }
 
-    console.log(basePrice);
+
     let calcul = 0;
-    console.log(loisirNumber);
-    console.log(visiteNumber);
-    console.log(relaxationNumber);
-    console.log(numberNights);
-    console.log(compteur);
-    console.log(hotelIndex);
     calcul = (basePrice + loisirNumber * loisir_option + visiteNumber * visite_option + relaxationNumber * relaxation_option + hotelIndex * price_per_day) * numberNights * numberPersons;
     let total = document.querySelector("#prix_final");
     total.innerHTML = calcul;
