@@ -49,7 +49,7 @@ reload.addEventListener('click', function() {
         } else {
             inputAll[i].value = "";
         }
-        inputAll[i].style.border = "2px solid green";
+        inputAll[i].style.border = "1px solid black";
         
 
         let parentDiv = inputAll[i].closest('div');
@@ -100,6 +100,7 @@ for (let i = 0; i < see.length; i++) {
 
 for (let i = 0; i < inputAll2.length; i++) {
     inputAll2[i].addEventListener('input', function() {
+        let number3 = 0;
         let number = 0;
         let number2 = 0;
         for (let j = 0; j < inputAll2.length; j++) {
@@ -111,6 +112,7 @@ for (let i = 0; i < inputAll2.length; i++) {
                 if (inputAll2[j].type == "email"){
                     if (inputAll2[j].value == registerData.email){
                         inputAll2[j].style.border = "2px solid green";
+                        number3++;
                     } else  if (inputAll2[j].value.includes("@") && inputAll2[j].value.includes(".")){
                         inputAll2[j].style.border = "2px solid green";
                         number++;
@@ -123,6 +125,7 @@ for (let i = 0; i < inputAll2.length; i++) {
                     let today = new Date();
                     if (inputAll2[j].value == registerData.birth){
                         inputAll2[j].style.border = "2px solid green";
+                        number3++;
                     } else if (today <= date){
                         inputAll2[j].style.border = "2px solid red";
                         number2--;
@@ -133,6 +136,7 @@ for (let i = 0; i < inputAll2.length; i++) {
                 } else if (inputAll2[j].name == "cdp"){
                     if (inputAll2[j].value == registerData.postalCode){
                         inputAll2[j].style.border = "2px solid green";
+                        number3++;
                     } else if (inputAll2[j].value.length == 5 && !isNaN(inputAll2[j].value)){
                         inputAll2[j].style.border = "2px solid green";
                         number++;
@@ -143,6 +147,7 @@ for (let i = 0; i < inputAll2.length; i++) {
                 } else if (inputAll2[j].name == "nb"){
                     if (inputAll2[j].value == registerData.nb){
                         inputAll2[j].style.border = "2px solid green";
+                        number3++;
                     } else if (inputAll2[j].value > 0 && !isNaN(inputAll2[j].value)){
                         inputAll2[j].style.border = "2px solid green";
                         number++;
@@ -153,19 +158,20 @@ for (let i = 0; i < inputAll2.length; i++) {
                 } else {
                     if (inputAll2[j].value == registerData.name || inputAll2[j].value == registerData.surname || inputAll2[j].value == registerData.road || inputAll2[j].value == registerData.city || inputAll2[j].value == registerData.password){
                         inputAll2[j].style.border = "2px solid green";
+                        number3++;
                     } else if (inputAll2[j].value.length > 0){
                         inputAll2[j].style.border = "2px solid green";
                         number++;
                     } else {
                         inputAll2[j].style.border = "2px solid red";
-                        number2--
+                        number2--;
                     }
                 }
             }
         }
-        console.log(number);
-        console.log(number2);
-        if (number > 0 && number2 == 0){
+        console.log(number3);
+        console.log(inputAll2.length);
+        if (number > 0 && number2 == 0 && number3 && number3 != inputAll2.length -2){
             button.style.display = "block";
             button.style.margin = "auto";
         } else {
