@@ -34,7 +34,15 @@
     --color-submit: #3791c7;
     --color-map-grey: #aaaaaa;
     --color-map-red: #ff4d4d;
+
+
 }
+
+.dark-theme input,
+.dark-theme button {
+    color:     var(--color-light-writing);
+}
+
 
 * {
     margin: 0;

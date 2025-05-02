@@ -9,11 +9,22 @@ h1 {
     text-shadow: 1px 1px var(--color-background);
 }
 
-h2{
+h2 {
     font-size: 0.8rem;
     color: var(--color-dark-writing);
 }
 
+h3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-align: center;
+    white-space: nowrap;
+    color: var(--color-header-active);
+    text-shadow: 1px 1px var(--color-background);
+}
 
 .main-grid {
     display: flex;
@@ -23,7 +34,7 @@ h2{
 
 }
 
-.utilisateur{
+.utilisateur {
     margin: var(--spacing-md) 0;
 }
 
@@ -116,7 +127,7 @@ h2{
     font-size: 1.2rem;
 }
 
-.grid-line-container div{
+.grid-line-container div {
     width: 100%;
     position: relative;
     display: flex;
@@ -125,13 +136,13 @@ h2{
     gap: 5rem;
 }
 
-.button-container{
+.button-container {
     gap: 1rem;
     display: flex;
     flex-direction: column;
 }
 
-.button-container button{
+.button-container button {
     width: 100%;
     font-size: 1.1rem;
     background: var(--color-background);
@@ -141,7 +152,8 @@ h2{
     font-style: italic;
     margin-right: 1.5rem;
 }
-.grid-line-container div input{
+
+.grid-line-container div input {
     width: 100%;
     font-size: 1.1rem;
     background: var(--color-background);
@@ -245,14 +257,13 @@ main div button img {
 }
 
 
-
-.button-ajouter-voyage{
+.button-ajouter-voyage {
     display: flex;
     align-items: flex-start;
     justify-content: center;
 }
 
-.button-ajouter-voyage button{
+.button-ajouter-voyage button {
     margin-right: 32rem;
     color: var(--color-light-writing);
     text-align: center;
@@ -275,6 +286,7 @@ main div button img {
     padding: 0 0.5rem;
     border-radius: 1rem;
 }
+
 .Non-réservé {
     color: var(--color-background);
     background: red;
@@ -283,7 +295,7 @@ main div button img {
 }
 
 
-.date-container{
+.date-container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -296,7 +308,7 @@ main div button img {
     text-wrap: nowrap;
 }
 
-.modification-container{
+.modification-container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -309,7 +321,7 @@ main div button img {
 }
 
 
-.button{
+.button {
     padding: 0.3rem 0.5rem;
     color: var(--color-light-writing);
     background: var(--color-header-active);
@@ -317,7 +329,7 @@ main div button img {
 }
 
 
-.button-voyage{
+.button-voyage {
     padding: 0.2rem 0.4rem;
     color: var(--color-light-writing);
     background: var(--color-header-active);
@@ -328,20 +340,19 @@ a {
     text-decoration: none;
 }
 
-
 .modif-image,
 .reload-image {
     width: 40px;
     height: auto;
 
 }
+
 .reload-image {
-   margin-left: auto;
+    margin-left: auto;
     margin-right: auto;
 }
 
-
-.button-modifier:hover{
+.button-modifier:hover {
     cursor: pointer;
 }
 
@@ -351,9 +362,15 @@ a {
 }
 
 @keyframes dots {
-    0% { content: '.'; }
-    33% { content: '..'; }
-    66% { content: '...'; }
+    0% {
+        content: '.';
+    }
+    33% {
+        content: '..';
+    }
+    66% {
+        content: '...';
+    }
 }
 
 .button-modifier:disabled {

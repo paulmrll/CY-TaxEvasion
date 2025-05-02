@@ -61,8 +61,6 @@ require_once "../php_pages/header.php";
                 </label>
             </div>
 
-
-
             <div class="option-select">
                 <h5>Hôtel :</h5>
                 <label>
@@ -75,7 +73,6 @@ require_once "../php_pages/header.php";
                     </select>
                 </label>
             </div>
-
 
             <div class="option-select">
                 <h5>Continent :</h5>

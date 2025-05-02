@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
             button.textContent = originalText;
 
             const interval = setInterval(() => {
-                dotCount = (dotCount + 1) % 4; // 0,1,2,3
+                dotCount = (dotCount + 1) % 4;
                 button.textContent = originalText + '.'.repeat(dotCount);
             }, 200);
 

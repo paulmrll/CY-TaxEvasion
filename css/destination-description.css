@@ -19,7 +19,7 @@
 
 h1 {
     margin: auto;
-    color: black;
+    color: var(--color-dark-writing);
     font-size: 3rem;
 }
 

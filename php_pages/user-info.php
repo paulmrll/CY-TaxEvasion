@@ -197,7 +197,7 @@ require_once "../php_pages/header.php";
                                 </div>
                                 <?php }
                                 } else {
-                                    echo "<p class='Non-réservé'>Aucun voyage réservé</p>";
+                                    echo "<h3>Aucun voyage réservé</h3>";
                                 }?>
 
 
