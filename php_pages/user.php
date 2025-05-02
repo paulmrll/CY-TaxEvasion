@@ -166,8 +166,13 @@ require_once "../php_pages/header.php";
                     </div>
 
                     <div class="utilisateur-image">
+                        
                         <button>
-                            <img src="../image/user-icone.png" alt="image-utilisateur">
+                            <img src="<?php if ($_SESSION['role'] == "Admin"){
+                                echo "../image/admin-logo.png";
+                            }else {
+                                echo "../image/user-icone.png";
+                            } ?>" alt="image-utilisateur">
                         </button>
                         <?php echo $_SESSION['role']; ?>
                     </div>
