@@ -49,49 +49,38 @@ require_once "../php_pages/header.php";
 
         <div class="destination-option-slider-container">
 
-            <div class="option-select">
+            <div class="option-select" >
                 <h5>Prix :</h5>
                 <label>
-                    <select>
+                    <select id="select-prix">
                         <option value="" selected hidden>Choisissez une option</option>
                         <option value="-10000"> - 10000 $</option>
                         <option value="10000-20000">10000 - 20000 $</option>
-                        <option value="20000-30000">20000 - 30000 $</option>
-                        <option value="+30000"> + 30000 $</option>
+                        <option value="+20000"> + 20000 $</option>
                     </select>
                 </label>
             </div>
 
+
+
             <div class="option-select">
-                <h5>Durée :</h5>
+                <h5>Hôtel :</h5>
                 <label>
-                    <select>
+                    <select id="select-hotel">
                         <option value="" selected hidden>Choisissez une option</option>
-                        <option value="1 - week-end">1 - week-end</option>
-                        <option value="1 - semaine">1 - semaine</option>
-                        <option value="2 - semaine">2 - semaine</option>
-                        <option value="3 - semaine">3 - semaine</option>
-                        <option value="1 - mois">1 - mois</option>
+                        <option value="5 étoiles">5 étoiles</option>
+                        <option value="5 étoiles premium">5 étoiles premium</option>
+                        <option value="5 étoiles Premium VIP">5 étoiles Premium VIP</option>
+                        <option value="5 étoiles Premium VIP Deluxe">5 étoiles Premium VIP Deluxe</option>
                     </select>
                 </label>
             </div>
 
-            <div class="option-select">
-                <h5>Repas :</h5>
-                <label>
-                    <select>
-                        <option value="" selected hidden>Choisissez une option</option>
-                        <option value="Matin">Matin</option>
-                        <option value="Midi - Soir">Midi - Soir</option>
-                        <option value="Matin - Midi - Soir">Matin - Midi - Soir</option>
-                    </select>
-                </label>
-            </div>
 
             <div class="option-select">
                 <h5>Continent :</h5>
                 <label>
-                    <select>
+                    <select id="select-continent">
                         <option value="" selected hidden>Choisissez une option</option>
                         <option value="Europe">Europe</option>
                         <option value="Amérique-Centrale">Amérique-Centrale</option>
@@ -106,10 +95,13 @@ require_once "../php_pages/header.php";
     </div>
 
 
-    <div class="destination-grid">
-        <div class="grid-container">
+    <div class="destination-grid" id="voyage-container">
+        <div class="grid-container" >
+
+
+
         <?php
-        
+
             for ($i = 0; $i < count($content); $i++):
         ?>
             <a class="grid-line-container" href="../php_pages/description-pages.php?destination=<?php echo $content[$i]['destination'];?>">
@@ -140,6 +132,9 @@ require_once "../php_pages/header.php";
 <?php
 require_once "../php_pages/footer.php";
 ?>
+
+<script src="../js/trie.js"></script>
+
 
 </body>
 
