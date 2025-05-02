@@ -28,7 +28,7 @@
         "image": "..\/image\/anguilla.jpg",
         "image_maps": "..\/image\/anguilla-maps.png",
         "image-flag": "..\/image\/anguilla-flag.jpg",
-        "prix": "18000€",
+        "prix": "18000",
         "continent": "Amérique"
     },
     {
@@ -60,7 +60,7 @@
         "image": "..\/image\/monaco.jpeg",
         "image_maps": "..\/image\/monaco-maps.png",
         "image-flag": "..\/image\/monaco-flag.png",
-        "prix": "18000€",
+        "prix": "18000",
         "continent": "Europe"
     },
     {
@@ -92,7 +92,7 @@
         "image": "..\/image\/antigua-et-barbuda.jpg",
         "image_maps": "..\/image\/antigua-barbuda-maps.png",
         "image-flag": "..\/image\/antigua-et-barbuda-flag.jpg",
-        "prix": "18000€",
+        "prix": "18000",
         "continent": "Amérique"
     },
     {
@@ -123,7 +123,7 @@
         "image": "..\/image\/bermudes.jpg",
         "image_maps": "..\/image\/bermudes-maps.png",
         "image-flag": "..\/image\/bermudes-flag.png",
-        "prix": "18000€",
+        "prix": "18000",
         "continent": "Amérique"
     },
     {
@@ -154,7 +154,7 @@
         "image": "..\/image\/caimans.jpg",
         "image_maps": "..\/image\/caïmans-maps.png",
         "image-flag": "..\/image\/caimans-flag.png",
-        "prix": "18000€",
+        "prix": "18000",
         "continent": "Amérique"
     },
     {
@@ -185,7 +185,7 @@
         "image": "..\/image\/chypre.jpeg",
         "image_maps": "..\/image\/chypre-maps.png",
         "image-flag": "..\/image\/chypre-flag.png",
-        "prix": "18000€",
+        "prix": "18000",
         "continent": "Europe"
     },
     {
@@ -215,7 +215,7 @@
         "image": "..\/image\/EAU.jpg",
         "image_maps": "..\/image\/EAU-maps.png",
         "image-flag": "..\/image\/EAU-flag.png",
-        "prix": "18000€",
+        "prix": "18000",
         "continent": "Asie"
     },
     {
@@ -246,7 +246,7 @@
         "image": "..\/image\/hongkong.jpg",
         "image_maps": "..\/image\/hongkong-maps.png",
         "image-flag": "..\/image\/hongkong-flag.png",
-        "prix": "18000€",
+        "prix": "18000",
         "continent": "Asie"
     },
     {
@@ -277,7 +277,7 @@
         "image": "..\/image\/les-fidji.jpeg",
         "image_maps": "..\/image\/fidji-maps.png",
         "image-flag": "..\/image\/les-fidji-flag.jpg",
-        "prix": "18000€",
+        "prix": "18000",
         "continent": "Océanie"
     },
     {
@@ -308,7 +308,7 @@
         "image": "..\/image\/jersey.jpeg",
         "image_maps": "..\/image\/jersey-maps.png",
         "image-flag": "..\/image\/jersey-flag.png",
-        "prix": "18000€",
+        "prix": "18000",
         "continent": "Europe"
     },
     {
@@ -339,7 +339,7 @@
         "image": "..\/image\/les-palaos.jpg",
         "image_maps": "..\/image\/les-palaos-maps.png",
         "image-flag": "..\/image\/les-palaos-flag.jpg",
-        "prix": "18000€",
+        "prix": "18000",
         "continent": "Océanie"
     },
     {
@@ -370,7 +370,7 @@
         "image": "..\/image\/malte.jpg",
         "image_maps": "..\/image\/malte-maps.png",
         "image-flag": "..\/image\/malte-flag.png",
-        "prix": "18000€",
+        "prix": "18000",
         "continent": "Europe"
     },
     {
@@ -401,7 +401,7 @@
         "image": "..\/image\/le-panama.jpg",
         "image_maps": "..\/image\/le-panama-maps.png",
         "image-flag": "..\/image\/le-panama-flag.jpg",
-        "prix": "18000€",
+        "prix": "18000",
         "continent": "Amérique"
     },
     {
@@ -432,7 +432,7 @@
         "image": "..\/image\/les-samoa-americaine.jpeg",
         "image_maps": "..\/image\/samoa-americaine-maps.png",
         "image-flag": "..\/image\/samoa-americaine-flag.jpg",
-        "prix": "18000€",
+        "prix": "18000",
         "continent": "Océanie"
     },
     {
@@ -463,7 +463,7 @@
         "image": "..\/image\/vierges.jpg",
         "image_maps": "..\/image\/vierge-maps.png",
         "image-flag": "..\/image\/vierges-flag.png",
-        "prix": "18000€",
+        "prix": "18000",
         "continent": "Amérique"
     }
 ]

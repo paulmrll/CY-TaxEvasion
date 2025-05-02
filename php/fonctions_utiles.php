@@ -55,5 +55,60 @@ function start_session($mail, $name, $firstname, $password, $role){
     $_SESSION['role'] = $role;
 }
 
+function calculate_price($destination, $hotel, $loisir, $visite, $relaxation, $departure, $return, $person){
+    if (isset($_SESSION['email'])) {
+        $jsonFile = "../data/travel.json";
+        if (!file_exists($jsonFile)) {
+            header('Location: ../php_pages/user_register_travel.php?destination=' . $destination);
+            exit();
+        }
+        $content = json_decode(file_get_contents($jsonFile), true);
+        if ($content == null) {
+            header('Location: ../php_pages/user_register_travel.php?destination=' . $destination);
+            exit();
+        }
+        switch ($hotel){
+                case "5 étoiles":
+                    $hotelIndex = 1;
+                    break;
+                case "5 étoiles premium":
+                    $hotelIndex = 2;
+                    break;
+                case "5 étoiles Premium VIP":
+                    $hotelIndex = 3;
+                    break;
+                case "5 étoiles Premium VIP Deluxe":
+                    $hotelIndex = 4;
+                    break;
+                default:
+                    $hotelIndex = 0;
+                    break;
+        }
+        for ($i = 0; $i < count($content); $i++) {
+            if ($content[$i]['destination'] === $destination) {
+                $basePrice = $content[$i]['prix'];
+                break;
+            }
+        }
+        $priceHotel = 1099;
+        $nb_loisir = count($loisir);
+        $nb_visite = count($visite);
+        $nb_relaxation = count($relaxation);
+        $price_loisir = 5036;
+        $price_visite = 4099;
+        $price_relaxation = 2019;
+        $departureDate = new DateTime($departure);
+        $returnDate = new DateTime($return);
+        $interval = $departureDate->diff($returnDate);
+        $days = $interval->days;
+        $montant = ($basePrice + $nb_loisir * $price_loisir + $nb_visite * $price_visite + $nb_relaxation * $price_relaxation + $hotelIndex * $priceHotel) * $days * $person;
+        return $montant;
+    } else {
+        header('Location: ../php_pages/connexion.php');
+        exit();
+    }
+    return 0;
+}
+
 
 ?>
