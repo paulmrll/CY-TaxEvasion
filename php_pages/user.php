@@ -288,14 +288,17 @@ require_once "../php_pages/header.php";
         </div>
 
     </div>
+    <?php
+require_once "../php_pages/footer.php";
+?>
+
 </main>
 
 
-<?php
-require_once "../php_pages/footer.php";
-?>
+
 <script src="../js/user.js"></script>
 
 </body>
+
 </html>
 
