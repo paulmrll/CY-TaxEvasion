@@ -179,7 +179,7 @@ require_once "../php_pages/header.php";
 
                 <div class="reservation-prix">
                     <h5>Prix :</h5>
-                    <input type="text" value="<?php echo $content[$a]["travels"][$index]["prix"]?>" name="prix_final" readonly>€
+                    <h6 id="prix_final"><?php echo $content[$a]["travels"][$index]["prix"]?></h6>€
                 </div>
                 <div class="button-container" id="buttons">
             <input type="hidden" value="<?php echo $content_travel[$index_travel]["prix"]?>" name="prix">

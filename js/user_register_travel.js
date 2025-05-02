@@ -106,8 +106,8 @@ function calculer() {
     console.log(compteur);
     console.log(hotelIndex);
     calcul = (basePrice + loisirNumber * loisir_option + visiteNumber * visite_option + relaxationNumber * relaxation_option + hotelIndex * price_per_day) * numberNights * numberPersons;
-    let total = document.querySelector("input[name=prix_final]");
-    total.value = calcul;
+    let total = document.querySelector("#prix_final");
+    total.innerHTML = calcul;
     if (compteur == 4 && loisirNumber > 0 && visiteNumber > 0 && relaxationNumber && hotelIndex != 0){
         submitButton.style.display = "block";
     } else {
