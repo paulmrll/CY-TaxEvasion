@@ -1,6 +1,10 @@
 [
     {
         "email": "paul@gmail.com",
+        "travels": []
+    },
+    {
+        "email": "a@gmail.com",
         "travels": [
             {
                 "destination": "Anguilla",
@@ -10,15 +14,16 @@
                     "Jet-Ski"
                 ],
                 "visite": [
-                    "Visite de Banque"
+                    "Visite de Banque",
+                    "Visite d'un Musée Colonialiste"
                 ],
                 "relaxation": [
                     "Spa et Jacuzzi Privé"
                 ],
                 "departure": "2025-05-03",
-                "return": "2025-05-17",
+                "return": "2025-05-31",
                 "reservation": "Paiement en attente",
-                "prix": 1528296,
+                "prix": 3400908,
                 "transaction": "0",
                 "person": "3",
                 "continent": "Amérique"

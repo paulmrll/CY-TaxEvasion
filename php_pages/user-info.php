@@ -151,10 +151,10 @@ require_once "../php_pages/header.php";
                     <div class="part-container">
                         <h1>Voyages de <?php echo $content_user[$id]['firstname']; ?> :</h1>
                         <?php
-                        if ($id_travel < 0){
-                            echo "aucun voyage pour cet utilisateur";
-                            exit();
-                        }
+                        if ($id_travel > 0){
+                            
+
+                        
                         for ($i = 0; $i < count($content[$id_travel]['travels']); $i++){
                             for ($o = 0; $o < count($content_travel); $o++){
                                 if ($content[$id_travel]['travels'][$i]["destination"] == $content_travel[$o]["destination"]){
@@ -195,7 +195,10 @@ require_once "../php_pages/header.php";
                                         <p>Date de retour : <strong><?php echo $content[$id_travel]['travels'][$i]['return'];?></strong></p>
                                     </div>
                                 </div>
-                                <?php }?>
+                                <?php }
+                                } else {
+                                    echo "<p class='Non-réservé'>Aucun voyage réservé</p>";
+                                }?>
 
 
                             </div>

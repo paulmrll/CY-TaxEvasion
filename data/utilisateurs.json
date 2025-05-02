@@ -27,7 +27,7 @@
         "email": "paul@gmail.com",
         "password": "$2y$10$DjChiWR9u1dyYLgzlEQvIObs1XePpZZqIClI5R9bPoCpTVCgie\/i.",
         "inscription_date": "23-03-2025 21:41:57",
-        "connexion_date": "01-05-2025 22:41:54",
+        "connexion_date": "02-05-2025 14:02:31",
         "role": "Admin",
         "card": {
             "name": "",
@@ -47,7 +47,7 @@
         "name": "Wingering",
         "firstname": "Cyprien",
         "email": "cyp@gmail.com",
-        "password": "$2y$10$vLtaOrD\/2YU0x7wQPbj12.WMh\/Z8Y.nxeB6d7iDLCG4rCD9QTWAu2",
+        "password": "$2y$10$d.uNGk8QAy\/sf3SK\/esVWOQtGMq\/OdxEfkBb3vh\/XDzuePhM9nG5W",
         "inscription_date": "23-03-2025 21:42:41",
         "connexion_date": "23-03-2025 21:42:41",
         "role": "Utilisateur",
@@ -129,6 +129,28 @@
             "rue": "a",
             "ville": "a",
             "cdp": "9500"
+        }
+    },
+    {
+        "name": "a",
+        "firstname": "a",
+        "email": "a@gmail.com",
+        "password": "$2y$10$6V9tz6CzHIacJCuMshKJauSyZzwi6brB820z7Y292fnjZf0JLIMNu",
+        "inscription_date": "02-05-2025 14:01:43",
+        "connexion_date": "02-05-2025 14:01:43",
+        "role": "Utilisateur",
+        "card": {
+            "name": "",
+            "number": 0,
+            "date": 0,
+            "cvv": 0
+        },
+        "birth": "2025-05-01",
+        "adress": {
+            "number": "2",
+            "rue": "buifzh",
+            "ville": "huifezuif",
+            "cdp": "98980"
         }
     }
 ]
