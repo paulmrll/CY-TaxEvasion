@@ -49,6 +49,8 @@ reload.addEventListener('click', function() {
         } else {
             inputAll[i].value = "";
         }
+        inputAll[i].style.border = "2px solid green";
+        
 
         let parentDiv = inputAll[i].closest('div');
         let image = parentDiv.querySelector('img');
@@ -61,10 +63,13 @@ reload.addEventListener('click', function() {
             inputAll[i].style.color = "white";
             image.src = "../image/visibility-logo.png";
         }
+        let button = document.querySelector(".button-modifier");
+    button.style.display = "none";
     }
 });
 
 
+let inputAll2 = document.querySelectorAll("input");
 
 for (let i = 0; i < see.length; i++) {
     see[i].addEventListener('click', function() {
@@ -87,10 +92,10 @@ for (let i = 0; i < see.length; i++) {
             input.style.color = "white";
             see[i].src = "../image/visibility-logo.png";
         }
+        
     });
 }
 
-let inputAll2 = document.querySelectorAll("input");
 
 
 for (let i = 0; i < inputAll2.length; i++) {

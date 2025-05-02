@@ -132,7 +132,7 @@ require_once "../php_pages/header.php";
 
                 </div>
                 <div class="reservation-prix">
-                <h5>Prix de base :</h5>
+                <h5>Prix :</h5>
                 <h6 id="prix_final">0</h6>€
                 </div>
                 <div class="button-container" id="buttons">
