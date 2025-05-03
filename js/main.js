@@ -1,56 +1,40 @@
+function getCookie(name) {
+    let cookies = document.cookie.split("; ");
+    for (let cookie of cookies) {
+        let [key, value] = cookie.split("=");
+        if (key === name) return value;
+    }
+    return null;
+}
+
 function changeTheme() {
     const logo = document.getElementById('theme-logo');
     const path = window.location.pathname;
 
     document.body.classList.toggle('dark-theme');
 
-
-    if (path === '/' || path.endsWith('index.php')) {
-
-        if (document.body.classList.contains('dark-theme')) {
-            logo.src = "image/moon.png";
-            localStorage.setItem('theme', 'dark');
-        } else {
-            logo.src = "image/sun.png";
-            localStorage.setItem('theme', 'light');
-        }
+    if (document.body.classList.contains('dark-theme')) {
+        document.cookie = "theme=dark; path=/; max-age=31536000"; // 1 an
+        logo.src = (path === '/' || path.endsWith('index.php')) ? "image/moon.png" : "../image/moon.png";
     } else {
-        if (document.body.classList.contains('dark-theme')) {
-            logo.src = "../image/moon.png";
-            localStorage.setItem('theme', 'dark');
-        } else {
-            logo.src = "../image/sun.png";
-            localStorage.setItem('theme', 'light');
-        }
+        document.cookie = "theme=light; path=/; max-age=31536000"; // 1 an
+        logo.src = (path === '/' || path.endsWith('index.php')) ? "image/sun.png" : "../image/sun.png";
     }
 }
 
 window.onload = function () {
-    const savedTheme = localStorage.getItem('theme');
+    const savedTheme = getCookie('theme');
     const logo = document.getElementById('theme-logo');
     const path = window.location.pathname;
 
-    if (path === '/' || path.endsWith('index.php')) {
-
-        if (savedTheme === 'dark') {
-            document.body.classList.add('dark-theme');
-            logo.src = "image/moon.png";
-        } else {
-            document.body.classList.remove('dark-theme');
-            logo.src = "image/sun.png";
-        }
+    if (savedTheme === 'dark') {
+        document.body.classList.add('dark-theme');
+        logo.src = (path === '/' || path.endsWith('index.php')) ? "image/moon.png" : "../image/moon.png";
+    } else {
+        document.body.classList.remove('dark-theme');
+        logo.src = (path === '/' || path.endsWith('index.php')) ? "image/sun.png" : "../image/sun.png";
     }
-    else{
-        if (savedTheme === 'dark') {
-            document.body.classList.add('dark-theme');
-            logo.src = "../image/moon.png";
-        } else {
-            document.body.classList.remove('dark-theme');
-            logo.src = "../image/sun.png";
-        }
-    }
-}
-
+};
 
 
 const plane = document.getElementById('jet-cursor');
