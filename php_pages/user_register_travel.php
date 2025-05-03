@@ -136,7 +136,7 @@ require_once "../php_pages/header.php";
                 <h6 id="prix_final">0</h6>€
                 </div>
                 <div class="button-container" id="buttons">
-            <input type="hidden" value="<?php echo $content[$i]["prix"]?>" name="prix">
+            <input type="hidden" id="prix" name="prix" value="<?php echo $content[$i]["prix"]?>" >
 
             </div>
 

@@ -118,3 +118,7 @@ for (let j = 0; j < inputs.length; j++) {
     inputs[j].addEventListener("input", calculer);
 }
 hotel.addEventListener("input", calculer);
+
+window.addEventListener("DOMContentLoaded", () => {
+    calculer();
+});
