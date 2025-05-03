@@ -43,6 +43,12 @@
     color:     var(--color-light-writing);
 }
 
+.dark-theme select {
+    background-color: var(--color-background-2);
+    color: var(--color-light-writing);
+    border: 0.1rem solid var(--color-light-border);
+}
+
 
 * {
     margin: 0;

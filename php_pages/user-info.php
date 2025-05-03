@@ -41,14 +41,14 @@ if ($content == null) {
     exit();
 }
 $id = $_POST['user_id'];
-if ($id > count($content_user) - 1 || $id < 0){
+if ($id > count($content_user) - 1 || $id < 0) {
     header('Location: inscription.php');
     exit();
 }
 $a = 0;
 $id_travel = -1;
-for($i = 0; $i < count($content); $i++){
-    if ($content[$i]["email"] == $content_user[$id]["email"]){
+for ($i = 0; $i < count($content); $i++) {
+    if ($content[$i]["email"] == $content_user[$id]["email"]) {
         $id_travel = $i;
         $a = 1;
     }
@@ -90,11 +90,11 @@ require_once "../php_pages/header.php";
                                 <div class="compte-info-container-top">
 
 
-
                                     <div class="grid-line-container">
                                         <div>
                                             <a>Nom : </a>
-                                            <input type="text" name="name" value="<?php echo $content_user[$id]['name']; ?>"
+                                            <input type="text" name="name"
+                                                   value="<?php echo $content_user[$id]['name']; ?>"
                                                    required>
                                         </div>
 
@@ -107,30 +107,46 @@ require_once "../php_pages/header.php";
                                                    name="firstname" required>
 
                                         </div>
-
                                     </div>
+
 
                                     <div class="grid-line-container">
                                         <div>
-                                            <a>Adresse mail : <?php echo $content_user[$id]['email'];?></a>
-                                            <input type="hidden" name="email" value="<?php echo $content_user[$id]['email'];?>"
+                                            <a>Adresse mail : <?php echo $content_user[$id]['email']; ?></a>
+                                            <input type="hidden" name="email"
+                                                   value="<?php echo $content_user[$id]['email']; ?>"
                                                    required>
 
                                         </div>
                                     </div>
-                                    <input type="hidden" name="password" value="<?php echo $content_user[$id]['password'];?>" required>
 
-                                    <input type="hidden" name="nb" value="<?php echo $content_user[$id]['adress']["number"];?>" required>
 
-                                    <input type="hidden" name="rue" value="<?php echo $content_user[$id]['adress']["rue"];?>" required>
-                                    <input type="hidden" name="ville" value="<?php echo $content_user[$id]['adress']["ville"];?>" required>
-                                    <input type="hidden" name="cdp" value="<?php echo $content_user[$id]['adress']["cdp"];?>" required>
-                                    <input type="hidden" name="birth" value="<?php echo $content_user[$id]["birth"];?>" required>
+                                    <input type="hidden" name="password"
+                                           value="<?php echo $content_user[$id]['password']; ?>" required>
+
+                                    <input type="hidden" name="nb"
+                                           value="<?php echo $content_user[$id]['adress']["number"]; ?>" required>
+
+                                    <input type="hidden" name="rue"
+                                           value="<?php echo $content_user[$id]['adress']["rue"]; ?>" required>
+                                    <input type="hidden" name="ville"
+                                           value="<?php echo $content_user[$id]['adress']["ville"]; ?>" required>
+                                    <input type="hidden" name="cdp"
+                                           value="<?php echo $content_user[$id]['adress']["cdp"]; ?>" required>
+                                    <input type="hidden" name="birth" value="<?php echo $content_user[$id]["birth"]; ?>"
+                                           required>
                                     <input type="hidden" name="todo" value="modify_client_by_admin">
 
+                                    <input type="hidden" name="role" id="role-hidden"
+                                           value="<?php echo $content_user[$id]['role']; ?>">
+
+
                                     <div class="button-container">
-                                        <button type="button" class="button-modifier">Modifier</button>
-                                        <button type="button" id="button-retour" onclick="history.back()">Retour</button>
+                                        <button type="button" id="button-modify" class="button-modifier">Modifier
+                                        </button>
+                                        <button type="button" id="button-return" class="button-modifier"
+                                                onclick="history.back()">Retour
+                                        </button>
                                     </div>
 
                                 </div>
@@ -142,7 +158,19 @@ require_once "../php_pages/header.php";
                         <button>
                             <img src="../image/user-icone.png" alt="image-utilisateur">
                         </button>
-                        <?php echo $content_user[$id]['role']; ?>
+
+                        <select class="role-select" name="role" id="role-select">
+                            <?php if ($content_user[$id]['role'] === 'VIP'): ?>
+                                <option value="Admin">VIP</option>
+                                <option value="Utilisateur">Utilisateur</option>
+                                <option value="VIP">Admin</option>
+                            <?php elseif ($content_user[$id]['role'] === 'Utilisateur'): ?>
+                                <option value="Utilisateur">Utilisateur</option>
+                                <option value="Admin">Admin</option>
+                                <option value="VIP">VIP</option>
+                            <?php endif; ?>
+                        </select>
+
                     </div>
                 </div>
 
@@ -152,17 +180,18 @@ require_once "../php_pages/header.php";
                         <h1>Voyages de <?php echo $content_user[$id]['firstname']; ?> :</h1>
                         <?php
                         if ($id_travel > 0){
-                            
 
-                        
-                        for ($i = 0; $i < count($content[$id_travel]['travels']); $i++){
-                            for ($o = 0; $o < count($content_travel); $o++){
-                                if ($content[$id_travel]['travels'][$i]["destination"] == $content_travel[$o]["destination"]){
-                                    $name = $content_travel[$o]["name"];
-                                    $url_image = $content_travel[$o]["image"];
-                                    break;
-                                }
+
+                        for ($i = 0;
+                        $i < count($content[$id_travel]['travels']);
+                        $i++){
+                        for ($o = 0; $o < count($content_travel); $o++) {
+                            if ($content[$id_travel]['travels'][$i]["destination"] == $content_travel[$o]["destination"]) {
+                                $name = $content_travel[$o]["name"];
+                                $url_image = $content_travel[$o]["image"];
+                                break;
                             }
+                        }
 
                         ?>
                         <div class="compte-info-container">
@@ -170,18 +199,19 @@ require_once "../php_pages/header.php";
 
                                 <div class="line-container">
                                     <div class="grid-item">
-                                        <a href="../php_pages/destination-pages?destination=<?php echo $content[$id_travel]["travels"][$i]["destination"] ?>" class="image-select">
-                                            <img src="../image/<?php echo $url_image?>" alt="<?php echo $name?>">
-                                            <h3><?php echo $name?></h3>
+                                        <a href="../php_pages/destination-pages?destination=<?php echo $content[$id_travel]["travels"][$i]["destination"] ?>"
+                                           class="image-select">
+                                            <img src="../image/<?php echo $url_image ?>" alt="<?php echo $name ?>">
+                                            <h3><?php echo $name ?></h3>
                                         </a>
                                     </div>
 
                                     <?php
                                     if ($content[$id_travel]['travels'][$i]['reservation'] == "Paiement en attente"):?>
-                                            <p class="Non-réservé">
-                                                <?php
-                                                echo $content[$id_travel]['travels'][$i]['reservation'] . " de " . $content[$a]['travels'][$i]['prix'] . "€";?>
-                                            </p>
+                                        <p class="Non-réservé">
+                                            <?php
+                                            echo $content[$id_travel]['travels'][$i]['reservation'] . " de " . $content[$a]['travels'][$i]['prix'] . "€"; ?>
+                                        </p>
                                     <?php else: ?>
                                         <p class="Réservé">
                                             <?php
@@ -191,14 +221,18 @@ require_once "../php_pages/header.php";
                                     <?php endif; ?>
 
                                     <div class="date-container">
-                                        <p>Date de départ : <strong><?php echo $content[$id_travel]['travels'][$i]['departure'];?></strong></p>
-                                        <p>Date de retour : <strong><?php echo $content[$id_travel]['travels'][$i]['return'];?></strong></p>
+                                        <p>Date de départ :
+                                            <strong><?php echo $content[$id_travel]['travels'][$i]['departure']; ?></strong>
+                                        </p>
+                                        <p>Date de retour :
+                                            <strong><?php echo $content[$id_travel]['travels'][$i]['return']; ?></strong>
+                                        </p>
                                     </div>
                                 </div>
                                 <?php }
                                 } else {
                                     echo "<h3>Aucun voyage réservé</h3>";
-                                }?>
+                                } ?>
 
 
                             </div>

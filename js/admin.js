@@ -1,48 +1,73 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const buttons = document.querySelectorAll('.button-modifier');
 
-    buttons.forEach(button => {
-        button.addEventListener('click', () => {
-            const form = button.closest('form');
-            const inputs = form.querySelectorAll('input[type="text"]');
-            const retourButton = document.getElementById('button-retour');
-            const originalValues = [];
+    const buttonModify = document.getElementById('button-modify');
+    const buttonReturn = document.getElementById('button-return');
+    const form = document.querySelector('form');
+    const inputs = form.querySelectorAll('input[type="text"]');
+    const originalValues = Array.from(inputs).map(input => input.value);
+    const select = document.getElementById('role-select');
 
-            inputs.forEach(input => {
-                originalValues.push(input.value);
-                input.value = '';
-                input.placeholder = '...';
-                input.disabled = true;
+    const roleSelect = document.getElementById('role-select');
+    const roleHidden = document.getElementById('role-hidden');
+
+
+    roleSelect.addEventListener('change', () => {
+        roleHidden.value = roleSelect.value;
+    });
+
+    roleHidden.value = roleSelect.value;
+
+
+
+
+    buttonModify.disabled = true;
+
+
+    inputs.forEach((input) => {
+        input.addEventListener('input', () => {
+            const isChanged = Array.from(inputs).some((input, i) => input.value !== originalValues[i]);
+            buttonModify.disabled = !isChanged;
+        });
+    });
+
+    select.addEventListener('change', () =>{
+
+        buttonModify.disabled = false;
+    });
+
+
+    buttonModify.addEventListener('click', () => {
+
+        inputs.forEach(input => {
+            input.disabled = true;
+            input.placeholder = '...';
+        });
+
+        buttonModify.disabled = true;
+        buttonReturn.disabled = true;
+        select.disabled = true;
+
+        let dotCount = 0;
+        const originalText = 'Mise à jour';
+        buttonModify.textContent = originalText;
+
+        const interval = setInterval(() => {
+            dotCount = (dotCount + 1) % 4;
+            buttonModify.textContent = originalText + '.'.repeat(dotCount);
+        }, 200);
+
+
+        setTimeout(() => {
+            clearInterval(interval);
+
+            inputs.forEach((input, index) => {
+                input.disabled = false;
             });
 
-            button.disabled = true;
-            if (retourButton) retourButton.disabled = true;
+            buttonModify.textContent = 'Modifier';
+            buttonModify.disabled = false;
 
-            let dotCount = 0;
-            const originalText = 'Mise à jour';
-            button.textContent = originalText;
-
-            const interval = setInterval(() => {
-                dotCount = (dotCount + 1) % 4;
-                button.textContent = originalText + '.'.repeat(dotCount);
-            }, 200);
-
-
-
-            setTimeout(() => {
-                clearInterval(interval);
-                inputs.forEach((input, index) => {
-                    input.value = originalValues[index];
-                    input.disabled = false;
-                });
-
-                if (retourButton) retourButton.disabled = false;
-
-                button.textContent = 'Modifier';
-                button.disabled = false;
-
-                form.submit();
-            }, 3000);
-        });
+            form.submit();
+        }, 2000);
     });
 });

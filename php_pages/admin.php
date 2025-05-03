@@ -59,7 +59,8 @@ require_once "../php_pages/header.php";
                         <td><?php echo htmlspecialchars($user["name"]) ?></td>
                         <td><?php echo htmlspecialchars($user["firstname"]) ?></td>
                         <td><?php echo htmlspecialchars($user["email"]) ?></td>
-                        <td><?php echo htmlspecialchars($user["role"]) ?></td>
+                        <td>
+                            <?php echo htmlspecialchars($user["role"]) ?></td>
                         <td>
                             <?php if ($user["role"] != "Admin"){
                             ?>

@@ -147,9 +147,7 @@ require_once "../php_pages/header.php";
                 <button type="submit">Réserver</button>
 
             </div>
-            
         </form>
-        
     </div>
 </main>
 

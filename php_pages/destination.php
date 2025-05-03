@@ -50,7 +50,7 @@ require_once "../php_pages/header.php";
         <div class="destination-option-slider-container">
 
             <div class="option-select" >
-                <h5>Prix :</h5>
+                <h5>Prix de base :</h5>
                 <label>
                     <select id="select-prix">
                         <option value="" selected hidden>Choisissez une option</option>
@@ -115,7 +115,6 @@ require_once "../php_pages/header.php";
                 </div>
             </a>
         <?php endfor;?>
-
 
 
         </div>

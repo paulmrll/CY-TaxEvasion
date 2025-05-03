@@ -157,11 +157,6 @@ h1{
 }
 
 
-.dark-theme select {
-    background-color: var(--color-background-2);
-    color: var(--color-light-writing);
-    border: 0.1rem solid var(--color-light-border);
-}
 
 select:focus{
     background: var(--color-background);

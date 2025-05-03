@@ -1,8 +1,9 @@
 function calculer() {
-        
+
     let price_per_day = 1099;
     let compteur = 0;
-    let hotelIndex = 0;;
+    let hotelIndex = 0;
+    ;
     let loisirNumber = 0;
     let visiteNumber = 0;
     let relaxationNumber = 0;
@@ -15,50 +16,50 @@ function calculer() {
     let relaxation_option = 2019;
     let visite_option = 4099;
 
-    for (let i = 0; i < inputs.length; i++){
-        if (inputs[i].name == "prix"){
+    for (let i = 0; i < inputs.length; i++) {
+        if (inputs[i].name == "prix") {
             basePrice = parseFloat(inputs[i].value);
         }
-        if (inputs[i].value != "" && inputs[i].type != "hidden" && inputs[i].type != "submit"){
-            
-            if (inputs[i].type == "checkbox"){
+        if (inputs[i].value != "" && inputs[i].type != "hidden" && inputs[i].type != "submit") {
 
-                switch (inputs[i].name){
+            if (inputs[i].type == "checkbox") {
+
+                switch (inputs[i].name) {
                     case "loisir[]":
-                        if (inputs[i].checked){
+                        if (inputs[i].checked) {
                             loisirNumber++;
                         }
                         break;
                     case "visite[]":
-                        if (inputs[i].checked){
+                        if (inputs[i].checked) {
                             visiteNumber++;
-                        }  
+                        }
                         break;
                     case "relaxation[]":
-                        if (inputs[i].checked){
+                        if (inputs[i].checked) {
                             relaxationNumber++;
                         }
                         break;
                     default:
                         break;
                 }
-            } else if (inputs[i].type == "number"){
+            } else if (inputs[i].type == "number") {
                 compteur++;
                 numberPersons = parseInt(inputs[i].value);
-            } else if (inputs[i].type == "date"){
+            } else if (inputs[i].type == "date") {
                 compteur++;
-                if (inputs[i].id == "departure"){
+                if (inputs[i].id == "departure") {
                     departure = new Date(inputs[i].value);
-                } else if (inputs[i].id == "return"){
+                } else if (inputs[i].id == "return") {
                     returnDate = new Date(inputs[i].value);
                 }
-            } 
+            }
         }
-        
     }
-    if (hotel.value != ""){
+
+    if (hotel.value != "") {
         compteur++;
-        switch (hotel.value){
+        switch (hotel.value) {
             case "5 étoiles":
                 hotelIndex = 1;
                 break;
@@ -75,24 +76,23 @@ function calculer() {
                 hotelIndex = 0;
                 break;
         }
+    }
 
-        
-    } 
-    
-    
-    if (departure >= returnDate){
+
+    if (departure >= returnDate) {
         numberNights = 1;
         submitButton.disabled = true;
     } else {
         numberNights = (returnDate - departure) / (1000 * 3600 * 24);
     }
-    
-    if (numberPersons < 1){
+
+    if (numberPersons < 1) {
         submitButton.disabled = true;
-    } if (numberPersons == 0){
+    }
+    if (numberPersons == 0) {
         numberPersons = 1;
     }
-    if (numberNights < 1){
+    if (numberNights < 1) {
         alert("Le nombre de nuits doit être supérieur à 0");
         submitButton.disabled = true;
     }
@@ -102,7 +102,7 @@ function calculer() {
     calcul = (basePrice + loisirNumber * loisir_option + visiteNumber * visite_option + relaxationNumber * relaxation_option + hotelIndex * price_per_day) * numberNights * numberPersons;
     let total = document.querySelector("#prix_final");
     total.innerHTML = calcul;
-    if (compteur == 4 && loisirNumber > 0 && visiteNumber > 0 && relaxationNumber && hotelIndex != 0){
+    if (compteur == 4 && loisirNumber > 0 && visiteNumber > 0 && relaxationNumber && hotelIndex != 0) {
         submitButton.disabled = false;
     } else {
         submitButton.disabled = true;
@@ -110,12 +110,11 @@ function calculer() {
 }
 
 
-
 let inputs = document.querySelectorAll("input");
 let hotel = document.querySelector("#hotel");
 let submitButton = document.querySelector("button[type='submit']");
 submitButton.disabled = true;
-for (let j = 0; j < inputs.length; j++){
-    inputs[j].addEventListener("input", calculer); 
+for (let j = 0; j < inputs.length; j++) {
+    inputs[j].addEventListener("input", calculer);
 }
 hotel.addEventListener("input", calculer);

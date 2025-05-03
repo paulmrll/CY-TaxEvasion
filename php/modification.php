@@ -1,14 +1,15 @@
 <?php
 session_start();
 
-function user_modification($email, $password, $firstname, $name, $number, $rue, $ville, $cdp, $birth, $todo){
+function user_modification($email, $password, $firstname, $name, $number, $rue, $ville, $cdp, $birth, $todo, $role)
+{
     $jsonFile = "../data/utilisateurs.json";
     if (!file_exists($jsonFile)) {
         header('Location: ../php_pages/inscription.php');
     }
-    
+
     $content = json_decode(file_get_contents($jsonFile), true);
-    if ($content == null){
+    if ($content == null) {
         header('Location: ../php_pages/inscription.php');
         exit();
     }
@@ -26,13 +27,14 @@ function user_modification($email, $password, $firstname, $name, $number, $rue, 
                 $content[$i]['adress']["ville"] = $ville;
                 $content[$i]['adress']["cdp"] = $cdp;
                 $content[$i]['birth'] = $birth;
+                $content[$i]['role'] = $role;
 
                 file_put_contents($jsonFile, json_encode($content, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT));
-                if ($todo != "modify_client_by_admin"){
-                $_SESSION['email'] = $email;
-                $_SESSION['name'] = $name;
-                $_SESSION['firstname'] = $firstname;
-                $_SESSION['password'] = $password;
+                if ($todo != "modify_client_by_admin") {
+                    $_SESSION['email'] = $email;
+                    $_SESSION['name'] = $name;
+                    $_SESSION['firstname'] = $firstname;
+                    $_SESSION['password'] = $password;
                 }
 
 
@@ -42,7 +44,7 @@ function user_modification($email, $password, $firstname, $name, $number, $rue, 
 }
 
 
-if (isset($_POST['email']) && isset($_POST['password']) && isset($_POST['firstname']) && isset($_POST['name']) && isset($_POST['nb']) && isset($_POST['rue']) && isset($_POST['ville']) && isset($_POST['cdp']) && isset($_POST['birth'])&& isset($_POST['todo'])) {
+if (isset($_POST['email']) && isset($_POST['password']) && isset($_POST['firstname']) && isset($_POST['name']) && isset($_POST['nb']) && isset($_POST['rue']) && isset($_POST['ville']) && isset($_POST['cdp']) && isset($_POST['birth']) && isset($_POST['todo']) && isset($_POST['role'])) {
 
     $email = $_POST['email'];
     $password = $_POST['password'];
@@ -52,17 +54,18 @@ if (isset($_POST['email']) && isset($_POST['password']) && isset($_POST['firstna
     $rue = $_POST['rue'];
     $nb_rue = $_POST['nb'];
     $ville = $_POST['ville'];
-    $birth =$_POST["birth"];
+    $birth = $_POST["birth"];
     $birth_time = strtotime($birth);
     $birth_time = date("Y-m-d", $birth_time);
-    if ($birth_time >= date("Y-m-d")){
+    if ($birth_time >= date("Y-m-d")) {
         header("Location: ../php_pages/user.php");
         exit();
     }
     $todo = $_POST['todo'];
-    user_modification($email, $password, $firstname, $name, $nb_rue, $rue, $ville, $cdp, $birth, $todo);
+    $role = $_POST['role'];
+    user_modification($email, $password, $firstname, $name, $nb_rue, $rue, $ville, $cdp, $birth, $todo, $role);
 
-    if ($todo == "modify_client_by_admin"){
+    if ($todo == "modify_client_by_admin") {
         header("Location: ../php_pages/admin.php");
         exit();
     } else {

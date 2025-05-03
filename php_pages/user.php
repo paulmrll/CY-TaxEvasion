@@ -148,11 +148,18 @@ require_once "../php_pages/header.php";
 
                                         </div>
                                     </div>
+
+                                    <input type="hidden" name="role"
+                                           value="<?php echo $content_user[$index_user]['role']; ?>" required>
+
                                     <div class="grid-line-container">
                                         <div>
                                             <img class="reload-image" src="../image/reload.png" alt="image-utilisateur">
                                         </div>
                                     </div>
+
+
+
                                     <input type="hidden" name="todo" value="modify_client">
 
                                     <div class="button-container">
