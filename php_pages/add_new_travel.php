@@ -146,6 +146,7 @@ require_once "../php_pages/header.php";
 require_once "../php_pages/footer.php";
 ?>
 
+<script src="../js/add_new_travel.js"></script>
 
 </body>
 </html>

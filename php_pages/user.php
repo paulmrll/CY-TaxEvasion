@@ -201,7 +201,7 @@ require_once "../php_pages/header.php";
                         } 
 
                         if ($a < 0 || count($content[$a]['travels']) == 0 || $content_travel === null || $content == null) {
-                            echo "<h1>Vous n'avez pas encore de voyages :</h1>";
+                            echo "<h1>Vous n'avez pas encore de voyages</h1>";
                         }  else {
                         echo "<h1>Mes Voyages :</h1>";
                         for ($i = 0; $i < count($content[$a]['travels']); $i++):

@@ -25,7 +25,7 @@
         "name": "Morille",
         "firstname": "Paul",
         "email": "paul@gmail.com",
-        "password": "$2y$10$KJjKxuGRAurS7P56I6gEtOlfpkltjo4PWWL4bMIjTQtyxXO0TPIZy",
+        "password": "$2y$10$qGH3Y7lLjUKftnwHYi1gX.fmiU7nKIpoIzeAR7SB8vCT0BXAJyiZG",
         "inscription_date": "23-03-2025 21:41:57",
         "connexion_date": "02-05-2025 22:26:41",
         "role": "Admin",
@@ -35,19 +35,19 @@
             "date": 0,
             "cvv": 0
         },
-        "birth": "2025-03-28",
+        "birth": "2025-03-06",
         "adress": {
             "number": "01",
             "rue": "du port",
             "ville": "cergy",
-            "cdp": "95000"
+            "cdp": "95001"
         }
     },
     {
         "name": "Wingering",
-        "firstname": "Cyprie",
+        "firstname": "Cyprien",
         "email": "cyp@gmail.com",
-        "password": "$2y$10$HUaB3xChYrbUeTCbzKhWz.VP63PDPhvwIn8P7ZQFucXyIogpwxkzW",
+        "password": "$2y$10$GMUoN1Lt7Xco86CuYCABtOSRm8kcQf9P6iB9SI8QaCqtW5P479yCK",
         "inscription_date": "23-03-2025 21:42:41",
         "connexion_date": "23-03-2025 21:42:41",
         "role": "Utilisateur",

@@ -80,11 +80,10 @@ require_once "../php_pages/header.php";
                     <select id="select-continent">
                         <option value="" selected hidden>Choisissez une option</option>
                         <option value="Europe">Europe</option>
-                        <option value="Amérique-Centrale">Amérique-Centrale</option>
-                        <option value="Amérique-du-Sud">Amérique-du-Sud</option>
-                        <option value="Moyen-Orient">Moyen-Orient</option>
+                        <option value="Amérique">Amérique</option>
                         <option value="Asie">Asie</option>
                         <option value="Océanie">Océanie</option>
+                        <option value="Afrique">Afrique</option>
                     </select>
                 </label>
             </div>
@@ -102,7 +101,7 @@ require_once "../php_pages/header.php";
             for ($i = 0; $i < count($content); $i++):
         ?>
             <a class="grid-line-container" href="../php_pages/description-pages.php?destination=<?php echo $content[$i]['destination'];?>">
-                <div class="grid-item">
+                <div data-price="<?php echo $content[$i]["prix"]?>" data-continent="<?php echo $content[$i]["continent"]?>" data-hotel="<?php echo implode(",",$content[$i]["hotel"])?>" class="grid-item">
                     <div class="image-select">
                         <img src="<?php echo $content[$i]["image"]?>" alt="<?php echo $content[$i]['name'];?>">
                         <h3><?php echo $content[$i]['name'];?></h3>

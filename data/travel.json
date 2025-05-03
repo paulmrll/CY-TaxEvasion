@@ -317,8 +317,7 @@
         "hotel": [
             "5 étoiles",
             "5 étoiles premium",
-            "5 étoiles Premium VIP",
-            "5 étoiles Premium VIP Deluxe"
+            "5 étoiles Premium VIP"
         ],
         "loisir": [
             "Jet-Ski",
@@ -339,7 +338,7 @@
         "image": "..\/image\/les-palaos.jpg",
         "image_maps": "..\/image\/les-palaos-maps.png",
         "image-flag": "..\/image\/les-palaos-flag.jpg",
-        "prix": "18000",
+        "prix": "180000",
         "continent": "Océanie"
     },
     {

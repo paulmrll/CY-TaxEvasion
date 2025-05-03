@@ -16,7 +16,6 @@ let reload = document.querySelector(".reload-image");
 
 let see = document.querySelectorAll(".modif-image");
     let inputAll = document.querySelectorAll("input");
-    console.log(registerData.name);
     for (let i = 0; i < inputAll.length; i++) {
         inputAll[i].readOnly = true;
         inputAll[i].style.backgroundColor = "grey";
