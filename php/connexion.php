@@ -30,7 +30,7 @@ function connexion($email, $password)
                     }
                 }
                 header('Location: ../php_pages/inscription.php');
-                exit();
+                exit(); 
         }
     } else {
         header('Location: ../php_pages/inscription.php');

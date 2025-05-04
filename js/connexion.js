@@ -39,4 +39,4 @@ reset.addEventListener("click", function() {
         inputs[i].style.border = "2px solid red";
     }
     button.disabled = true;
-});
+});  
