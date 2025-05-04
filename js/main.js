@@ -37,20 +37,36 @@ window.onload = function () {
 };
 
 
+
 const plane = document.getElementById('jet-cursor');
 
 let cursorX = window.innerWidth / 2;
 let cursorY = window.innerHeight / 2;
 let t = 0;
 let prevAngle = 0;
+let hasMouseMoved = false;
+
+plane.style.display = 'none';
+
+
 document.addEventListener('mousemove', (e) => {
     cursorX = e.clientX;
     cursorY = e.clientY;
+
+    if (!hasMouseMoved) {
+        hasMouseMoved = true;
+        plane.style.display = 'block';
+    }
 });
 
 function animateInfinity() {
     t += 0.03;
     const a = 60;
+
+    if (!hasMouseMoved) {
+        requestAnimationFrame(animateInfinity);
+        return;
+    }
 
     const x = (a * Math.sin(t)) / (1 + Math.pow(Math.cos(t), 2));
     const y = a * Math.sin(t) * Math.cos(t);
