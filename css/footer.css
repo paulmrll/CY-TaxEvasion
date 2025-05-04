@@ -64,3 +64,14 @@ img{
     width: 40px;
     height: auto;
 }
+
+.color-mode{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1.2rem;
+}
+
+.color-mode p{
+    margin-left: 0.5rem;
+}

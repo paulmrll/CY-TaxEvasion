@@ -260,9 +260,13 @@ if ($content == null) {
 <footer>
     <div class="footer-container">
         <div class="contact">
-            <a href="#" onclick="changeTheme()" class="footer-contact">
-                <img class="theme-logo" id="theme-logo" src="image/sun.png" alt="theme-logo">
-            </a>
+
+            <div class="color-mode">
+                <a href="#" onclick="changeTheme()" class="footer-contact">
+                    <img class="theme-logo" id="theme-logo" src="image/sun.png" alt="theme-logo">
+                </a>
+                <p>Thèmes</p>
+            </div>
 
             <a href="php_pages/contact.php" class="footer-contact">Nous contacter</a>
             <a href="php_pages/about-us.php" class="footer-contact">Qui sommes-nous ?</a>
@@ -277,7 +281,7 @@ if ($content == null) {
     </div>
 </footer>
 
-<img src="image/jet-icon.png" id="jet-cursor" class="cursor-image" alt="jet" />
+<img src="image/jet-icon.png" id="jet-cursor" class="cursor-image" alt="jet"/>
 <script src="js/main.js"></script>
 
 </body>
