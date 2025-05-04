@@ -23,16 +23,20 @@ document.addEventListener('DOMContentLoaded', () => {
     buttonModify.disabled = true;
 
 
+
+    function checkIfChangedAndNotEmpty() {
+        const isChanged = Array.from(inputs).some((input, i) => input.value !== originalValues[i]);
+        const isFilled = Array.from(inputs).every(input => input.value.trim() !== '');
+        buttonModify.disabled = !(isChanged && isFilled);
+    }
+
     inputs.forEach((input) => {
-        input.addEventListener('input', () => {
-            const isChanged = Array.from(inputs).some((input, i) => input.value !== originalValues[i]);
-            buttonModify.disabled = !isChanged;
-        });
+        input.addEventListener('input', checkIfChangedAndNotEmpty);
     });
 
-    select.addEventListener('change', () =>{
-
-        buttonModify.disabled = false;
+    select.addEventListener('change', () => {
+        const isFilled = Array.from(inputs).every(input => input.value.trim() !== '');
+        buttonModify.disabled = !isFilled;
     });
 
 
