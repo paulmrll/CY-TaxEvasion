@@ -71,7 +71,27 @@ document.addEventListener('DOMContentLoaded', () => {
             buttonModify.textContent = 'Modifier';
             buttonModify.disabled = false;
 
-            form.submit();
         }, 2000);
     });
+
+
+
+
+    async function fetchUserData(){
+        const form = document.querySelector('form');
+        const formData = new FormData(form);
+        try {
+            const response = await fetch('user.php', {
+                method: 'POST',
+                body: formData
+            });
+            if (!reponse.ok) {
+            console.log("Erreur HTTP :", reponse.status);
+            return;
+        }
+        } catch (error){
+            console.error('Error fetching user data:', error);
+        }
+
+    }
 });

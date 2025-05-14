@@ -1,16 +1,19 @@
-
+document.addEventListener("DOMContentLoaded", function() {
 
 const registerData = new Object();
-registerData.name = document.querySelector("input[name='name']").value;
-registerData.surname = document.querySelector("input[name='firstname']").value;
-registerData.email = document.querySelector("input[name='email']").value;
-registerData.password = document.querySelector("input[name='password']").value;
-registerData.nb = document.querySelector("input[name='nb']").value;
-registerData.road = document.querySelector("input[name='rue']").value;
-registerData.city = document.querySelector("input[name='ville']").value;
-registerData.postalCode = document.querySelector("input[name='cdp']").value;
-registerData.birth = document.querySelector("input[name='birth']").value;
 
+function getUserData() {
+    registerData.name = document.querySelector("input[name='name']").value;
+    registerData.surname = document.querySelector("input[name='firstname']").value;
+    registerData.email = document.querySelector("input[name='email']").value;
+    registerData.password = document.querySelector("input[name='password']").value;
+    registerData.nb = document.querySelector("input[name='nb']").value;
+    registerData.road = document.querySelector("input[name='rue']").value;
+    registerData.city = document.querySelector("input[name='ville']").value;
+    registerData.postalCode = document.querySelector("input[name='cdp']").value;
+    registerData.birth = document.querySelector("input[name='birth']").value;
+}
+getUserData();
 let reload = document.querySelector(".reload-image");
 
 
@@ -23,8 +26,8 @@ let see = document.querySelectorAll(".modif-image");
     }
     let button = document.querySelector(".button-modifier");
     button.disabled = true;
-
-reload.addEventListener('click', function() {
+function discardChanges(){
+    let inputAll = document.querySelectorAll("input");
     for (let i = 0; i < inputAll.length; i++) {
         if (inputAll[i].name == "password") {
             inputAll[i].value = registerData.password;
@@ -65,7 +68,8 @@ reload.addEventListener('click', function() {
         let button = document.querySelector(".button-modifier");
     button.disabled = true;
     }
-});
+}
+reload.addEventListener('click', discardChanges);
 
 
 let inputAll2 = document.querySelectorAll("input");
@@ -168,9 +172,7 @@ for (let i = 0; i < inputAll2.length; i++) {
                 }
             }
         }
-        console.log(number3);
-        console.log(inputAll2.length);
-        if (number > 0 && number2 == 0 && number3 && number3 != inputAll2.length -2){
+        if (number > 0 && number2 == 0 && number3 && number3 != inputAll2.length - 2){
             button.disabled = false;
         } else {
             button.disabled = true;
@@ -178,3 +180,42 @@ for (let i = 0; i < inputAll2.length; i++) {
 
     });
 }
+button.addEventListener('click', updateUser);
+async function updateUser() { 
+    console.log("updateUser");
+    const form = document.getElementById("form1");
+    const formData = new FormData(form);
+     const reponse = await fetch("../php/modification.php",{
+            method: "POST",
+            body: formData,
+        });
+    
+    try{
+         if (!reponse.ok) {
+            console.log("Erreur HTTP :", reponse.status);
+            return;
+        }
+    } catch(e) {
+        discardChanges();
+    }
+    let inputAll = document.querySelectorAll("input");
+    
+    for (let i = 0; i < inputAll.length; i++) {
+        let parentDiv = inputAll[i].closest('div');
+        let image = parentDiv.querySelector('img');
+        if (inputAll[i].name == "password") {
+            inputAll[i].type = "password";
+        }
+        inputAll[i].readOnly = true;
+        inputAll[i].style.backgroundColor = "grey";
+        inputAll[i].style.color = "white";
+        inputAll[i].style.border = "1px solid black";
+        image.src = "../image/visibility-logo.png";
+    }
+    let button = document.querySelector(".button-modifier");
+    button.disabled = true;
+    getUserData();
+}
+button.addEventListener('click', updateUser);
+});
+

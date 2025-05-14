@@ -16,8 +16,28 @@
                 ],
                 "departure": "2025-05-03",
                 "return": "2025-05-17",
-                "reservation": "Paiement en attente",
+                "reservation": "Payé",
                 "prix": 877856,
+                "transaction": "6824a7c62e5a3",
+                "person": "2",
+                "continent": "Amérique"
+            },
+            {
+                "destination": "Antigua",
+                "hotel": "5 étoiles premium",
+                "loisir": [
+                    "Visite de Banque"
+                ],
+                "visite": [
+                    "Visite d'un Musée Colonialiste"
+                ],
+                "relaxation": [
+                    "Spa et Jacuzzi Privé"
+                ],
+                "departure": "2025-05-15",
+                "return": "2025-05-25",
+                "reservation": "Payé",
+                "prix": 627040,
                 "transaction": "0",
                 "person": "2",
                 "continent": "Amérique"
