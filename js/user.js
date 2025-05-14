@@ -180,7 +180,9 @@ for (let i = 0; i < inputAll2.length; i++) {
 
     });
 }
-button.addEventListener('click', updateUser);
+
+
+
 async function updateUser() { 
     console.log("updateUser");
     const form = document.getElementById("form1");

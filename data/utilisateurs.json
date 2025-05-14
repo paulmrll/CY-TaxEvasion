@@ -27,7 +27,7 @@
         "email": "paul@gmail.com",
         "password": "$2y$10$gEySXR3zbt0Evnudn.7Wpuj5.HF\/sALlTtX7ydXaJGqXXO\/rGXA1W",
         "inscription_date": "23-03-2025 21:41:57",
-        "connexion_date": "14-05-2025 13:35:08",
+        "connexion_date": "14-05-2025 20:46:36",
         "role": "Admin",
         "card": {
             "name": "",
@@ -44,10 +44,10 @@
         }
     },
     {
-        "name": "Wingerin",
+        "name": "Wingering",
         "firstname": "Cyprien",
         "email": "cyp@gmail.com",
-        "password": "$2y$10$vMboRu.4rGZ8.H3WmubrtO1GoGMXysr.QJKR.Fqu95ZgAJpobrFmC",
+        "password": "$2y$10$yrnxkpYERY9K0XKWIDr2yOdIwvmA.Lg2h6pVjfyuL3IQm.kjw0LEm",
         "inscription_date": "23-03-2025 21:42:41",
         "connexion_date": "23-03-2025 21:42:41",
         "role": "Utilisateur",
