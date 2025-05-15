@@ -70,5 +70,50 @@
                 "continent": "Amérique"
             }
         ]
+    },
+    {
+        "email": "flo@gmail.com",
+        "travels": [
+            {
+                "destination": "Anguilla",
+                "hotel": "5 étoiles",
+                "loisir": [
+                    "Visite de Banque"
+                ],
+                "visite": [
+                    "Visite d'un Musée Colonialiste"
+                ],
+                "relaxation": [
+                    "Spa et Jacuzzi Privé"
+                ],
+                "departure": "2025-05-16",
+                "return": "2025-05-30",
+                "reservation": "Payé",
+                "prix": 1694168,
+                "transaction": "6825c568a5297",
+                "person": "4",
+                "continent": "Amérique"
+            },
+            {
+                "destination": "Antigua",
+                "hotel": "5 étoiles Premium VIP",
+                "loisir": [
+                    "Jet-Ski"
+                ],
+                "visite": [
+                    "Visite d'un Musée Colonialiste"
+                ],
+                "relaxation": [
+                    "Spa et Jacuzzi Privé"
+                ],
+                "departure": "2025-05-23",
+                "return": "2025-06-04",
+                "reservation": "Paiement en attente",
+                "prix": 389412,
+                "transaction": "0",
+                "person": "1",
+                "continent": "Amérique"
+            }
+        ]
     }
 ]

@@ -164,7 +164,7 @@ require_once "../php_pages/header.php";
 
                                     <div class="button-container">
                                         <button type="button" class="button-modifier">Modifier</button>
-                                        
+
                                     </div>
                                 </div>
                             </div>
@@ -173,7 +173,7 @@ require_once "../php_pages/header.php";
                     </div>
 
                     <div class="utilisateur-image">
-                        
+
                         <button>
                             <img src="<?php if ($_SESSION['role'] == "Admin"){
                                 echo "../image/admin-logo.png";
@@ -187,7 +187,6 @@ require_once "../php_pages/header.php";
 
 
                 <div class="box-container">
-                    <div class="part-container">
                         <?php
 
                         if (file_exists("../data/travel-user.json")) {
@@ -205,7 +204,7 @@ require_once "../php_pages/header.php";
                         }
                         if (file_exists("../data/travel.json")) {
                             $content_travel = json_decode(file_get_contents("../data/travel.json"), true);
-                        } 
+                        }
 
                         if ($a < 0 || count($content[$a]['travels']) == 0 || $content_travel === null || $content == null) {
                             echo "<h1>Vous n'avez pas encore de voyages</h1>";
@@ -222,8 +221,8 @@ require_once "../php_pages/header.php";
                                     break;
                                 }
                             endfor;
-                            
-                            
+
+
                         ?>
 
                         <div class="compte-info-container">
@@ -237,7 +236,7 @@ require_once "../php_pages/header.php";
                                         </a>
                                     </div>
 
-                                    
+
                                         <p class="Réservé">
                                             <?php
                                             echo $content[$a]['travels'][$i]['reservation'];
@@ -268,7 +267,7 @@ require_once "../php_pages/header.php";
                                 }
                                 if ($compteur == 0) {
                                     echo "<h1>Vous n'avez pas encore de Voyages</h1>";
-                                } 
+                                }
                             } else {
                                 echo "<h1>Vous n'avez pas encore de Voyages</h1>";
                             }
@@ -281,12 +280,12 @@ require_once "../php_pages/header.php";
 
                     </div>
 
-                       
-                
+
+
 
                 <div class="box-container">
-                    
-                    <div class="part-container">
+
+                    <div class="part-container-voyage">
                         <h1>Panier :</h1>
                     <?php
                     $compteur = 0;
@@ -308,16 +307,16 @@ require_once "../php_pages/header.php";
                             }
                         endfor;
                         if ($content[$a]['travels'][$i]['reservation'] === "Payé") {
-                            
+
                         } else {
                         ?>
 
-                    
-                        
-                            
-                            
 
-                            
+
+
+
+
+
                         <div class="compte-info-container">
                             <div class="grid-container">
                                 <div class="line-container">
@@ -366,7 +365,7 @@ require_once "../php_pages/header.php";
                                 endfor;
                                 if ($compteur == 0) {
                                     echo "<h1>Rien dans le panier</h1>";
-                                } 
+                                }
                                 ?>
 
 
