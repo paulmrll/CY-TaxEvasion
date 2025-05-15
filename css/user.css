@@ -112,6 +112,12 @@ h3 {
     gap: 4rem;
 }
 
+.part-container-voyage {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
 .grid-line-container {
     display: flex;
     align-items: center;

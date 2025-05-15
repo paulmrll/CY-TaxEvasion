@@ -187,7 +187,7 @@ require_once "../php_pages/header.php";
 
 
                 <div class="box-container">
-                    <div class="part-container">
+                    <div class="part-container-voyage">
                         <?php
 
                         if (file_exists("../data/travel-user.json")) {
@@ -286,7 +286,7 @@ require_once "../php_pages/header.php";
 
                 <div class="box-container">
                     
-                    <div class="part-container">
+                    <div class="part-container-voyage">
                         <h1>Panier :</h1>
                     <?php
                     $compteur = 0;
