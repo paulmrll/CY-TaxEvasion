@@ -281,11 +281,13 @@ require_once "../php_pages/header.php";
 
                     </div>
 
-                </div>
-                        </div>
-                        </div>
+                       
+                
 
                 <div class="box-container">
+                    
+                    <div class="part-container">
+                        <h1>Panier :</h1>
                     <?php
                     $compteur = 0;
                     for ($i = 0; $i < count($content[$a]['travels']); $i++){
@@ -310,19 +312,10 @@ require_once "../php_pages/header.php";
                         } else {
                         ?>
 
-                    <div class="box-container">
-                        <div class="part-container">
+                    
+                        
                             
-                            <?php
-
-                            if ($compteur > 0) {
-                                 echo "<h1>Panier :</h1>";
-                            } else {
-                                echo "<h1>Rien dans le panier</h1>";
-                               
-                                
-                            }
-                            ?>
+                            
 
                             
                         <div class="compte-info-container">
