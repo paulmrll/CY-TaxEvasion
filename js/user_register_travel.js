@@ -1,124 +1,51 @@
-function calculer() {
 
-    let price_per_day = 1099;
-    let compteur = 0;
-    let hotelIndex = 0;
-    ;
-    let loisirNumber = 0;
-    let visiteNumber = 0;
-    let relaxationNumber = 0;
-    let numberPersons = 0;
-    let numberNights = 0;
-    let departure = 0;
-    let returnDate = 0;
-    let basePrice = 0;
-    let loisir_option = 5036;
-    let relaxation_option = 2019;
-    let visite_option = 4099;
 
-    for (let i = 0; i < inputs.length; i++) {
-        if (inputs[i].name == "prix") {
-            basePrice = parseFloat(inputs[i].value);
+
+
+
+async function price(){
+    const price = document.querySelector("#prix_final");
+    const form = document.getElementById("form1");
+    const formData = new FormData(form);
+    const prix = document.querySelector("#prix_final");
+    for (let pair of formData.entries()) {
+  console.log(pair[0], pair[1]);
+}
+    formData.set("todo", "calculer");
+    try {
+        const response = await fetch("../php/register_travel.php", {
+            method: "POST",
+            body: formData,
+        });
+        if (!response.ok) {
+            console.log("Erreur HTTP :", response.status);
+            return;
         }
-        if (inputs[i].value != "" && inputs[i].type != "hidden" && inputs[i].type != "submit") {
-
-            if (inputs[i].type == "checkbox") {
-
-                switch (inputs[i].name) {
-                    case "loisir[]":
-                        if (inputs[i].checked) {
-                            loisirNumber++;
-                        }
-                        break;
-                    case "visite[]":
-                        if (inputs[i].checked) {
-                            visiteNumber++;
-                        }
-                        break;
-                    case "relaxation[]":
-                        if (inputs[i].checked) {
-                            relaxationNumber++;
-                        }
-                        break;
-                    default:
-                        break;
-                }
-            } else if (inputs[i].type == "number") {
-                compteur++;
-                numberPersons = parseInt(inputs[i].value);
-            } else if (inputs[i].type == "date") {
-                compteur++;
-                if (inputs[i].id == "departure") {
-                    departure = new Date(inputs[i].value);
-                } else if (inputs[i].id == "return") {
-                    returnDate = new Date(inputs[i].value);
-                }
-            }
-        }
+        console.log("Erreur HTTP :", response.status);
+        const data = await response.text();
+        console.log("data", data);
+        prix.innerHTML = data;
     }
-
-    if (hotel.value != "") {
-        compteur++;
-        switch (hotel.value) {
-            case "5 étoiles":
-                hotelIndex = 1;
-                break;
-            case "5 étoiles premium":
-                hotelIndex = 2;
-                break;
-            case "5 étoiles Premium VIP":
-                hotelIndex = 3;
-                break;
-            case "5 étoiles Premium VIP Deluxe":
-                hotelIndex = 4;
-                break;
-            default:
-                hotelIndex = 0;
-                break;
-        }
-    }
-
-
-    if (departure >= returnDate) {
-        numberNights = 1;
-        submitButton.disabled = true;
-    } else {
-        numberNights = (returnDate - departure) / (1000 * 3600 * 24);
-    }
-
-    if (numberPersons < 1) {
-        submitButton.disabled = true;
-    }
-    if (numberPersons == 0) {
-        numberPersons = 1;
-    }
-    if (numberNights < 1) {
-        alert("Le nombre de nuits doit être supérieur à 0");
-        submitButton.disabled = true;
-    }
-
-
-    let calcul = 0;
-    calcul = (basePrice + loisirNumber * loisir_option + visiteNumber * visite_option + relaxationNumber * relaxation_option + hotelIndex * price_per_day) * numberNights * numberPersons;
-    let total = document.querySelector("#prix_final");
-    total.innerHTML = calcul;
-    if (compteur == 4 && loisirNumber > 0 && visiteNumber > 0 && relaxationNumber && hotelIndex != 0) {
-        submitButton.disabled = false;
-    } else {
-        submitButton.disabled = true;
+    catch (e) {
+        console.log("Erreur HTTP :", response.status);
     }
 }
-
-
 let inputs = document.querySelectorAll("input");
 let hotel = document.querySelector("#hotel");
 let submitButton = document.querySelector("button[type='submit']");
-submitButton.disabled = true;
+submitButton.disabled = false;
 for (let j = 0; j < inputs.length; j++) {
-    inputs[j].addEventListener("input", calculer);
+    inputs[j].addEventListener("input", ()=>{
+        price();
+
+    });
 }
-hotel.addEventListener("input", calculer);
+hotel.addEventListener("change", () => {
+    price();
+}
+);
+
 
 window.addEventListener("DOMContentLoaded", () => {
-    calculer();
+
 });

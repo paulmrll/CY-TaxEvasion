@@ -63,7 +63,7 @@ require_once "../php_pages/header.php";
     <img class="main-image" src="<?php echo $content[$i]["image"]?>" alt="Image de la destination">
     <h1>Réserver votre voyage à <?php echo $content[$i]["destination"]?></h1>
     <div class="container">
-    <form method="post" action="../php/register_travel.php">
+    <form id="form1" method="post" action="../php/register_travel.php">
        
             <input type="hidden" value="<?php echo $content[$i]["destination"]?>" name="destination">
 
@@ -89,7 +89,6 @@ require_once "../php_pages/header.php";
                     <input type="checkbox" id="loisir<?php echo $o ?>" name="loisir[]" value="<?php echo $content[$i]["loisir"][$o] ?>">
                     <label class="reservation-button" for="loisir<?php echo $o ?>"><?php echo $content[$i]["loisir"][$o] ?></label>
                     <?php endfor; ?>
-
                     </div>
                 </div>
 
@@ -116,7 +115,7 @@ require_once "../php_pages/header.php";
                 </div>
                 <div class="reservation-checkbox">
                     <h5>Nombre de personnes</h5>
-                    <input id="person" name="person" type="number" placeholder="1" required>
+                    <input id="person" name="person" type="number" min="0" placeholder="1" required>
                 </div>
                 <div class="reservation-checkbox">
                     <h5>Dates de départ :</h5>
@@ -143,7 +142,7 @@ require_once "../php_pages/header.php";
             </div>
             <input id="continent" name="continent" type="hidden" value="<?php echo $content[$i]["continent"]?>">
             <div class="button-container" id="buttons">
-                <input type="hidden" name="todo" value="modify">
+                <input type="hidden" name="todo" value="register">
                 <button type="submit">Réserver</button>
 
             </div>

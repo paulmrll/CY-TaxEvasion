@@ -140,30 +140,71 @@ function register_travel($destination, $hotel, $loisir, $visite, $relaxation, $d
 
 
 
-
-if (isset($_POST['destination']) && isset($_POST['hotel']) && isset($_POST['loisir']) && isset($_POST['visite']) && 
-isset($_POST['relaxation']) && isset($_POST['departure']) && isset($_POST['return']) && isset($_POST['person']) && isset($_POST['continent'])){
-    if (!isset($_SESSION['email'])){
-        header('Location: ../php_pages/connexion.php');
-        exit();
+if (isset($_POST['todo'])){
+    if (isset($_POST['destination']) && isset($_POST['hotel']) && isset($_POST['loisir']) && isset($_POST['visite']) && 
+    isset($_POST['relaxation']) && isset($_POST['departure']) && isset($_POST['return']) && isset($_POST['person']) && isset($_POST['continent']) && $_POST['todo'] == "register"){ 
+        if (!isset($_SESSION['email'])){
+            header('Location: ../php_pages/connexion.php');
+            exit();
+        }
+        $destination = $_POST['destination'];
+        $hotel = $_POST['hotel'];
+        $loisir = $_POST['loisir'];
+        $visite = $_POST['visite'];
+        $relaxation = $_POST['relaxation'];
+        $departure = $_POST['departure'];
+        $return = $_POST['return'];
+        $person = $_POST['person'];
+        $continent = $_POST['continent'];
+        if ($departure < date("Y-m-d") || $return < date("Y-m-d") || $return < $departure){
+            header('Location: ../php_pages/user_register_travel.php?destination='.$destination);
+            exit();
+        }
+        register_travel($destination, $hotel, $loisir, $visite, $relaxation, $departure, $return, $person, $continent);
+    } else {
+        $destination = $_POST['destination'];
+        if ($_POST['todo'] == "calculer"){
+            $hotel = $_POST['hotel'];
+            if ($hotel ==""){
+                $hotel = "1";
+            }
+            if (!isset($_POST['loisir'])){
+                $loisir = ["1"];
+            } else {
+                $loisir = (array)($_POST['loisir']);
+            }
+            if (!isset($_POST['visite'])){
+                $visite = ["1"];
+            } else {
+                $visite = (array)($_POST['visite']);
+            }
+            if (!isset($_POST['relaxation'])){
+                $relaxation = ["1"];
+            } else {
+                $relaxation = (array)$_POST['relaxation'];
+            }
+            $departure = $_POST['departure'];
+            if ($departure == ""){
+                $departure = date("Y-m-d");
+            }   
+            $return = $_POST['return'];
+            if ($return == ""){
+                $return = date('Y-m-d', strtotime($departure . ' +1 day'));
+            }
+            $person = $_POST['person'];
+            if ($person == "" || $person < 1){
+                $person = 1;
+            }
+            
+            $prix = calculate_price($destination, $hotel, $loisir, $visite, $relaxation, $departure, $return, $person);
+            echo $prix;
+            exit();
+        } else {
+            $destination = $_POST['destination'];
+            header('Location: ../php_pages/user_register_travel.php?destination='.$destination);
+            exit();
+        }
     }
-    $destination = $_POST['destination'];
-    $hotel = $_POST['hotel'];
-    $loisir = $_POST['loisir'];
-    $visite = $_POST['visite'];
-    $relaxation = $_POST['relaxation'];
-    $departure = $_POST['departure'];
-    $return = $_POST['return'];
-    $person = $_POST['person'];
-    $continent = $_POST['continent'];
-    if ($departure < date("Y-m-d") || $return < date("Y-m-d") || $return < $departure){
-        header('Location: ../php_pages/user_register_travel.php?destination='.$destination);
-        exit();
-    }
-    register_travel($destination, $hotel, $loisir, $visite, $relaxation, $departure, $return, $person, $continent);
-} else {
-    $destination = $_POST['destination'];
-    header('Location: ../php_pages/user_register_travel.php?destination='.$destination);
 }
 
 

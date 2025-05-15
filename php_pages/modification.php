@@ -91,7 +91,7 @@ require_once "../php_pages/header.php";
     <img class="main-image" src="<?php echo $url_image?>" alt="Image de la destination">
     <h1>Modifier votre voyage à <?php echo $name;?></h1>
     <div class="container">
-    <form method="post" action="../php/modification_travel.php">
+    <form id="form1" method="post" action="../php/modification_travel.php">
        
         <input type="hidden" name="destination" value="<?php echo $content_travel[$index_travel]["destination"]?>">
 

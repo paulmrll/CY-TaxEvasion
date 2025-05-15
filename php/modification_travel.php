@@ -112,15 +112,57 @@ if (isset($_POST['todo'])) {
                 exit();
             }
             break;
+        case "price":
+            $destination = $_POST['destination'];
+            if ($_POST['todo'] == "calculer"){
+                $hotel = $_POST['hotel'];
+                if ($hotel ==""){
+                    $hotel = "1";
+                }
+                if (!isset($_POST['loisir'])){
+                    $loisir = ["1"];
+                } else {
+                    $loisir = (array)($_POST['loisir']);
+                }
+                if (!isset($_POST['visite'])){
+                    $visite = ["1"];
+                } else {
+                    $visite = (array)($_POST['visite']);
+                }
+                if (!isset($_POST['relaxation'])){
+                    $relaxation = ["1"];
+                } else {
+                    $relaxation = (array)$_POST['relaxation'];
+                }
+                $departure = $_POST['departure'];
+                if ($departure == ""){
+                    $departure = date("Y-m-d");
+                }   
+                $return = $_POST['return'];
+                if ($return == ""){
+                    $return = date('Y-m-d', strtotime($departure . ' +1 day'));
+                }
+                $person = $_POST['person'];
+                if ($person == "" || $person < 1){
+                    $person = 1;
+                }
+                
+                $prix = calculate_price($destination, $hotel, $loisir, $visite, $relaxation, $departure, $return, $person);
+                echo $prix;
+                exit();
+            }
+            break;
         default:
             header('Location: ../php_pages/user.php');
             exit();
+            break;
     }
 
 } else {
     header('Location: ../php_pages/modification.php');
     exit();
 }
+
 
 
 ?>

@@ -84,6 +84,7 @@ function calculate_price($destination, $hotel, $loisir, $visite, $relaxation, $d
                     $hotelIndex = 0;
                     break;
         }
+        $basePrice = 0;
         for ($i = 0; $i < count($content); $i++) {
             if ($content[$i]['destination'] === $destination) {
                 $basePrice = $content[$i]['prix'];
@@ -91,9 +92,21 @@ function calculate_price($destination, $hotel, $loisir, $visite, $relaxation, $d
             }
         }
         $priceHotel = 1099;
-        $nb_loisir = count($loisir);
-        $nb_visite = count($visite);
-        $nb_relaxation = count($relaxation);
+        if ($loisir[0] == "1"){
+            $nb_loisir = 0;
+        } else {
+            $nb_loisir = count($loisir);
+        }
+        if ($visite[0] == "1"){
+            $nb_visite = 0;
+        } else {
+            $nb_visite = count($visite);
+        }
+        if ($relaxation[0] == "1"){
+            $nb_relaxation = 0;
+        } else {
+            $nb_relaxation = count($relaxation);
+        }
         $price_loisir = 5036;
         $price_visite = 4099;
         $price_relaxation = 2019;
@@ -107,7 +120,7 @@ function calculate_price($destination, $hotel, $loisir, $visite, $relaxation, $d
         header('Location: ../php_pages/connexion.php');
         exit();
     }
-    return 0;
+    return  $nb_loisir;
 }
 
 
