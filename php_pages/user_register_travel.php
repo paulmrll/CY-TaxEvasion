@@ -119,7 +119,7 @@ require_once "../php_pages/header.php";
                 </div>
                 <div class="reservation-checkbox">
                     <h5>Dates de départ :</h5>
-                    <input id="departure" name="departure" type="date" placeholder="jj/mm/aaaa" required>
+                    <input id="departure" name="departure" value="<?php echo date('Y-m-d', strtotime('+3 day')); ?>" type="date" required>
                 </div>
                 
 

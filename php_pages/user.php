@@ -211,15 +211,19 @@ require_once "../php_pages/header.php";
                             echo "<h1>Vous n'avez pas encore de voyages</h1>";
                         }  else {
                         echo "<h1>Mes Voyages :</h1>";
+                        $compteur = 0;
                         for ($i = 0; $i < count($content[$a]['travels']); $i++):
-
-                        for ($o = 0; $o < count($content_travel); $o++):
-                            if ($content[$a]['travels'][$i]['destination'] === $content_travel[$o]['destination']) {
-                                $url_image = $content_travel[$o]['image'];
-                                $name = $content_travel[$o]['name'];
-                                break;
-                            }
-                        endfor;
+                            if ($content[$a]['travels'][$i]['reservation'] === "Payé") {
+                                $compteur++;
+                                for ($o = 0; $o < count($content_travel); $o++):
+                                if ($content[$a]['travels'][$i]['destination'] === $content_travel[$o]['destination']) {
+                                    $url_image = $content_travel[$o]['image'];
+                                    $name = $content_travel[$o]['name'];
+                                    break;
+                                }
+                            endfor;
+                            
+                            
                         ?>
 
                         <div class="compte-info-container">
@@ -232,21 +236,14 @@ require_once "../php_pages/header.php";
                                             <h3><?php echo $name ?></h3>
                                         </a>
                                     </div>
-                                    <?php
-                                    if ($content[$a]['travels'][$i]['reservation'] == "Paiement en attente"):?>
-                                        <a href="../php_pages/paiement.php?destination=<?php echo $content[$a]["travels"][$i]["destination"] ?>">
-                                            <p class="Non-réservé">
-                                                <?php
-                                                echo $content[$a]['travels'][$i]['reservation'] . " de " . $content[$a]['travels'][$i]['prix'] . "€";
-                                                ?> <h2>Cliquer ci-dessus pour payer</h2>
-                                            </p></a>
-                                    <?php else: ?>
+
+                                    
                                         <p class="Réservé">
                                             <?php
                                             echo $content[$a]['travels'][$i]['reservation'];
                                             ?>
                                         </p>
-                                    <?php endif; ?>
+
                                     <div class="date-container">
                                         <p>Du : <strong><?php echo $content[$a]['travels'][$i]['departure'] ?></strong>
                                         </p>
@@ -266,13 +263,16 @@ require_once "../php_pages/header.php";
 
 
                                 <?php
+                            }
                                 endfor;
                                 }
-
+                                if ($compteur == 0) {
+                                    echo "<h1>Vous n'avez pas encore de Voyages</h1>";
                                 } 
-                            }else {
+                            } else {
                                 echo "<h1>Vous n'avez pas encore de Voyages</h1>";
                             }
+                        }
                                 ?>
 
 

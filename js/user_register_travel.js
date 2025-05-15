@@ -1,4 +1,11 @@
+function minimumDate() {
+    let inputDate = document.getElementById("departure");
+    let returnDate = document.getElementById("return");
+    console.log( inputDate.value);
+        returnDate.min = inputDate.value;
 
+    
+}
 
 
 
@@ -8,9 +15,7 @@ async function price(){
     const form = document.getElementById("form1");
     const formData = new FormData(form);
     const prix = document.querySelector("#prix_final");
-    for (let pair of formData.entries()) {
-  console.log(pair[0], pair[1]);
-}
+    
     formData.set("todo", "calculer");
     try {
         const response = await fetch("../php/register_travel.php", {
@@ -21,9 +26,7 @@ async function price(){
             console.log("Erreur HTTP :", response.status);
             return;
         }
-        console.log("Erreur HTTP :", response.status);
         const data = await response.text();
-        console.log("data", data);
         prix.innerHTML = data;
     }
     catch (e) {
@@ -47,5 +50,6 @@ hotel.addEventListener("change", () => {
 
 
 window.addEventListener("DOMContentLoaded", () => {
-
+    minimumDate();
+    document.getElementById("departure").addEventListener("change", minimumDate);
 });
