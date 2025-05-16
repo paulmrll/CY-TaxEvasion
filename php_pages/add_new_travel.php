@@ -121,7 +121,13 @@ require_once "../php_pages/header.php";
                 </div>
                 <div class="reservation-checkbox">
                     <h5>Continent : </h5>
-                    <input id="Continent" type="text" name="continent" placeholder="Continent" required>
+                    <select id="continent" name="continent" required>
+                        <option value="Europe">Europe</option>
+                        <option value="Asie">Asie</option>
+                        <option value="Amérique">Amérique</option>
+                        <option value="Afrique">Afrique</option>
+                        <option value="Océanie">Océanie</option>
+                    </select>
                 </div>
                 
                 
