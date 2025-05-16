@@ -68,23 +68,7 @@ function calculate_price($destination, $hotel, $loisir, $visite, $relaxation, $d
             exit();
         }
 
-        switch ($hotel){
-                case "5 étoiles":
-                    $hotelIndex = 1;
-                    break;
-                case "5 étoiles premium":
-                    $hotelIndex = 2;
-                    break;
-                case "5 étoiles Premium VIP":
-                    $hotelIndex = 3;
-                    break;
-                case "5 étoiles Premium VIP Deluxe":
-                    $hotelIndex = 4;
-                    break;
-                default:
-                    $hotelIndex = 0;
-                    break;
-        }
+        
         $basePrice = 0;
         $price_loisir = 0;
         $price_visite = 0;
@@ -120,6 +104,13 @@ function calculate_price($destination, $hotel, $loisir, $visite, $relaxation, $d
                         }
                     }
                 }
+                if ($hotel[0] == "1"){
+                    $priceHotel = 0;
+                } else {
+                    if (in_array($hotel, $content[$i]['hotel'])){
+                        $priceHotel = $content[$i]['price hotel'][$hotel];
+                    }
+                }
                 break;
             }
         }
@@ -127,7 +118,7 @@ function calculate_price($destination, $hotel, $loisir, $visite, $relaxation, $d
         $returnDate = new DateTime($return);
         $interval = $departureDate->diff($returnDate);
         $days = $interval->days;
-        $montant = ($basePrice + $price_loisir + $price_visite + $price_relaxation + $hotelIndex * $priceHotel) * $days * $person;
+        $montant = ($basePrice + $price_loisir + $price_visite + $price_relaxation + $priceHotel) * $days * $person;
         return $montant;
     } else {
         header('Location: ../php_pages/connexion.php');
