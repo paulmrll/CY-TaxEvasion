@@ -22,7 +22,19 @@ function register_photo($file){
 
 function add_travel($name, $hotel, $loisir, $visite, $relaxation, $description, $photo, $photo_drapeau, $photo_carte, $prix, $continent) {
     $jsonFile = "../data/travel.json";
-    
+    $price_hotel = [];
+    for ($i = 0; $i < count($hotel); $i++){
+        $price_hotel[$hotel[$i]] = rand(200+$i*100, 500+$i*50); 
+    }
+    for ($i = 0; $i < count($loisir); $i++){
+        $price_option[$loisir[$i]] = rand(200+$i*100, 500+$i*50); 
+    }
+    for ($i = 0; $i < count($relaxation); $i++){
+        $price_option[$relaxation[$i]] = rand(200+$i*100, 500+$i*50); 
+    }
+    for ($i = 0; $i < count($visite); $i++){
+        $price_option[$visite[$i]] = rand(200+$i*100, 500+$i*50); 
+    }
     $temp = explode(" ", $name);
     for ($i = 0; $i < count($temp); $i++){
         $temp[$i] = strtolower($temp[$i]);
@@ -65,9 +77,11 @@ function add_travel($name, $hotel, $loisir, $visite, $relaxation, $description, 
         "destination" => $destination,
         "name" => $name,
         "hotel" => $hotel,
+        "price_hotel" => $price_hotel,
         "loisir" => $loisir,
         "visite" => $visite,
         "relaxation" => $relaxation,
+        "price_option" => $price_option,
         "description" => $description,
         "image" => $photo_url,
         "image_maps" => $photo_carte_url,
@@ -84,9 +98,11 @@ function add_travel($name, $hotel, $loisir, $visite, $relaxation, $description, 
             "destination" => $destination,
             "name" => $name,
             "hotel" => $hotel,
+            "price_hotel" => $price_hotel,
             "loisir" => $loisir,
             "visite" => $visite,
             "relaxation" => $relaxation,
+            "price_option" => $price_option,
             "description" => $description,
             "image" => $photo_url,
             "image_maps" => $photo_carte_url,

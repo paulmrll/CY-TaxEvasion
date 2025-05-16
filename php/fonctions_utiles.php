@@ -82,7 +82,7 @@ function calculate_price($destination, $hotel, $loisir, $visite, $relaxation, $d
                 } else {
                     for ($j = 0; $j < count($loisir); $j++){
                         if (in_array($loisir[$j], $content[$i]['loisir'] )){
-                            $price_loisir += $content[$i]['price option'][$loisir[$j]];
+                            $price_loisir += $content[$i]['price_option'][$loisir[$j]];
                         }
                     }
                 }
@@ -91,7 +91,7 @@ function calculate_price($destination, $hotel, $loisir, $visite, $relaxation, $d
                 } else {
                     for ($j = 0; $j < count($visite); $j++){
                         if (in_array($visite[$j], $content[$i]['visite'] )){
-                            $price_visite += $content[$i]['price option'][$visite[$j]];
+                            $price_visite += $content[$i]['price_option'][$visite[$j]];
                         }
                     }
                 }
@@ -100,7 +100,7 @@ function calculate_price($destination, $hotel, $loisir, $visite, $relaxation, $d
                 } else {
                     for ($j = 0; $j < count($relaxation); $j++){
                         if (in_array($relaxation[$j], $content[$i]['relaxation'] )){
-                            $price_relaxation += $content[$i]['price option'][$relaxation[$j]];
+                            $price_relaxation += $content[$i]['price_option'][$relaxation[$j]];
                         }
                     }
                 }
@@ -108,7 +108,7 @@ function calculate_price($destination, $hotel, $loisir, $visite, $relaxation, $d
                     $priceHotel = 0;
                 } else {
                     if (in_array($hotel, $content[$i]['hotel'])){
-                        $priceHotel = $content[$i]['price hotel'][$hotel];
+                        $priceHotel = $content[$i]['price_hotel'][$hotel];
                     }
                 }
                 break;
