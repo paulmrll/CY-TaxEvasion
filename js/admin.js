@@ -14,31 +14,33 @@ function registerOriginalValues() {
 }
 
 function checkInputValues(){
+    console.log("checkInputValues");
     for (let i = 0; i < inputAll.length; i++){
-        inputAll[i].addEventListener('input', function() {
             let number3 = 0;
             let number = inputAll.length;
             let number2 = 0;
             for (let j = 0; j < inputAll.length; j++) {
-                
                 if (inputAll[j].value === ""){
                     inputAll[j].style.border = "2px solid red";
+                    console.log("Valeur vide");
                     number3++;
-                    
                 } else if (inputAll[j].value == originalValues[inputAll[j].name]) {
                     inputAll[j].style.border = "2px solid green";
+                    console.log("Valeur inchangée");
+                    console.log("number" + number);
                     number--;
                 } else {
                     inputAll[j].style.border = "2px solid green";
+                    console.log("Valeur modifiée");
                     number2++;
                 }
+                
             }
             if (number3 > 0 || number == 0) {
                 buttonModify.disabled = true;
             } else {
                 buttonModify.disabled = false;
             }
-        });
     }
 }
 
@@ -61,13 +63,11 @@ async function fetchUserData(){
         }
 
     }
-    registerOriginalValues();
+registerOriginalValues();
     for (let i = 0; i < inputAll.length; i++){
         inputAll[i].addEventListener('input', () => {
-            
             checkInputValues();
-            
-            
+
     });
 }
     
