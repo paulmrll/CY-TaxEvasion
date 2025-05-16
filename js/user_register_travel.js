@@ -1,10 +1,14 @@
 function minimumDate() {
     let inputDate = document.getElementById("departure");
     let returnDate = document.getElementById("return");
-    console.log( inputDate.value);
-        returnDate.min = inputDate.value;
+    returnDate.min = inputDate.value;
 
     
+}
+function maximumDate() {
+    let inputDate = document.getElementById("departure");
+    let returnDate = document.getElementById("return");
+    inputDate.max = returnDate.value;
 }
 
 function validateForm() {
@@ -95,13 +99,15 @@ window.addEventListener("DOMContentLoaded", () => {
     let submitButton = document.querySelector("button[type='submit']");
     submitButton.disabled = true;
     minimumDate();
+    maximumDate();
     document.getElementById("departure").addEventListener("change", minimumDate);
+    document.getElementById("return").addEventListener("change", maximumDate);
     hotel.addEventListener("change", () => {
         price();
         validateForm();
     });
     for (let j = 0; j < inputs.length; j++) {
-    inputs[j].addEventListener("input", ()=>{
+    inputs[j].addEventListener("input", () => {
         price();
         validateForm();
 

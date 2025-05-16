@@ -67,6 +67,7 @@ function calculate_price($destination, $hotel, $loisir, $visite, $relaxation, $d
             header('Location: ../php_pages/user_register_travel.php?destination=' . $destination);
             exit();
         }
+
         switch ($hotel){
                 case "5 étoiles":
                     $hotelIndex = 1;
@@ -85,36 +86,48 @@ function calculate_price($destination, $hotel, $loisir, $visite, $relaxation, $d
                     break;
         }
         $basePrice = 0;
+        $price_loisir = 0;
+        $price_visite = 0;
+        $price_relaxation = 0;
+        $priceHotel = 0;
         for ($i = 0; $i < count($content); $i++) {
             if ($content[$i]['destination'] === $destination) {
                 $basePrice = $content[$i]['prix'];
+                if ($loisir[0] == "1"){
+                    $price_loisir = 0;
+                } else {
+                    for ($j = 0; $j < count($loisir); $j++){
+                        if (in_array($loisir[$j], $content[$i]['loisir'] )){
+                            $price_loisir += $content[$i]['price option'][$loisir[$j]];
+                        }
+                    }
+                }
+                if ($visite[0] == "1"){
+                    $price_visite = 0;
+                } else {
+                    for ($j = 0; $j < count($visite); $j++){
+                        if (in_array($visite[$j], $content[$i]['visite'] )){
+                            $price_visite += $content[$i]['price option'][$visite[$j]];
+                        }
+                    }
+                }
+                if ($relaxation[0] == "1"){
+                    $price_relaxation = 0;
+                } else {
+                    for ($j = 0; $j < count($relaxation); $j++){
+                        if (in_array($relaxation[$j], $content[$i]['relaxation'] )){
+                            $price_relaxation += $content[$i]['price option'][$relaxation[$j]];
+                        }
+                    }
+                }
                 break;
             }
         }
-        $priceHotel = 1099;
-        if ($loisir[0] == "1"){
-            $nb_loisir = 0;
-        } else {
-            $nb_loisir = count($loisir);
-        }
-        if ($visite[0] == "1"){
-            $nb_visite = 0;
-        } else {
-            $nb_visite = count($visite);
-        }
-        if ($relaxation[0] == "1"){
-            $nb_relaxation = 0;
-        } else {
-            $nb_relaxation = count($relaxation);
-        }
-        $price_loisir = 5036;
-        $price_visite = 4099;
-        $price_relaxation = 2019;
         $departureDate = new DateTime($departure);
         $returnDate = new DateTime($return);
         $interval = $departureDate->diff($returnDate);
         $days = $interval->days;
-        $montant = ($basePrice + $nb_loisir * $price_loisir + $nb_visite * $price_visite + $nb_relaxation * $price_relaxation + $hotelIndex * $priceHotel) * $days * $person;
+        $montant = ($basePrice + $price_loisir + $price_visite + $price_relaxation + $hotelIndex * $priceHotel) * $days * $person;
         return $montant;
     } else {
         header('Location: ../php_pages/connexion.php');

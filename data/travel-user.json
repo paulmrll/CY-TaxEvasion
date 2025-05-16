@@ -41,6 +41,52 @@
                 "transaction": "0",
                 "person": "2",
                 "continent": "Amérique"
+            },
+            {
+                "destination": "Monaco",
+                "hotel": "5 étoiles Premium VIP Deluxe",
+                "loisir": [
+                    "Visite de Banque"
+                ],
+                "visite": [
+                    "Visite de Banque"
+                ],
+                "relaxation": [
+                    "Spa et Jacuzzi Privé"
+                ],
+                "departure": "2025-05-25",
+                "return": "2025-05-31",
+                "reservation": "Paiement en attente",
+                "prix": 402600,
+                "transaction": "0",
+                "person": "2",
+                "continent": "Europe"
+            },
+            {
+                "destination": "Bermudes",
+                "hotel": "5 étoiles premium",
+                "loisir": [
+                    "Jet-Ski",
+                    "Plongée sous-marine",
+                    "Balade en yacht"
+                ],
+                "visite": [
+                    "Visite de Banque",
+                    "Visite d'un Musée Colonialiste",
+                    "Visite d'un vignoble"
+                ],
+                "relaxation": [
+                    "Spa et Jacuzzi Privé",
+                    "Diner gastronomique 5 étoiles",
+                    "Soiree VIP éxecutif business class"
+                ],
+                "departure": "2025-05-19",
+                "return": "2025-05-25",
+                "reservation": "Paiement en attente",
+                "prix": 340776,
+                "transaction": "0",
+                "person": "2",
+                "continent": "Amérique"
             }
         ]
     },

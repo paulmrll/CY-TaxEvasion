@@ -8,6 +8,12 @@
             "5 étoiles Premium VIP",
             "5 étoiles Premium VIP Deluxe"
         ],
+        "price hotel": {
+            "5 étoiles" : "1000",
+            "5 étoiles premium" : "1300",
+            "5 étoiles Premium VIP" : "2000",
+            "5 étoiles Premium VIP Deluxe" : "5000"
+        },
         "loisir": [
             "Visite de Banque",
             "Jet-Ski",
@@ -24,6 +30,17 @@
             "Diner gastronomique 5 étoiles",
             "Soiree VIP éxecutif business class"
         ],
+        "price option": {
+            "Visite de Banque" : "400",
+            "Visite d'un Musée Colonialiste" : "200",
+            "Visite d'un vignoble" : "100",
+            "Jet-Ski" : "700",
+            "Plongée sous-marine" : "1000",
+            "Balade en yacht" : "2000",
+            "Spa et Jacuzzi Privé" : "300",
+            "Diner gastronomique 5 étoiles" : "1500",
+            "Soiree VIP éxecutif business class" : "2000"
+        },
         "description": "Membre de l’organisation des états du caraïbe oriental depuis 1995, l’île Anguilla est un territoire britannique d’outre-mer. Anguilla est un paradis fiscal par excellence. Les personnes physiques résidentes et non-résidentes bénéficient d’un impôt zéro, et ce pour les : impôt sur le revenu, les droits de successions ainsi que l’impôt sur la fortune. Nous notons toutefois une taxe de 3% sur les biens immobiliers localisés sur l’île d’Anguilla pour les non-résidents.",
         "image": "..\/image\/anguilla.jpg",
         "image_maps": "..\/image\/anguilla-maps.png",
@@ -40,6 +57,12 @@
             "5 étoiles Premium VIP",
             "5 étoiles Premium VIP Deluxe"
         ],
+        "price hotel": {
+            "5 étoiles" : "1000",
+            "5 étoiles premium" : "1300",
+            "5 étoiles Premium VIP" : "2000",
+            "5 étoiles Premium VIP Deluxe" : "5000"
+        },
         "loisir": [
             "Visite de Banque",
             "Jet-Ski",
@@ -56,6 +79,17 @@
             "Diner gastronomique 5 étoiles",
             "Soiree VIP éxecutif business class"
         ],
+        "price option": {
+            "Visite de Banque" : "400",
+            "Visite d'un Musée Colonialiste" : "200",
+            "Visite d'un vignoble" : "100",
+            "Jet-Ski" : "700",
+            "Plongée sous-marine" : "1000",
+            "Balade en yacht" : "2000",
+            "Spa et Jacuzzi Privé" : "300",
+            "Diner gastronomique 5 étoiles" : "1500",
+            "Soiree VIP éxecutif business class" : "2000"
+        },
         "description": "Monaco est une destination de prestige qui incarne à la fois luxe, stabilité et attractivité fiscale. Véritable paradis fiscal en Europe, la Principauté se distingue par l'absence totale d'impôt sur le revenu pour les résidents (sauf les Français en vertu d'accords spécifiques) , ainsi que par l'absence d'impôt sur la fortune, sur les successions en ligne directe et sur les plus-values. Cette politique fiscale  avantageuse attire les entrepreneurs, les investisseurs et les grandes fortunes du monde entier, désireux de préserver et faire fructifier  leur patrimoine dans un cadre légal sécurisé.",
         "image": "..\/image\/monaco.jpeg",
         "image_maps": "..\/image\/monaco-maps.png",
@@ -72,8 +106,13 @@
             "5 étoiles Premium VIP",
             "5 étoiles Premium VIP Deluxe"
         ],
+        "price hotel": {
+            "5 étoiles" : "1000",
+            "5 étoiles premium" : "1300",
+            "5 étoiles Premium VIP" : "2000",
+            "5 étoiles Premium VIP Deluxe" : "5000"
+        },
         "loisir": [
-            "Visite de Banque",
             "Jet-Ski",
             "Plongée sous-marine",
             "Balade en yacht"
@@ -88,6 +127,17 @@
             "Diner gastronomique 5 étoiles",
             "Soiree VIP éxecutif business class"
         ],
+        "price option": {
+            "Visite de Banque" : "400",
+            "Visite d'un Musée Colonialiste" : "200",
+            "Visite d'un vignoble" : "100",
+            "Jet-Ski" : "700",
+            "Plongée sous-marine" : "1000",
+            "Balade en yacht" : "2000",
+            "Spa et Jacuzzi Privé" : "300",
+            "Diner gastronomique 5 étoiles" : "1500",
+            "Soiree VIP éxecutif business class" : "2000"
+        },
         "description": "Antigua-et-Barbuda offre 0 % d’impôt sur le revenu, les plus-values et la fortune, ainsi qu’aucune taxe sur les successions et donations. Avec un passeport accessible dès 100 000 $, ouvrant les portes de 150 pays sans visa, et 365 plages paradisiaques, c’est la destination idéale pour allier optimisation fiscale et qualité de vie. Investissez, installez-vous, profitez. Le paradis vous attend.",
         "image": "..\/image\/antigua-et-barbuda.jpg",
         "image_maps": "..\/image\/antigua-barbuda-maps.png",
@@ -104,6 +154,12 @@
             "5 étoiles Premium VIP",
             "5 étoiles Premium VIP Deluxe"
         ],
+        "price hotel": {
+            "5 étoiles" : "1000",
+            "5 étoiles premium" : "1300",
+            "5 étoiles Premium VIP" : "2000",
+            "5 étoiles Premium VIP Deluxe" : "5000"
+        },
         "loisir": [
             "Jet-Ski",
             "Plongée sous-marine",
@@ -119,6 +175,17 @@
             "Diner gastronomique 5 étoiles",
             "Soiree VIP éxecutif business class"
         ],
+        "price option": {
+            "Visite de Banque" : "400",
+            "Visite d'un Musée Colonialiste" : "200",
+            "Visite d'un vignoble" : "100",
+            "Jet-Ski" : "700",
+            "Plongée sous-marine" : "1000",
+            "Balade en yacht" : "2000",
+            "Spa et Jacuzzi Privé" : "300",
+            "Diner gastronomique 5 étoiles" : "1500",
+            "Soiree VIP éxecutif business class" : "2000"
+        },
         "description": "Les Bermudes, archipel paradisiaque situé dans l’Atlantique, sont bien plus qu’une destination de rêve : elles constituent l’un des centres financiers les plus attractifs au monde grâce à leur fiscalité ultra-avantageuse. Véritable paradis fiscal, l’archipel n’impose ni impôt sur le revenu, ni impôt sur les sociétés, ni impôt sur les plus-values, ni taxe sur les dividendes, offrant ainsi un environnement fiscal idéal pour les entreprises et les investisseurs cherchant à maximiser leurs profits.",
         "image": "..\/image\/bermudes.jpg",
         "image_maps": "..\/image\/bermudes-maps.png",
@@ -135,6 +202,12 @@
             "5 étoiles Premium VIP",
             "5 étoiles Premium VIP Deluxe"
         ],
+        "price hotel": {
+            "5 étoiles" : "1000",
+            "5 étoiles premium" : "1300",
+            "5 étoiles Premium VIP" : "2000",
+            "5 étoiles Premium VIP Deluxe" : "5000"
+        },
         "loisir": [
             "Jet-Ski",
             "Plongée sous-marine",
@@ -150,6 +223,17 @@
             "Diner gastronomique 5 étoiles",
             "Soiree VIP éxecutif business class"
         ],
+        "price option": {
+            "Visite de Banque" : "400",
+            "Visite d'un Musée Colonialiste" : "200",
+            "Visite d'un vignoble" : "100",
+            "Jet-Ski" : "700",
+            "Plongée sous-marine" : "1000",
+            "Balade en yacht" : "2000",
+            "Spa et Jacuzzi Privé" : "300",
+            "Diner gastronomique 5 étoiles" : "1500",
+            "Soiree VIP éxecutif business class" : "2000"
+        },
         "description": "Les îles Caïmans sont l’un des paradis fiscaux les plus réputés au monde, attirant entreprises, investisseurs et grandes fortunes grâce à leur régime fiscal exceptionnel. L’archipel applique une politique de zéro impôt : il n’y a ni impôt sur le revenu, ni impôt sur les sociétés, ni taxe sur les plus-values, ni droits de succession. Cette fiscalité ultra-attractive en fait une destination privilégiée pour les fonds d’investissement, les banques et les multinationales cherchant à optimiser leur structuration financière.",
         "image": "..\/image\/caimans.jpg",
         "image_maps": "..\/image\/caïmans-maps.png",
@@ -166,6 +250,12 @@
             "5 étoiles Premium VIP",
             "5 étoiles Premium VIP Deluxe"
         ],
+        "price hotel": {
+            "5 étoiles" : "1000",
+            "5 étoiles premium" : "1300",
+            "5 étoiles Premium VIP" : "2000",
+            "5 étoiles Premium VIP Deluxe" : "5000"
+        },
         "loisir": [
             "Jet-Ski",
             "Plongée sous-marine",
@@ -181,6 +271,17 @@
             "Diner gastronomique 5 étoiles",
             "Soiree VIP éxecutif business class"
         ],
+        "price option": {
+            "Visite de Banque" : "400",
+            "Visite d'un Musée Colonialiste" : "200",
+            "Visite d'un vignoble" : "100",
+            "Jet-Ski" : "700",
+            "Plongée sous-marine" : "1000",
+            "Balade en yacht" : "2000",
+            "Spa et Jacuzzi Privé" : "300",
+            "Diner gastronomique 5 étoiles" : "1500",
+            "Soiree VIP éxecutif business class" : "2000"
+        },
         "description": "Chypre est l’une des destinations les plus attractives en Europe pour les entrepreneurs et les investisseurs en quête d’optimisation fiscale. Grâce à son taux d’imposition sur les sociétés parmi les plus bas de l’Union européenne, fixé à 12,5 %, l’île offre un cadre fiscal avantageux pour les entreprises internationales. De plus, Chypre applique une exonération totale sur les plus-values mobilières, ainsi qu’une absence d’impôt sur les dividendes perçus par les sociétés étrangères, ce qui en fait un hub stratégique pour la gestion de patrimoine et les investissements.",
         "image": "..\/image\/chypre.jpeg",
         "image_maps": "..\/image\/chypre-maps.png",
@@ -197,6 +298,12 @@
             "5 étoiles Premium VIP",
             "5 étoiles Premium VIP Deluxe"
         ],
+        "price hotel": {
+            "5 étoiles" : "1000",
+            "5 étoiles premium" : "1300",
+            "5 étoiles Premium VIP" : "2000",
+            "5 étoiles Premium VIP Deluxe" : "5000"
+        },
         "loisir": [
             "Jet-Ski",
             "Plongée sous-marine",
@@ -211,6 +318,16 @@
             "Diner gastronomique 5 étoiles",
             "Soiree VIP éxecutif business class"
         ],
+        "price option": {
+            "Visite de Banque" : "400",
+            "Visite d'un Musée Colonialiste" : "200",
+            "Jet-Ski" : "700",
+            "Plongée sous-marine" : "1000",
+            "Balade en yacht" : "2000",
+            "Spa et Jacuzzi Privé" : "300",
+            "Diner gastronomique 5 étoiles" : "1500",
+            "Soiree VIP éxecutif business class" : "2000"
+        },
         "description": "Les Émirats arabes unis (EAU) sont l’un des paradis fiscaux les plus attractifs au monde, offrant un environnement fiscal ultra-compétitif et une stabilité économique exceptionnelle. Longtemps connus pour leur absence totale d’impôt sur le revenu des particuliers et des  sociétés, les EAU maintiennent un taux d’imposition de 0 % pour la plupart des entreprises établies dans les zones franches, ainsi qu’une absence de taxe sur les dividendes, les plus-values et la fortune. Depuis 2023, un impôt sur les sociétés de 9 % a été introduit, mais il reste l’un des plus bas au monde et ne s’applique pas aux entreprises dont les bénéfices sont inférieurs à un certain seuil.",
         "image": "..\/image\/EAU.jpg",
         "image_maps": "..\/image\/EAU-maps.png",
@@ -227,6 +344,12 @@
             "5 étoiles Premium VIP",
             "5 étoiles Premium VIP Deluxe"
         ],
+        "price hotel": {
+            "5 étoiles" : "1000",
+            "5 étoiles premium" : "1300",
+            "5 étoiles Premium VIP" : "2000",
+            "5 étoiles Premium VIP Deluxe" : "5000"
+        },
         "loisir": [
             "Jet-Ski",
             "Plongée sous-marine",
@@ -242,6 +365,17 @@
             "Diner gastronomique 5 étoiles",
             "Soiree VIP éxecutif business class"
         ],
+        "price option": {
+            "Visite de Banque" : "400",
+            "Visite d'un Musée Colonialiste" : "200",
+            "Visite d'un vignoble" : "100",
+            "Jet-Ski" : "700",
+            "Plongée sous-marine" : "1000",
+            "Balade en yacht" : "2000",
+            "Spa et Jacuzzi Privé" : "300",
+            "Diner gastronomique 5 étoiles" : "1500",
+            "Soiree VIP éxecutif business class" : "2000"
+        },
         "description": "Hong Kong est une métropole dynamique et un centre financier de premier plan, souvent considéré comme un véritable paradis fiscal pour les entreprises et les investisseurs du monde entier. Grâce à son régime fiscal ultra-compétitif, cette région administrative spéciale de la Chine offre un impôt sur les sociétés plafonné à 16,5 % et un impôt sur le revenu progressif ne dépassant pas 15 %. Mieux encore, il n’existe ni taxe sur la valeur ajoutée (TVA), ni impôt sur les dividendes, les gains en capital ou les successions, faisant de Hong Kong un environnement fiscal idéal pour l’optimisation financière.",
         "image": "..\/image\/hongkong.jpg",
         "image_maps": "..\/image\/hongkong-maps.png",
@@ -258,6 +392,12 @@
             "5 étoiles Premium VIP",
             "5 étoiles Premium VIP Deluxe"
         ],
+        "price hotel": {
+            "5 étoiles" : "1000",
+            "5 étoiles premium" : "1300",
+            "5 étoiles Premium VIP" : "2000",
+            "5 étoiles Premium VIP Deluxe" : "5000"
+        },
         "loisir": [
             "Jet-Ski",
             "Plongée sous-marine",
@@ -273,6 +413,17 @@
             "Diner gastronomique 5 étoiles",
             "Soiree VIP éxecutif business class"
         ],
+        "price option": {
+            "Visite de Banque" : "400",
+            "Visite d'un Musée Colonialiste" : "200",
+            "Visite d'un vignoble" : "100",
+            "Jet-Ski" : "700",
+            "Plongée sous-marine" : "1000",
+            "Balade en yacht" : "2000",
+            "Spa et Jacuzzi Privé" : "300",
+            "Diner gastronomique 5 étoiles" : "1500",
+            "Soiree VIP éxecutif business class" : "2000"
+        },
         "description": "Avec ses eaux cristallines et son climat idyllique, Fidji est plus qu’une destination de rêve : c’est aussi un refuge fiscal attractif. 0 % d’impôt sur les plus-values, les successions et les revenus étrangers, un secret bancaire préservé et un cadre favorable aux entreprises en font une option stratégique pour les investisseurs et expatriés. Ajoutez à cela 333 îles paradisiaques et une qualité de vie exceptionnelle, et vous obtenez l’équilibre parfait entre optimisation fiscale et évasion tropicale. Fidji vous attend.",
         "image": "..\/image\/les-fidji.jpeg",
         "image_maps": "..\/image\/fidji-maps.png",
@@ -289,6 +440,12 @@
             "5 étoiles Premium VIP",
             "5 étoiles Premium VIP Deluxe"
         ],
+        "price hotel": {
+            "5 étoiles" : "1000",
+            "5 étoiles premium" : "1300",
+            "5 étoiles Premium VIP" : "2000",
+            "5 étoiles Premium VIP Deluxe" : "5000"
+        },
         "loisir": [
             "Jet-Ski",
             "Plongée sous-marine",
@@ -304,6 +461,17 @@
             "Diner gastronomique 5 étoiles",
             "Soiree VIP éxecutif business class"
         ],
+        "price option": {
+            "Visite de Banque" : "400",
+            "Visite d'un Musée Colonialiste" : "200",
+            "Visite d'un vignoble" : "100",
+            "Jet-Ski" : "700",
+            "Plongée sous-marine" : "1000",
+            "Balade en yacht" : "2000",
+            "Spa et Jacuzzi Privé" : "300",
+            "Diner gastronomique 5 étoiles" : "1500",
+            "Soiree VIP éxecutif business class" : "2000"
+        },
         "description": "Jersey, petite île anglo-normande située entre la France et le Royaume-Uni, est un véritable paradis fiscal prisé des entreprises et des grandes fortunes. Grâce à son régime fiscal particulièrement attractif, l'île applique un impôt sur les sociétés de 0 %  pour la majorité des entreprises, un taux réduit de 10 % pour le secteur financier et un taux plafonné à 20 % pour certaines  activités spécifiques. De plus, il n'existe ni impôt sur les plus-values, ni impôt sur la fortune, ni droits de succession, offrant ainsi un environnement idéal pour l'optimisation fiscale et la gestion de patrimoine.",
         "image": "..\/image\/jersey.jpeg",
         "image_maps": "..\/image\/jersey-maps.png",
@@ -319,6 +487,12 @@
             "5 étoiles premium",
             "5 étoiles Premium VIP"
         ],
+        "price hotel": {
+            "5 étoiles" : "1000",
+            "5 étoiles premium" : "1300",
+            "5 étoiles Premium VIP" : "2000",
+            "5 étoiles Premium VIP Deluxe" : "5000"
+        },
         "loisir": [
             "Jet-Ski",
             "Plongée sous-marine",
@@ -334,6 +508,17 @@
             "Diner gastronomique 5 étoiles",
             "Soiree VIP éxecutif business class"
         ],
+        "price option": {
+            "Visite de Banque" : "400",
+            "Visite d'un Musée Colonialiste" : "200",
+            "Visite d'un vignoble" : "100",
+            "Jet-Ski" : "700",
+            "Plongée sous-marine" : "1000",
+            "Balade en yacht" : "2000",
+            "Spa et Jacuzzi Privé" : "300",
+            "Diner gastronomique 5 étoiles" : "1500",
+            "Soiree VIP éxecutif business class" : "2000"
+        },
         "description": "Petit paradis méconnu, Palaos offre 0 % d’impôt sur le revenu, les plus-values et les successions, ainsi qu’un cadre discret pour les investisseurs. Avec ses 500 îles aux eaux turquoise, une stabilité politique et une qualité de vie exceptionnelle, c’est l’endroit rêvé pour allier optimisation fiscale et évasion tropicale. Pourquoi choisir entre prospérité et paradis ? Aux Palaos, vous pouvez avoir les deux.",
         "image": "..\/image\/les-palaos.jpg",
         "image_maps": "..\/image\/les-palaos-maps.png",
@@ -350,6 +535,12 @@
             "5 étoiles Premium VIP",
             "5 étoiles Premium VIP Deluxe"
         ],
+        "price hotel": {
+            "5 étoiles" : "1000",
+            "5 étoiles premium" : "1300",
+            "5 étoiles Premium VIP" : "2000",
+            "5 étoiles Premium VIP Deluxe" : "5000"
+        },
         "loisir": [
             "Jet-Ski",
             "Plongée sous-marine",
@@ -365,6 +556,17 @@
             "Diner gastronomique 5 étoiles",
             "Soiree VIP éxecutif business class"
         ],
+        "price option": {
+            "Visite de Banque" : "400",
+            "Visite d'un Musée Colonialiste" : "200",
+            "Visite d'un vignoble" : "100",
+            "Jet-Ski" : "700",
+            "Plongée sous-marine" : "1000",
+            "Balade en yacht" : "2000",
+            "Spa et Jacuzzi Privé" : "300",
+            "Diner gastronomique 5 étoiles" : "1500",
+            "Soiree VIP éxecutif business class" : "2000"
+        },
         "description": "Malte est une destination de choix pour les entrepreneurs et les investisseurs en quête d’un environnement fiscal attractif au sein  de l’Union européenne. Grâce à un système fiscal avantageux, l’île offre un taux d’imposition sur les sociétés de 35 %, mais avec  un mécanisme de remboursement pouvant réduire l’impôt effectif à environ 5 % pour les actionnaires étrangers. De plus, il n’existe  ni taxe sur les plus-values pour les non-résidents, ni impôt sur la fortune, ni droits de succession, ce qui en fait un cadre idéal  pour l’optimisation fiscale et la gestion de patrimoine.",
         "image": "..\/image\/malte.jpg",
         "image_maps": "..\/image\/malte-maps.png",
@@ -381,6 +583,12 @@
             "5 étoiles Premium VIP",
             "5 étoiles Premium VIP Deluxe"
         ],
+        "price hotel": {
+            "5 étoiles" : "1000",
+            "5 étoiles premium" : "1300",
+            "5 étoiles Premium VIP" : "2000",
+            "5 étoiles Premium VIP Deluxe" : "5000"
+        },
         "loisir": [
             "Jet-Ski",
             "Plongée sous-marine",
@@ -396,6 +604,17 @@
             "Diner gastronomique 5 étoiles",
             "Soiree VIP éxecutif business class"
         ],
+        "price option": {
+            "Visite de Banque" : "400",
+            "Visite d'un Musée Colonialiste" : "200",
+            "Visite d'un vignoble" : "100",
+            "Jet-Ski" : "700",
+            "Plongée sous-marine" : "1000",
+            "Balade en yacht" : "2000",
+            "Spa et Jacuzzi Privé" : "300",
+            "Diner gastronomique 5 étoiles" : "1500",
+            "Soiree VIP éxecutif business class" : "2000"
+        },
         "description": "Avec 0 % d’impôt sur les revenus étrangers, pas de taxe sur les successions ni les plus-values, et un secret bancaire reconnu, le Panama est une destination de choix pour les entrepreneurs et investisseurs. Son visa de résidence attractif et son économie dynamique en font un hub financier stratégique. Ajoutez à cela des plages paradisiaques, une qualité de vie élevée et une fiscalité avantageuse : le Panama est l’équilibre parfait entre affaires et évasion tropicale.",
         "image": "..\/image\/le-panama.jpg",
         "image_maps": "..\/image\/le-panama-maps.png",
@@ -412,6 +631,12 @@
             "5 étoiles Premium VIP",
             "5 étoiles Premium VIP Deluxe"
         ],
+        "price hotel": {
+            "5 étoiles" : "1000",
+            "5 étoiles premium" : "1300",
+            "5 étoiles Premium VIP" : "2000",
+            "5 étoiles Premium VIP Deluxe" : "5000"
+        },
         "loisir": [
             "Jet-Ski",
             "Plongée sous-marine",
@@ -427,6 +652,17 @@
             "Diner gastronomique 5 étoiles",
             "Soiree VIP éxecutif business class"
         ],
+        "price option": {
+            "Visite de Banque" : "400",
+            "Visite d'un Musée Colonialiste" : "200",
+            "Visite d'un vignoble" : "100",
+            "Jet-Ski" : "700",
+            "Plongée sous-marine" : "1000",
+            "Balade en yacht" : "2000",
+            "Spa et Jacuzzi Privé" : "300",
+            "Diner gastronomique 5 étoiles" : "1500",
+            "Soiree VIP éxecutif business class" : "2000"
+        },
         "description": "Les Samoa-Américaines, territoire non incorporé des États-Unis dans le Pacifique Sud, se distinguent par leur autonomie fiscale et leurs paysages paradisiaques. Leur code fiscal indépendant permet une fiscalité plus avantageuse que celle des États-Unis, avec des taux réduits et des exonérations pour les entreprises. L’archipel offre des opportunités économiques variées dans le tourisme, la pêche et l’industrie agroalimentaire. Grâce à ses incitations fiscales et ses zones franches, il constitue un choix stratégique pour les investisseurs cherchant à allier rentabilité et cadre de vie exceptionnel.",
         "image": "..\/image\/les-samoa-americaine.jpeg",
         "image_maps": "..\/image\/samoa-americaine-maps.png",
@@ -443,6 +679,12 @@
             "5 étoiles Premium VIP",
             "5 étoiles Premium VIP Deluxe"
         ],
+        "price hotel": {
+            "5 étoiles" : "1000",
+            "5 étoiles premium" : "1300",
+            "5 étoiles Premium VIP" : "2000",
+            "5 étoiles Premium VIP Deluxe" : "5000"
+        },
         "loisir": [
             "Jet-Ski",
             "Plongée sous-marine",
@@ -458,6 +700,17 @@
             "Diner gastronomique 5 étoiles",
             "Soiree VIP éxecutif business class"
         ],
+        "price option": {
+            "Visite de Banque" : "400",
+            "Visite d'un Musée Colonialiste" : "200",
+            "Visite d'un vignoble" : "100",
+            "Jet-Ski" : "700",
+            "Plongée sous-marine" : "1000",
+            "Balade en yacht" : "2000",
+            "Spa et Jacuzzi Privé" : "300",
+            "Diner gastronomique 5 étoiles" : "1500",
+            "Soiree VIP éxecutif business class" : "2000"
+        },
         "description": "Les Îles Vierges britanniques (BVI) sont l’un des paradis fiscaux les plus prisés au monde, notamment pour la création de sociétés  offshore. Grâce à un régime fiscal extrêmement avantageux, l’archipel applique un impôt sur les sociétés de 0 %, aucune taxe sur les plus-values, ni impôt sur le revenu, ni droits de succession. Cette politique en fait une destination de choix pour les entrepreneurs, investisseurs et multinationales cherchant à optimiser leur fiscalité en toute légalité.",
         "image": "..\/image\/vierges.jpg",
         "image_maps": "..\/image\/vierge-maps.png",
