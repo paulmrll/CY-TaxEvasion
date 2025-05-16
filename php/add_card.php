@@ -5,7 +5,7 @@ function add_card($name, $card, $date, $cvv){
     if (!file_exists($jsonFile)) {
         exit("Erreur : Le fichier json n'existe pas");
         header('Location: ../php/inscription.php');
-    }
+    }   
 
     $content = json_decode(file_get_contents($jsonFile), true);
     if ($content == null){
