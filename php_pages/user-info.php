@@ -145,10 +145,11 @@ require_once "../php_pages/header.php";
                                         <button type="button" id="button-modify" class="button-modifier">Modifier
                                         </button>
                                         <a href="../php_pages/admin.php">
-                                            <button type="button" id="button-return" class="button-modifier"
-                                                    >Retour
+                                            <button type="button" id="button-return" class="button-modifier">
+                                                <a href="../php_pages/admin.php">
+                                                    Retour
+                                                </a>
                                             </button>
-                                        </a>
                                     </div>
 
                                 </div>
@@ -251,7 +252,7 @@ require_once "../php_pages/header.php";
 require_once "../php_pages/footer.php";
 ?>
 
-<script src="../js/admin.js"></script>
+<script src="../js/admin3.js"></script>
 
 
 </body>

@@ -44,10 +44,10 @@
         }
     },
     {
-        "name": "Wingering",
+        "name": "Wingerin",
         "firstname": "Cyprien",
         "email": "cyp@gmail.com",
-        "password": "$2y$10$sgxJ061xX3BpH7fRl9jCn.Jgluo8aVg3NclTh0NBbGlfCfBZg8wHm",
+        "password": "$2y$10$T0WDNcI9aKsWToL5dWismOa1Z0wjoo9Q1AoSWVCQFYoFsnOE5oUeO",
         "inscription_date": "23-03-2025 21:42:41",
         "connexion_date": "23-03-2025 21:42:41",
         "role": "Utilisateur",
@@ -129,28 +129,6 @@
             "rue": "a",
             "ville": "a",
             "cdp": "9500"
-        }
-    },
-    {
-        "name": "a",
-        "firstname": "aa",
-        "email": "a@gmail.com",
-        "password": "$2y$10$QR7tEKG0490q0aVPkTyqveO7KzmQvnprVkdwBMBlhFsTzjWVH1HLW",
-        "inscription_date": "02-05-2025 14:01:43",
-        "connexion_date": "02-05-2025 14:47:08",
-        "role": "Utilisateur",
-        "card": {
-            "name": "",
-            "number": 0,
-            "date": 0,
-            "cvv": 0
-        },
-        "birth": "2025-05-01",
-        "adress": {
-            "number": "2",
-            "rue": "buifzh",
-            "ville": "huifezuif",
-            "cdp": "98980"
         }
     }
 ]
