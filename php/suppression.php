@@ -22,6 +22,31 @@ function supprimer_user($mail){
         }
     }
 }
+function supprimer_travel_user($destination){
+    $file = "../data/travel-user.json";
+    if (!file_exists($file)){
+        header("Location: ../php_pages/admin.php");
+        exit();
+    }
+    $content = json_decode(file_get_contents($file), true);
+    if ($content == null || !isset($content)){
+        header("Location: ../php_pages/admin.php");
+        exit();
+    }
+    for ($i = 0; $i < count($content); $i++){
+        for ($j = 0; $j < count($content[$i]['travels']); $j++){
+            if ($content[$i]['travels'][$j]['destination'] == $destination){
+                unset($content[$i]['travels'][$j]);
+                $content[$i]['travels'] = array_values($content[$i]['travels']);
+                file_put_contents($file, json_encode($content, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT));
+                header("Location: ../php_pages/admin.php");
+                exit();
+            }
+        }
+    }
+    header("Location: ../php_pages/admin.php");
+    exit();
+}
 
 function supprimer_travel($destination){
     $file = "../data/travel.json";
@@ -39,11 +64,15 @@ function supprimer_travel($destination){
             unset($content[$i]);
             $content = array_values($content);
             file_put_contents($file, json_encode($content, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT));
+            supprimer_travel_user($destination);
             header("Location: ../php_pages/admin.php");
             exit();
         }
     }
+    header("Location: ../php_pages/admin.php");
+    exit();
 }
+
 
 if (isset($_POST['action'])){
     if($_POST['action'] == "delete"){

@@ -61,58 +61,6 @@
                 "transaction": "0",
                 "person": "2",
                 "continent": "Europe"
-            },
-            {
-                "destination": "Bermudes",
-                "hotel": "5 étoiles premium",
-                "loisir": [
-                    "Jet-Ski",
-                    "Plongée sous-marine",
-                    "Balade en yacht"
-                ],
-                "visite": [
-                    "Visite de Banque",
-                    "Visite d'un Musée Colonialiste",
-                    "Visite d'un vignoble"
-                ],
-                "relaxation": [
-                    "Spa et Jacuzzi Privé",
-                    "Diner gastronomique 5 étoiles",
-                    "Soiree VIP éxecutif business class"
-                ],
-                "departure": "2025-05-19",
-                "return": "2025-05-25",
-                "reservation": "Paiement en attente",
-                "prix": 340776,
-                "transaction": "0",
-                "person": "2",
-                "continent": "Amérique"
-            },
-            {
-                "destination": "Zfa",
-                "hotel": "5 étoiles",
-                "loisir": [
-                    "Jet-Ski",
-                    "Plongée sous-marine",
-                    "Balade en yacht"
-                ],
-                "visite": [
-                    "Visite de Banque",
-                    "Visite d'un Musée Colonialiste",
-                    "Visite d'un vignoble'"
-                ],
-                "relaxation": [
-                    "Spa et Jacuzzi Privé",
-                    "Diner gastronomique 5 étoiles",
-                    "Soiree VIP éxecutif business class"
-                ],
-                "departure": "2025-05-19",
-                "return": "2025-05-25",
-                "reservation": "Paiement en attente",
-                "prix": 264072,
-                "transaction": "0",
-                "person": "2",
-                "continent": "Europe"
             }
         ]
     },
