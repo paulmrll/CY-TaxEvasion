@@ -187,7 +187,7 @@ async function updateUser() {
     console.log("updateUser");
     const form = document.getElementById("form1");
     const formData = new FormData(form);
-     const reponse = await fetch("../php/modification.php",{
+    const reponse = await fetch("../php/modification.php",{
             method: "POST",
             body: formData,
         });

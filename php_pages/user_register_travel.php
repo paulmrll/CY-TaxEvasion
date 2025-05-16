@@ -65,7 +65,7 @@ require_once "../php_pages/header.php";
     <div class="container">
     <form id="form1" method="post" action="../php/register_travel.php">
        
-            <input type="hidden" value="<?php echo $content[$i]["destination"]?>" name="destination">
+            <input id="destination" type="hidden" value="<?php echo $content[$i]["destination"]?>" name="destination">
 
             <div class="reservation-slider-container">
 
@@ -73,10 +73,8 @@ require_once "../php_pages/header.php";
                     <h5>Hotêl :</h5>
                     <label>
                         <select id="hotel" name="hotel" required>
-                        <option value="" selected hidden>Choisissez une option</option>
-                            <?php for ($o= 0; $o < count($content[$i]["hotel"]); $o++):?>
-                            <option value="<?php echo $content[$i]["hotel"][$o]?>"><?php echo $content[$i]["hotel"][$o]?></option>
-                            <?php endfor;?>
+                        
+                            
                         </select>
                     </label>
                 </div>
@@ -84,33 +82,24 @@ require_once "../php_pages/header.php";
 
                 <div class="reservation-checkbox">
                     <h5>Activités nautiques :</h5>
-                    <div>
-                    <?php for ($o = 0; $o < count($content[$i]["loisir"]); $o++): ?>
-                    <input type="checkbox" id="loisir<?php echo $o ?>" name="loisir[]" value="<?php echo $content[$i]["loisir"][$o] ?>">
-                    <label class="reservation-button" for="loisir<?php echo $o ?>"><?php echo $content[$i]["loisir"][$o] ?></label>
-                    <?php endfor; ?>
+                    <div id="loisir_div">
+                    
                     </div>
                 </div>
 
 
                 <div class="reservation-checkbox">
                     <h5>Visite guidée :</h5>
-                    <div>
-                    <?php for ($o = 0; $o < count($content[$i]["visite"]); $o++): ?>
-                    <input type="checkbox" id="visite<?php echo $o ?>" name="visite[]" value="<?php echo $content[$i]["visite"][$o] ?>">
-                    <label class="reservation-button" for="visite<?php echo $o ?>"><?php echo $content[$i]["visite"][$o] ?></label>
-                    <?php endfor; ?>
+                    <div id="visite_div">
+                    
                     </div>
                 </div>
 
 
                 <div class="reservation-checkbox">
                     <h5>Activité de détentes :</h5>
-                    <div>
-                    <?php for ($o = 0; $o < count($content[$i]["relaxation"]); $o++): ?>
-                    <input type="checkbox" id="relaxation<?php echo $o ?>" name="relaxation[]" value="<?php echo $content[$i]["relaxation"][$o] ?>">
-                    <label class="reservation-button" for="relaxation<?php echo $o ?>"><?php echo $content[$i]["relaxation"][$o] ?></label>
-                    <?php endfor; ?>
+                    <div id="relaxation_div">
+                    
                     </div>
                 </div>
                 <div class="reservation-checkbox">

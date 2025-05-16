@@ -43,24 +43,25 @@
                 "continent": "Amérique"
             },
             {
-                "destination": "Monaco",
-                "hotel": "5 étoiles Premium VIP Deluxe",
+                "destination": "Panama",
+                "hotel": "5 étoiles premium",
                 "loisir": [
-                    "Visite de Banque"
+                    "Jet-Ski"
                 ],
                 "visite": [
-                    "Visite de Banque"
+                    "Visite de Banque",
+                    "Visite d'un Musée Colonialiste"
                 ],
                 "relaxation": [
                     "Spa et Jacuzzi Privé"
                 ],
-                "departure": "2025-05-25",
+                "departure": "2025-05-19",
                 "return": "2025-05-31",
                 "reservation": "Paiement en attente",
-                "prix": 402600,
+                "prix": 250800,
                 "transaction": "0",
-                "person": "2",
-                "continent": "Europe"
+                "person": "1",
+                "continent": "Amérique"
             }
         ]
     },

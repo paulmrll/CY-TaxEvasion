@@ -89,10 +89,6 @@ async function price(){
 }
 
 async function checkBox() {
-    let hotel = document.querySelectorAll("input[type='checkbox']");
-    let checkBox_visite = document.querySelectorAll("input[name='visite[]']");
-    let checkBox_relaxation = document.querySelectorAll("input[name='relaxation[]']");
-    let checkBox_loisir = document.querySelectorAll("input[name='loisir[]']");
     let destination = document.querySelector("#destination").value;
     console.log(destination);
     try{
@@ -104,9 +100,24 @@ async function checkBox() {
         }
         
         const data = await response.json();
+
+        const response2 = await fetch(`../php/give_checkbox.php?destination=${encodeURIComponent(destination)}&todo=${encodeURIComponent(document.querySelector("#abc").value)}`);
+        console.log(response.status);
+        if (!response.ok) {
+            console.log("Erreur HTTP :", response.status);
+            return;
+        }
+        console.log("a");
+        const data2 = await response2.json();
         
     for (let i = 0; i < data.visite.length; i++){
+        console.log(data.visite[i]);
         let visite = document.createElement("input");
+        for (let j = 0; j < data2.visite.length; j++){
+            if (data.visite[i] == data2.visite[j]){
+                visite.checked = true;
+            }
+        }
         visite.type = "checkbox";
         visite.name = "visite[]";
         visite.value = data.visite[i];
@@ -116,11 +127,18 @@ async function checkBox() {
         label.innerHTML = data.visite[i];
         label.classList.add("reservation-button");
         document.querySelector("#visite_div").appendChild(visite);
+        
         document.querySelector("#visite_div").appendChild(label);
         document.querySelector("#visite_div").appendChild(document.createElement("br"));
     }
     for (let i = 0; i < data.relaxation.length; i++){
+        console.log(data.relaxation[i]);
         let relaxation = document.createElement("input");
+        for (let j = 0; j < data2.relaxation.length; j++){
+            if (data.relaxation[i] == data2.relaxation[j]){
+                relaxation.checked = true;
+            }
+        }
         relaxation.type = "checkbox";
         relaxation.name = "relaxation[]";
         relaxation.value = data.relaxation[i];
@@ -135,7 +153,14 @@ async function checkBox() {
 
     }
     for (let i = 0; i < data.loisir.length; i++){
+        console.log(data.loisir[i]);
         let loisir = document.createElement("input");
+        for (let j = 0; j < data2.loisir.length; j++){
+            if (data.loisir[i] == data2.loisir[j]){
+                console.log(data2.loisir[j]);
+                loisir.checked = true;
+            }
+        }
         loisir.type = "checkbox";
         loisir.name = "loisir[]";
         loisir.value = data.loisir[i];
@@ -153,6 +178,12 @@ async function checkBox() {
 
     for (let i = 0; i < data.hotel.length; i++) {
         let option = document.createElement("option");
+        for (let j = 0; j < data2.hotel.length; j++){
+            if (data.hotel[i] == data2.hotel[j]){
+                option.selected = true;
+            }
+        }
+        console.log(data2.hotel[0]);
         option.value = data.hotel[i];
         option.innerHTML = data.hotel[i];
         selectHotel.appendChild(option);
@@ -164,6 +195,7 @@ async function checkBox() {
             validateForm();
         });
     }
+    return inputs;
     } catch(e){
         console.log("Erreur HTTP :", e.message);
     }
@@ -171,20 +203,26 @@ async function checkBox() {
 }
 
 window.addEventListener("DOMContentLoaded", () => {
-    
+
+
     checkBox();
+
+
 
     let hotel = document.querySelector("#hotel");
     let submitButton = document.querySelector("button[type='submit']");
     submitButton.disabled = true;
     minimumDate();
     maximumDate();
+
     document.getElementById("departure").addEventListener("change", minimumDate);
     document.getElementById("return").addEventListener("change", maximumDate);
+
     hotel.addEventListener("change", () => {
         price();
         validateForm();
     });
-    
 
+    
 });
+

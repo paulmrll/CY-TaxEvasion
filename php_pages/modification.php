@@ -93,18 +93,16 @@ require_once "../php_pages/header.php";
     <div class="container">
     <form id="form1" method="post" action="../php/modification_travel.php">
        
-        <input type="hidden" name="destination" value="<?php echo $content_travel[$index_travel]["destination"]?>">
-
+            <input type="hidden" name="destination" value="<?php echo $content_travel[$index_travel]["destination"]?>" id="destination">
+            <input type="hidden" name="a" id='abc' value="<?php echo $_SESSION['email']?>">
             <div class="reservation-slider-container">
 
                 <div class="reservation-select">
                     <h5>Hotêl :</h5>
                     <label>
                         <select id="hotel" name="hotel" required>
-                        <option value="<?php echo $content[$a]['travels'][$index]['hotel']?>"><?php echo $content[$a]['travels'][$index]['hotel']?></option>
-                            <?php for ($o= 0; $o < count($content_travel[$index_travel]["hotel"]); $o++):?>
-                            <option value="<?php echo $content_travel[$index_travel]["hotel"][$o]?>"><?php echo $content_travel[$index_travel]["hotel"][$o]?></option>
-                            <?php endfor;?>
+                        
+                            
                         </select>
                     </label>
                 </div>
@@ -112,49 +110,24 @@ require_once "../php_pages/header.php";
 
                 <div class="reservation-checkbox">
                     <h5>Activités nautiques :</h5>
-                    <div>
-                    <?php for ($o = 0; $o < count($content_travel[$index_travel]["loisir"]); $o++): ?>
-                    <input type="checkbox" id="loisir<?php echo $o ?>" name="loisir[]" value="<?php echo $content_travel[$index_travel]["loisir"][$o] ?>"
-                    <?php if (in_array($content_travel[$index_travel]["loisir"][$o], $content[$a]['travels'][$index]['loisir'])){
-                        echo "checked";
-                    }
-                    ?>
-                    >
-                    <label class="reservation-button" for="loisir<?php echo $o ?>"><?php echo $content_travel[$index_travel]["loisir"][$o] ?></label>
-                    <?php endfor; ?>
-
+                    <div id="loisir_div">
+                    
                     </div>
                 </div>
 
 
                 <div class="reservation-checkbox">
                     <h5>Visite guidée :</h5>
-                    <div>
-                    <?php for ($o = 0; $o < count($content_travel[$index_travel]["visite"]); $o++): ?>
-                    <input type="checkbox" id="visite<?php echo $o ?>" name="visite[]" value="<?php echo $content_travel[$index_travel]["visite"][$o] ?>"
-                    <?php if (in_array($content_travel[$index_travel]["visite"][$o], $content[$a]['travels'][$index]['visite'])){
-                        echo "checked";
-                    }
-                    ?>
-                    >
-                    <label class="reservation-button" for="visite<?php echo $o ?>"><?php echo $content_travel[$index_travel]["visite"][$o] ?></label>
-                    <?php endfor; ?>
+                    <div id="visite_div">
+                    
                     </div>
                 </div>
 
 
                 <div class="reservation-checkbox">
                     <h5>Activité de détentes :</h5>
-                    <div>
-                    <?php for ($o = 0; $o < count($content_travel[$index_travel]["relaxation"]); $o++): ?>
-                    <input type="checkbox" id="relaxation<?php echo $o ?>" name="relaxation[]" value="<?php echo $content_travel[$index_travel]["relaxation"][$o] ?>"
-                    <?php if (in_array($content_travel[$index_travel]["relaxation"][$o], $content[$a]['travels'][$index]['relaxation'])){
-                        echo "checked";
-                    }
-                    ?>
-                    >
-                    <label class="reservation-button" for="relaxation<?php echo $o ?>"><?php echo $content_travel[$index_travel]["relaxation"][$o] ?></label>
-                    <?php endfor; ?>
+                    <div id="relaxation_div">
+                    
                     </div>
                 </div>
                 <div class="reservation-checkbox">
@@ -207,7 +180,7 @@ require_once "../php_pages/footer.php";
 ?>
 
 
-<script src="../js/user_register_travel.js"></script>
+<script src="../js/user_modify_travel.js"></script>
 </body>
 </html>
 
