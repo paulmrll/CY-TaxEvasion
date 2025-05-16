@@ -144,9 +144,11 @@ require_once "../php_pages/header.php";
                                     <div class="button-container">
                                         <button type="button" id="button-modify" class="button-modifier">Modifier
                                         </button>
-                                        <button type="button" id="button-return" class="button-modifier"
-                                                onclick="history.back()">Retour
-                                        </button>
+                                        <a href="../php_pages/admin.php">
+                                            <button type="button" id="button-return" class="button-modifier"
+                                                    >Retour
+                                            </button>
+                                        </a>
                                     </div>
 
                                 </div>

@@ -717,53 +717,5 @@
         "image-flag": "..\/image\/vierges-flag.png",
         "prix": "18000",
         "continent": "Amérique"
-    },
-    {
-        "destination": "Zfa",
-        "name": "Zfa",
-        "hotel": [
-            "5 étoiles",
-            "5 étoiles Premium",
-            "5 étoiles Premium VIP",
-            "5 étoiles Premium VIP Deluxe"
-        ],
-        "price_hotel": {
-            "5 étoiles": 400,
-            "5 étoiles Premium": 335,
-            "5 étoiles Premium VIP": 453,
-            "5 étoiles Premium VIP Deluxe": 588
-        },
-        "loisir": [
-            "Jet-Ski",
-            "Plongée sous-marine",
-            "Balade en yacht"
-        ],
-        "visite": [
-            "Visite de Banque",
-            "Visite d'un Musée Colonialiste",
-            "Visite d'un vignoble'"
-        ],
-        "relaxation": [
-            "Spa et Jacuzzi Privé",
-            "Diner gastronomique 5 étoiles",
-            "Soiree VIP éxecutif business class"
-        ],
-        "price_option": {
-            "Jet-Ski": 398,
-            "Plongée sous-marine": 360,
-            "Balade en yacht": 527,
-            "Spa et Jacuzzi Privé": 337,
-            "Diner gastronomique 5 étoiles": 321,
-            "Soiree VIP éxecutif business class": 456,
-            "Visite de Banque": 344,
-            "Visite d'un Musée Colonialiste": 332,
-            "Visite d'un vignoble'": 531
-        },
-        "description": "dazdfa",
-        "image": "..\/image\/Capture d’écran 2025-05-08 à 22.32.27.png",
-        "image_maps": "..\/image\/Capture d’écran 2025-05-15 à 18.23.28.png",
-        "image-flag": "..\/image\/Capture d’écran 2025-05-16 à 08.30.39.png",
-        "prix": "18000",
-        "continent": "Europe"
     }
 ]
