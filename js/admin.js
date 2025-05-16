@@ -88,7 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
 
             buttonModify.textContent = 'Modifier';
-            buttonModify.disabled = false;
+            buttonModify.disabled = true;
             buttonReturn.disabled = false;
 
 
@@ -108,7 +108,7 @@ document.addEventListener('DOMContentLoaded', () => {
         } catch (error){
             console.error('Error fetching user data:', error);
         }
-
+        registerOriginalValues();
     }
     registerOriginalValues();
     for (let i = 0; i < inputAll.length; i++){

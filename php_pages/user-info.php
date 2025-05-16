@@ -252,7 +252,7 @@ require_once "../php_pages/header.php";
 require_once "../php_pages/footer.php";
 ?>
 
-<script src="../js/admin3.js"></script>
+<script src="../js/admin.js"></script>
 
 
 </body>
