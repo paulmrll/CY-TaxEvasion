@@ -150,7 +150,7 @@ require_once "../php_pages/header.php";
 
                                 </div>
                             </div>
-                        </form>
+                        
                     </div>
 
                     <div class="utilisateur-image">
@@ -171,6 +171,7 @@ require_once "../php_pages/header.php";
                         </select>
 
                     </div>
+                    </form>
                 </div>
 
 
@@ -198,7 +199,7 @@ require_once "../php_pages/header.php";
 
                                 <div class="line-container">
                                     <div class="grid-item">
-                                        <a href="../php_pages/destination-pages?destination=<?php echo $content[$id_travel]["travels"][$i]["destination"] ?>"
+                                        <a href="../php_pages/description-pages.php?destination=<?php echo $content[$id_travel]["travels"][$i]["destination"] ?>"
                                            class="image-select">
                                             <img src="../image/<?php echo $url_image ?>" alt="<?php echo $name ?>">
                                             <h3><?php echo $name ?></h3>
