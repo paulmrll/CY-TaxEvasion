@@ -206,10 +206,10 @@ require_once "../php_pages/header.php";
                                     </div>
 
                                     <?php
-                                    if ($content[$id_travel]['travels'][$i]['reservation'] == "Paiement en attente"):?>
+                                    if ($content[$id_travel]['travels'][$i]['reservation'] != "Payé"):?>
                                         <p class="Non-réservé">
                                             <?php
-                                            echo $content[$id_travel]['travels'][$i]['reservation'] . " de " . $content[$a]['travels'][$i]['prix'] . "€"; ?>
+                                            echo $content[$id_travel]['travels'][$i]['reservation'] . " de " . $content[$id_travel]['travels'][$i]['prix'] . "€"; ?>
                                         </p>
                                     <?php else: ?>
                                         <p class="Réservé">
