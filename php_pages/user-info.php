@@ -120,10 +120,6 @@ require_once "../php_pages/header.php";
                                         </div>
                                     </div>
 
-
-                                    <input type="hidden" name="password"
-                                           value="<?php echo $content_user[$id]['password']; ?>" required>
-
                                     <input type="hidden" name="nb"
                                            value="<?php echo $content_user[$id]['adress']["number"]; ?>" required>
 
