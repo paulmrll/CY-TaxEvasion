@@ -9,11 +9,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const select = document.getElementById('role-select');
     const roleSelect = document.getElementById('role-select');
     const roleHidden = document.getElementById('role-hidden');
+    const returnLink = document.getElementById('return-link');
 
 
-
+    let canReturn = true;
     buttonModify.disabled = true;
-
 
 
     function registerOriginalValues() {
@@ -68,6 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         buttonModify.disabled = true;
         buttonReturn.disabled = true;
+        canReturn = false;
         select.disabled = true;
 
         let dotCount = 0;
@@ -90,7 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
             buttonModify.textContent = 'Modifier';
             buttonModify.disabled = true;
             buttonReturn.disabled = false;
-
+            canReturn = true;
 
         }, 2000);
 
@@ -122,4 +123,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     buttonModify.addEventListener('click', fetchUserData);
+
+    returnLink.addEventListener("click", function(event) {
+        if (!canReturn) {
+            event.preventDefault();
+        }
+    });
+
 });

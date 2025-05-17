@@ -146,7 +146,7 @@ require_once "../php_pages/header.php";
                                         </button>
                                         <a href="../php_pages/admin.php">
                                             <button type="button" id="button-return" class="button-modifier">
-                                                <a href="../php_pages/admin.php">
+                                                <a id="return-link" href="../php_pages/admin.php">
                                                     Retour
                                                 </a>
                                             </button>

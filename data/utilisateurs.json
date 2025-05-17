@@ -44,10 +44,10 @@
         }
     },
     {
-        "name": "Wingering",
+        "name": "Wingerin",
         "firstname": "Cyprien",
         "email": "cyp@gmail.com",
-        "password": "$2y$10$PKPM0sPoa9IaxlIEhgXwT.OlSV8P6rMZUMI8AllSeE.Xa6l5vPssy",
+        "password": "$2y$10$S\/7X3M0dTUPYeZYSTup1huVrBFStcLBxxLw9.di1B5xbvqKxKoJI6",
         "inscription_date": "23-03-2025 21:42:41",
         "connexion_date": "23-03-2025 21:42:41",
         "role": "Utilisateur",

@@ -342,6 +342,14 @@ main div button img {
     border-radius: 0.8rem;
 }
 
+.button-voyage:hover{
+    transform: scale(0.9);
+}
+
+.button-voyage:hover{
+    transform: scale(0.9);
+}
+
 a {
     text-decoration: none;
 }
@@ -385,6 +393,8 @@ a {
 }
 
 
+
+
 .role-select{
     cursor: pointer;
     width: 70%;
@@ -393,4 +403,9 @@ a {
     background: var(--color-background);
     border-radius: 0.3rem;
     border: 0.08rem solid var(--color-dark-writing);
+}
+
+
+.button-modifier a{
+    color: var(--color-dark-writing);
 }
