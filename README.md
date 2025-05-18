@@ -20,15 +20,16 @@
             <p>CY-TaxEvasion Pre-Ing-2 S2 project</p>
             <p>Subject : <a href="Projet_Click_journeY_v1.4_PHASE4.pdf" target="_blank"><strong>Project.pdf</strong></a></p>
             <p>CY-TaxEvasion is a fictitious travel agency specializing in exotic destinations and tax havens. This project was carried out as part of the web development module in semester 4.</p>
-            
-            email de connexion utilisateur : {
+           
+            email de connexion utilisateur : 
     flo@gmail.com,
     paul@gmail.com,
     cyp@gmail.com,
     romain@gmail.com,
     olivier@gmail.com
 
-mdp de connexion pour tout les utilisateurs : 1234
+    mdp de connexion pour tout les utilisateurs : 1234
+    ⚠️Penser à changer le lien vers le formulaire de paiement "$retour" ligne49 du fichier paiement.php
 
  <section>
             <h2>🧭 How to Use the Website</h2>
