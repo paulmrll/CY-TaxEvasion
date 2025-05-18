@@ -30,6 +30,24 @@
     olivier@gmail.com
 
 mdp de connexion pour tout les utilisateurs : 1234
+
+ <section>
+            <h2>🧭 How to Use the Website</h2>
+            <ol>
+                <li><strong>Access the Home Page:</strong> Open <code>index.php</code> in your browser.</li>
+                <li><strong>Create an Account:</strong> Go to the "Sign up" page and fill in your details.</li>
+                <li><strong>Log in:</strong> Use one of the provided accounts above to log in and access your user space.</li>
+                <li><strong>Modify your Profile:</strong> You can edit your personal details. </li>
+                <li><strong>Book a Trip:</strong>
+                    <ul>
+                        <li>Go to the "Destinations" section.</li>
+                        <li>Select a destination and customize your trip.</li>
+                        <li>Submit to confirm your booking.</li>
+                    </ul>
+                </li>
+                <li>✈️have a nice trip✈️ </li>
+            </ol>
+        </section>
            
         
 <h3>Contributors</h3>
