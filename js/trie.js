@@ -32,7 +32,6 @@ for (let j = 0; j < select.length; j++){
                     break
             }
         }
-
         let destinationdiv = document.querySelectorAll("div.grid-item");
         let compteur = 0;
         for (let i = 0; i < destinationdiv.length; i++){
