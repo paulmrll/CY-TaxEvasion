@@ -172,6 +172,7 @@ require_once "../php_pages/header.php";
                         <a class="button" href="../php_pages/add_card.php">Ajouter Votre CB</a>
                     </div>
 
+
                     <div class="utilisateur-image">
                             <img src="<?php if ($_SESSION['role'] == "Admin"){
                                 echo "../image/admin-logo.png";
@@ -202,12 +203,12 @@ require_once "../php_pages/header.php";
                         if (file_exists("../data/travel.json")) {
                             $content_travel = json_decode(file_get_contents("../data/travel.json"), true);
                         }
-
+                        $compteur = 0;
                         if ($a < 0 || count($content[$a]['travels']) == 0 || $content_travel === null || $content == null) {
                             echo "<h1>Vous n'avez pas encore de voyages</h1>";
                         }  else {
                         echo "<h1>Mes Voyages :</h1>";
-                        $compteur = 0;
+                        
                         for ($i = 0; $i < count($content[$a]['travels']); $i++):
                             if ($content[$a]['travels'][$i]['reservation'] === "Payé") {
                                 $compteur++;
@@ -262,9 +263,7 @@ require_once "../php_pages/header.php";
                             }
                                 endfor;
                                 }
-                                if ($compteur == 0) {
-                                    echo "<h1>Vous n'avez pas encore de Voyages</h1>";
-                                }
+                                
                             } else {
                                 echo "<h1>Vous n'avez pas encore de Voyages</h1>";
                             }
@@ -275,6 +274,8 @@ require_once "../php_pages/header.php";
                             </div>
                         </div>
 
+                    </div>
+                    </div>
                     </div>
 
 
