@@ -288,7 +288,7 @@ require_once "../php_pages/header.php";
                     $compteur = 0;
                     if ($a < 0 || count($content[$a]['travels']) == 0 || $content_travel === null || $content == null) {
                         echo "<h1>Rien dans le panier</h1>";
-                    }
+                    } else {
                     for ($i = 0; $i < count($content[$a]['travels']); $i++){
                         if ($content[$a]['travels'][$i]['reservation'] != "Payé") {
                             $compteur++;
@@ -361,8 +361,10 @@ require_once "../php_pages/header.php";
 
 
                                 <?php
+                        
                                 }
                                 endfor;
+                            }
                                 
                                 ?>
 
