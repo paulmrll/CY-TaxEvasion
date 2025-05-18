@@ -49,6 +49,7 @@ require_once "../php_pages/header.php";
         <div class="main-grid">
             <div class="compte-info-container">
                 <div class="utilisateur-line-container">
+
                     <div class="box-container">
 
                         <form id="form1" action="../php/modification.php" method="post">
@@ -184,6 +185,7 @@ require_once "../php_pages/header.php";
                 </div>
 
 
+
                 <div class="box-container-voyage">
                         <?php
 
@@ -281,6 +283,7 @@ require_once "../php_pages/header.php";
 
 
 
+
                 <div class="box-container-voyage">
 
                         <h1>Panier :</h1>
@@ -370,12 +373,15 @@ require_once "../php_pages/header.php";
 
 
 
-                </div>
                             </div>
+                        </div>
 
+                    </div>
+
+
+                </div>
+            </div>
         </div>
-
-    </div>
     </div>
     </main>
     <?php
