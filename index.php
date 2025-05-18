@@ -276,7 +276,7 @@ if ($content == null) {
         <div class="contact">
 
             <div class="color-mode">
-                <a href="#" onclick="changeTheme()" class="footer-contact">
+                <a href="#" onclick="changeThemeMain()" class="footer-contact">
                     <img class="theme-logo" id="theme-logo" src="image/sun.png" alt="theme-logo">
                 </a>
                 <p>Thèmes</p>

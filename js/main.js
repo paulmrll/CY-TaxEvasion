@@ -21,6 +21,20 @@ function changeTheme() {
         logo.src = (path === '/' || path.endsWith('index.php')) ? "image/sun.png" : "../image/sun.png";
     }
 }
+function changeThemeMain() {
+    const logo = document.getElementById('theme-logo');
+    const path = window.location.pathname;
+
+    document.body.classList.toggle('dark-theme');
+
+    if (document.body.classList.contains('dark-theme')) {
+        document.cookie = "theme=dark; path=/; max-age=31536000"; // 1 an
+        logo.src = (path === '/' || path.endsWith('index.php')) ? "image/moon.png" : "image/moon.png";
+    } else {
+        document.cookie = "theme=light; path=/; max-age=31536000"; // 1 an
+        logo.src = (path === '/' || path.endsWith('index.php')) ? "image/sun.png" : "image/sun.png";
+    }
+}
 
 window.onload = function () {
     const savedTheme = getCookie('theme');
