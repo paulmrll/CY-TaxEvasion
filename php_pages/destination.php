@@ -42,7 +42,7 @@ require_once "../php_pages/header.php";
 
         </div>
         <img class="intro-image" src="../image/destination-intro.jpg" alt="destination-image">
-    </div>
+    </div>  
 
     <div class="destination-option-container">
         <h2>Choisissez vos préférences :</h2>
