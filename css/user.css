@@ -60,11 +60,12 @@ h3 {
 }
 
 .box-container-voyage {
+    max-width: 100%;
     margin: 0 15rem;
     background: var(--color-background-2);
     border-radius: 2rem;
     padding: 1.5rem 2rem;
-    min-width: 60rem;
+
 }
 
 
