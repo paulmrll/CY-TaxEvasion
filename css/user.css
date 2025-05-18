@@ -59,6 +59,7 @@ h3 {
     min-width: 60rem;
 }
 .box-container-voyage {
+    margin: 1 15rem;
     background: var(--color-background-2);
     border-radius: 2rem;
     padding: 1.5rem 2rem;
