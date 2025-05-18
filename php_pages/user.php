@@ -286,6 +286,18 @@ require_once "../php_pages/header.php";
                         <h1>Panier :</h1>
                     <?php
                     $compteur = 0;
+                    if ($a < 0 || count($content[$a]['travels']) == 0 || $content_travel === null || $content == null) {
+                        echo "<h1>Rien dans le panier</h1>";
+                    }  else {
+                        for ($i = 0; $i < count($content); $i++) {
+                            if ($content[$i]["email"] === $_SESSION['email']) {
+                                $a = $i;
+                                break;
+                            } else {
+                                $a = -2;
+                            }
+                        }
+                    }
                     for ($i = 0; $i < count($content[$a]['travels']); $i++){
                         if ($content[$a]['travels'][$i]['reservation'] != "Payé") {
                             $compteur++;
@@ -360,9 +372,7 @@ require_once "../php_pages/header.php";
                                 <?php
                                 }
                                 endfor;
-                                if ($compteur == 0) {
-                                    echo "<h1>Rien dans le panier</h1>";
-                                }
+                                
                                 ?>
 
 
