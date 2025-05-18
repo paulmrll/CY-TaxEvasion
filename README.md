@@ -1,6 +1,5 @@
 
 
-⚠️Penser à changer le lien vers le formulaire de paiement "$retour" ligne49 du fichier paiement.php
 <!DOCTYPE html>
 <html lang="en">
 <head>
