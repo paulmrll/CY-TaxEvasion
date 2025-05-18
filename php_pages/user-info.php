@@ -140,23 +140,22 @@ require_once "../php_pages/header.php";
                                     <div class="button-container">
                                         <button type="button" id="button-modify" class="button-modifier">Modifier
                                         </button>
-                                        <a href="../php_pages/admin.php">
-                                            <button type="button" id="button-return" class="button-modifier">
-                                                <a id="return-link" href="../php_pages/admin.php">
-                                                    Retour
-                                                </a>
-                                            </button>
+                                        <button type="button" id="button-return" class="button-modifier">
+                                            <a id="return-link">
+                                                Retour
+                                            </a>
+                                        </button>
                                     </div>
 
                                 </div>
                             </div>
-                        
+
                     </div>
 
                     <div class="utilisateur-image">
-                        <button>
+                        <div>
                             <img src="../image/user-icone.png" alt="image-utilisateur">
-                        </button>
+                        </div>
 
                         <select class="role-select" name="role" id="role-select">
                             <?php if ($content_user[$id]['role'] === 'VIP'): ?>

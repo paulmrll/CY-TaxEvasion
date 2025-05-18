@@ -96,7 +96,7 @@ if ($content == null) {
             <label class="search-bar">
                 <span class="search-bar-title">Recherchez votre destination de rêve</span>
                 <input type="text" name="destination" list="destination" placeholder="Entrez une destination..."
-                       required>
+                       required autocomplete="off">
                 <datalist id="destination">
                     <?php
                     for ($i = 0; $i < count($content); $i++):
@@ -108,6 +108,20 @@ if ($content == null) {
             </label>
         </form>
     </div>
+
+    <script>
+        document.querySelector('form').addEventListener('submit', function (e) {
+            const input = document.querySelector('input[name="destination"]');
+            const datalist = document.getElementById('destination');
+            const options = Array.from(datalist.options).map(opt => opt.value.toLowerCase());
+            const saisie = input.value.trim().toLowerCase();
+
+            if (!options.includes(saisie)) {
+                e.preventDefault();
+                window.location.href = 'php_pages/page_introuvable.php?destination=' + encodeURIComponent(input.value);
+            }
+        });
+    </script>
 
 
     <div class="map-container">

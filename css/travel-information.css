@@ -111,7 +111,8 @@ h6{
 }
 
 
-
+.modifier-button:hover {
+    background: var(--color-header-active-lighter);}
 
 
 

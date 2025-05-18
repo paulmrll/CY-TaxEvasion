@@ -75,6 +75,16 @@ table button:hover[type="submit"]{
     border: 0.1vmin var(--color-submit) solid;
 }
 
+table button[type="reset"]{
+    background-color: var(--color-header-active-lighter);
+    color: var(--color-light-writing);
+}
+
+
+.dark-theme table button[type="reset"]{
+    background-color: var(--color-background);
+    color: var(--color-light-writing);
+}
 
 table button:hover[type="reset"]{
     background-color: var(--color-reset);

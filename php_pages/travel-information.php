@@ -157,9 +157,15 @@ require_once "../php_pages/header.php";
                 </div>
 
             </div>
-            <?php if ($content[$a]['travels'][$index]['reservation'] == "Paiement en attente"){?>
-            <a class="modifier-button" href="../php/define-index-travel.php?action=modify&travel=<?php echo $content[$a]['travels'][$index]['destination']?>">Modifier</a>
-            <?php }?>
+
+            <div>
+                <?php if ($content[$a]['travels'][$index]['reservation'] == "Paiement en attente"){?>
+                    <a class="modifier-button" href="../php/define-index-travel.php?action=modify&travel=<?php echo $content[$a]['travels'][$index]['destination']?>">Modifier</a>
+                <?php }?>
+                <a class="modifier-button" href="../php_pages/user.php">Confirmer</a>
+            </div>
+
+
 
 
     </div>

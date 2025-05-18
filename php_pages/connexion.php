@@ -32,7 +32,7 @@
             </tr>
             <tr>
                 <td colspan="2">
-                    <button type="submit">connexion</button>
+                    <button type="submit">Connexion</button>
                     <button type="reset">Réinitialiser</button>
                 </td>
             </tr>

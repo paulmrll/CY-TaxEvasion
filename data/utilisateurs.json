@@ -5,7 +5,7 @@
         "email": "flo@gmail.com",
         "password": "$2y$10$oB4HOCTmESAAnjUMe7xmgunpeC\/9298zloUutN4fkil8l6Rpnagaa",
         "inscription_date": "23-03-2025 21:41:15",
-        "connexion_date": "15-05-2025 12:45:07",
+        "connexion_date": "18-05-2025 11:44:51",
         "role": "Admin",
         "card": {
             "name": "",
@@ -25,7 +25,7 @@
         "name": "Morille",
         "firstname": "Paul",
         "email": "paul@gmail.com",
-        "password": "$2y$10$gEySXR3zbt0Evnudn.7Wpuj5.HF\/sALlTtX7ydXaJGqXXO\/rGXA1W",
+        "password": "$2y$10$okWnhbA22d\/\/sMbTuEWJaOLUc\/VSvEW7GsWtLETmPK\/hzwkIP\/dFy",
         "inscription_date": "23-03-2025 21:41:57",
         "connexion_date": "14-05-2025 20:46:36",
         "role": "Admin",
@@ -44,12 +44,12 @@
         }
     },
     {
-        "name": "Wingerin",
+        "name": "Wingering",
         "firstname": "Cyprien",
         "email": "cyp@gmail.com",
-        "password": "$2y$10$S\/7X3M0dTUPYeZYSTup1huVrBFStcLBxxLw9.di1B5xbvqKxKoJI6",
+        "password": "$2y$10$okWnhbA22d\/\/sMbTuEWJaOLUc\/VSvEW7GsWtLETmPK\/hzwkIP\/dFy",
         "inscription_date": "23-03-2025 21:42:41",
-        "connexion_date": "23-03-2025 21:42:41",
+        "connexion_date": "18-05-2025 11:43:25",
         "role": "Utilisateur",
         "card": {
             "name": "",
@@ -69,9 +69,9 @@
         "name": "Delacroix",
         "firstname": "Romain",
         "email": "romain@gmail.com",
-        "password": "$2y$10$QR9UygR.LtORkztVGGPN5ujlYik7jbZh3RK5b\/cXGYe\/pi2pEZVX2",
+        "password": "$2y$10$8NySRxmyi0S0jRSRnIZT7OaCXBp7ipYahaEOcAzqmonWfQoiK4yjK",
         "inscription_date": "23-03-2025 21:44:35",
-        "connexion_date": "23-03-2025 21:44:35",
+        "connexion_date": "18-05-2025 11:44:26",
         "role": "Utilisateur",
         "card": {
             "name": "",
@@ -89,11 +89,11 @@
     },
     {
         "name": "Dufour",
-        "firstname": "Oliv",
+        "firstname": "Olivier",
         "email": "olivier@gmail.com",
-        "password": "$2y$10$AX8kSWZKrDMRpxiIp9YSKu9Chww.691YfITCL0Mt2PIcZTPQx.rS2",
+        "password": "$2y$10$RLofrtEtX2g0z28KE3mQZ.GR\/PkicVwMqeYVbeVnROdD2eNABu4Ze",
         "inscription_date": "23-03-2025 21:45:39",
-        "connexion_date": "23-03-2025 21:45:39",
+        "connexion_date": "18-05-2025 11:45:13",
         "role": "Utilisateur",
         "card": {
             "name": "",
@@ -110,25 +110,25 @@
         }
     },
     {
-        "name": "a",
-        "firstname": "ab",
-        "email": "tkt@gmail",
-        "password": "$2y$10$nqRNUZ5V\/r5FfnT2GE4S9e9Uok9SG\/5ITEQBpTolS5G3NufrGum3a",
-        "inscription_date": "30-04-2025 14:25:47",
-        "connexion_date": "30-04-2025 14:25:47",
-        "role": "VIP",
+        "name": "Goupil",
+        "firstname": "Florian",
+        "email": "flo.goup@orange.fr",
+        "password": "$2y$10$vkrgT5xYTmSpl1bcH8hx3u75oUoCM2vC\/8yEquYhrYDe5RQHX9JpO",
+        "inscription_date": "17-05-2025 11:24:09",
+        "connexion_date": "18-05-2025 11:14:24",
+        "role": "Utilisateur",
         "card": {
-            "name": "",
-            "number": 0,
-            "date": 0,
-            "cvv": 0
+            "name": "goup",
+            "number": "9632587412365478",
+            "date": "2026-06-17",
+            "cvv": "555"
         },
-        "birth": "2000-02-05",
+        "birth": "1965-11-04",
         "adress": {
-            "number": "1",
-            "rue": "a",
-            "ville": "a",
-            "cdp": "9500"
+            "number": "25",
+            "rue": "rue des petits pains",
+            "ville": "Paris",
+            "cdp": "75010"
         }
     }
 ]

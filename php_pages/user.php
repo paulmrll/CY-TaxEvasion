@@ -173,20 +173,17 @@ require_once "../php_pages/header.php";
                     </div>
 
                     <div class="utilisateur-image">
-
-                        <button>
                             <img src="<?php if ($_SESSION['role'] == "Admin"){
                                 echo "../image/admin-logo.png";
                             }else {
                                 echo "../image/user-icone.png";
                             } ?>" alt="image-utilisateur">
-                        </button>
                         <?php echo $_SESSION['role']; ?>
                     </div>
                 </div>
 
 
-                <div class="box-container">
+                <div class="box-container-voyage">
                         <?php
 
                         if (file_exists("../data/travel-user.json")) {
@@ -283,7 +280,7 @@ require_once "../php_pages/header.php";
 
 
 
-                <div class="box-container">
+                <div class="box-container-voyage">
 
                         <h1>Panier :</h1>
                     <?php

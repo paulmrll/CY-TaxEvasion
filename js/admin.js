@@ -1,65 +1,60 @@
 document.addEventListener('DOMContentLoaded', () => {
     const buttonModify = document.getElementById('button-modify');
     const inputAll = document.querySelectorAll('input[type="text"]');
-    const originalValues = new Object();
-
+    const originalValues = {};
     const buttonReturn = document.getElementById('button-return');
-    const form = document.querySelector('form');
+    const form = document.getElementById('form-modifier');
     const inputs = form.querySelectorAll('input[type="text"]');
-    const select = document.getElementById('role-select');
     const roleSelect = document.getElementById('role-select');
     const roleHidden = document.getElementById('role-hidden');
-    const returnLink = document.getElementById('return-link');
 
-
-    let canReturn = true;
     buttonModify.disabled = true;
 
-
     function registerOriginalValues() {
-        for (let i = 0; i < inputAll.length; i++) {
-            originalValues[inputAll[i].name] = inputAll[i].value;
-            console.log(originalValues[inputAll[i].name]);
-        }
+        inputAll.forEach(input => {
+            originalValues[input.name] = input.value;
+        });
+        originalValues['role'] = roleSelect.value;
     }
 
-    function checkInputValues(){
-        console.log("checkInputValues");
-        for (let i = 0; i < inputAll.length; i++){
-            let number3 = 0;
-            let number = inputAll.length;
-            let number2 = 0;
-            for (let j = 0; j < inputAll.length; j++) {
+    function checkInputValues() {
+        let hasEmpty = false;
+        let hasChanged = false;
+        let roleChanged = false;
 
-                if (inputAll[j].value === ""){
-                    inputAll[j].style.border = "2px solid red";
-                    console.log("Valeur vide");
-                    number3++;
-
-                } else if (inputAll[j].value == originalValues[inputAll[j].name]) {
-                    inputAll[j].style.border = "2px solid green";
-                    console.log("Valeur inchangée");
-                    console.log("number" + number);
-                    number--;
-                } else {
-                    inputAll[j].style.border = "2px solid green";
-                    console.log("Valeur modifiée");
-                    number2++;
-                }
-
-            }
-            if (number3 > 0 || number == 0) {
-                buttonModify.disabled = true;
+        inputAll.forEach(input => {
+            if (input.value.trim() === '') {
+                input.style.border = "2px solid red";
+                hasEmpty = true;
             } else {
-                buttonModify.disabled = false;
+                input.style.border = "2px solid green";
+                if (input.value !== originalValues[input.name]) {
+                    hasChanged = true;
+                }
             }
+        });
+
+        if (roleSelect.value !== originalValues['role']) {
+            roleChanged = true;
         }
+
+        buttonModify.disabled = hasEmpty || !(hasChanged || roleChanged);
     }
 
-    async function fetchUserData(){
-        const form = document.getElementById("form-modifier");
-        const formData = new FormData(form);
+    roleSelect.addEventListener('change', checkInputValues);
 
+
+
+    inputAll.forEach(input => {
+        input.addEventListener('input', checkInputValues);
+    });
+
+
+    async function fetchUserData() {
+
+        roleHidden.value = roleSelect.value;
+
+        const formData = new FormData(form);
 
         inputs.forEach(input => {
             input.disabled = true;
@@ -68,66 +63,58 @@ document.addEventListener('DOMContentLoaded', () => {
 
         buttonModify.disabled = true;
         buttonReturn.disabled = true;
-        canReturn = false;
-        select.disabled = true;
+        roleSelect.disabled = true;
 
         let dotCount = 0;
         const originalText = 'Mise à jour';
         buttonModify.textContent = originalText;
+        roleHidden.value = roleSelect.value;
+
 
         const interval = setInterval(() => {
             dotCount = (dotCount + 1) % 4;
             buttonModify.textContent = originalText + '.'.repeat(dotCount);
         }, 200);
 
-
         setTimeout(() => {
             clearInterval(interval);
 
-            inputs.forEach((input, index) => {
-                input.disabled = false;
-            });
-
+            inputs.forEach(input => input.disabled = false);
+            roleSelect.disabled = false;
             buttonModify.textContent = 'Modifier';
-            buttonModify.disabled = true;
+            buttonModify.disabled = false;
             buttonReturn.disabled = false;
-            canReturn = true;
+            roleSelect.disabled = false;
 
-        }, 2000);
-
-
-        try {
-            const reponse = await fetch('../php/modification.php', {
-                method: 'POST',
-                body: formData
+            inputAll.forEach(input => {
+                originalValues[input.name] = input.value;
             });
-            console.log("Erreur HTTP :", reponse.status);
-            if (!reponse.ok) {
-                console.log("Erreur HTTP :", reponse.status);
-                return;
-            }
-        } catch (error){
-            console.error('Error fetching user data:', error);
-        }
-        registerOriginalValues();
-    }
-    registerOriginalValues();
-    for (let i = 0; i < inputAll.length; i++){
-        inputAll[i].addEventListener('input', () => {
+            originalValues['role'] = roleSelect.value;
 
             checkInputValues();
 
 
-        });
+        }, 2000);
+
+        try {
+            const response = await fetch('../php/modification.php', {
+                method: 'POST',
+                body: formData
+            });
+            if (!response.ok) {
+                console.log("Erreur HTTP :", response.status);
+                return;
+            }
+        } catch (error) {
+            console.error('Erreur réseau :', error);
+        }
     }
 
+    registerOriginalValues();
 
     buttonModify.addEventListener('click', fetchUserData);
 
-    returnLink.addEventListener("click", function(event) {
-        if (!canReturn) {
-            event.preventDefault();
-        }
+    buttonReturn.addEventListener('click', () => {
+        window.location.href = '../php_pages/admin.php';
     });
-
 });
